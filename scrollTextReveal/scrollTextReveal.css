@@ -123,8 +123,6 @@ section {
     opacity: 0;
 }
 
-// Responsive
-
 @media (max-width: 1000px) {
     .copy-container h1 {
         width: 90%;
