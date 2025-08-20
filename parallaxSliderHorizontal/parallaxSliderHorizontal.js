@@ -121,15 +121,16 @@ function updateSlidePositions() {
   const track = document.querySelector(".slide-track")
   const sequenceWidth = state.slideWidth * totalSlideCount
 
+  // keep currentX within [-4 * sequenceWidth, -1 * sequenceWidth]
   if (state.currentX > -sequenceWidth * 1) {
     state.currentX -= sequenceWidth
     state.targetX -= sequenceWidth
-  } else if (state.currentX < sequenceWidth * 4) {
+  } else if (state.currentX < -sequenceWidth * 4) {
     state.currentX += sequenceWidth
     state.targetX += sequenceWidth
   }
 
-  track.style.transform = `translate3d(${state.currentX}px, 0, 0)`
+  track.style.transform = `translate3d(${state.currentX}px,0,0)`
 }
 
 // Parallex Effect
@@ -192,17 +193,17 @@ function animate() {
 
 // Vertical Scroll Ignore
 function handleWheel(e) {
-  if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
-    return
-  }
+  if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return
 
   e.preventDefault()
   state.lastScrollTime = Date.now()
 
   const scrollDelta = e.deltaY * config.SCROLL_SPEED
-  state.targetX -= Math.max(
-    Math.min(scrollDelta, config.MAX_VELOCITY) - config.MAX_VELOCITY
+  const clamped = Math.max(
+    -config.MAX_VELOCITY,
+    Math.min(scrollDelta, config.MAX_VELOCITY)
   )
+  state.targetX -= clamped // down = left, up = right
 }
 
 // Mobile touch
