@@ -10,6 +10,9 @@ const config = {
 
 const totalSlideCount = sliderData.length
 
+// Giving "state" some default object values
+// We will reference these throughout the project
+
 const state = {
   currentX: 0,
   targetX: 0,
@@ -68,9 +71,8 @@ function createSlideElement(index) {
 
   // Don't allow drag if the user doesn't drag much
   slide.addEventListener("click", (e) => {
-    e.preventDefault()
     if (state.dragDistance < 10 && !state.hasActuallyDragged) {
-      window.localStorage.href = sliderData[dataIndex].url
+      window.location.href = sliderData[dataIndex].url
       // Why is this sliderData url here?
     }
   })
@@ -126,4 +128,172 @@ function updateSlidePositions() {
     state.currentX += sequenceWidth
     state.targetX += sequenceWidth
   }
+
+  track.style.transform = `translate3d(${state.currentX}px, 0, 0)`
 }
+
+// Parallex Effect
+
+// Adjusts position of each image based on how far it is from the center of the screen
+function updateParallax() {
+  // Calculate center point of viewport
+  const viewportCenter = window.innerWidth / 2
+
+  // Load through all slides, get bounding boxes
+  state.slides.forEach((slide) => {
+    const img = slide.querySelector("img")
+    if (!img) return
+
+    const slideRect = slide.getBoundingClientRect()
+
+    if (slideRect.right < -500 || slideRect.left > window.innerWidth + 500) {
+      return
+    }
+
+    // Offset depending on how far image is from center
+    // Gives parallax effect
+    const slideCenter = slideRect.left + slideRect.width / 2
+    const distanceFromCenter = slideCenter - viewportCenter
+    const parallaxOffset = distanceFromCenter * -0.25
+
+    img.style.transform = `translateX(${parallaxOffset}px) scale(2.25)`
+  })
+}
+
+// Tracking Velocity
+function updateMovingState() {
+  state.velocity = Math.abs(state.currentX - state.lastCurrentX)
+  state.lastCurrentX = state.currentX
+
+  // If velocity is super low, consider slider not moving
+  const isSlowEnough = state.velocity < 0.1
+  const hasBeenStillLongEnough = Date.now() - state.lastScrollTime > 200
+  state.isMoving =
+    state.hasActuallyDragged || !isSlowEnough || !hasBeenStillLongEnough
+
+  // Sync velocity to CSS style tag --slider-moving
+  // Helps with displaying overlay
+  document.documentElement.style.setProperty(
+    "--slider-moving",
+    state.isMoving ? "1" : "0"
+  )
+}
+
+// Animation Loop
+function animate() {
+  state.currentX += (state.targetX - state.currentX) * config.LERP_FACTOR
+
+  updateMovingState()
+  updateSlidePositions()
+  updateParallax()
+
+  requestAnimationFrame(animate)
+}
+
+// Vertical Scroll Ignore
+function handleWheel(e) {
+  if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+    return
+  }
+
+  e.preventDefault()
+  state.lastScrollTime = Date.now()
+
+  const scrollDelta = e.deltaY * config.SCROLL_SPEED
+  state.targetX -= Math.max(
+    Math.min(scrollDelta, config.MAX_VELOCITY) - config.MAX_VELOCITY
+  )
+}
+
+// Mobile touch
+function handleTouchStart(e) {
+  state.isDragging = true
+  state.startX = e.touches[0].clientX
+  state.lastX = state.targetX
+  state.dragDistance = 0
+  state.hasActuallyDragged = false
+  state.lastScrollTime = Date.now()
+}
+
+function handleTouchMove(e) {
+  if (!state.isDragging) return
+
+  const deltaX = (e.touches[0].clientX - state.startX) * 1.5
+  state.targetX = state.lastX + deltaX
+  state.dragDistance = Math.abs(deltaX)
+
+  if (state.dragDistance > 5) {
+    state.hasActuallyDragged = true
+  }
+
+  state.lastScrollTime = Date.now()
+}
+
+function handleTouchEnd() {
+  state.isDragging = false
+  setTimeout(() => {
+    state.hasActuallyDragged = false
+  }, 100)
+}
+
+function handleMouseDown(e) {
+  e.preventDefault()
+  state.isDragging = true
+  state.startX = e.clientX
+  state.lastMouseX = e.clientX
+  state.lastX = state.targetX
+  state.dragDistance = 0
+  state.hasActuallyDragged = false
+  state.lastScrollTime = Date.now()
+}
+
+function handleMouseMove(e) {
+  if (!state.isDragging) return
+
+  e.preventDefault()
+  const deltaX = (e.clientX - state.lastMouseX) * 2
+  state.targetX += deltaX
+  state.lastMouseX = e.clientX
+  state.dragDistance += Math.abs(deltaX)
+
+  if (state.dragDistance > 5) {
+    state.hasActuallyDragged = true
+  }
+
+  state.lastScrollTime = Date.now()
+}
+
+function handleMouseUp() {
+  state.isDragging = false
+  setTimeout(() => {
+    state.hasActuallyDragged = false
+  }, 100)
+}
+
+function handleResize() {
+  initializeSlides()
+}
+
+function initializeEventListeners() {
+  const slider = document.querySelector(".slider")
+
+  slider.addEventListener("wheel", handleWheel, { passive: false })
+  slider.addEventListener("touchstart", handleTouchStart)
+  slider.addEventListener("touchmove", handleTouchMove)
+  slider.addEventListener("touchend", handleTouchEnd)
+  slider.addEventListener("mousedown", handleMouseDown)
+  slider.addEventListener("mouseleave", handleMouseUp)
+  slider.addEventListener("dragstart", (e) => e.preventDefault())
+
+  document.addEventListener("mousemove", handleMouseMove)
+  document.addEventListener("mouseup", handleMouseUp)
+  window.addEventListener("resize", handleResize)
+}
+
+function initializeSlider() {
+  initializeSlides()
+  initializeEventListeners()
+  animate()
+}
+
+document.addEventListener("DOMContentLoaded", initializeSlider)
