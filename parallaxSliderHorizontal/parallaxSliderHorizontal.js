@@ -3,15 +3,14 @@ import { sliderData } from "./sliderData"
 // Config below defines slide parameters
 
 const config = {
-  SCROLL_SPEED: 1.75,
-  LERP_FACTOR: 0.05,
-  MAX_VELOCITY: 150,
+  SCROLL_SPEED: 1.75, // Scroll Speed
+  LERP_FACTOR: 0.05, // Smoothing
+  MAX_VELOCITY: 150, // How much a single drag can move the track
 }
 
 const totalSlideCount = sliderData.length
 
-// Giving "state" some default object values
-// We will reference these throughout the project
+// State holds all the dynamic values that will change over time
 
 const state = {
   currentX: 0,
@@ -36,24 +35,27 @@ function checkMobile() {
 }
 
 // The function below creates individual slide elements for DOM
-
 function createSlideElement(index) {
   const slide = document.createElement("div")
   slide.className = "slide"
 
+  // Checks if mobile
   if (state.isMobile) {
     slide.style.width = "175px"
     slide.style.height = "250px"
   }
 
+  // Creates container for image
   const imageContainer = document.createElement("div")
   imageContainer.className = "slide-image"
 
+  // Creates image and pulls from sliderData import object
   const img = document.createElement("img")
   const dataIndex = index % totalSlideCount
   img.src = sliderData[dataIndex].img
   img.alt = sliderData[dataIndex].title
 
+  // Overlay show on slide hover when not moving
   const overlay = document.createElement("div")
   overlay.className = "slide-overlay"
 
@@ -61,6 +63,7 @@ function createSlideElement(index) {
   title.className = "project-title"
   title.textContent = sliderData[dataIndex].title
 
+  // Creates an arrow near the slide title on hover
   const arrow = document.createElement("div")
   arrow.className = "project-arrow"
   arrow.innerHTML = `
@@ -69,11 +72,11 @@ function createSlideElement(index) {
     </svg>
     `
 
-  // Don't allow drag if the user doesn't drag much
+  // If the drag distance is super low and if the state isn't in drag
+  // Assign the URL from dataIndex as an href
   slide.addEventListener("click", (e) => {
     if (state.dragDistance < 10 && !state.hasActuallyDragged) {
       window.location.href = sliderData[dataIndex].url
-      // Why is this sliderData url here?
     }
   })
 
