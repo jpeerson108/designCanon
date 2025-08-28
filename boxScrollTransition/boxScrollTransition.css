@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+section.hero-img,
+section.about-img {
+    height: 200vh;
+}
+
+.hero {
+    background: #222;
+}
+
+.about {
+    background: #555;
+}
+
+.footer {
+    background: #888;
+}
+
+img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Inter";
+    font-size: 10vw;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    color: #000;
+    opacity: .5;
+}
+
+.blocks-container {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+}
+
+.blocks-container.top {
+    top: 0;
+}
+
+.blocks-container.bottom {
+    bottom: 0;
+}
+
+.blocks-row {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+}
+
+.block {
+    width: 100%;
+    height: 100%;
+    transition: opacity 100ms;
+}
+
+.blocks-container.top .blocks-row .block {
+    opacity: 1;
+}
+
+.blocks-container.bottom .blocks-row .block {
+    opacity: 0;
+}
+
+.hero-img .blocks-container.top .blocks-row .block {
+    background: #222;
+}
+
+.hero-img .blocks-container.bottom .blocks-row .block {
+    background: #555;
+}
+
+.about-img .blocks-container.top .blocks-row .block {
+    background: #555;
+}
+
+.about-img .blocks-container.bottom .blocks-row .block {
+    background: #888;
+}
