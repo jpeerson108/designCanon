@@ -51,6 +51,10 @@ nav {
     font-size: 15vw;
     line-height: 90%;
     color: #222;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .transition {
