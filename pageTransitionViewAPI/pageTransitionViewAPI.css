@@ -66,11 +66,11 @@ nav a {
     transform: translate(-50%, -50%);
     text-transform: uppercase;
     color: #333;
-    font-size: 20vw;
+    font-size: 10vw;
     font-weight: 700;
     display: flex;
     justify-content: center;
-    letter-spacing: -0.5rem;
+    letter-spacing: -0.2rem;
     line-height: 1;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
