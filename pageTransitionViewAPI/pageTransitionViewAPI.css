@@ -24,7 +24,6 @@ img {
     height: 100%;
     min-height: 100vw;
     background-color: #fff;
-
 }
 
 nav {
@@ -109,7 +108,7 @@ nav a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 2em;
 }
 
