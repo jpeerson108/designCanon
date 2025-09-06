@@ -130,3 +130,38 @@ nav a {
     position: relative;
     will-change: transform;
 }
+
+
+/* Current page moves out and up on leave */
+@keyframes move-out {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0.5;
+        transform: translateY(-35%);
+    }
+}
+
+/* Controls how the new page appears */
+@keyframes move-in {
+    from {
+        clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+
+    to {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+    }
+}
+
+/* Applies transition too entire current page */
+::view-transition-old(root) {
+    animation: 1.5s cubic-bezier(0.87, 0, 0.13, 1) both move-out;
+}
+
+/* Applies transition too new incoming page */
+::view-transition-new(root) {
+    animation: 1.5s cubic-bezier(0.87, 0, 0.13, 1) both move-in;
+}
