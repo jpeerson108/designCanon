@@ -45,7 +45,7 @@ class SlideShow {
     this.DOM.el = DOM_el
     this.DOM.slides = [...this.DOM.el.querySelectorAll(".slide")]
     this.DOM.slidesInner = this.DOM.slides.map((item) =>
-      item.querySelectorAll(".side-inner")
+      item.querySelectorAll(".slide-inner")
     )
 
     this.DOM.slides[this.current].classList.add("slide--current")
@@ -119,36 +119,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelector(".slides")
   const slideShow = new SlideShow(slides)
 
+  let lastTime = 0
+  const delay = 300
+
   Observer.create({
     type: "wheel,touch",
-    onDown: () => slideShow.prev(),
-    onUp: () => slideShow.next(),
+    onDown: () => {
+      const now = Date.now()
+      if (now - lastTime > delay) {
+        slideShow.prev()
+        lastTime = now
+      }
+    },
+    onUp: () => {
+      const now = Date.now()
+      if (now - lastTime > delay) {
+        slideShow.next()
+        lastTime = now
+      }
+    },
     wheelSpeed: -1,
-    tolerance: 10,
+    tolerance: 30,
   })
 
-  gsap.from(".title", {
-    y: 50,
-    opacity: 0,
-    duration: 1,
-    delay: 0.5,
-  })
-
-  gsap.from(".description", {
-    y: 30,
-    opacity: 0,
-    duration: 1,
-    delay: 0.5,
-  })
-
-  gsap.from(".explore", {
-    y: 20,
-    opacity: 0,
-    duration: 1,
-    delay: 0.3,
-  })
-
-  preloadImages("slide-img").then(() => {
+  preloadImages(".slide-img").then(() => {
     document.body.classList.remove("loading")
   })
 })

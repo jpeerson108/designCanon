@@ -127,7 +127,7 @@ body {
     align-self: center;
 }
 
-.instructions {
+.instruction {
     position: absolute;
     bottom: 20px;
     left: 30%;
