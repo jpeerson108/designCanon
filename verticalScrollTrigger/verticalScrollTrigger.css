@@ -130,7 +130,8 @@ body {
 .instruction {
     position: absolute;
     bottom: 20px;
-    left: 30%;
+    left: 50%;
+    transform: translateX(-50%);
     color: #fff;
     font-size: .8rem;
     text-transform: uppercase;
