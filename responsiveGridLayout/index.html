@@ -3,9 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Design Canon | Responsive Grid</title>
+    <link rel="stylesheet" href="./responsiveGridLayout.css">
 </head>
 <body>
-    
+    <header>
+        <h1>Responsive Grid Layout</h1>
+    </header>
+    <div class="wall">
+        <div class="wall-item">
+            <img src="./assets/image 20.jpg" alt="">
+            <h2>Title Goes Here</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam odit, doloremque laborum cum, ducimus inventore non perspiciatis rem ipsum magni pariatur. Molestias sint possimus repellat saepe reiciendis laudantium quia?</p>
+        </div>
+
+        <div class="wall-item">
+            <img src="./assets/image 21.jpg" alt="">
+            <h2>Title Goes Here</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam odit, doloremque laborum cum, ducimus inventore non perspiciatis rem ipsum magni pariatur. Molestias sint possimus repellat saepe reiciendis laudantium quia?</p>
+        </div>
+
+        <div class="wall-item">
+            <img src="./assets/image 22.jpg" alt="">
+            <h2>Title Goes Here</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam odit, doloremque laborum cum, ducimus inventore non perspiciatis rem ipsum magni pariatur. Molestias sint possimus repellat saepe reiciendis laudantium quia?</p>
+        </div>
+
+        <div class="wall-item">
+            <img src="./assets/image 23.jpg" alt="">
+            <h2>Title Goes Here</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam odit, doloremque laborum cum, ducimus inventore non perspiciatis rem ipsum magni pariatur. Molestias sint possimus repellat saepe reiciendis laudantium quia?</p>
+        </div>
+
+        <div class="wall-item">
+            <img src="./assets/image 30.jpg" alt="">
+            <h2>Title Goes Here</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam odit, doloremque laborum cum, ducimus inventore non perspiciatis rem ipsum magni pariatur. Molestias sint possimus repellat saepe reiciendis laudantium quia?</p>
+        </div>
+
+        <!-- Repeat Items -->
+
+        <div class="wall-item">
+            <img src="./assets/image 20.jpg" alt="">
+            <h2>Title Goes Here</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam odit, doloremque laborum cum, ducimus inventore non perspiciatis rem ipsum magni pariatur. Molestias sint possimus repellat saepe reiciendis laudantium quia?</p>
+        </div>
+
+        <div class="wall-item">
+            <img src="./assets/image 21.jpg" alt="">
+            <h2>Title Goes Here</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam odit, doloremque laborum cum, ducimus inventore non perspiciatis rem ipsum magni pariatur. Molestias sint possimus repellat saepe reiciendis laudantium quia?</p>
+        </div>
+
+        <div class="wall-item">
+            <img src="./assets/image 22.jpg" alt="">
+            <h2>Title Goes Here</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam odit, doloremque laborum cum, ducimus inventore non perspiciatis rem ipsum magni pariatur. Molestias sint possimus repellat saepe reiciendis laudantium quia?</p>
+        </div>
+
+        <div class="wall-item">
+            <img src="./assets/image 23.jpg" alt="">
+            <h2>Title Goes Here</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam odit, doloremque laborum cum, ducimus inventore non perspiciatis rem ipsum magni pariatur. Molestias sint possimus repellat saepe reiciendis laudantium quia?</p>
+        </div>
+
+        <div class="wall-item">
+            <img src="./assets/image 30.jpg" alt="">
+            <h2>Title Goes Here</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam odit, doloremque laborum cum, ducimus inventore non perspiciatis rem ipsum magni pariatur. Molestias sint possimus repellat saepe reiciendis laudantium quia?</p>
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./jaliswall/jaliswall.js"></script>
+
+    <script type="text/javascript">
+        
+        $(".wall").jaliswall({
+          item : ".wall-item",
+          columnClass : ".wall-column",
+        })
+
+    </script>
 </body>
 </html>
