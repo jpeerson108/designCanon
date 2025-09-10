@@ -2,7 +2,7 @@ const counter = document.querySelector(".percent")
 
 TweenLite.set(counter, {
   xPercent: -5,
-  yPercent: -5,
+  //   yPercent: -5,
 })
 
 function progress() {
@@ -15,9 +15,9 @@ function progress() {
   const $textColor = progress > 99 ? "#fff" : "#222"
 
   // This adds a % counter to the progress bar
-  $("h1")
-    .text(Math.round(progress) + "%")
-    .css({ color: $textColor })
+  //   $("h1")
+  //     .text(Math.round(progress) + "%")
+  //     .css({ color: $textColor })
 
   $(".fill")
     .height(progress + "%")
