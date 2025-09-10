@@ -11,8 +11,8 @@ function progress() {
   const windowHeight = $(window).height()
   const progress = (windowScrollTop / (docHeight - windowHeight)) * 100
 
-  const $bgColor = progress > 99 ? "#fff" : "#fff"
-  const $textColor = progress > 99 ? "#fff" : "#222"
+  const $bgColor = progress > 99 ? "#c9c9c9" : "#c9c9c9"
+  // const $textColor = progress > 99 ? "#c9c9c9" : "#222"
 
   // This adds a % counter to the progress bar
   //   $("h1")
