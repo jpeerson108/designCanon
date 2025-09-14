@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+.spacer {
+  height: 70vh;
+}
+
+.marquee {
+  position: relative;
+  background: #111;
+  color: #ebebeb;
+  padding: 25px 0;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.marquee-inner {
+  display: flex;
+  width: fit-content;
+  flex: auto;
+  flex-direction: row;
+}
+
+.marquee-part {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 4px;
+}
+
+.arrow {
+  width: 60px;
+  height: 60px;
+  color: #ec6533;
+  margin: 0 1em 0 1.5em;
+  transform: rotate(180deg);
+  transform-origin: 50% 50%;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.arrow svg {
+  width: 100%;
+  height: 100%;
+}
+
+.arrow.active {
+  transform: rotate(-180deg);
+  transform-origin: 50% 50%;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
