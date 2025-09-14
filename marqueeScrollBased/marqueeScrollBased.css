@@ -7,7 +7,7 @@
 }
 
 body {
-  background: #111;
+  background: #151515;
   font-family: "Inter", sans-serif;
 }
 
@@ -17,13 +17,13 @@ body {
 
 .marquee {
   position: relative;
-  background: #161616;
+  background: #1c1c1c;
   color: #ebebeb;
-  padding: 20px 0;
-  font-weight: 700;
-  font-size: 1.3rem;
-  letter-spacing: 0.15rem;
-  text-transform: uppercase;
+  padding: 15px 0;
+  font-weight: 300;
+  font-size: 2.2rem;
+  letter-spacing: -5%;
+  /* text-transform: uppercase; */
   overflow: hidden;
 }
 
@@ -39,13 +39,14 @@ body {
   align-items: center;
   flex-shrink: 0;
   padding: 0 4px;
+  will-change: transform;
 }
 
 .arrow {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   color: #ec6533;
-  margin: 0 1em 0 1.5em;
+  margin: 0 0.5em;
   transform: rotate(180deg);
   transform-origin: 50% 50%;
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
