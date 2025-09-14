@@ -1,13 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Still working on this. I want to add an ease animation between expand and collapse */
+
 body {
-  background-color: #DCDCDC;
-  padding: 1rem;
+  background-color: #151515;
+  padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.cards-container {
+  max-width: 1000px;
+  margin: auto;
 }
 
 .card {
-  border: 1px solid black;
-  margin-bottom: 1rem;
-  background-color: white;
+  margin: 0 40px 13px;
+  padding: 10px 20px;
+  border: 0.5px solid #777777;
+  background-color: #262626;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  border-radius: 5px;
 }
 
 .card:last-child {
@@ -17,24 +35,37 @@ body {
 .card-header {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid black;
-  padding: .5rem;
-  font-size: 2rem;
+  font-size: 1.4rem;
   align-items: center;
-  margin-bottom: -1px;
+  font-weight: 400;
 }
 
 .card-body {
-  padding: 0 .5rem;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.7;
   height: 0;
   overflow: hidden;
 }
 
 .card-body.show {
   height: auto;
-  padding: .5rem;
+  padding: 1rem 0 0.5rem;
 }
 
 button {
   cursor: pointer;
+  font-family: "Inter", sans-serif;
+}
+
+.plus-icon {
+  color: #777777;
+  transform: will-change;
+  cursor: pointer;
+}
+
+.plus-icon svg {
+  height: 2rem;
+  width: 2rem;
+  object-fit: contain;
 }
