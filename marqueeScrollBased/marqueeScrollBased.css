@@ -7,7 +7,7 @@
 }
 
 body {
-  background: #fff;
+  background: #111;
   font-family: "Inter", sans-serif;
 }
 
@@ -17,9 +17,9 @@ body {
 
 .marquee {
   position: relative;
-  background: #111;
+  background: #161616;
   color: #ebebeb;
-  padding: 25px 0;
+  padding: 20px 0;
   font-weight: 700;
   font-size: 1.3rem;
   letter-spacing: 0.15rem;
@@ -57,7 +57,7 @@ body {
 }
 
 .arrow.active {
-  transform: rotate(-180deg);
+  transform: rotateX(180deg);
   transform-origin: 50% 50%;
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
