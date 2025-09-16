@@ -2,13 +2,32 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
 :root {
-  --bg-color-dark1: #151515;
-  --bg-color-dark2: #1c1c1c;
-  --border-color: #2c2c2c;
-  --text-color-1: #fff;
-  --text-color-2: #888;
-  --text-color-3: #666;
-  --accent-color: #ff5252;
+  /* Color: Legend */
+  --color-dark-1: #111;
+  --color-dark-1b: #161616;
+  --color-dark-2: #222;
+  --color-dark-3: #333;
+  --color-dark-4: #444;
+  --color-dark-5: #555;
+  --color-dark-6: #666;
+  --color-dark-7: #777;
+  --color-dark-8: #888;
+  --color-dark-9: #999;
+  --color-light-1: #aaa;
+  --color-light-2: #bbb;
+  --color-light-3: #ccc;
+  --color-light-4: #ddd;
+  --color-light-5: #eee;
+  --color-white: #fff;
+
+  /* Color: Semantics */
+  --color-bg-main: var(--color-dark-1);
+  --color-text-main: var(--color-white);
+  --color-text-secondary: var(--color-dark-8);
+  --color-borders: var(--color-dark-5);
+  --color-accent: #ff5252;
+
+  /* Fonts */
   --font-main: "Inter", sans-serif;
   --font-secondary: "JetBrains Mono", monospace;
 }
@@ -26,8 +45,8 @@ a {
 }
 
 body {
-  background: var(--bg-color-dark1);
-  color: var(--text-color-1);
+  background: var(--color-bg-main);
+  color: var(--color-white);
 }
 
 nav {
@@ -46,7 +65,7 @@ nav {
 }
 
 .social-icons {
-  color: var(--text-color);
+  color: var(--color-white);
   text-decoration: none;
 }
 
@@ -79,10 +98,10 @@ nav {
   border-radius: 5px;
   border: solid;
   border-width: 0.5px;
-  border-color: var(--border-color);
+  border-color: var(--color-borders);
   font-size: 1rem;
   font-family: "Inter", sans-serif;
-  background: var(--bg-color-dark2);
+  background: var(--color-dark-1b);
   display: flex;
   justify-content: space-between;
 }
@@ -95,13 +114,14 @@ nav {
 }
 
 .projects-title {
+  font-size: 0.9rem;
 }
 
 .projects-category {
   margin-top: auto;
   font-size: 0.6rem;
   font-family: var(--font-secondary);
-  color: var(--text-color-2);
+  color: var(--color-text-secondary);
   text-transform: uppercase;
   letter-spacing: -5%;
 }
@@ -109,11 +129,11 @@ nav {
 .projects-image {
   width: 140px;
   height: 80px;
-  background: var(--border-color);
+  background: var(--color-dark-2);
   border-radius: 3px;
   border: solid;
   border-width: 0.5px;
-  border-color: var(--border-color);
+  border-color: var(--color-dark-3);
 }
 
 .projects-image img {
@@ -128,9 +148,12 @@ nav {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  font-family: var(--font-secondary);
-  color: var(--text-color-2);
+  padding: 0 35px 25px 35px;
+}
+
+.footer p {
   text-transform: uppercase;
   font-size: 0.6rem;
-  padding: 0 35px 20px 35px;
+  font-family: var(--font-secondary);
+  color: var(--color-text-secondary);
 }
