@@ -131,6 +131,12 @@ nav {
   height: 16px;
 }
 
+.social-icon.github {
+  width: 14px;
+  height: 14px;
+  margin-bottom: 5px;
+}
+
 .social-icon svg {
   width: 100%;
   height: 100%;
