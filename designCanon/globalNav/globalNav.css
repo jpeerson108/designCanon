@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+:root {
+  /* Color: Legend */
+  --color-dark-1: #111;
+  --color-dark-1b: #161616;
+  --color-dark-2: #222;
+  --color-dark-3: #333;
+  --color-dark-4: #444;
+  --color-dark-5: #555;
+  --color-dark-6: #666;
+  --color-dark-7: #777;
+  --color-dark-8: #888;
+  --color-dark-9: #999;
+  --color-light-1: #aaa;
+  --color-light-2: #bbb;
+  --color-light-3: #ccc;
+  --color-light-4: #ddd;
+  --color-light-5: #eee;
+  --color-white: #fff;
+
+  /* Color: Semantics */
+  --color-bg-main: var(--color-dark-1);
+  --color-text-main: var(--color-white);
+  --color-text-secondary: var(--color-dark-8);
+  --color-borders: var(--color-dark-5);
+  --color-accent: #ff5252;
+
+  /* Fonts */
+  --font-main: "Inter", sans-serif;
+  --font-secondary: "JetBrains Mono", monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  width: 100%;
+  padding: 40px 35px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.box {
+  display: inline-flex;
+  padding: 4px 13px;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  border: 1.5px solid var(--color-dark-3);
+  border-radius: 5px;
+  background: var(--color-dark-1);
+  color: var(--color-white);
+  text-align: center;
+  letter-spacing: -0.95px;
+}
+
+.nav-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.nav-icon svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.box-center {
+  border: 1.5px solid var(--color-accent);
+}
+
+.content-middle {
+  display: flex;
+  color: var(--color-white);
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  font-size: 12px;
+}
+
+.content-middle span {
+  display: flex;
+  color: var(--color-white);
+}
+
+.box-search {
+  display: inline-flex;
+  font-size: 13px;
+  padding: 8px 13px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.box-search p {
+  padding-right: 10vw;
+}
+
+#about-text {
+  display: none;
+}
+
+#about-text.show-nav-text {
+  display: inline;
+}
