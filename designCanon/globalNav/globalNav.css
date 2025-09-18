@@ -81,17 +81,13 @@ nav {
 .nav-box.left {
   display: inline-flex;
 }
-
+/*
 #about-text {
   max-width: 0;
   opacity: 0;
   overflow: hidden;
-  white-space: nowrap;
-  transition:
-    max-width 0.3s ease,
-    opacity 0.3s ease;
-  display: inline-block;
-}
+  transition: all 0.3s ease;
+} */
 
 #about-text.show-nav-text {
   max-width: 200px;
