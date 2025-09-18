@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #111;
+}
+
+.btn-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "JetBrains Mono", monospace;
+  text-transform: uppercase;
+}
+
+.btn {
+  display: inline-flex;
+  padding: 4px 15px;
+  border: 1px solid #333;
+  gap: 4px;
+  color: #fff;
+}
+
+.icon-placeholder {
+  width: 15px;
+  height: 15px;
+  background: #333;
+}
