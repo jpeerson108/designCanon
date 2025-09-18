@@ -20,6 +20,7 @@ body {
   font-family: "JetBrains Mono", monospace;
   text-transform: uppercase;
   letter-spacing: -0.4px;
+  font-size: 0.9rem;
 }
 
 .btn {
@@ -46,4 +47,7 @@ body {
   width: 15px;
   height: 15px;
   background: #333;
+}
+
+.btn-text {
 }
