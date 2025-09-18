@@ -19,17 +19,30 @@ body {
   align-items: center;
   font-family: "JetBrains Mono", monospace;
   text-transform: uppercase;
+  letter-spacing: -0.4px;
 }
 
 .btn {
-  display: inline-flex;
-  padding: 4px 15px;
+  padding: 4px 10px;
   border: 1px solid #333;
-  gap: 4px;
   color: #fff;
 }
 
-.icon-placeholder {
+.btn-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 5px;
+}
+
+.btn-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-icon {
   width: 15px;
   height: 15px;
   background: #333;
