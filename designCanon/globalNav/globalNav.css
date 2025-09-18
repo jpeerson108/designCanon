@@ -83,11 +83,19 @@ nav {
 }
 
 #about-text {
-  display: none;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition:
+    max-width 0.3s ease,
+    opacity 0.3s ease;
+  display: inline-block;
 }
 
 #about-text.show-nav-text {
-  display: inline;
+  max-width: 200px;
+  opacity: 1;
 }
 
 /* Center Box: Name & Socials */
