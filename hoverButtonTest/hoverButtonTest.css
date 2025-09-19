@@ -14,14 +14,15 @@ a {
 
 body {
   background: #111;
+  display: flex;
 }
 
 .btn-container {
-  width: 100vw;
-  height: 100vh;
+  position: absolute;
+  left: 40px;
+  top: 40px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   font-family: "JetBrains Mono", monospace;
   text-transform: uppercase;
   letter-spacing: -0.4px;
@@ -65,12 +66,20 @@ body {
   opacity: 0;
   margin-left: -5px;
   transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  white-space: nowrap;
 }
 
 .btn-text-show {
   max-width: 200px;
-  overflow: auto;
   opacity: 1;
   margin-left: -1px;
   padding-right: 3px;
+}
+
+.btn-wrapper.active .btn-text {
+  max-width: 200px;
+  opacity: 1;
+  margin-left: -1px;
+  padding-right: 3px;
+  overflow: hidden; /* not auto! */
 }
