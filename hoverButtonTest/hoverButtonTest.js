@@ -1,6 +1,13 @@
-const btnWrapper = document.querySelectorAll(".btn-wrapper")
-const btnIcon = document.querySelectorAll(".btn-icon")
+const btnWrappers = document.querySelectorAll(".btn-wrapper")
 
-btnWrapper.addEventListener("mouseenter", (e) => {
-  btnIcon.classList.add("")
+btnWrappers.forEach((wrapper) => {
+  const btnText = wrapper.querySelector(".btn-text")
+
+  wrapper.addEventListener("mouseenter", () => {
+    btnText.classList.add("btn-text-show")
+  })
+
+  wrapper.addEventListener("mouseleave", () => {
+    btnText.classList.remove("btn-text-show")
+  })
 })

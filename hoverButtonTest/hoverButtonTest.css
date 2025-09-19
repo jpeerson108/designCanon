@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
   background: #111;
 }
@@ -20,13 +25,14 @@ body {
   font-family: "JetBrains Mono", monospace;
   text-transform: uppercase;
   letter-spacing: -0.4px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .btn {
-  padding: 4px 10px;
+  padding: 5px 6px;
   border: 1px solid #333;
   color: #fff;
+  border-radius: 5px;
 }
 
 .btn-list {
@@ -41,13 +47,30 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 5px;
+  padding: 2px 4px;
+  border-radius: 3px;
+  background: #333;
 }
 
 .btn-icon {
   width: 15px;
   height: 15px;
-  background: #333;
+  background: #555;
+  border-radius: 100%;
 }
 
 .btn-text {
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-left: -5px;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.btn-text-show {
+  max-width: 200px;
+  overflow: auto;
+  opacity: 1;
+  margin-left: -1px;
+  padding-right: 3px;
 }
