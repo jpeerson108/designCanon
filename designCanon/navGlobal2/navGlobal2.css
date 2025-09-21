@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background: #111;
+  display: flex;
+}
+
+.btn-container {
+  display: flex;
+  align-items: flex-start;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: -0.4px;
+  font-size: 0.8rem;
+  /* background: #19c5ff; */
+}
+
+#navMenu {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+}
+
+#socialMenu {
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  transform: translateX(-50%);
+}
+
+#searchMenu {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+}
+
+.btn {
+  padding: 5px 6px;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #333;
+  transition: border 0.3s ease;
+}
+
+.btn:hover {
+  border: 1px solid #ec6533;
+}
+
+.btn-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 5px;
+}
+
+.btn-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 4px;
+  border-radius: 3px;
+  background: #222;
+  transition: background 0.2s ease;
+}
+
+.btn-wrapper:hover {
+  background: #333;
+}
+
+.btn-icon {
+  width: 15px;
+  height: 15px;
+  background: #555;
+  border-radius: 100%;
+}
+
+.btn-text {
+  margin: 0 4px;
+}
+
+.btn-text-expand {
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-left: -5px;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  white-space: nowrap;
+}
+
+.btn-text-show {
+  max-width: 200px;
+  opacity: 1;
+  margin-left: -1px;
+  padding-right: 3px;
+}
+
+.btn-wrapper.active .btn-text-expand {
+  max-width: 200px;
+  opacity: 1;
+  margin-left: -1px;
+  padding-right: 3px;
+  overflow: hidden;
+  background: #333;
+}
+
+#btn-search {
+  all: unset;
+  box-sizing: border-box;
+  margin: 2px 0 2px 4px;
+  padding: 0;
+  appearance: none;
+}
+
+#btn-search:focus::placeholder {
+  color: transparent;
+  transition: color 0.15s ease;
+}
+
+.btn-wrapper.search {
+  background: transparent;
+}
