@@ -1,4 +1,4 @@
-import { sliderData } from "./sliderData"
+import { sliderData } from "/scripts/parallaxSliderHorizontalData.js"
 
 // Config below defines slide parameters
 

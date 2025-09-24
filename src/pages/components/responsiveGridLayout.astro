@@ -6,6 +6,8 @@ import "../../styles/responsiveGridLayout.css";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design Canon | Responsive Grid</title>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="/scripts/jaliswall.js"></script>
 </head>
 <body>
     <header>
@@ -73,19 +75,14 @@ import "../../styles/responsiveGridLayout.css";
             <h2>Title Goes Here</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam odit, doloremque laborum cum, ducimus inventore non perspiciatis rem ipsum magni pariatur. Molestias sint possimus repellat saepe reiciendis laudantium quia?</p>
         </div>
-
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="../../scripts/jaliswall.js"></script>
-
-    <script type="text/javascript">
-        
-        $(".wall").jaliswall({
+    <script is:inline>
+        document.addEventListener("DOMContentLoaded", () => {
+            $(".wall").jaliswall({
           item : ".wall-item",
           columnClass : ".wall-column",
+         })
         })
-
     </script>
 </body>
 </html>
