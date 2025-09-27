@@ -93,8 +93,13 @@ a {
 }
 
 .btn-icon svg {
-  width: 75%;
-  height: 75%;
+  width: 78%;
+  height: 78%;
+}
+
+.btn-icon.nav svg {
+  width: 67%;
+  height: 67%;
 }
 
 .btn-text {
@@ -118,7 +123,7 @@ a {
 }
 
 .btn-wrapper.active {
-  background: #333;
+  background: #3c3c3c;
 }
 
 .btn-wrapper.active .btn-text-expand {
@@ -136,6 +141,8 @@ a {
   padding: 0;
   appearance: none;
   caret-color: #ec6533;
+  width: 14vw;
+  max-width: 250px;
 }
 
 #btn-search::-webkit-search-cancel-button {
