@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+:root {
+  --top-margin: 30px;
+}
 
 * {
   margin: 0;
@@ -16,7 +17,7 @@ a {
   display: flex;
   align-items: flex-start;
   font-family: "JetBrains Mono", monospace;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: -0.4px;
   font-size: 0.8rem;
@@ -27,14 +28,14 @@ a {
 #navMenu {
   position: absolute;
   left: 40px;
-  top: 40px;
+  top: var(--top-margin);
   transition: all 0.3s ease;
 }
 
 #socialMenu {
   position: absolute;
   left: 50%;
-  top: 40px;
+  top: var(--top-margin);
   transform: translateX(-50%);
   transition: all 0.3s ease;
 }
@@ -42,7 +43,7 @@ a {
 #searchMenu {
   position: absolute;
   right: 40px;
-  top: 40px;
+  top: var(--top-margin);
   transition: all 0.3s ease;
 }
 
@@ -69,6 +70,7 @@ a {
 .btn-wrapper {
   display: inline-flex;
   align-items: center;
+  justify-items: center;
   gap: 5px;
   padding: 2px 4px;
   border-radius: 3px;
@@ -83,8 +85,16 @@ a {
 .btn-icon {
   width: 15px;
   height: 15px;
-  background: #555;
-  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: #555;
+  border-radius: 100%; */
+}
+
+.btn-icon svg {
+  width: 75%;
+  height: 75%;
 }
 
 .btn-text {
@@ -107,13 +117,16 @@ a {
   padding-right: 3px;
 }
 
+.btn-wrapper.active {
+  background: #333;
+}
+
 .btn-wrapper.active .btn-text-expand {
   max-width: 200px;
   opacity: 1;
   margin-left: -1px;
   padding-right: 3px;
   overflow: hidden;
-  background: #333;
 }
 
 #btn-search {
@@ -122,6 +135,21 @@ a {
   margin: 2px 0 2px 4px;
   padding: 0;
   appearance: none;
+  caret-color: #ec6533;
+}
+
+#btn-search::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 17px;
+  width: 17px;
+  background: url("/public/assets/svg/close-outline.svg") no-repeat center
+    center;
+  background-size: contain;
+  opacity: 40%;
+  cursor: pointer;
+  filter: invert(1);
+  transition: all 0.3s ease;
 }
 
 #btn-search:focus::placeholder {
@@ -138,7 +166,7 @@ a {
     position: absolute;
     right: 40px;
     left: auto;
-    top: 40px;
+    top: var(--top-margin);
     transform: translateX(0);
   }
 
@@ -151,7 +179,7 @@ a {
   #navMenu {
     position: absolute;
     left: 50%;
-    top: 40px;
+    top: var(--top-margin);
     transform: translateX(-50%);
   }
 
