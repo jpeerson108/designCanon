@@ -20,6 +20,7 @@ a {
   text-transform: uppercase;
   letter-spacing: -0.4px;
   font-size: 0.8rem;
+  white-space: nowrap;
   /* background: #19c5ff; */
 }
 
@@ -27,6 +28,7 @@ a {
   position: absolute;
   left: 40px;
   top: 40px;
+  transition: all 0.3s ease;
 }
 
 #socialMenu {
@@ -34,12 +36,14 @@ a {
   left: 50%;
   top: 40px;
   transform: translateX(-50%);
+  transition: all 0.3s ease;
 }
 
 #searchMenu {
   position: absolute;
   right: 40px;
   top: 40px;
+  transition: all 0.3s ease;
 }
 
 .btn {
@@ -127,4 +131,35 @@ a {
 
 .btn-wrapper.search {
   background: transparent;
+}
+
+@media screen and (max-width: 1200px) {
+  #socialMenu {
+    position: absolute;
+    right: 40px;
+    left: auto;
+    top: 40px;
+    transform: translateX(0);
+  }
+
+  #searchMenu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #navMenu {
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    transform: translateX(-50%);
+  }
+
+  #socialMenu {
+    display: none;
+  }
+
+  #searchMenu {
+    display: none;
+  }
 }
