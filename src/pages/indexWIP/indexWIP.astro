@@ -1,4 +1,5 @@
 ---
+import "../../styles/global.css";
 import "../../styles/indexWIP.css";
 import NavMainPages from "@/components/navMainPages.astro";
 ---
@@ -8,8 +9,13 @@ import NavMainPages from "@/components/navMainPages.astro";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design Canon | Home</title>
     <script type="module" src="/scripts/navMainPages.js"></script>
+    <script type="module" src="/scripts/indexWIP.js"></script>
 </head>
 <body>
     <NavMainPages />
+    <section class="intro-text">
+        <p>Adaptive web components and animations grounded in purpose, aesthetic, and function.</p>
+    </section>
+    <section class="component-grid" id="componentGrid"></section>
 </body>
 </html>
