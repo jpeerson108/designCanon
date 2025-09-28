@@ -4,6 +4,8 @@ async function loadComponents() {
 
   const grid = document.getElementById("componentGrid")
 
+  components.sort((a, b) => new Date(b.date) - new Date(a.date))
+
   components.forEach((component) => {
     const card = document.createElement("article")
     card.classList.add("component-card")
@@ -16,7 +18,12 @@ async function loadComponents() {
         </div>
         `
 
-    if (component.new) {
+    const today = new Date()
+    const oneMonthAgo = new Date()
+    oneMonthAgo.setMonth(today.getMonth() - 1)
+
+    const componentDate = new Date(component.date)
+    if (componentDate >= oneMonthAgo) {
       const newLabel = document.createElement("a")
       newLabel.classList.add("new-label")
       newLabel.textContent = "New!"

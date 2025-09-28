@@ -4,41 +4,41 @@
         "category": "Navigation",
         "image": "/assets/thumbnails/thumbnail-2.png",
         "href": "#",
-        "new": true
+        "date": "2025-09-19"
     },
     {
         "title": "Infinite Marquee (ScrollTrigger)",
         "category": "Marquees",
         "image": "/assets/thumbnails/thumbnail-1.png",
         "href": "#",
-        "new": true
+        "date": "2025-09-14"
     },
     {
         "title": "Smooth Accordion List",
         "category": "Structure",
         "image": "/assets/thumbnails/thumbnail-3.png",
         "href": "#",
-        "new": false
+        "date": "2025-07-28"
     },
     {
         "title": "Random Boxes Page Transition",
         "category": "Page Transitions",
         "image": "/assets/thumbnails/thumbnail-4.png",
         "href": "#",
-        "new": false
+        "date": "2025-09-12"
     },
     {
         "title": "Staggered Columns Page Transition",
         "category": "Page Transitions",
         "image": "/assets/thumbnails/thumbnail-5.png",
         "href": "#",
-        "new": false
+        "date": "2025-08-28"
     },
     {
         "title": "Scroll-Based Box Section Transition",
         "category": "ScrollTrigger",
         "image": "/assets/thumbnails/thumbnail-6.png",
         "href": "#",
-        "new": false
+        "date": "2025-08-27"
     }
 ]
