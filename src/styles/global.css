@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-color: #222 transparent;
 }
 
 body {
@@ -65,4 +66,8 @@ svg {
 input,
 textarea {
   caret-color: #ec6533;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
 }

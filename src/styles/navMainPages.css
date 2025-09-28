@@ -169,7 +169,8 @@ body {
 }
 
 .btn-wrapper.search {
-  background: transparent;
+  /* background: transparent; */
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1200px) {

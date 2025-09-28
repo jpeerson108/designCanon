@@ -2,31 +2,37 @@
     {
         "title": "Expand / Collapse",
         "category": "Accordion",
-        "image": "/assets/thumbnails/thumbnail-2.png"
+        "image": "/assets/thumbnails/thumbnail-2.png",
+        "href": "#"
     },
     {
         "title": "Scroll Text Reveal with Pre-loaders",
         "category": "Text Effects",
-        "image": "/assets/thumbnails/thumbnail-1.png"
+        "image": "/assets/thumbnails/thumbnail-1.png",
+        "href": "#"
     },
     {
         "title": "Box Page Transition",
         "category": "Transition: Page",
-        "image": "/assets/thumbnails/thumbnail-3.png"
+        "image": "/assets/thumbnails/thumbnail-3.png",
+        "href": "#"
     },
     {
         "title": "Box Section Transition",
         "category": "Transition: Section",
-        "image": "/assets/thumbnails/thumbnail-4.png"
+        "image": "/assets/thumbnails/thumbnail-4.png",
+        "href": "#"
     },
     {
         "title": "Columns Page Transition",
         "category": "Transition: Page",
-        "image": "/assets/thumbnails/thumbnail-5.png"
+        "image": "/assets/thumbnails/thumbnail-5.png",
+        "href": "#"
     },
     {
         "title": "Infinite Marquee (Scroll Based)",
         "category": "ScrollTrigger",
-        "image": "/assets/thumbnails/thumbnail-6.png"
+        "image": "/assets/thumbnails/thumbnail-6.png",
+        "href": "#"
     }
 ]

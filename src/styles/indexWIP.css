@@ -1,5 +1,5 @@
 .intro-text {
-  height: 200px;
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,15 +7,23 @@
 
 .intro-text p {
   text-align: center;
-  font-size: 1.5rem;
-  width: 40vw;
-  min-width: 500px;
+  font-size: clamp(1.728rem, 1.536rem + 0.8532vw, 2.1973rem);
+  width: 50rem;
+  margin-top: -15px;
+  font-weight: 400;
+  cursor: default;
+  line-height: 1.3;
 }
 
 .component-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 1.2rem;
+  margin-bottom: 5rem;
+}
+
+.component-card {
+  margin-bottom: 10px;
 }
 
 .component-card img {
@@ -23,15 +31,26 @@
   display: block;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  border-radius: 7px;
+  border-radius: 15px;
   margin-bottom: 10px;
 }
 
-h3 {
-  margin-bottom: 4px;
+.component-data {
+  margin-left: 2px;
 }
 
-@media (max-width: 900px) {
+h3 {
+  font-size: clamp(1rem, 0.9489rem + 0.2273vw, 1.125rem);
+  margin-bottom: 7px;
+}
+
+.component-data p {
+  color: #777;
+  font-size: clamp(0.8333rem, 0.8061rem + 0.1212vw, 0.9rem);
+  cursor: default;
+}
+
+@media (max-width: 1200px) {
   .component-grid {
     grid-template-columns: repeat(2, 1fr);
   }

@@ -9,9 +9,11 @@ async function loadComponents() {
     card.classList.add("component-card")
 
     card.innerHTML = `
-        <img src="${component.image}" alt="${component.title}">
-        <h3>${component.title}</h3>
-        <p>${component.category}</p>
+        <a href="${component.href}"><img src="${component.image}" alt="${component.title}"></a>
+        <div class="component-data">
+        <a href="${component.href}"><h3>${component.title}</h3></a>
+        <p>Category: ${component.category}</p>
+        </div>
         `
 
     grid.appendChild(card)
