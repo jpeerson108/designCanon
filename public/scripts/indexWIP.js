@@ -4,8 +4,10 @@ async function loadComponents() {
 
   const grid = document.getElementById("componentGrid")
 
+  // Default sort cards by newest date
   components.sort((a, b) => new Date(b.date) - new Date(a.date))
 
+  // Dynamically create each card via JSON data
   components.forEach((component) => {
     const card = document.createElement("article")
     card.classList.add("component-card")
@@ -18,6 +20,7 @@ async function loadComponents() {
         </div>
         `
 
+    // Add "New!" label to dates within the last month
     const today = new Date()
     const oneMonthAgo = new Date()
     oneMonthAgo.setMonth(today.getMonth() - 1)
