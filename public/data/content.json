@@ -4,41 +4,41 @@
         "category": "Accordion",
         "image": "/assets/thumbnails/thumbnail-2.png",
         "href": "#",
-        "new": "1"
+        "new": true
     },
     {
         "title": "Scroll Text Reveal with Pre-loaders",
         "category": "Text Effects",
         "image": "/assets/thumbnails/thumbnail-1.png",
         "href": "#",
-        "new": "1"
+        "new": true
     },
     {
         "title": "Box Page Transition",
         "category": "Transition: Page",
         "image": "/assets/thumbnails/thumbnail-3.png",
         "href": "#",
-        "new": "0"
+        "new": false
     },
     {
         "title": "Box Section Transition",
         "category": "Transition: Section",
         "image": "/assets/thumbnails/thumbnail-4.png",
         "href": "#",
-        "new": "0"
+        "new": false
     },
     {
         "title": "Columns Page Transition",
         "category": "Transition: Page",
         "image": "/assets/thumbnails/thumbnail-5.png",
         "href": "#",
-        "new": "0"
+        "new": false
     },
     {
         "title": "Infinite Marquee (Scroll Based)",
         "category": "ScrollTrigger",
         "image": "/assets/thumbnails/thumbnail-6.png",
         "href": "#",
-        "new": "0"
+        "new": false
     }
 ]

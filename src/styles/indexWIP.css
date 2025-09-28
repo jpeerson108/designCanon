@@ -8,7 +8,7 @@
 .intro-text p {
   text-align: center;
   font-size: clamp(1.728rem, 1.536rem + 0.8532vw, 2.1973rem);
-  max-width: 46ch;
+  max-width: 35ch;
   margin-top: -22px;
   font-weight: 400;
   cursor: default;
@@ -23,6 +23,7 @@
 }
 
 .component-card {
+  position: relative;
   margin-bottom: 13px;
 }
 
@@ -31,7 +32,7 @@
   display: block;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 10px;
   margin-bottom: 15px;
 }
 
@@ -48,6 +49,22 @@ h3 {
   color: #777;
   font-size: clamp(0.8333rem, 0.8061rem + 0.1212vw, 0.9rem);
   cursor: default;
+}
+
+.new-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(17, 17, 17, 0.9);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 3px 7px 3px 8px;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 400;
+  border-radius: 4px;
+  z-index: 2;
+  cursor: pointer;
+  user-select: none;
 }
 
 @media (max-width: 1200px) {

@@ -16,6 +16,15 @@ async function loadComponents() {
         </div>
         `
 
+    if (component.new) {
+      const newLabel = document.createElement("a")
+      newLabel.classList.add("new-label")
+      newLabel.textContent = "New!"
+      newLabel.href = component.href
+
+      card.appendChild(newLabel)
+    }
+
     grid.appendChild(card)
   })
 }
