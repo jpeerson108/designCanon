@@ -1,41 +1,41 @@
 [
     {
-        "title": "Expand / Collapse",
-        "category": "Accordion",
+        "title": "Expand Menu on Hover",
+        "category": "Navigation",
         "image": "/assets/thumbnails/thumbnail-2.png",
         "href": "#",
         "new": true
     },
     {
-        "title": "Scroll Text Reveal with Pre-loaders",
-        "category": "Text Effects",
+        "title": "Infinite Marquee (ScrollTrigger)",
+        "category": "Marquees",
         "image": "/assets/thumbnails/thumbnail-1.png",
         "href": "#",
         "new": true
     },
     {
-        "title": "Box Page Transition",
-        "category": "Transition: Page",
+        "title": "Smooth Accordion List",
+        "category": "Structure",
         "image": "/assets/thumbnails/thumbnail-3.png",
         "href": "#",
         "new": false
     },
     {
-        "title": "Box Section Transition",
-        "category": "Transition: Section",
+        "title": "Random Boxes Page Transition",
+        "category": "Page Transitions",
         "image": "/assets/thumbnails/thumbnail-4.png",
         "href": "#",
         "new": false
     },
     {
-        "title": "Columns Page Transition",
-        "category": "Transition: Page",
+        "title": "Staggered Columns Page Transition",
+        "category": "Page Transitions",
         "image": "/assets/thumbnails/thumbnail-5.png",
         "href": "#",
         "new": false
     },
     {
-        "title": "Infinite Marquee (Scroll Based)",
+        "title": "Scroll-Based Box Section Transition",
         "category": "ScrollTrigger",
         "image": "/assets/thumbnails/thumbnail-6.png",
         "href": "#",
