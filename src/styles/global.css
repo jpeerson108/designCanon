@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
+:root {
+  --horizontal-page-padding: clamp(16px, 4vw, 40px);
+}
+
 *,
 *::before,
 *::after {
@@ -14,8 +18,8 @@ body {
   background: #111;
   color: #fff;
   -webkit-font-smoothing: antialiased;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: var(--horizontal-page-padding);
+  padding-right: var(--horizontal-page-padding);
   font-family: "Inter", sans-serif;
 }
 

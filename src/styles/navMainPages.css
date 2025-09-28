@@ -1,5 +1,6 @@
 :root {
   --top-margin: 30px;
+  --rounded-corners: 5px;
 }
 
 * {
@@ -15,6 +16,14 @@ a {
 
 body {
   padding-top: 64px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100vw;
 }
 
 .btn-container {
@@ -51,10 +60,19 @@ body {
   transition: all 0.3s ease;
 }
 
+#navMenu,
+#socialMenu,
+#searchMenu {
+  background: rgba(17, 17, 17, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(50px);
+  border-radius: var(--rounded-corners);
+}
+
 .btn {
   padding: 5px 6px;
   color: #fff;
-  border-radius: 5px;
+  border-radius: var(--rounded-corners);
   border: 1px solid #333;
   transition: border 0.3s ease;
 }
@@ -163,6 +181,11 @@ body {
   transition: all 0.3s ease;
 }
 
+#btn-search::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
 #btn-search:focus::placeholder {
   color: transparent;
   transition: color 0.15s ease;
@@ -188,17 +211,55 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  .btn {
+    padding: 8px;
+    color: #fff;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #333;
+    width: 100vw;
+    height: auto;
+    display: flex;
+  }
+
+  .btn:hover {
+    border: none;
+    border-bottom: 1px solid #333;
+  }
+
+  .btn-list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .btn-wrapper {
+    flex: 1;
+    justify-content: center;
+    width: 100%;
+    padding: 6px;
+  }
+
   #navMenu {
-    position: absolute;
-    left: 50%;
-    top: var(--top-margin);
-    transform: translateX(-50%);
+    left: 0;
+    top: 0;
   }
 
-  #socialMenu {
-    display: none;
+  #navMenu .btn-text-expand {
+    max-width: 100%;
+    opacity: 1;
+    margin-left: -1px;
+    padding-right: 3px;
+    overflow: visible;
   }
 
+  #navMenu,
+  #socialMenu,
+  #searchMenu {
+    border-radius: 0;
+  }
+
+  #socialMenu,
   #searchMenu {
     display: none;
   }
