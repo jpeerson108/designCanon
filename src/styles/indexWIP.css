@@ -8,7 +8,7 @@
 .intro-text p {
   text-align: center;
   font-size: clamp(1.728rem, 1.536rem + 0.8532vw, 2.1973rem);
-  max-width: 35ch;
+  max-width: 34ch;
   margin-top: -22px;
   font-weight: 400;
   cursor: default;
@@ -65,6 +65,33 @@ h3 {
   z-index: 2;
   cursor: pointer;
   user-select: none;
+}
+
+.filter-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  overflow-x: hidden;
+  padding: 0.5rem 0;
+  margin-bottom: 10px;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+}
+
+.filter-btn.active {
+  background: #555;
 }
 
 @media (max-width: 1200px) {
