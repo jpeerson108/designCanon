@@ -5,13 +5,18 @@ btnWrappers.forEach((wrapper) => {
 
   if (!btnText) return
 
+  let hideTimeout
+
   // Hover events
   wrapper.addEventListener("mouseenter", () => {
+    clearTimeout(hideTimeout)
     btnText.classList.add("btn-text-show")
   })
 
   wrapper.addEventListener("mouseleave", () => {
-    btnText.classList.remove("btn-text-show")
+    hideTimeout = setTimeout(() => {
+      btnText.classList.remove("btn-text-show")
+    }, 300)
   })
 
   // Active page detection
