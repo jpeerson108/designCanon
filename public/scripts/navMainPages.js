@@ -16,7 +16,7 @@ btnWrappers.forEach((wrapper) => {
   wrapper.addEventListener("mouseleave", () => {
     hideTimeout = setTimeout(() => {
       btnText.classList.remove("btn-text-show")
-    }, 300)
+    }, 500)
   })
 
   // Active page detection
