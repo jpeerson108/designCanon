@@ -31,6 +31,9 @@ nav {
 
 .socials-container {
   height: 100%;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
 }
 
 ul {
@@ -42,7 +45,7 @@ li {
   height: 100%;
   min-width: var(--navMain-height);
   min-height: var(--navMain-height);
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 li.menu-box {
@@ -54,12 +57,17 @@ li.social-box {
   border-left: solid 1px #333;
 }
 
-li:hover {
-  background: #333;
+li.social-box:hover {
+  background: #222;
 }
 
 .menu-box.active {
   background: #333;
+}
+
+.menu-box.hovering {
+  background: #222;
+  transition: background 0.3s ease;
 }
 
 a {
@@ -92,6 +100,10 @@ a p {
   margin-left: 5px;
 }
 
+.nav-menu-text.show .menu-box {
+  background: #333;
+}
+
 .nav-icon {
   width: 15px;
   aspect-ratio: 1 / 1;
@@ -107,4 +119,46 @@ a p {
   left: 50%;
   transform: translateX(-50%);
   cursor: default;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1200px) {
+  .nav-logo {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .socials-container {
+    opacity: 0;
+    display: none;
+  }
+
+  .nav-menu ul {
+    width: 100vw;
+  }
+
+  .nav-menu ul li {
+    flex: 1;
+    border-right: 1px solid #333;
+  }
+
+  .nav-menu li.menu-box:last-child {
+    border-right: none;
+  }
+
+  .nav-menu-text {
+    max-width: none;
+    overflow: visible;
+    opacity: 1;
+    margin-left: 5px;
+    white-space: nowrap;
+  }
+
+  .nav-menu a {
+    padding: 0;
+  }
 }

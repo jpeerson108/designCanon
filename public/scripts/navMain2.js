@@ -13,13 +13,15 @@ menuBox.forEach((box) => {
   box.addEventListener("mouseenter", () => {
     clearTimeout(hideTimeout)
     menuText.classList.add("show")
+    box.classList.add("hovering")
   })
 
   box.addEventListener("mouseleave", () => {
     if (box.classList.contains("active")) return
     hideTimeout = setTimeout(() => {
       menuText.classList.remove("show")
-    }, 500)
+      box.classList.remove("hovering")
+    }, 0)
   })
 
   // Active page detection
