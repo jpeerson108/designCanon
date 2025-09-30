@@ -3,7 +3,7 @@ async function loadComponents() {
   const response = await fetch("/data/content.json")
   const components = await response.json()
   const grid = document.getElementById("componentGrid")
-  const filterTrack = document.querySelector(".filter-track")
+  const categoriesTrack = document.querySelector(".contentGrid-categories")
   const categories = [...new Set(components.map((c) => c.category))]
   const filters = ["All", ...categories]
 
@@ -16,14 +16,14 @@ async function loadComponents() {
     filterBtn.textContent = category.toUpperCase()
     filterBtn.classList.add("filter-btn")
     if (category === "All") filterBtn.classList.add("active")
-    filterTrack.appendChild(filterBtn)
+    categoriesTrack.appendChild(filterBtn)
   })
 
   // Render component cards
   renderComponents(components, grid)
 
   // Filter grid cards on category selection
-  filterTrack.addEventListener("click", (e) => {
+  categoriesTrack.addEventListener("click", (e) => {
     if (!e.target.classList.contains("filter-btn")) return
 
     document
