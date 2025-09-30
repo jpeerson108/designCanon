@@ -30,6 +30,66 @@ nav {
   height: 100%;
 }
 
+.nav-dropdown {
+  position: absolute;
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  margin-left: -1px;
+  padding: 0;
+  pointer-events: none;
+}
+
+.nav-dropdown li {
+  display: block;
+  white-space: nowrap;
+  border: 1px solid #222;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition-property: opacity, background-color;
+  transition-duration: 0.05s, 0.3s;
+  transition-timing-function: ease, ease;
+  transition-delay: 0s, 0s;
+}
+
+.nav-dropdown li a {
+  width: 151px;
+  height: 40px;
+}
+
+.nav-dropdown > li:not(:first-child) {
+  margin-top: -1px;
+}
+
+/* Nav Dropdown Hover + Effects */
+.has-dropdown:hover .nav-dropdown {
+  visibility: visible;
+  pointer-events: all;
+}
+
+.has-dropdown:hover .nav-dropdown li {
+  opacity: 1;
+}
+.has-dropdown:hover .nav-dropdown li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.has-dropdown:hover .nav-dropdown li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.has-dropdown:hover .nav-dropdown li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.has-dropdown:hover .nav-dropdown li:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.nav-dropdown li:hover {
+  background-color: #222;
+}
+
 .socials-container {
   height: 100%;
   opacity: 1;
@@ -42,11 +102,30 @@ ul {
   height: 100%;
 }
 
+.nav-menu li {
+  transition: opacity 0.3s ease;
+}
+
+.nav-menu:hover > li:not(.has-dropdown),
+.nav-menu:hover ~ .socials-container li,
+.nav-menu:hover ~ .nav-logo {
+  opacity: 0.1;
+}
+
+.nav-menu li:hover,
+.nav-menu li:hover .nav-dropdown,
+.nav-menu li:hover .nav-dropdown li {
+  opacity: 1;
+}
+
 li {
   height: 100%;
   min-width: var(--navMain-heightDesktop);
-  min-height: var(--navMain-heightDesktop);
   transition: all 0.3s ease;
+}
+
+.menu-box {
+  position: relative;
 }
 
 li.menu-box {
