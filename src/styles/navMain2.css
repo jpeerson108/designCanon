@@ -1,5 +1,6 @@
 :root {
-  --navMain-height: 60px;
+  --navMain-heightDesktop: 60px;
+  --navMain-heightMobile: 45px;
 }
 
 * {
@@ -15,10 +16,10 @@
 nav {
   position: fixed;
   width: 100vw;
-  height: var(--navMain-height);
+  height: var(--navMain-heightDesktop);
   display: flex;
   justify-content: space-between;
-  border-bottom: solid 1px #333;
+  border-bottom: solid 1px #222;
   align-items: center;
   margin-left: calc(-1 * var(--horizontal-page-padding));
   margin-right: calc(-1 * var(--horizontal-page-padding));
@@ -43,18 +44,18 @@ ul {
 
 li {
   height: 100%;
-  min-width: var(--navMain-height);
-  min-height: var(--navMain-height);
+  min-width: var(--navMain-heightDesktop);
+  min-height: var(--navMain-heightDesktop);
   transition: all 0.3s ease;
 }
 
 li.menu-box {
-  border-right: solid 1px #333;
+  border-right: solid 1px #222;
 }
 
 li.social-box {
   aspect-ratio: 1 / 1;
-  border-left: solid 1px #333;
+  border-left: solid 1px #222;
 }
 
 li.social-box:hover {
@@ -62,7 +63,7 @@ li.social-box:hover {
 }
 
 .menu-box.active {
-  background: #333;
+  background: #222;
 }
 
 .menu-box.hovering {
@@ -78,6 +79,10 @@ a {
   align-items: center;
   justify-content: center;
   padding: 0 22px;
+}
+
+p {
+  margin-top: 1px;
 }
 
 a p {
@@ -101,7 +106,7 @@ a p {
 }
 
 .nav-menu-text.show .menu-box {
-  background: #333;
+  background: #222;
 }
 
 .nav-icon {
@@ -137,13 +142,38 @@ a p {
     display: none;
   }
 
+  nav {
+    height: var(--navMain-heightMobile);
+    font-size: 14px;
+  }
+
+  li {
+    min-width: var(--navMain-heightMobile);
+    min-height: var(--navMain-heightMobile);
+  }
+
+  .nav-icon {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .nav-menu a {
+    padding: 0;
+  }
+
   .nav-menu ul {
     width: 100vw;
+    margin-top: 0.3px;
   }
 
   .nav-menu ul li {
-    flex: 1;
-    border-right: 1px solid #333;
+    flex: 1 auto;
+    padding: 0 1rem;
+    border-right: 1px solid #222;
   }
 
   .nav-menu li.menu-box:last-child {
@@ -154,11 +184,11 @@ a p {
     max-width: none;
     overflow: visible;
     opacity: 1;
-    margin-left: 5px;
+    margin-left: 1px;
     white-space: nowrap;
   }
 
-  .nav-menu a {
-    padding: 0;
+  .nav-menu-text.show {
+    margin-left: 1px;
   }
 }
