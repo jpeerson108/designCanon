@@ -24,7 +24,6 @@
 }
 
 h3 {
-  font-size: clamp(1rem, 0.9489rem + 0.2273vw, 1.125rem);
   margin-bottom: 4px;
 }
 

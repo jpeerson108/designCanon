@@ -1,12 +1,5 @@
 :root {
   --top-margin: 30px;
-  --rounded-corners: 5px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 a {
