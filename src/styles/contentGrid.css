@@ -219,9 +219,11 @@
   transition: transform 0.3s ease;
 }
 
+/* Zoom content grid image on hover
 .content-card > a img:hover {
   transform: scale(1.03);
 }
+*/
 
 .content-data {
   margin-left: 2px;
