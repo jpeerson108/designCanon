@@ -5,7 +5,7 @@ import "@/styles/contentGrid.css";
 <body>
     <section class="filter-track">
         <div class="filter-track-left">
-            <div class="contentGrid-sort">
+            <div class="filter-track-sort-container">
                 <button class="sort-button">Sort: Newest
                     <span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 50" fill="none">
@@ -21,10 +21,10 @@ import "@/styles/contentGrid.css";
                     <li><button data-sort="category">Category</button></li>
                 </ul>
             </div>
-            <div class="contentGrid-categories"></div>
+            <div class="filter-track-categories"></div>
         </div>
         <div class="filter-track-right">
-            <form class="contentGrid-search" action="/search" method="get">
+            <form class="filter-track-search" action="/search" method="get">
             <input class="search-input" type="search" placeholder="Search" aria-label="Search">
             <button type="submit">
                 <div class="search-icon">
@@ -36,6 +36,6 @@ import "@/styles/contentGrid.css";
         </form>
         </div>
     </section>
-    <section class="component-grid" id="componentGrid"></section>
+    <section class="content-grid" id="contentGrid"></section>
 </body>
 </html>

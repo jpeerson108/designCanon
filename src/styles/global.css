@@ -9,6 +9,18 @@
   --rounded-corners-small: 5px;
   --rounded-corners-med: 10px;
   --rounded-corners-large: 15px;
+
+  /* Main Colors */
+  --color-accent: #ec6533;
+  --color-black-1: #111;
+  --color-black-2: #222;
+  --color-black-3: #333;
+  --color-black-4: #444;
+  --color-black-5: #555;
+  --color-black-6: #666;
+  --color-black-7: #777;
+  --color-black-8: #888;
+  --color-black-9: #999;
 }
 
 *,
@@ -66,12 +78,12 @@ select {
 }
 
 ::selection {
-  background: #ec6533;
+  background: var(--color-accent);
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #ec6533;
+  background: var(--color-accent);
   color: #fff;
 }
 
@@ -86,7 +98,7 @@ svg {
 
 input,
 textarea {
-  caret-color: #ec6533;
+  caret-color: var(--color-accent);
 }
 
 ::-webkit-scrollbar-thumb {
