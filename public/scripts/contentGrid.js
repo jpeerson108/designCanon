@@ -46,6 +46,10 @@ async function loadContent() {
 
 function renderContent(cards, grid) {
   grid.innerHTML = ""
+  const today = new Date()
+  const oneMonthAgo = new Date()
+  oneMonthAgo.setMonth(today.getMonth() - 1)
+
   cards.forEach((content) => {
     const card = document.createElement("article")
     card.classList.add("content-card")
@@ -59,6 +63,15 @@ function renderContent(cards, grid) {
           <p>Category: ${content.category}</p>
         </div>
         `
+
+    // Add "New!" label if <1Mo Old
+    const contentDate = new Date(content.date)
+    if (contentDate >= oneMonthAgo) {
+      const newLabel = document.createElement("a")
+      newLabel.classList.add("new-label")
+      newLabel.textContent = "New!"
+      card.appendChild(newLabel)
+    }
 
     grid.appendChild(card)
   })

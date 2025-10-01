@@ -60,7 +60,7 @@
   border-radius: var(--filter-border-radius);
   cursor: pointer;
   letter-spacing: -0.4px;
-  transition: background .3s ease;
+  transition: background 0.3s ease;
 }
 
 .categories-btn:hover {
@@ -105,7 +105,7 @@
   letter-spacing: -0.4px;
   font-weight: 400;
   cursor: pointer;
-  transition: background .3s ease;
+  transition: background 0.3s ease;
 }
 
 .sort-button:hover {
@@ -130,12 +130,12 @@
   all: unset;
   border: var(--filter-border);
   border-radius: var(--filter-border-radius);
-  padding: var(--buttonPadding-vertical) var(--buttonPadding-horizontal);
+  padding: 6px var(--buttonPadding-horizontal);
   display: flex;
   justify-content: space-between;
   align-items: center;
   caret-color: var(--color-accent);
-  transition: border .3s ease;
+  transition: border 0.3s ease;
 }
 
 .filter-track-search:hover {
@@ -149,8 +149,8 @@
 .search-input::-webkit-search-cancel-button {
   -webkit-appearance: none;
   appearance: none;
-  height: 18px;
-  width: 18px;
+  height: 20px;
+  width: 20px;
   background: url("/public/assets/svg/close-outline.svg") no-repeat center
     center;
   background-size: contain;
@@ -168,7 +168,8 @@
 
 .search-input {
   all: unset;
-  width: 250px;
+  width: 230px;
+  max-height: 14px;
 }
 
 .search-input::placeholder {
@@ -239,7 +240,7 @@ h3 {
   cursor: default;
 }
 
-.new-label {
+article .new-label {
   position: absolute;
   top: 10px;
   left: 10px;
