@@ -153,7 +153,7 @@ li.menu-box {
   font-size: 0.8rem;
   opacity: 0;
   transition-property: opacity, background-color;
-  transition-duration: 0.3s, 0.5s;
+  transition-duration: 0.3s, 0.3s;
   transition-timing-function: ease, ease;
   transition-delay: 0s, 0s;
   background-color: rgba(17, 17, 17, 0.9);
