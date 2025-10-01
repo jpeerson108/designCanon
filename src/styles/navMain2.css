@@ -10,7 +10,7 @@ body {
 nav {
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
   height: var(--navMain-heightDesktop);
   margin-left: calc(-1 * var(--horizontal-page-padding));
   margin-right: calc(-1 * var(--horizontal-page-padding));
