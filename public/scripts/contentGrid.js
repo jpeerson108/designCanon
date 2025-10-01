@@ -1,9 +1,10 @@
 // Fetch JSON data
+const categoriesTrack = document.querySelector(".filter-track-categories-inner")
+
 async function loadContent() {
   const response = await fetch("/data/content.json")
   const content = await response.json()
   const grid = document.getElementById("contentGrid")
-  const categoriesTrack = document.querySelector(".filter-track-categories")
   const categoriesList = [...new Set(content.map((c) => c.category))]
   const categories = ["All", ...categoriesList]
 
@@ -78,3 +79,15 @@ function renderContent(cards, grid) {
 }
 
 loadContent()
+
+// Categories: Scroll right on arrow click
+const arrow = document.querySelector(".filter-track-categories-arrow-right")
+
+const scrollAmount = 275
+
+arrow.addEventListener("click", () => {
+  categoriesTrack.scrollBy({
+    left: scrollAmount,
+    behavior: "smooth",
+  })
+})
