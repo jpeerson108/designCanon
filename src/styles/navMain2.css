@@ -21,7 +21,7 @@ nav {
   font-family: "JetBrains Mono", monospace;
   text-transform: uppercase;
   letter-spacing: -0.5px;
-  background-color: rgba(17, 17, 17, 0);
+  background-color: rgba(17, 17, 17, 1);
   backdrop-filter: blur(40px);
   z-index: 1000;
   transition: top 0.5s cubic-bezier(0.57, -0.16, 0.46, 1);
