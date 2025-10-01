@@ -202,15 +202,25 @@
 .content-card {
   position: relative;
   margin-bottom: 13px;
+  overflow: hidden;
 }
 
-.content-card img {
-  width: 100%;
+.content-card > a {
   display: block;
+  margin-bottom: 15px;
+  overflow: hidden;
+  border-radius: var(--contentImg-border-radius);
+}
+
+.content-card > a img {
+  width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  border-radius: var(--contentImg-border-radius);
-  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.content-card > a img:hover {
+  transform: scale(1.03);
 }
 
 .content-data {
