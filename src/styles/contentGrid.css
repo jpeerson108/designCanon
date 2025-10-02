@@ -378,15 +378,26 @@ article .new-label {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .content-grid {
     grid-template-columns: 1fr;
+  }
+
+  .container .content-grid {
     margin-left: calc(-1 * var(--horizontal-page-padding));
     margin-right: calc(-1 * var(--horizontal-page-padding));
   }
 
   .content-card > a {
     border-radius: 0;
+  }
+
+  article .new-label {
+    position: absolute;
+    top: 10px;
+    margin-left: 10px;
+    padding: 3px 7px 3px 8px;
+    border-radius: var(--filter-border-radius);
   }
 
   .content-data {

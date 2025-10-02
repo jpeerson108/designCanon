@@ -13,8 +13,6 @@ nav {
   top: 0;
   width: 100%;
   height: var(--navMain-heightDesktop);
-  margin-left: calc(-1 * var(--horizontal-page-padding));
-  margin-right: calc(-1 * var(--horizontal-page-padding));
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,9 +25,11 @@ nav {
   transition: top 0.5s cubic-bezier(0.57, -0.16, 0.46, 1);
 }
 
+/* Add back if you use JS nav scroll hide/show
 nav.hidden {
   top: -100%;
 }
+*/
 
 /* Globals */
 nav a {

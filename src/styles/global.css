@@ -24,6 +24,10 @@
   --color-black-7: #777;
   --color-black-8: #888;
   --color-black-9: #999;
+
+  /* Breakpoints */
+  --breakpoint-tablet: 1200px;
+  --breakpoint-mobile: 650px;
 }
 
 *,
@@ -55,8 +59,13 @@ body {
   background: #111;
   color: #fff;
   -webkit-font-smoothing: antialiased;
-  padding: 0 var(--horizontal-page-padding);
   font-family: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 2500px;
+  padding-left: var(--horizontal-page-padding);
+  padding-right: var(--horizontal-page-padding);
 }
 
 a {
@@ -107,8 +116,9 @@ textarea {
   background: #222;
 }
 
-@media (max-width: 600px) {
-  body {
-    padding: 0 10px;
+@media screen and (max-width: 650px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
