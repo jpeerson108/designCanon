@@ -1,6 +1,7 @@
 :root {
   --navMain-heightDesktop: 60px;
   --navMain-heightMobile: 45px;
+  --navMain-border: solid 1px #222;
 }
 
 body {
@@ -17,7 +18,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: solid 1px #222;
+  border-bottom: var(--navMain-border);
   font-family: "JetBrains Mono", monospace;
   text-transform: uppercase;
   letter-spacing: -0.5px;
@@ -86,7 +87,7 @@ nav li {
 }
 
 li.menu-box {
-  border-right: solid 1px #222;
+  border-right: var(--navMain-border);
 }
 
 /* Menu Items - Interactivity */
@@ -148,7 +149,10 @@ li.menu-box {
 .nav-dropdown li {
   display: block;
   white-space: nowrap;
-  border: 1px solid #222;
+  border-top: var(--navMain-border);
+  border-bottom: var(--navMain-border);
+  border-left: var(--navMain-border);
+  border-right: var(--navMain-border);
   font-size: 0.8rem;
   opacity: 0;
   transition-property: opacity, background-color;
@@ -202,7 +206,7 @@ li.menu-box {
 
 li.social-box {
   aspect-ratio: 1 / 1;
-  border-left: solid 1px #222;
+  border-left: var(--navMain-border);
 }
 
 li.social-box:hover {
@@ -266,7 +270,7 @@ li.social-box:hover {
   .nav-menu ul li {
     flex: 1 auto;
     padding: 0 1rem;
-    border-right: 1px solid #222;
+    border-right: var(--navMain-border);
   }
 
   .nav-menu li.menu-box:last-child {
@@ -283,5 +287,27 @@ li.social-box:hover {
 
   .nav-menu-text.show {
     margin-left: 1px;
+  }
+
+  .nav-dropdown {
+    display: block;
+    position: fixed;
+    top: var(--navMain-heightMobile);
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .nav-menu ul.nav-dropdown li {
+    height: 40px;
+    margin-top: -2px;
+    border-left: none;
+    border-right: none;
+    padding: 0;
+  }
+
+  .nav-dropdown li a {
+    width: 100%;
+    line-height: 40px;
   }
 }

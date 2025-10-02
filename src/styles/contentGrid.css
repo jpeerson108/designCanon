@@ -363,6 +363,10 @@ article .new-label {
   .content-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .filter-track-right {
+    display: none;
+  }
 }
 
 @media (max-width: 600px) {
@@ -372,7 +376,7 @@ article .new-label {
     margin-right: calc(-1 * var(--horizontal-page-padding));
   }
 
-  .content-card img {
+  .content-card > a {
     border-radius: 0;
   }
 
