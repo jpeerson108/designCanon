@@ -61,8 +61,20 @@
   overflow-x: auto;
   scrollbar-width: none;
 }
+
 .filter-track-categories-inner::-webkit-scrollbar {
   display: none;
+}
+
+.filter-track-categories-inner.dragging {
+  cursor: grabbing !important;
+  user-select: none;
+}
+
+body.dragging-global,
+body.dragging-global * {
+  cursor: grabbing !important;
+  user-select: none !important;
 }
 
 /* Category Buttons */

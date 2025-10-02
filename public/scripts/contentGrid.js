@@ -1,10 +1,10 @@
-// Fetch JSON data
 const categoriesTrack = document.querySelector(".filter-track-categories-inner")
+const grid = document.getElementById("contentGrid")
 
+// Fetch JSON data
 async function loadContent() {
   const response = await fetch("/data/content.json")
   const content = await response.json()
-  const grid = document.getElementById("contentGrid")
   const categoriesList = [...new Set(content.map((c) => c.category))]
   const categories = ["All", ...categoriesList]
 
@@ -147,3 +147,45 @@ setTimeout(() => {
   arrowRight.style.transition = ""
   fadeRight.style.transition = ""
 }, 50)
+
+// Categories: Dragging functionality
+let isDown = false
+let startX
+let scrollLeft
+let hasDragged = false
+const dragThreshold = 5
+
+categoriesTrack.addEventListener("mousedown", (e) => {
+  isDown = true
+  hasDragged = false
+  categoriesTrack.classList.add("dragging")
+  startX = e.pageX - categoriesTrack.offsetLeft
+  scrollLeft = categoriesTrack.scrollLeft
+})
+
+document.addEventListener("mousemove", (e) => {
+  if (!isDown || !categoriesTrack) return
+  e.preventDefault()
+
+  const xAmount = e.pageX - categoriesTrack.offsetLeft
+  const walk = (xAmount - startX) * 1.5
+  if (Math.abs(xAmount - startX) > dragThreshold) {
+    hasDragged = true
+  }
+
+  categoriesTrack.scrollLeft = scrollLeft - walk
+  document.body.classList.add("dragging-global")
+})
+
+document.addEventListener("mouseup", () => {
+  isDown = false
+  categoriesTrack.classList.remove("dragging")
+  document.body.classList.remove("dragging-global")
+})
+
+categoriesTrack.addEventListener("click", (e) => {
+  if (hasDragged) {
+    e.preventDefault()
+    e.stopImmediatePropagation()
+  }
+})
