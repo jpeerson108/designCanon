@@ -21,8 +21,7 @@ nav {
   font-family: "JetBrains Mono", monospace;
   text-transform: uppercase;
   letter-spacing: -0.5px;
-  background-color: rgba(17, 17, 17, 0.8);
-  backdrop-filter: blur(40px);
+  background-color: var(--color-black-1);
   z-index: 1000;
   transition: top 0.5s cubic-bezier(0.57, -0.16, 0.46, 1);
 }
@@ -156,7 +155,7 @@ li.menu-box {
   transition-duration: 0.3s, 0.3s;
   transition-timing-function: ease, ease;
   transition-delay: 0s, 0s;
-  background-color: rgba(17, 17, 17, 0.9);
+  background-color: var(--color-black-1);
 }
 
 .nav-dropdown li a {
