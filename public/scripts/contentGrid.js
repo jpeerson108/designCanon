@@ -46,25 +46,91 @@ async function loadContent() {
 }
 
 // Render cards function
+// function renderContent(cards, grid) {
+//   grid.innerHTML = ""
+//   const today = new Date()
+//   const oneMonthAgo = new Date()
+//   oneMonthAgo.setMonth(today.getMonth() - 1)
+
+//   cards.forEach((content) => {
+//     const card = document.createElement("article")
+//     card.classList.add("content-card")
+
+//     card.innerHTML = `
+//         <a href="${content.href}">
+//           <img src="${content.image}" alt="${content.title}">
+//         </a>
+//         <div class="content-data">
+//           <a href="${content.href}"><h3>${content.title}</h3></a>
+//           <p>Category: ${content.category}</p>
+//         </div>
+//         `
+
+//     // Add "New!" label if <1Mo Old
+//     const contentDate = new Date(content.date)
+//     if (contentDate >= oneMonthAgo) {
+//       const newLabel = document.createElement("a")
+//       newLabel.classList.add("new-label")
+//       newLabel.textContent = "New!"
+//       card.appendChild(newLabel)
+//     }
+
+//     grid.appendChild(card)
+//   })
+// }
+
+// Render cards function
+let firstRender = true
+
 function renderContent(cards, grid) {
-  grid.innerHTML = ""
   const today = new Date()
   const oneMonthAgo = new Date()
   oneMonthAgo.setMonth(today.getMonth() - 1)
 
-  cards.forEach((content) => {
+  const allCards = Array.from(grid.querySelectorAll(".content-card"))
+
+  if (allCards.length > 0) {
+    allCards.forEach((card) => card.classList.add("hidden"))
+
+    let finished = 0
+    allCards.forEach((card) => {
+      card.addEventListener(
+        "transitionend",
+        () => {
+          card.remove()
+          finished++
+          if (finished === allCards.length) {
+            addNewCards(cards, grid, oneMonthAgo)
+          }
+        },
+        { once: true }
+      )
+    })
+  } else {
+    addNewCards(cards, grid, oneMonthAgo, true)
+    firstRender = false
+  }
+}
+
+// Add cards and fade-in
+function addNewCards(cards, grid, oneMonthAgo, instant = false) {
+  cards.forEach((content, index) => {
     const card = document.createElement("article")
     card.classList.add("content-card")
 
+    if (!instant) {
+      card.classList.add("hidden")
+    }
+
     card.innerHTML = `
-        <a href="${content.href}">
-          <img src="${content.image}" alt="${content.title}">
-        </a>
-        <div class="content-data">
-          <a href="${content.href}"><h3>${content.title}</h3></a>
-          <p>Category: ${content.category}</p>
-        </div>
-        `
+      <a href="${content.href}">
+        <img src="${content.image}" alt="${content.title}">
+      </a>
+      <div class="content-data">
+        <a href="${content.href}"><h3>${content.title}</h3></a>
+        <p>Category: ${content.category}</p>
+      </div>
+    `
 
     // Add "New!" label if <1Mo Old
     const contentDate = new Date(content.date)
@@ -76,6 +142,24 @@ function renderContent(cards, grid) {
     }
 
     grid.appendChild(card)
+
+    // Staggered fade-in
+
+    if (!instant) {
+      const delay = index * 100
+      card.style.transitionDelay = `${delay}ms`
+
+      void card.offsetWidth
+      card.classList.remove("hidden")
+
+      card.addEventListener(
+        "transitionend",
+        () => {
+          card.style.transitionDelay = ""
+        },
+        { once: true }
+      )
+    }
   })
 }
 

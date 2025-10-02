@@ -6,7 +6,7 @@
 
 :root {
   /* L/R Padding */
-  --horizontal-page-padding: clamp(16px, 4vw, 40px);
+  --horizontal-page-padding: clamp(10px, 1rem + 1vw, 40px);
 
   /* Rounded Corners */
   --rounded-corners-small: 5px;
@@ -55,8 +55,7 @@ body {
   background: #111;
   color: #fff;
   -webkit-font-smoothing: antialiased;
-  padding-left: var(--horizontal-page-padding);
-  padding-right: var(--horizontal-page-padding);
+  padding: 0 var(--horizontal-page-padding);
   font-family: "Inter", sans-serif;
 }
 
@@ -106,4 +105,10 @@ textarea {
 
 ::-webkit-scrollbar-thumb {
   background: #222;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0 10px;
+  }
 }

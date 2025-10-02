@@ -124,11 +124,13 @@ body.dragging-global * {
 .filter-track-categories-arrow-right {
   right: 5px;
   transform: translateY(-50%);
+  margin-top: 1px;
 }
 
 .filter-track-categories-arrow-left {
   left: 5px;
   transform: translateY(-50%) rotate(180deg);
+  margin-top: -1px;
 }
 
 .filter-track-categories-arrow svg {
@@ -308,6 +310,12 @@ body.dragging-global * {
   position: relative;
   margin-bottom: 13px;
   overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.content-card.hidden {
+  opacity: 0;
 }
 
 .content-card > a {
