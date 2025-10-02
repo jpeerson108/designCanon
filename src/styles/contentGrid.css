@@ -52,6 +52,7 @@
   flex: 1;
   min-width: 0;
   overflow: hidden;
+  cursor: grab;
 }
 
 .filter-track-categories-inner {
@@ -84,7 +85,7 @@ body.dragging-global * {
   color: #fff;
   padding: var(--buttonPadding-vertical) var(--buttonPadding-horizontal);
   border-radius: var(--filter-border-radius);
-  cursor: pointer;
+  cursor: grab;
   letter-spacing: -0.4px;
   transition: background 0.3s ease;
 }
