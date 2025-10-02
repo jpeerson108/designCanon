@@ -80,14 +80,70 @@ function renderContent(cards, grid) {
 
 loadContent()
 
-// Categories: Scroll right on arrow click
-const arrow = document.querySelector(".filter-track-categories-arrow-right")
+// Categories: Scroll on arrow click
+const arrowRight = document.querySelector(
+  ".filter-track-categories-arrow-right"
+)
+const arrowLeft = document.querySelector(".filter-track-categories-arrow-left")
+const fadeRight = document.querySelector(".filter-track-categories-fade-right")
+const fadeLeft = document.querySelector(".filter-track-categories-fade-left")
 
 const scrollAmount = 275
 
-arrow.addEventListener("click", () => {
+arrowRight.addEventListener("click", () => {
   categoriesTrack.scrollBy({
     left: scrollAmount,
     behavior: "smooth",
   })
 })
+
+arrowLeft.addEventListener("click", () => {
+  categoriesTrack.scrollBy({
+    left: -scrollAmount,
+    behavior: "smooth",
+  })
+})
+
+// Categories: Show/hide arrows appropriately
+function showHideArrows() {
+  const maxScrollLeft =
+    categoriesTrack.scrollWidth - categoriesTrack.clientWidth
+
+  if (maxScrollLeft <= 0) {
+    arrowLeft.classList.remove("visible")
+    fadeLeft.classList.remove("visible")
+    arrowRight.classList.remove("visible")
+    fadeRight.classList.remove("visible")
+    return
+  }
+
+  if (categoriesTrack.scrollLeft > 0) {
+    arrowLeft.classList.add("visible")
+    fadeLeft.classList.add("visible")
+  } else {
+    arrowLeft.classList.remove("visible")
+    fadeLeft.classList.remove("visible")
+  }
+
+  if (categoriesTrack.scrollLeft >= maxScrollLeft - 1) {
+    arrowRight.classList.remove("visible")
+    fadeRight.classList.remove("visible")
+  } else {
+    arrowRight.classList.add("visible")
+    fadeRight.classList.add("visible")
+  }
+}
+
+arrowRight.style.transition = "none"
+fadeRight.style.transition = "none"
+
+window.addEventListener("load", showHideArrows)
+categoriesTrack.addEventListener("scroll", showHideArrows)
+window.addEventListener("resize", showHideArrows)
+showHideArrows()
+
+// Small fix so right arrow doesn't ease in on page load
+setTimeout(() => {
+  arrowRight.style.transition = ""
+  fadeRight.style.transition = ""
+}, 50)
