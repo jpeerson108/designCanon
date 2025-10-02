@@ -20,10 +20,10 @@ async function loadContent() {
     categoriesTrack.appendChild(filterBtn)
   })
 
-  // Render component cards
+  // Render cards
   renderContent(content, grid)
 
-  // Filter grid cards on category selection
+  // Filter grid cards on category track selection
   categoriesTrack.addEventListener("click", (e) => {
     if (!e.target.classList.contains("categories-btn")) return
 
@@ -32,19 +32,20 @@ async function loadContent() {
       .forEach((btn) => btn.classList.remove("active"))
     e.target.classList.add("active")
 
-    // Filter cards
+    // Filter cards in grid
     const category = e.target.textContent
     if (category === "ALL") {
       renderContent(content, grid)
     } else {
       const filtered = content.filter(
-        (c) => c.category.toUpperCase() === category
+        (e) => e.category.toUpperCase() === category
       )
       renderContent(filtered, grid)
     }
   })
 }
 
+// Render cards function
 function renderContent(cards, grid) {
   grid.innerHTML = ""
   const today = new Date()
@@ -80,7 +81,7 @@ function renderContent(cards, grid) {
 
 loadContent()
 
-// Categories: Scroll on arrow click
+// Categories Track: Scroll pre-defined distance on arrow click
 const arrowRight = document.querySelector(
   ".filter-track-categories-arrow-right"
 )
@@ -104,7 +105,7 @@ arrowLeft.addEventListener("click", () => {
   })
 })
 
-// Categories: Show/hide arrows appropriately
+// Categories Track: Show/hide arrows appropriately
 function showHideArrows() {
   const maxScrollLeft =
     categoriesTrack.scrollWidth - categoriesTrack.clientWidth
@@ -148,7 +149,7 @@ setTimeout(() => {
   fadeRight.style.transition = ""
 }, 50)
 
-// Categories: Dragging functionality
+// Categories Track: Dragging functionality
 let isDown = false
 let startX
 let scrollLeft
