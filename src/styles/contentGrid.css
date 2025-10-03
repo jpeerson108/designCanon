@@ -356,6 +356,11 @@ body.dragging-global * {
   transition: opacity 0.3s ease;
 }
 
+.sort-expanded-menu li button.active {
+  background-color: #333;
+  color: #fff;
+}
+
 .sort-expanded-menu.show li button {
   opacity: 1;
   transition-delay: calc(var(--i) * 0.1s);

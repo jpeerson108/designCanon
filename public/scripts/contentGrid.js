@@ -1,10 +1,11 @@
 const categoriesTrack = document.querySelector(".filter-track-categories-inner")
 const grid = document.getElementById("contentGrid")
+let content = []
 
 // Fetch JSON data
 async function loadContent() {
   const response = await fetch("/data/content.json")
-  const content = await response.json()
+  content = await response.json()
   const categoriesList = [...new Set(content.map((c) => c.category))]
   const categories = ["All", ...categoriesList]
 
@@ -241,7 +242,7 @@ categoriesTrack.addEventListener("click", (e) => {
   }
 })
 
-// Sort Button: Expand options and stagger on "Sort" button click
+// Sort Button: Expand stagger function
 const sortButton = document.querySelector(".sort-button")
 const sortExpandedMenu = document.querySelector(".sort-expanded-menu")
 const sortButtons = Array.from(sortExpandedMenu.querySelectorAll("li button"))
@@ -269,6 +270,7 @@ function sortExpandStagger() {
   })
 }
 
+// Sort Button: Add active class & call expand function
 sortButton.addEventListener("click", () => {
   const isShowing = sortExpandedMenu.classList.contains("show")
 
@@ -280,4 +282,51 @@ sortButton.addEventListener("click", () => {
     sortButton.classList.add("active")
     sortExpandedMenu.classList.add("show")
   }
+})
+
+// Sort Content Function
+function sortContent(cards, type) {
+  const sorted = [...cards]
+
+  switch (type) {
+    case "newest":
+      sorted.sort((a, b) => new Date(b.date) - new Date(a.date))
+      break
+    case "oldest":
+      sorted.sort((a, b) => new Date(a.date) - new Date(b.date))
+      break
+    case "az":
+      sorted.sort((a, b) => a.title.localeCompare(b.title))
+      break
+    case "za":
+      sorted.sort((a, b) => b.title.localeCompare(a.title))
+      break
+  }
+
+  return sorted
+}
+
+sortButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const sortSelection = btn.dataset.sort
+
+    sortButtons.forEach((b) => b.classList.remove("active"))
+    btn.classList.add("active")
+
+    const activeCategory = document.querySelector(
+      ".categories-btn.active"
+    ).textContent
+    let filtered
+
+    if (activeCategory === "ALL") {
+      filtered = content
+    } else {
+      filtered = content.filter(
+        (e) => e.category.toUpperCase() === activeCategory
+      )
+    }
+
+    const sorted = sortContent(filtered, sortSelection)
+    renderContent(sorted, grid)
+  })
 })
