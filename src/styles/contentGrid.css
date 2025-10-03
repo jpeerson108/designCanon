@@ -177,28 +177,21 @@ body.dragging-global * {
   pointer-events: none;
 }
 
-/* Sort Button + Dropdown */
-.sort-dropdownMenu {
-  display: none;
-  flex-direction: column;
-}
-
-.sort-dropdownMenu li button {
-  background: transparent;
-  border: var(--filter-border);
-  padding: var(--buttonPadding-vertical) var(--buttonPadding-horizontal);
-  border-radius: var(--filter-border-radius);
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: -0.4px;
-  font-weight: 400;
-}
-
+/* Sort Containers */
 .filter-track-sort-container {
   display: flex;
+  gap: var(--filterFlexGap);
   align-items: center;
 }
 
+.filter-track-sort-container ul {
+  display: flex;
+  flex-direction: row;
+  gap: var(--filterFlexGap);
+  align-items: center;
+}
+
+/* Sort Button */
 .sort-button {
   display: flex;
   align-items: center;
@@ -214,21 +207,167 @@ body.dragging-global * {
   transition: background 0.3s ease;
 }
 
-.sort-button:hover {
-  background: #222;
-}
-
 .sort-button span {
   display: flex;
   align-items: center;
   color: #777;
   margin-left: 8px;
+  transition: all 0.3s ease;
 }
 
 .sort-button svg {
   width: 10px;
   height: 10px;
   display: block;
+}
+
+.sort-button:hover {
+  background: #222;
+}
+
+.sort-button.active {
+  background: #222;
+}
+
+.sort-button.active span {
+  transform: rotate(45deg) scale(1.2);
+}
+
+/* Sort Dropdown */
+
+/*
+.sort-expanded-menu {
+  visibility: hidden;
+  opacity: 0;
+  max-width: 0;
+  transform-origin: left;
+  margin-left: -5px;
+  transition:
+    opacity 0.3s ease,
+    margin-left 0.3s ease,
+    max-width 0.3s ease,
+    visibility 0.3s linear;
+}
+
+.sort-expanded-menu.show {
+  visibility: visible;
+  opacity: 1;
+  max-width: 300px;
+  margin-left: 0;
+  transition-delay: 0s, 0s, 0s, 0s;
+}
+
+.sort-expanded-menu li button {
+  opacity: 0;
+  background: transparent;
+  border: var(--filter-border);
+  padding: var(--buttonPadding-vertical) var(--buttonPadding-horizontal);
+  border-radius: var(--filter-border-radius);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: -0.4px;
+  font-weight: 400;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.sort-expanded-menu.show li button {
+  opacity: 1;
+}
+
+.sort-expanded-menu li button:hover {
+  background-color: var(--color-black-3);
+}
+
+.sort-expanded-menu.show li:nth-child(1) button {
+  transition-delay: 0.1s;
+}
+.sort-expanded-menu.show li:nth-child(2) button {
+  transition-delay: 0.2s;
+}
+.sort-expanded-menu.show li:nth-child(3) button {
+  transition-delay: 0.3s;
+}
+.sort-expanded-menu.show li:nth-child(4) button {
+  transition-delay: 0.4s;
+}
+
+
+.sort-expanded-menu li:nth-child(1) button {
+  transition-delay: 0.4s;
+}
+.sort-expanded-menu li:nth-child(2) button {
+  transition-delay: 0.3s;
+}
+.sort-expanded-menu li:nth-child(3) button {
+  transition-delay: 0.2s;
+}
+.sort-expanded-menu li:nth-child(4) button {
+  transition-delay: 0.1s;
+} */
+
+.sort-expanded-menu {
+  visibility: hidden;
+  opacity: 0;
+  max-width: 0;
+  margin-left: -5px;
+  transition:
+    opacity 0.3s ease,
+    margin-left 0.3s ease,
+    max-width 0.3s ease,
+    visibility 0.3s linear;
+}
+
+.sort-expanded-menu.show {
+  visibility: visible;
+  opacity: 1;
+  max-width: 300px;
+  margin-left: 0;
+}
+
+.sort-expanded-menu li {
+  --i: 0;
+}
+.sort-expanded-menu li:nth-child(1) {
+  --i: 1;
+}
+.sort-expanded-menu li:nth-child(2) {
+  --i: 2;
+}
+.sort-expanded-menu li:nth-child(3) {
+  --i: 3;
+}
+.sort-expanded-menu li:nth-child(4) {
+  --i: 4;
+}
+
+.sort-expanded-menu li button {
+  opacity: 0;
+  background: transparent;
+  border: var(--filter-border);
+  border-radius: var(--filter-border-radius);
+  padding: var(--buttonPadding-vertical) var(--buttonPadding-horizontal);
+  text-transform: uppercase;
+  letter-spacing: -0.4px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.sort-expanded-menu.show li button {
+  opacity: 1;
+  transition-delay: calc(var(--i) * 0.1s);
+}
+
+.sort-expanded-menu.hide li button {
+  opacity: 0;
+  transition-delay: calc((5 - var(--i)) * 0.1s);
+}
+
+.sort-expanded-menu li button:hover {
+  background-color: var(--color-black-3);
 }
 
 /* Search Field */

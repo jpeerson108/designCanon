@@ -46,40 +46,6 @@ async function loadContent() {
 }
 
 // Render cards function
-// function renderContent(cards, grid) {
-//   grid.innerHTML = ""
-//   const today = new Date()
-//   const oneMonthAgo = new Date()
-//   oneMonthAgo.setMonth(today.getMonth() - 1)
-
-//   cards.forEach((content) => {
-//     const card = document.createElement("article")
-//     card.classList.add("content-card")
-
-//     card.innerHTML = `
-//         <a href="${content.href}">
-//           <img src="${content.image}" alt="${content.title}">
-//         </a>
-//         <div class="content-data">
-//           <a href="${content.href}"><h3>${content.title}</h3></a>
-//           <p>Category: ${content.category}</p>
-//         </div>
-//         `
-
-//     // Add "New!" label if <1Mo Old
-//     const contentDate = new Date(content.date)
-//     if (contentDate >= oneMonthAgo) {
-//       const newLabel = document.createElement("a")
-//       newLabel.classList.add("new-label")
-//       newLabel.textContent = "New!"
-//       card.appendChild(newLabel)
-//     }
-
-//     grid.appendChild(card)
-//   })
-// }
-
-// Render cards function
 let firstRender = true
 
 function renderContent(cards, grid) {
@@ -272,5 +238,46 @@ categoriesTrack.addEventListener("click", (e) => {
   if (hasDragged) {
     e.preventDefault()
     e.stopImmediatePropagation()
+  }
+})
+
+// Sort Button: Expand options and stagger on "Sort" button click
+const sortButton = document.querySelector(".sort-button")
+const sortExpandedMenu = document.querySelector(".sort-expanded-menu")
+const sortButtons = Array.from(sortExpandedMenu.querySelectorAll("li button"))
+
+function sortExpandStagger() {
+  sortExpandedMenu.classList.add("hide")
+
+  requestAnimationFrame(() => {
+    let finished = 0
+
+    const onEnd = (e) => {
+      if (e.propertyName !== "opacity") return
+      finished += 1
+      if (finished === sortButtons.length) {
+        sortExpandedMenu.classList.remove("hide", "show")
+        sortButtons.forEach((btn) =>
+          btn.removeEventListener("transitionend", onEnd)
+        )
+      }
+    }
+
+    sortButtons.forEach((btn) =>
+      btn.addEventListener("transitionend", onEnd, { once: false })
+    )
+  })
+}
+
+sortButton.addEventListener("click", () => {
+  const isShowing = sortExpandedMenu.classList.contains("show")
+
+  if (isShowing) {
+    sortButton.classList.remove("active")
+    sortExpandStagger()
+  } else {
+    sortExpandedMenu.classList.remove("hide")
+    sortButton.classList.add("active")
+    sortExpandedMenu.classList.add("show")
   }
 })

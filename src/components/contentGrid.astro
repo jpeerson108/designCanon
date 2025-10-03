@@ -7,20 +7,21 @@ import "@/styles/contentGrid.css";
         <section class="filter-track">
             <div class="filter-track-left">
                 <div class="filter-track-sort-container">
-                    <button class="sort-button">Sort: Newest
+                    <button class="sort-button">Sort
                         <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 50" fill="none">
-                        <path d="M69.1659 2.41588C72.3877 -0.805945 77.612 -0.805945 80.8338 2.41588C84.0557 5.63771 84.0557 10.862 80.8338 14.0838L47.8339 47.0839C44.612 50.3057 39.3877 50.3057 36.1659 47.0839L3.16588 14.0838C-0.0559447 10.862 -0.0559447 5.63771 3.16588 2.41588C6.38771 -0.805945 11.612 -0.805945 14.8338 2.41588L41.9999 29.5819L69.1659 2.41588Z" fill="currentColor"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 145 145" fill="none">
+                        <path d="M72.5 0C80.2776 5.82583e-05 86.583 6.30536 86.583 14.083V59.46H130.917C138.695 59.46 145 65.7653 145 73.543C145 81.3206 138.695 87.626 130.917 87.626H86.583V130.917C86.583 138.695 80.2776 145 72.5 145C64.7223 145 58.417 138.695 58.417 130.917V87.626H14.083C6.30534 87.626 2.45477e-05 81.3206 0 73.543C0 65.7653 6.30533 59.46 14.083 59.46H58.417V14.083C58.417 6.30533 64.7223 -3.39973e-07 72.5 0Z" fill="currentColor"/>
                         </svg>
                     </span>
                     </button>
-                    <ul class="sort-dropdownMenu">
-                        <li><button data-sort="newest">Newest</button></li>
-                        <li><button data-sort="oldest">Oldest</button></li>
-                        <li><button data-sort="az">A → Z</button></li>
-                        <li><button data-sort="za">Z → A</button></li>
-                        <li><button data-sort="category">Category</button></li>
-                    </ul>
+                    <div class="sort-expanded-menu">
+                        <ul>
+                            <li><button data-sort="newest">New</button></li>
+                            <li><button data-sort="oldest">Old</button></li>
+                            <li><button data-sort="az">A → Z</button></li>
+                            <li><button data-sort="za">Z → A</button></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="filter-track-categories">
                     <div class="filter-track-categories-inner"></div>
