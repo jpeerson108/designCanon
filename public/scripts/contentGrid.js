@@ -284,7 +284,7 @@ sortButton.addEventListener("click", () => {
   }
 })
 
-// Sort Content Function
+// Sort Content Helper Function
 function sortContent(cards, type) {
   const sorted = [...cards]
 
@@ -306,6 +306,7 @@ function sortContent(cards, type) {
   return sorted
 }
 
+// Event listener on sort buttons
 sortButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     const sortSelection = btn.dataset.sort
