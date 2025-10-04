@@ -435,6 +435,7 @@ body.dragging-global * {
   height: 11px;
   aspect-ratio: 1 / 1;
   color: #fff;
+  cursor: default;
 }
 
 .search-svg {

@@ -74,6 +74,7 @@ function renderContent(cards, grid) {
       )
     })
   } else {
+    grid.innerHTML = ""
     addNewCards(cards, grid, oneMonthAgo, true)
     firstRender = false
   }
@@ -278,25 +279,28 @@ sortButton.addEventListener("click", () => {
     sortButton.classList.remove("active")
     sortExpandStagger()
 
-    // Reset sort on sort button close
-    sortButtons.forEach((b) => b.classList.remove("active"))
+    if (activeSort) {
+      activeSort = null
+      // Reset sort on sort button close
+      sortButtons.forEach((b) => b.classList.remove("active"))
 
-    // Respect user's category selection
-    const activeCategory = document.querySelector(
-      ".categories-btn.active"
-    ).textContent
-    let filtered
+      // Respect user's category selection
+      const activeCategory = document.querySelector(
+        ".categories-btn.active"
+      ).textContent
+      let filtered
 
-    if (activeCategory === "ALL") {
-      filtered = content
-    } else {
-      filtered = content.filter(
-        (e) => e.category.toUpperCase() === activeCategory
-      )
+      if (activeCategory === "ALL") {
+        filtered = content
+      } else {
+        filtered = content.filter(
+          (e) => e.category.toUpperCase() === activeCategory
+        )
+      }
+
+      const resetSorted = sortContent(filtered, "newest")
+      renderContent(resetSorted, grid)
     }
-
-    const resetSorted = sortContent(filtered, "newest")
-    renderContent(resetSorted, grid)
   } else {
     sortExpandedMenu.classList.remove("hide")
     sortButton.classList.add("active")
@@ -327,13 +331,17 @@ function sortContent(cards, type) {
 }
 
 // Event listener on sort buttons
+let activeSort = null
+
 sortButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     const sortSelection = btn.dataset.sort
+    activeSort = sortSelection
 
     sortButtons.forEach((b) => b.classList.remove("active"))
     btn.classList.add("active")
 
+    // Respect user's category selection
     const activeCategory = document.querySelector(
       ".categories-btn.active"
     ).textContent
@@ -353,7 +361,6 @@ sortButtons.forEach((btn) => {
 })
 
 // Search Functionality
-
 // Remove default submit behavior on Enter
 const searchForm = document.querySelector(".filter-track-search")
 searchForm.addEventListener("submit", (e) => {
@@ -367,7 +374,9 @@ searchInput.addEventListener("input", () => {
   // Optimize user input for matching
 
   content.forEach((item, index) => {
-    const card = grid.children[index] // Grid order matches content array
+    // Grid order matches content array
+    const card = grid.children[index]
+    // Optimize JSON data for matching
     const title = (item.title || "").toLowerCase().trim()
     const category = (item.category || "").toLowerCase().trim()
     const matches = title.includes(query) || category.includes(query)
@@ -393,13 +402,14 @@ function hideCard(card) {
   if (card.classList.contains("hidden")) return
 
   card.classList.add("hidden")
+  // Wait till done animating then remove from grid
   card.addEventListener(
     "transitionend",
     () => {
       if (card.classList.contains("hidden")) {
-        card.style.display = "none" // Remove from grid flow
+        card.style.display = "none"
       }
     },
-    { once: true } // Run cleanup once per fade
+    { once: true }
   )
 }
