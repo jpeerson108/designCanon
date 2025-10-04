@@ -242,7 +242,7 @@ categoriesTrack.addEventListener("click", (e) => {
   }
 })
 
-// Sort Button: Expand stagger function
+// Sort Button: Expand + stagger options on sort button click
 const sortButton = document.querySelector(".sort-button")
 const sortExpandedMenu = document.querySelector(".sort-expanded-menu")
 const sortButtons = Array.from(sortExpandedMenu.querySelectorAll("li button"))
@@ -277,6 +277,26 @@ sortButton.addEventListener("click", () => {
   if (isShowing) {
     sortButton.classList.remove("active")
     sortExpandStagger()
+
+    // Reset sort on sort button close
+    sortButtons.forEach((b) => b.classList.remove("active"))
+
+    // Respect user's category selection
+    const activeCategory = document.querySelector(
+      ".categories-btn.active"
+    ).textContent
+    let filtered
+
+    if (activeCategory === "ALL") {
+      filtered = content
+    } else {
+      filtered = content.filter(
+        (e) => e.category.toUpperCase() === activeCategory
+      )
+    }
+
+    const resetSorted = sortContent(filtered, "newest")
+    renderContent(resetSorted, grid)
   } else {
     sortExpandedMenu.classList.remove("hide")
     sortButton.classList.add("active")
@@ -331,3 +351,55 @@ sortButtons.forEach((btn) => {
     renderContent(sorted, grid)
   })
 })
+
+// Search Functionality
+
+// Remove default submit behavior on Enter
+const searchForm = document.querySelector(".filter-track-search")
+searchForm.addEventListener("submit", (e) => {
+  e.preventDefault()
+})
+
+const searchInput = document.querySelector(".search-input")
+
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.trim().toLowerCase()
+  // Optimize user input for matching
+
+  content.forEach((item, index) => {
+    const card = grid.children[index] // Grid order matches content array
+    const title = (item.title || "").toLowerCase().trim()
+    const category = (item.category || "").toLowerCase().trim()
+    const matches = title.includes(query) || category.includes(query)
+
+    if (matches) {
+      showCard(card)
+    } else {
+      hideCard(card)
+    }
+  })
+})
+
+function showCard(card) {
+  if (card.style.display === "none") {
+    card.style.display = ""
+    requestAnimationFrame(() => card.classList.remove("hidden"))
+  } else {
+    card.classList.remove("hidden")
+  }
+}
+
+function hideCard(card) {
+  if (card.classList.contains("hidden")) return
+
+  card.classList.add("hidden")
+  card.addEventListener(
+    "transitionend",
+    () => {
+      if (card.classList.contains("hidden")) {
+        card.style.display = "none" // Remove from grid flow
+      }
+    },
+    { once: true } // Run cleanup once per fade
+  )
+}
