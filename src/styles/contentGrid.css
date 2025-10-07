@@ -375,14 +375,19 @@ body.dragging-global * {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.2rem;
   margin-bottom: 20rem;
+  transition: opacity 0.3s ease;
 }
 
 .content-card {
   position: relative;
   margin-bottom: 13px;
   overflow: hidden;
-  opacity: 1;
+  opacity: 0;
   transition: opacity 0.3s ease;
+}
+
+.content-card:not(.hidden) {
+  opacity: 1;
 }
 
 .content-card.hidden {

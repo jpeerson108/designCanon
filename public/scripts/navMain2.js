@@ -36,17 +36,15 @@ menuBox.forEach((box) => {
   }
 })
 
-// Hide navbar on scroll-down, show on scroll-up
-// let lastScrollY = window.scrollY
-// const navbar = document.querySelector("nav")
+// Make logo smaller on scroll-down
+let lastScrollY = window.scrollY
+const navLogo = document.querySelector(".nav-logo")
 
-// window.addEventListener("scroll", () => {
-//   if (window.scrollY > lastScrollY) {
-//     navbar.classList.add("hidden")
-//   } else {
-//     navbar.classList.remove("hidden")
-//   }
-//   lastScrollY = window.scrollY
-// })
-
-// ^ Not sure if I want to keep this but leaving it for now
+window.addEventListener("scroll", () => {
+  if (window.scrollY > lastScrollY) {
+    navLogo.classList.add("small")
+  } else {
+    navLogo.classList.remove("small")
+  }
+  lastScrollY = window.scrollY
+})

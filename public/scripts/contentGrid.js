@@ -21,10 +21,9 @@ async function loadContent() {
     categoriesTrack.appendChild(filterBtn)
   })
 
-  // Render cards
   renderContent(content, grid)
 
-  // Filter grid cards on category track selection
+  // Filter grid cards on category selection
   categoriesTrack.addEventListener("click", (e) => {
     if (!e.target.classList.contains("categories-btn")) return
 
@@ -46,10 +45,14 @@ async function loadContent() {
   })
 }
 
-// Render cards function
+// Render content helper function
 let firstRender = true
+let isRendering = false
 
 function renderContent(cards, grid) {
+  if (isRendering) return
+  isRendering = true
+
   const today = new Date()
   const oneMonthAgo = new Date()
   oneMonthAgo.setMonth(today.getMonth() - 1)
@@ -57,25 +60,22 @@ function renderContent(cards, grid) {
   const allCards = Array.from(grid.querySelectorAll(".content-card"))
 
   if (allCards.length > 0) {
-    allCards.forEach((card) => card.classList.add("hidden"))
+    // Fade out entire grid
+    grid.style.opacity = "0"
 
-    let finished = 0
-    allCards.forEach((card) => {
-      card.addEventListener(
-        "transitionend",
-        () => {
-          card.remove()
-          finished++
-          if (finished === allCards.length) {
-            addNewCards(cards, grid, oneMonthAgo)
-          }
-        },
-        { once: true }
-      )
-    })
+    // Wait for grid fade-out to complete then transition
+    setTimeout(() => {
+      grid.innerHTML = ""
+
+      addNewCards(cards, grid, oneMonthAgo)
+
+      grid.style.opacity = "1"
+      isRendering = false
+    }, 300) // Match CSS transition duration
   } else {
     grid.innerHTML = ""
     addNewCards(cards, grid, oneMonthAgo, true)
+    isRendering = false
     firstRender = false
   }
 }
@@ -112,7 +112,6 @@ function addNewCards(cards, grid, oneMonthAgo, instant = false) {
     grid.appendChild(card)
 
     // Staggered fade-in
-
     if (!instant) {
       const delay = index * 100
       card.style.transitionDelay = `${delay}ms`
