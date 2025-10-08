@@ -126,7 +126,7 @@ function addNewCards(cards, grid, oneMonthAgo, instant = false) {
     // Add "New!" label if <1Mo Old
     const contentDate = new Date(content.date)
     if (contentDate >= oneMonthAgo) {
-      const newLabel = document.createElement("a")
+      const newLabel = document.createElement("span")
       newLabel.classList.add("new-label")
       newLabel.textContent = "New!"
       card.appendChild(newLabel)
