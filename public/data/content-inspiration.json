@@ -4,7 +4,35 @@
         "category": "Industrial",
         "image": "/assets/inspiration/image 25.webp",
         "href": "https://www.h3x.tech/",
-        "date": "2024-11-12"
+        "date": "2025-12-08"
+    },
+    {
+        "title": "Sui Overflow 2025",
+        "category": "Event",
+        "image": "/assets/inspiration/image 7.webp",
+        "href": "https://suioverflow.com/",
+        "date": "2025-12-01"
+    },
+    {
+        "title": "ChainGPT Labs",
+        "category": "AI",
+        "image": "/assets/inspiration/image 345.webp",
+        "href": "https://labs.chaingpt.org/",
+        "date": "2025-11-22"
+    },
+    {
+        "title": "Shield AI",
+        "category": "AI",
+        "image": "/assets/inspiration/image 235.webp",
+        "href": "https://shield.ai/",
+        "date": "2025-11-15"
+    },
+    {
+        "title": "Ursa Major",
+        "category": "Industrial",
+        "image": "/assets/inspiration/image 271.webp",
+        "href": "https://www.ursamajor.com/",
+        "date": "2025-11-02"
     },
     {
         "title": "MARA",
@@ -14,48 +42,6 @@
         "date": "2025-10-01"
     },
     {
-        "title": "Saronic",
-        "category": "Industrial",
-        "image": "/assets/inspiration/image 210.webp",
-        "href": "https://www.saronic.com/",
-        "date": "2025-07-18"
-    },
-    {
-        "title": "Trace Space",
-        "category": "Industrial",
-        "image": "/assets/inspiration/image 228.webp",
-        "href": "https://www.saronic.com/",
-        "date": "2025-05-27"
-    },
-    {
-        "title": "Shield AI",
-        "category": "AI",
-        "image": "/assets/inspiration/image 235.webp",
-        "href": "https://shield.ai/",
-        "date": "2025-03-09"
-    },
-    {
-        "title": "Aerodome",
-        "category": "Industrial",
-        "image": "/assets/inspiration/image 265.webp",
-        "href": "https://www.aerodome.com/",
-        "date": "2024-12-21"
-    },
-    {
-        "title": "Empower Trading",
-        "category": "Industrial",
-        "image": "/assets/inspiration/image 320.webp",
-        "href": "https://enpowertrading.co.za/",
-        "date": "2025-06-15"
-    },
-    {
-        "title": "Ursa Major",
-        "category": "Industrial",
-        "image": "/assets/inspiration/image 271.webp",
-        "href": "https://www.ursamajor.com/",
-        "date": "2025-01-06"
-    },
-    {
         "title": "Palantir",
         "category": "Industrial",
         "image": "/assets/inspiration/image 278.webp",
@@ -63,81 +49,11 @@
         "date": "2025-10-05"
     },
     {
-        "title": "Firestorm",
+        "title": "Saronic",
         "category": "Industrial",
-        "image": "/assets/inspiration/image 284.webp",
-        "href": "https://www.launchfirestorm.com/",
-        "date": "2025-03-24"
-    },
-    {
-        "title": "VAST Space",
-        "category": "Industrial",
-        "image": "/assets/inspiration/image 290.webp",
-        "href": "https://www.vastspace.com/",
-        "date": "2024-10-29"
-    },
-    {
-        "title": "Arena AI",
-        "category": "AI",
-        "image": "/assets/inspiration/image 296.webp",
-        "href": "https://arena-ai.com/",
-        "date": "2025-04-12"
-    },
-    {
-        "title": "Northwood Space",
-        "category": "Industrial",
-        "image": "/assets/inspiration/image 302.webp",
-        "href": "https://www.northwoodspace.io/",
-        "date": "2025-08-07"
-    },
-    {
-        "title": "Terminal",
-        "category": "Industrial",
-        "image": "/assets/inspiration/image 373.webp",
-        "href": "https://terminal-industries.com/",
-        "date": "2025-05-02"
-    },
-    {
-        "title": "Dropbox Brand Guidelines",
-        "category": "SaaS",
-        "image": "/assets/inspiration/image 13.webp",
-        "href": "https://dropbox.design/",
-        "date": "2025-01-14"
-    },
-    {
-        "title": "Sonar Music",
-        "category": "Music",
-        "image": "/assets/inspiration/image 19.webp",
-        "href": "https://sonarmusic.com/",
-        "date": "2024-12-03"
-    },
-    {
-        "title": "Studio Alphonse",
-        "category": "Agency",
-        "image": "/assets/inspiration/image 122.webp",
-        "href": "https://studioalphonse.com/",
-        "date": "2025-04-22"
-    },
-    {
-        "title": "Tonemaki",
-        "category": "Agency",
-        "image": "/assets/inspiration/image 150.webp",
-        "href": "https://tonemaki.com/",
-        "date": "2025-02-10"
-    },
-    {
-        "title": "Eduard Bodak",
-        "category": "Portfolio",
-        "image": "/assets/inspiration/image 143.webp",
-        "href": "https://eduardbodak.com/",
-        "date": "2025-06-05"
-    },
-    {
-        "title": "GSAP",
-        "category": "Development",
-        "image": "/assets/inspiration/image 162.webp",
-        "href": "https://gsap.com/",
-        "date": "2024-11-28"
+        "image": "/assets/inspiration/image 210.webp",
+        "href": "https://www.saronic.com/",
+        "date": "2025-07-18"
     },
     {
         "title": "Intercom Report 2025",
@@ -147,81 +63,18 @@
         "date": "2025-07-19"
     },
     {
-        "title": "Trona",
-        "category": "Restaurant",
-        "image": "/assets/inspiration/image 222.webp",
-        "href": "https://trona.com/",
-        "date": "2025-04-11"
-    },
-    {
-        "title": "Yellowbird",
-        "category": "Food & Beverage",
-        "image": "/assets/inspiration/image 190.webp",
-        "href": "https://yellowbirdfoods.com/",
-        "date": "2024-11-22"
-    },
-    {
-        "title": "Pizarro",
-        "category": "Restaurant",
-        "image": "/assets/inspiration/image 128.webp",
-        "href": "https://pizzapizarro.com/",
-        "date": "2025-02-18"
-    },
-    {
-        "title": "Jones Bar-B-Q",
-        "category": "Food & Beverage",
-        "image": "/assets/inspiration/image 116.webp",
-        "href": "https://www.jonesbbqkc.com/",
-        "date": "2025-05-09"
-    },
-    {
-        "title": "Tripletta",
-        "category": "Restaurant",
-        "image": "/assets/inspiration/image 61.webp",
-        "href": "https://tripletta.com/",
-        "date": "2025-01-27"
-    },
-    {
-        "title": "Niki Studio",
-        "category": "Portfolio",
-        "image": "/assets/inspiration/image 259.webp",
-        "href": "https://niki.studio/",
-        "date": "2024-12-14"
-    },
-    {
-        "title": "Black Jays",
-        "category": "Finance",
-        "image": "/assets/inspiration/image 333.webp",
-        "href": "https://blackjays.com/",
-        "date": "2025-04-02"
-    },
-    {
-        "title": "Infinite Capital",
-        "category": "Finance",
-        "image": "/assets/inspiration/image 31.webp",
-        "href": "https://infinite.capital/",
-        "date": "2025-03-19"
-    },
-    {
         "title": "ChainGPT",
         "category": "AI",
         "image": "/assets/inspiration/image 351.webp",
         "href": "https://www.chaingpt.org/",
-        "date": "2025-01-22"
-    },
-    {
-        "title": "ChainGPT Labs",
-        "category": "AI",
-        "image": "/assets/inspiration/image 345.webp",
-        "href": "https://labs.chaingpt.org/",
         "date": "2025-07-10"
     },
     {
-        "title": "Offbrand",
-        "category": "Agency",
-        "image": "/assets/inspiration/image 169.webp",
-        "href": "https://offbrand.agency/",
-        "date": "2025-02-06"
+        "title": "Northwood Space",
+        "category": "Industrial",
+        "image": "/assets/inspiration/image 302.webp",
+        "href": "https://www.northwoodspace.io/",
+        "date": "2025-08-07"
     },
     {
         "title": "Slash",
@@ -231,6 +84,20 @@
         "date": "2025-06-17"
     },
     {
+        "title": "Eduard Bodak",
+        "category": "Portfolio",
+        "image": "/assets/inspiration/image 143.webp",
+        "href": "https://eduardbodak.com/",
+        "date": "2025-06-05"
+    },
+    {
+        "title": "Empower Trading",
+        "category": "Industrial",
+        "image": "/assets/inspiration/image 320.webp",
+        "href": "https://enpowertrading.co.za/",
+        "date": "2025-06-15"
+    },
+    {
         "title": "Flowfest",
         "category": "Event",
         "image": "/assets/inspiration/image 176.webp",
@@ -238,67 +105,18 @@
         "date": "2025-05-28"
     },
     {
-        "title": "Sui Overflow 2025",
-        "category": "Event",
-        "image": "/assets/inspiration/image 7.webp",
-        "href": "https://suioverflow.com/",
-        "date": "2024-11-03"
+        "title": "Jones Bar-B-Q",
+        "category": "Food & Beverage",
+        "image": "/assets/inspiration/image 116.webp",
+        "href": "https://www.jonesbbqkc.com/",
+        "date": "2025-05-09"
     },
     {
-        "title": "Webflow Conf 2025",
-        "category": "Event",
-        "image": "/assets/inspiration/image 1.webp",
-        "href": "https://webflow.com/conf",
-        "date": "2025-03-04"
-    },
-    {
-        "title": "Dich Fashiun",
-        "category": "Fashion",
-        "image": "/assets/inspiration/image 138.webp",
-        "href": "https://dich-fashion.webflow.io/",
-        "date": "2025-03-13"
-    },
-    {
-        "title": "Kustomer",
-        "category": "SaaS",
-        "image": "/assets/inspiration/image 103.webp",
-        "href": "https://www.kustomer.com/",
-        "date": "2025-02-12"
-    },
-    {
-        "title": "Koyeb",
-        "category": "SaaS",
-        "image": "/assets/inspiration/image 326.webp",
-        "href": "https://www.koyeb.com/",
-        "date": "2024-12-08"
-    },
-    {
-        "title": "Wone",
-        "category": "SaaS",
-        "image": "/assets/inspiration/image 55.webp",
-        "href": "https://thewone.co/",
-        "date": "2025-03-02"
-    },
-    {
-        "title": "Husher",
-        "category": "Music",
-        "image": "/assets/inspiration/image 365.webp",
-        "href": "https://www.husher.com/",
-        "date": "2025-01-19"
-    },
-    {
-        "title": "Payload",
-        "category": "Development",
-        "image": "/assets/inspiration/image 198.webp",
-        "href": "https://payloadcms.com/",
-        "date": "2025-04-06"
-    },
-    {
-        "title": "Vercel",
-        "category": "SaaS",
-        "image": "/assets/inspiration/image 74.webp",
-        "href": "https://vercel.com/",
-        "date": "2024-11-30"
+        "title": "Terminal",
+        "category": "Industrial",
+        "image": "/assets/inspiration/image 373.webp",
+        "href": "https://terminal-industries.com/",
+        "date": "2025-05-02"
     },
     {
         "title": "Retool",
@@ -315,6 +133,41 @@
         "date": "2025-04-24"
     },
     {
+        "title": "Studio Alphonse",
+        "category": "Agency",
+        "image": "/assets/inspiration/image 122.webp",
+        "href": "https://studioalphonse.com/",
+        "date": "2025-04-22"
+    },
+    {
+        "title": "Arena AI",
+        "category": "AI",
+        "image": "/assets/inspiration/image 296.webp",
+        "href": "https://arena-ai.com/",
+        "date": "2025-04-12"
+    },
+    {
+        "title": "Trona",
+        "category": "Restaurant",
+        "image": "/assets/inspiration/image 222.webp",
+        "href": "https://trona.com/",
+        "date": "2025-04-11"
+    },
+    {
+        "title": "Payload",
+        "category": "Development",
+        "image": "/assets/inspiration/image 198.webp",
+        "href": "https://payloadcms.com/",
+        "date": "2025-04-06"
+    },
+    {
+        "title": "Black Jays",
+        "category": "Finance",
+        "image": "/assets/inspiration/image 333.webp",
+        "href": "https://blackjays.com/",
+        "date": "2025-04-02"
+    },
+    {
         "title": "Fin AI",
         "category": "AI",
         "image": "/assets/inspiration/image 91.webp",
@@ -322,10 +175,150 @@
         "date": "2025-03-28"
     },
     {
+        "title": "Firestorm",
+        "category": "Industrial",
+        "image": "/assets/inspiration/image 284.webp",
+        "href": "https://www.launchfirestorm.com/",
+        "date": "2025-03-24"
+    },
+    {
+        "title": "Infinite Capital",
+        "category": "Finance",
+        "image": "/assets/inspiration/image 31.webp",
+        "href": "https://infinite.capital/",
+        "date": "2025-03-19"
+    },
+    {
+        "title": "Dich Fashiun",
+        "category": "Fashion",
+        "image": "/assets/inspiration/image 138.webp",
+        "href": "https://dich-fashion.webflow.io/",
+        "date": "2025-03-13"
+    },
+    {
+        "title": "Webflow Conf 2025",
+        "category": "Event",
+        "image": "/assets/inspiration/image 1.webp",
+        "href": "https://webflow.com/conf",
+        "date": "2025-03-04"
+    },
+    {
+        "title": "Wone",
+        "category": "SaaS",
+        "image": "/assets/inspiration/image 55.webp",
+        "href": "https://thewone.co/",
+        "date": "2025-03-02"
+    },
+    {
+        "title": "Pizarro",
+        "category": "Restaurant",
+        "image": "/assets/inspiration/image 128.webp",
+        "href": "https://pizzapizarro.com/",
+        "date": "2025-02-18"
+    },
+    {
+        "title": "Kustomer",
+        "category": "SaaS",
+        "image": "/assets/inspiration/image 103.webp",
+        "href": "https://www.kustomer.com/",
+        "date": "2025-02-12"
+    },
+    {
+        "title": "Tonemaki",
+        "category": "Agency",
+        "image": "/assets/inspiration/image 150.webp",
+        "href": "https://tonemaki.com/",
+        "date": "2025-02-10"
+    },
+    {
+        "title": "Offbrand",
+        "category": "Agency",
+        "image": "/assets/inspiration/image 169.webp",
+        "href": "https://offbrand.agency/",
+        "date": "2025-02-06"
+    },
+    {
+        "title": "Husher",
+        "category": "Music",
+        "image": "/assets/inspiration/image 365.webp",
+        "href": "https://www.husher.com/",
+        "date": "2025-01-19"
+    },
+    {
         "title": "Arago",
         "category": "Hardware",
         "image": "/assets/inspiration/image 67.webp",
         "href": "https://www.arago.ai/",
         "date": "2025-01-09"
+    },
+    {
+        "title": "Dropbox Brand Guidelines",
+        "category": "SaaS",
+        "image": "/assets/inspiration/image 13.webp",
+        "href": "https://dropbox.design/",
+        "date": "2025-01-14"
+    },
+    {
+        "title": "Tripletta",
+        "category": "Restaurant",
+        "image": "/assets/inspiration/image 61.webp",
+        "href": "https://tripletta.com/",
+        "date": "2025-01-27"
+    },
+    {
+        "title": "Niki Studio",
+        "category": "Portfolio",
+        "image": "/assets/inspiration/image 259.webp",
+        "href": "https://niki.studio/",
+        "date": "2024-12-14"
+    },
+    {
+        "title": "Aerodome",
+        "category": "Industrial",
+        "image": "/assets/inspiration/image 265.webp",
+        "href": "https://www.aerodome.com/",
+        "date": "2024-12-21"
+    },
+    {
+        "title": "Sonar Music",
+        "category": "Music",
+        "image": "/assets/inspiration/image 19.webp",
+        "href": "https://sonarmusic.com/",
+        "date": "2024-12-03"
+    },
+    {
+        "title": "Koyeb",
+        "category": "SaaS",
+        "image": "/assets/inspiration/image 326.webp",
+        "href": "https://www.koyeb.com/",
+        "date": "2024-12-08"
+    },
+    {
+        "title": "Vercel",
+        "category": "SaaS",
+        "image": "/assets/inspiration/image 74.webp",
+        "href": "https://vercel.com/",
+        "date": "2024-11-30"
+    },
+    {
+        "title": "GSAP",
+        "category": "Development",
+        "image": "/assets/inspiration/image 162.webp",
+        "href": "https://gsap.com/",
+        "date": "2024-11-28"
+    },
+    {
+        "title": "Yellowbird",
+        "category": "Food & Beverage",
+        "image": "/assets/inspiration/image 190.webp",
+        "href": "https://yellowbirdfoods.com/",
+        "date": "2024-11-22"
+    },
+    {
+        "title": "VAST Space",
+        "category": "Industrial",
+        "image": "/assets/inspiration/image 290.webp",
+        "href": "https://www.vastspace.com/",
+        "date": "2024-10-29"
     }
 ]
