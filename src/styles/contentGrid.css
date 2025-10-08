@@ -396,15 +396,19 @@ body.dragging-global * {
 }
 
 .content-card > a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
   margin-bottom: 15px;
   overflow: hidden;
   border-radius: var(--contentImg-border-radius);
 }
 
 .content-card > a img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
+  display: block;
+  width: 101%;
+  height: 101%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }

@@ -1,0 +1,100 @@
+[
+    {
+        "title": "Advanced Electric Motors",
+        "category": "Motors",
+        "image": "/assets/images/inspiration/image 25.webp",
+        "href": "https://www.h3x.tech/",
+        "date": "2024-11-12"
+    },
+    {
+        "title": "MARA",
+        "category": "Energy",
+        "image": "/assets/images/inspiration/image 189.webp",
+        "href": "https://www.mara.com/",
+        "date": "2025-02-03"
+    },
+    {
+        "title": "Saronic",
+        "category": "Defense",
+        "image": "/assets/images/inspiration/image 210.webp",
+        "href": "https://www.saronic.com/",
+        "date": "2025-07-18"
+    },
+    {
+        "title": "Trace Space",
+        "category": "Industrial",
+        "image": "/assets/images/inspiration/image 228.webp",
+        "href": "https://www.saronic.com/",
+        "date": "2025-05-27"
+    },
+    {
+        "title": "Shield AI",
+        "category": "Defense",
+        "image": "/assets/images/inspiration/image 235.webp",
+        "href": "https://shield.ai/",
+        "date": "2025-03-09"
+    },
+    {
+        "title": "Aerodome",
+        "category": "Defense",
+        "image": "/assets/images/inspiration/image 265.webp",
+        "href": "https://www.aerodome.com/",
+        "date": "2024-12-21"
+    },
+    {
+        "title": "Empower Trading",
+        "category": "Energy",
+        "image": "/assets/images/inspiration/image 320.webp",
+        "href": "https://enpowertrading.co.za/",
+        "date": "2025-06-15"
+    },
+    {
+        "title": "Ursa Major",
+        "category": "Aerospace",
+        "image": "/assets/images/inspiration/image 271.webp",
+        "href": "https://www.ursamajor.com/",
+        "date": "2025-01-06"
+    },
+    {
+        "title": "Palantir",
+        "category": "Data Analytics",
+        "image": "/assets/images/inspiration/image 278.webp",
+        "href": "https://www.palantir.com/",
+        "date": "2025-09-01"
+    },
+    {
+        "title": "Firestorm",
+        "category": "Defense",
+        "image": "/assets/images/inspiration/image 284.webp",
+        "href": "https://www.launchfirestorm.com/",
+        "date": "2025-03-24"
+    },
+    {
+        "title": "VAST Space",
+        "category": "Aerospace",
+        "image": "/assets/images/inspiration/image 290.webp",
+        "href": "https://www.vastspace.com/",
+        "date": "2024-10-29"
+    },
+    {
+        "title": "Arena AI",
+        "category": "Hardware",
+        "image": "/assets/images/inspiration/image 296.webp",
+        "href": "https://arena-ai.com/",
+        "date": "2025-04-12"
+    },
+    {
+        "title": "Northwood Space",
+        "category": "Aerospace",
+        "image": "/assets/images/inspiration/image 302.webp",
+        "href": "https://www.northwoodspace.io/",
+        "date": "2025-08-07"
+    },
+    {
+        "title": "Terminal",
+        "category": "Supply Chain",
+        "image": "/assets/images/inspiration/image 373.webp",
+        "href": "https://terminal-industries.com/",
+        "date": "2025-05-02"
+    }
+]

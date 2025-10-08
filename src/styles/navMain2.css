@@ -214,12 +214,13 @@ li.social-box:hover {
   height: 60%;
   left: 50%;
   transform: translateX(-50%);
-  visibility: visible;
   opacity: 1;
+  visibility: visible;
   transition: all 0.3s ease;
 }
 
 .nav-logo a {
+  display: block;
   height: 100%;
   padding: 0;
 }

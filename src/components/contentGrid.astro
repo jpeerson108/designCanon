@@ -1,5 +1,6 @@
 ---
 import "@/styles/contentGrid.css";
+const { dataFile } = Astro.props;
 ---
 <script type="module" src="/scripts/contentGrid.js"></script>
 <body>
@@ -52,7 +53,7 @@ import "@/styles/contentGrid.css";
                 </form>
             </div>
         </section>
-        <section class="content-grid" id="contentGrid"></section>
+        <section class="content-grid" id="contentGrid" data-file={dataFile}></section>
     </div>
 </body>
 </html>

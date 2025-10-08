@@ -1,10 +1,11 @@
 const categoriesTrack = document.querySelector(".filter-track-categories-inner")
 const grid = document.getElementById("contentGrid")
 let content = []
+const dataPath = grid.dataset.file
 
 // Fetch JSON data
 async function loadContent() {
-  const response = await fetch("/data/content.json")
+  const response = await fetch(dataPath)
   content = await response.json()
   const categoriesList = [...new Set(content.map((c) => c.category))]
   const categories = ["All", ...categoriesList]
