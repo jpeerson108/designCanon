@@ -1,6 +1,9 @@
 const categoriesTrack = document.querySelector(".filter-track-categories-inner")
 const grid = document.getElementById("contentGrid")
 let content = []
+let itemsPerLoad = 3
+let currentIndex = 0
+let currentCards = []
 const dataPath = grid.dataset.file
 
 // Fetch JSON data
@@ -58,26 +61,34 @@ function renderContent(cards, grid) {
   const oneMonthAgo = new Date()
   oneMonthAgo.setMonth(today.getMonth() - 1)
 
+  currentCards = cards
+  currentIndex = 0
+
   const allCards = Array.from(grid.querySelectorAll(".content-card"))
+  const initialLoadCount = itemsPerLoad * 2 // Load 6 initially when itemsPerLoad = 3
 
   if (allCards.length > 0) {
-    // Fade out entire grid
     grid.style.opacity = "0"
 
-    // Wait for grid fade-out to complete then transition
     setTimeout(() => {
       grid.innerHTML = ""
 
-      addNewCards(cards, grid, oneMonthAgo)
+      const firstBatch = currentCards.slice(0, initialLoadCount)
+      addNewCards(firstBatch, grid, oneMonthAgo)
 
       grid.style.opacity = "1"
       isRendering = false
-    }, 300) // Match CSS transition duration
+      currentIndex = firstBatch.length
+    }, 300)
   } else {
     grid.innerHTML = ""
-    addNewCards(cards, grid, oneMonthAgo, true)
+
+    const firstBatch = currentCards.slice(0, initialLoadCount)
+    addNewCards(firstBatch, grid, oneMonthAgo, true)
+
     isRendering = false
     firstRender = false
+    currentIndex = firstBatch.length
   }
 }
 
@@ -132,6 +143,42 @@ function addNewCards(cards, grid, oneMonthAgo, instant = false) {
 }
 
 loadContent()
+
+// Infinite Scroll
+window.addEventListener("scroll", () => {
+  if (isRendering) return
+
+  const lastCard = grid.querySelector(".content-card:last-child")
+  if (!lastCard) return
+
+  const rect = lastCard.getBoundingClientRect()
+  const triggerPoint = window.innerHeight * 0.4
+
+  if (
+    rect.top < triggerPoint &&
+    currentIndex < currentCards.length &&
+    !isRendering
+  ) {
+    isRendering = true
+
+    const today = new Date()
+    const oneMonthAgo = new Date()
+    oneMonthAgo.setMonth(today.getMonth() - 1)
+
+    const nextBatch = currentCards.slice(
+      currentIndex,
+      currentIndex + itemsPerLoad
+    )
+
+    // Add small timeout to avoid double-triggering on fast scrolls
+    addNewCards(nextBatch, grid, oneMonthAgo)
+    currentIndex += nextBatch.length
+
+    setTimeout(() => {
+      isRendering = false
+    }, 300)
+  }
+})
 
 // Categories Track: Scroll pre-defined distance on arrow click
 const arrowRight = document.querySelector(
