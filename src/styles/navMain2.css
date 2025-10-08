@@ -211,7 +211,7 @@ li.social-box:hover {
 /* Center Logo */
 .nav-logo {
   position: absolute;
-  height: 60%;
+  height: 55%;
   left: 50%;
   transform: translateX(-50%);
   opacity: 1;
