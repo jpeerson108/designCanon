@@ -320,5 +320,75 @@
         "image": "/assets/inspiration/image 290.webp",
         "href": "https://www.vastspace.com/",
         "date": "2024-10-29"
+    },
+    {
+        "title": "Brainsave",
+        "category": "AI",
+        "image": "/assets/inspiration/image 339.webp",
+        "href": "https://brainsave.ai/",
+        "date": "2025-10-08"
+    },
+    {
+        "title": "Anime.js",
+        "category": "Development",
+        "image": "/assets/inspiration/image 247.webp",
+        "href": "https://animejs.com/",
+        "date": "2025-09-29"
+    },
+    {
+        "title": "Stripe",
+        "category": "Finance",
+        "image": "/assets/inspiration/image 97.webp",
+        "href": "https://stripe.com/",
+        "date": "2025-09-21"
+    },
+    {
+        "title": "Figma",
+        "category": "SaaS",
+        "image": "/assets/inspiration/image 85.webp",
+        "href": "https://www.figma.com/",
+        "date": "2025-09-17"
+    },
+    {
+        "title": "Hyperbolic",
+        "category": "AI",
+        "image": "/assets/inspiration/image 241.webp",
+        "href": "https://www.hyperbolic.ai/",
+        "date": "2025-09-10"
+    },
+    {
+        "title": "Baseten",
+        "category": "AI",
+        "image": "/assets/inspiration/image 216.webp",
+        "href": "https://www.baseten.co/",
+        "date": "2025-09-05"
+    },
+    {
+        "title": "Cal.com",
+        "category": "SaaS",
+        "image": "/assets/inspiration/image 109.webp",
+        "href": "https://cal.com/",
+        "date": "2025-08-30"
+    },
+    {
+        "title": "Codemetal",
+        "category": "AI",
+        "image": "/assets/inspiration/image 79.webp",
+        "href": "https://codemetal.ai/",
+        "date": "2025-08-18"
+    },
+    {
+        "title": "FifthRow",
+        "category": "SaaS",
+        "image": "/assets/inspiration/image 308.webp",
+        "href": "https://www.fifthrow.com/",
+        "date": "2025-08-10"
+    },
+    {
+        "title": "Jitter",
+        "category": "SaaS",
+        "image": "/assets/inspiration/image 49.webp",
+        "href": "https://jitter.video/",
+        "date": "2025-08-02"
     }
 ]
