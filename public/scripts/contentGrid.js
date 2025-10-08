@@ -11,6 +11,17 @@ async function loadContent() {
   const response = await fetch(dataPath)
   content = await response.json()
   const categoriesList = [...new Set(content.map((c) => c.category))]
+
+  const categoriesCount = content.reduce((counts, item) => {
+    const category = item.category
+    counts[category] = (counts[category] || 0) + 1
+    return counts
+  }, {})
+
+  categoriesList.sort(
+    (a, b) => categoriesCount[b] - categoriesCount[a] || a.localeCompare(b)
+  )
+
   const categories = ["All", ...categoriesList]
 
   // Default sort cards by newest date
