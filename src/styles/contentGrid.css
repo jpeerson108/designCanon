@@ -388,7 +388,6 @@ body.dragging-global * {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.2rem;
-  margin-bottom: 20rem;
   transition: opacity 0.3s ease;
 }
 

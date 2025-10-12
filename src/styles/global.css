@@ -68,6 +68,10 @@ body {
   padding-right: var(--horizontal-page-padding);
 }
 
+.spacer {
+  height: 200vh;
+}
+
 a {
   color: inherit;
   text-decoration: none;
