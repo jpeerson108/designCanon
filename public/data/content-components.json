@@ -7,7 +7,7 @@
         "date": "2025-09-19"
     },
     {
-        "title": "Infinite Marquee (ScrollTrigger)",
+        "title": "Infinite Marquee (Scroll-Based)",
         "category": "Marquees",
         "image": "/assets/thumbnails/thumbnail-1.png",
         "href": "#",
@@ -35,8 +35,8 @@
         "date": "2025-08-28"
     },
     {
-        "title": "Scroll-Based Box Section Transition",
-        "category": "ScrollTrigger",
+        "title": "Box Section Transition (Scroll-Based)",
+        "category": "Scroll",
         "image": "/assets/thumbnails/thumbnail-6.png",
         "href": "#",
         "date": "2025-08-27"
