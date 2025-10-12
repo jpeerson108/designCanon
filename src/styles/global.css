@@ -68,8 +68,20 @@ body {
   padding-right: var(--horizontal-page-padding);
 }
 
-.spacer {
-  height: 200vh;
+.spacer-tiny {
+  height: 1rem;
+}
+.spacer-small {
+  height: 4rem;
+}
+.spacer-med {
+  height: 10rem;
+}
+.spacer-large {
+  height: 30rem;
+}
+.spacer-huge {
+  height: 100rem;
 }
 
 a {
