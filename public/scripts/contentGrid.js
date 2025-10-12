@@ -477,22 +477,43 @@ function hideCard(card) {
 
 // Position fix filter track when entering/leaving content grid section
 const filterTrack = document.querySelector(".filter-track")
-let isActive = false
+const parentContainer = document.querySelector(
+  ".container.content-grid-container"
+)
+let isFilterSticky = false
 
+// Create placeholder element
 const placeholder = document.createElement("div")
 placeholder.style.display = "none"
 
+// Insert placeholder into DOM from the start (hidden)
+filterTrack.parentNode.insertBefore(placeholder, filterTrack)
+
+// Main sticky trigger - use placeholder as reference point
 ScrollTrigger.create({
-  trigger: filterTrack,
-  start: "top 60px",
-  end: "bottom 60px",
+  trigger: placeholder,
+  start: "top 65px",
+  endTrigger: parentContainer,
+  end: "bottom top",
   onEnter: () => makeSticky(),
   onLeaveBack: () => makeUnsticky(),
+  onLeave: () => fadeOut(),
+  onEnterBack: () => fadeIn(),
+})
+
+// Observer to watch for new items
+const observer = new MutationObserver(() => {
+  ScrollTrigger.refresh()
+})
+
+observer.observe(parentContainer, {
+  childList: true,
+  subtree: true,
 })
 
 function makeSticky() {
-  if (isActive) return
-  isActive = true
+  if (isFilterSticky) return
+  isFilterSticky = true
 
   const state = Flip.getState(filterTrack)
 
@@ -500,31 +521,46 @@ function makeSticky() {
   placeholder.style.height = rect.height + "px"
   placeholder.style.marginBottom = "1.2rem"
   placeholder.style.display = "block"
-  filterTrack.parentNode.insertBefore(placeholder, filterTrack)
 
   filterTrack.classList.add("active")
 
   Flip.from(state, {
-    duration: 0.6,
+    duration: 0.5,
     ease: "power2.out",
+    immediateRender: true, // Ensures element is in final position immediately
   })
 }
 
 function makeUnsticky() {
-  if (!isActive) return
-  isActive = false
+  if (!isFilterSticky) return
+  isFilterSticky = false
 
-  // Get the state before any changes
   const state = Flip.getState(filterTrack)
 
   filterTrack.classList.remove("active")
 
-  if (placeholder.parentNode) {
-    placeholder.remove()
-  }
+  placeholder.style.display = "none"
 
   Flip.from(state, {
-    duration: 0.6,
+    duration: 0.5,
     ease: "power2.inOut",
+    absoluteOnLeave: true, // Keeps element positioned absolutely during animation
+    simple: true, // Simplified animation to prevent scroll interference
+  })
+}
+
+function fadeOut() {
+  gsap.to(filterTrack, {
+    opacity: 0,
+    duration: 0.2,
+    ease: "none",
+  })
+}
+
+function fadeIn() {
+  gsap.to(filterTrack, {
+    opacity: 1,
+    duration: 0.2,
+    ease: "none",
   })
 }
