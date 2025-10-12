@@ -1,7 +1,7 @@
 ---
 import "../../styles/global.css";
-import "../../styles/indexWIP.css";
-import NavMain2 from "@/components/navMain2.astro";
+import "../../styles/index.css";
+import NavMain from "@/components/navMain.astro";
 import ContentGrid from "@/components/contentGrid.astro";
 ---
 <script type="module" src="/scripts/inspiration.js"></script>
@@ -12,12 +12,13 @@ import ContentGrid from "@/components/contentGrid.astro";
     <title>Design Canon | Home</title>
 </head>
 <body>
-    <NavMain2 />
+    <NavMain />
     <div class="container">
         <section class="intro-text">
         <p>A growing archive of websites that push the boundaries of design and interaction.</p>
         </section>
     </div>
     <ContentGrid dataFile="/data/content-inspiration.json" />
+    <div class="spacer"></div>
 </body>
 </html>
