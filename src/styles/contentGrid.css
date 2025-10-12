@@ -15,10 +15,24 @@
 
 /* Filters Container */
 .filter-track {
+  /* Positioning */
+  position: sticky;
+  top: 60px;
   width: 100%;
+  padding: 5px 0;
+  z-index: 100;
+
+  /* Flex */
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--filterFlexGap);
+
+  /* Styling */
+  background-color: var(--color-black-1);
+  border-bottom: 1px solid transparent;
+
+  /* Font */
   font-family: "JetBrains Mono", monospace;
   text-transform: uppercase;
   white-space: nowrap;
@@ -26,22 +40,22 @@
   font-weight: 400;
   letter-spacing: -0.4px;
   color: #fff;
-  gap: var(--filterFlexGap);
-  margin-bottom: 1.2rem;
-  background-color: transparent;
-  border-bottom: 1px solid transparent;
+
+  /* Animations */
+  transition:
+    width 0.3s ease,
+    margin 0.3s ease,
+    border-bottom 0.3s ease,
+    padding 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .filter-track.active {
-  position: fixed;
-  top: var(--navMain-heightDesktop);
-  margin-left: calc(-1 * var(--horizontal-page-padding));
-  margin-right: calc(-1 * var(--horizontal-page-padding));
   width: 100vw;
   padding: 5px 5px;
-  background-color: var(--color-black-1);
+  margin-left: calc(-1 * var(--horizontal-page-padding));
+  margin-right: calc(-1 * var(--horizontal-page-padding));
   border-bottom: 1px solid var(--color-black-2);
-  z-index: 100;
 }
 
 .filter-track-left {
@@ -386,6 +400,7 @@ body.dragging-global * {
 /* Content Grid */
 .content-grid {
   display: grid;
+  margin-top: 1rem;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.2rem;
   transition: opacity 0.3s ease;
