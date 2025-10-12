@@ -338,7 +338,7 @@ body.dragging-global * {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  caret-color: var(--color-accent);
+  caret-color: var(--color-white-c);
   transition: border 0.3s ease;
 }
 

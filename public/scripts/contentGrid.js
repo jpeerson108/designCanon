@@ -472,7 +472,8 @@ function hideCard(card) {
   )
 }
 
-// Position fix filter track when entering/leaving content grid section
+// Sticky Filter Track
+// Purpose: Make the filter track sticky when in the content grid section
 const filterTrack = document.querySelector(".filter-track")
 const gridContainer = document.querySelector(
   ".container.content-grid-container"
@@ -481,8 +482,10 @@ const gridContainer = document.querySelector(
 const stickyObserver = new IntersectionObserver(
   ([entry]) => {
     const containerTop = entry.boundingClientRect.top
+    const filterTop = filterTrack.getBoundingClientRect().top
 
-    if (containerTop <= 60 && entry.isIntersecting) {
+    // Add active class when filter-track reaches 60px
+    if (filterTop <= 60 && entry.isIntersecting) {
       filterTrack.classList.add("active")
     } else if (containerTop > 60) {
       filterTrack.classList.remove("active")

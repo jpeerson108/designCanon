@@ -24,6 +24,11 @@
   --color-black-7: #777;
   --color-black-8: #888;
   --color-black-9: #999;
+  --color-white-a: #aaa;
+  --color-white-b: #bbb;
+  --color-white-c: #ccc;
+  --color-white-d: #ddd;
+  --color-white-e: #eee;
 
   /* Breakpoints */
   --breakpoint-tablet: 1200px;
@@ -105,12 +110,12 @@ select {
 }
 
 ::selection {
-  background: var(--color-accent);
+  background: var(--color-black-3);
   color: #fff;
 }
 
 ::-moz-selection {
-  background: var(--color-accent);
+  background: var(--color-black-3);
   color: #fff;
 }
 
@@ -125,7 +130,7 @@ svg {
 
 input,
 textarea {
-  caret-color: var(--color-accent);
+  caret-color: var(--color-black-9);
 }
 
 ::-webkit-scrollbar-thumb {
