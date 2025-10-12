@@ -1,3 +1,6 @@
+gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(Flip)
+
 const categoriesTrack = document.querySelector(".filter-track-categories-inner")
 const grid = document.getElementById("contentGrid")
 let content = []
@@ -470,4 +473,58 @@ function hideCard(card) {
     },
     { once: true }
   )
+}
+
+// Position fix filter track when entering/leaving content grid section
+const filterTrack = document.querySelector(".filter-track")
+let isActive = false
+
+const placeholder = document.createElement("div")
+placeholder.style.display = "none"
+
+ScrollTrigger.create({
+  trigger: filterTrack,
+  start: "top 60px",
+  end: "bottom 60px",
+  onEnter: () => makeSticky(),
+  onLeaveBack: () => makeUnsticky(),
+})
+
+function makeSticky() {
+  if (isActive) return
+  isActive = true
+
+  const state = Flip.getState(filterTrack)
+
+  const rect = filterTrack.getBoundingClientRect()
+  placeholder.style.height = rect.height + "px"
+  placeholder.style.marginBottom = "1.2rem"
+  placeholder.style.display = "block"
+  filterTrack.parentNode.insertBefore(placeholder, filterTrack)
+
+  filterTrack.classList.add("active")
+
+  Flip.from(state, {
+    duration: 0.6,
+    ease: "power2.out",
+  })
+}
+
+function makeUnsticky() {
+  if (!isActive) return
+  isActive = false
+
+  // Get the state before any changes
+  const state = Flip.getState(filterTrack)
+
+  filterTrack.classList.remove("active")
+
+  if (placeholder.parentNode) {
+    placeholder.remove()
+  }
+
+  Flip.from(state, {
+    duration: 0.6,
+    ease: "power2.inOut",
+  })
 }
