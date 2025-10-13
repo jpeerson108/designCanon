@@ -1,44 +1,50 @@
 [
     {
-        "title": "Expand Menu on Hover",
+        "title": "Reveal Menu Items on Hover",
         "category": "Navigation",
         "image": "/assets/thumbnails/thumbnail-2.png",
         "href": "#",
-        "date": "2025-09-19"
+        "date": "2025-09-19",
+        "tags": ["hover", "expand", "menu", "navigation", "reveal"]
     },
     {
         "title": "Infinite Marquee (Scroll-Based)",
         "category": "Marquees",
         "image": "/assets/thumbnails/thumbnail-1.png",
         "href": "#",
-        "date": "2025-09-14"
+        "date": "2025-09-14",
+        "tags": ["marquee", "scroll", "infinite", "loop", "horizontal", "text", "scrolling", "motion", "continuous"]
     },
     {
-        "title": "Smooth Accordion List",
+        "title": "Silky-Smooth Accordion List",
         "category": "Structure",
         "image": "/assets/thumbnails/thumbnail-3.png",
         "href": "#",
-        "date": "2025-07-28"
+        "date": "2025-07-28",
+        "tags": ["accordion", "list", "expand", "collapse", "toggle", "reveal", "structure"]
     },
     {
-        "title": "Random Boxes Page Transition",
+        "title": "Pixelated Page Transition",
         "category": "Page Transitions",
         "image": "/assets/thumbnails/thumbnail-4.png",
         "href": "#",
-        "date": "2025-09-12"
+        "date": "2025-09-12",
+        "tags": ["page", "transition", "pixelated", "box", "reveal", "screen"]
     },
     {
         "title": "Staggered Columns Page Transition",
         "category": "Page Transitions",
         "image": "/assets/thumbnails/thumbnail-5.png",
         "href": "#",
-        "date": "2025-08-28"
+        "date": "2025-08-28",
+        "tags": ["page", "transition", "staggered", "columns", "reveal", "loading", "layout"]
     },
     {
         "title": "Box Section Transition (Scroll-Based)",
         "category": "Scroll",
         "image": "/assets/thumbnails/thumbnail-6.png",
         "href": "#",
-        "date": "2025-08-27"
+        "date": "2025-08-27",
+        "tags": ["scroll", "section", "transition", "boxes", "reveal", "scroll-based"]
     }
 ]
