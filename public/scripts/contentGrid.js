@@ -475,9 +475,7 @@ function hideCard(card) {
 // Sticky Filter Track
 // Purpose: Make the filter track sticky when in the content grid section
 const filterTrack = document.querySelector(".filter-track")
-const gridContainer = document.querySelector(
-  ".container.content-grid-container"
-)
+const gridContainer = document.querySelector(".content-grid-container")
 
 const stickyObserver = new IntersectionObserver(
   ([entry]) => {

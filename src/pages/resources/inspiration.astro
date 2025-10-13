@@ -1,24 +1,13 @@
 ---
-import "../../styles/global.css";
-import "../../styles/index.css";
-import NavMain from "@/components/navMain.astro";
+import BaseLayout from "../../layouts/baseLayout.astro";
 import ContentGrid from "@/components/contentGrid.astro";
+import "../../styles/index.css";
 ---
 <script type="module" src="/scripts/inspiration.js"></script>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design Canon | Home</title>
-</head>
-<body>
-    <NavMain />
-    <div class="container">
-        <section class="intro-text">
+<BaseLayout title="Inspiration">
+    <section class="intro-text">
         <p>A growing archive of websites that push the boundaries of design and interaction.</p>
         </section>
-    </div>
     <ContentGrid dataFile="/data/content-inspiration.json" />
     <div class="spacer-large"></div>
-</body>
-</html>
+</BaseLayout>

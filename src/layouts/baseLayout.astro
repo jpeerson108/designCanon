@@ -1,0 +1,19 @@
+---
+const { title } = Astro.props;
+import "../styles/global.css";
+import NavMain from "@/components/navMain.astro";
+---
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/assets/svg/designcanon-favicon.svg" />
+    <title>{title ? `${title} | Design Canon` : "Design Canon"}</title>
+  </head>
+  <body>
+    <NavMain />
+    <div class="container">
+        <slot />
+    </div>
+  </body>
+</html>
