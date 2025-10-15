@@ -1,0 +1,33 @@
+nav {
+  position: fixed;
+  top: 20px;
+  display: flex;
+  width: 100%;
+  padding: 0 20px;
+  justify-content: space-between;
+  font-family: "JetBrains Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  color: #fff;
+}
+
+.nav-left a,
+.nav-right a {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.nav-right a {
+  gap: 6px;
+}
+
+.nav-icon {
+  height: 16px;
+  width: 100%;
+}
+
+.nav-icon.github {
+  height: 15px;
+  width: 100%;
+}

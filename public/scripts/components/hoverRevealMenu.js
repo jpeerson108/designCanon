@@ -15,13 +15,14 @@ btnWrappers.forEach((wrapper) => {
 
   // Active page detection
   const navLink = wrapper.getAttribute("href")
+
   if (navLink && navLink !== "#") {
     const navURL = new URL(navLink, window.location.href)
     const navPathEnding = navURL.pathname.split("/").pop()
 
     if (window.location.pathname.endsWith(navPathEnding)) {
       wrapper.classList.add("active")
-      btnText.classList.add("btn-text-show")
+      btnText.classList.add("show")
     }
   }
 })

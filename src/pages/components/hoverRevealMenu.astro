@@ -1,18 +1,13 @@
 ---
-import "../../styles/hoverButtonTest.css";
+import SecondaryLayout from "../../layouts/secondaryLayout.astro";
+import "../../styles/components/hoverRevealMenu.css";
 ---
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design Canon | Hover Button</title>
-    <script type="module" src="/scripts/hoverButtonTest.js"></script>
-</head>
-<body>
+    <script type="module" src="/scripts/components/hoverRevealMenu.js"></script>
+<SecondaryLayout>
     <div class="btn-container">
         <div class="btn">
             <ul class="btn-list">
-                <a href="../../pages/components/hoverButtonTest" class="btn-wrapper">
+                <a href="/components/hoverRevealMenu" class="btn-wrapper">
                     <div class="btn-icon"></div>
                     <div class="btn-text">Home</div>
                 </a>
@@ -35,5 +30,4 @@ import "../../styles/hoverButtonTest.css";
             </ul>
         </div>
     </div>
-</body>
-</html>
+</SecondaryLayout>
