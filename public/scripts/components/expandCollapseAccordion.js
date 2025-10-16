@@ -5,7 +5,7 @@ document.addEventListener("click", (e) => {
   const body = icon.parentElement.nextElementSibling
 
   if (body.classList.contains("show")) {
-    // Expand
+    // Collapse
     body.style.height = body.scrollHeight + "px"
     body.offsetHeight
     body.style.height = "0"

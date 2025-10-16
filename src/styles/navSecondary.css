@@ -10,6 +10,7 @@ nav {
   letter-spacing: -0.5px;
   font-size: 0.9rem;
   color: #fff;
+  z-index: 1000;
 }
 
 .nav-left a,

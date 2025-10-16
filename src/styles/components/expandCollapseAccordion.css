@@ -1,23 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 body {
-  background-color: #151515;
-  padding: 4vw;
-  margin: 0;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: top;
   min-height: 100vh;
 }
 
 .cards-container {
-  max-width: 1000px;
-  margin: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .card {
-  margin: 0 40px 13px;
+  width: 70vw;
+  max-width: 800px;
+  min-width: 300px;
+  margin-bottom: 13px;
   padding: 10px 20px;
   border: 0.5px solid #777777;
   background-color: #262626;
@@ -33,29 +33,32 @@ body {
 .card-header {
   display: flex;
   justify-content: space-between;
-  font-size: 1.4rem;
   align-items: center;
+  font-size: 1.4rem;
   font-weight: 400;
 }
 
 .card-body {
   height: 0;
-  padding: 0;
   opacity: 0;
   overflow: hidden;
   font-size: 1rem;
   font-weight: 200;
   line-height: 1.7;
+  margin-bottom: 0;
+  margin-top: 0;
   transition:
     height 0.4s ease,
-    padding 0.6s ease,
-    opacity 0.3s ease 0.1s;
+    opacity 0.4s ease,
+    margin-bottom 0.4s ease,
+    margin-top 0.4s ease;
 }
 
 .card-body.show {
   height: auto;
-  padding: 1rem 0 0.5rem;
   opacity: 100%;
+  margin-bottom: 0.5rem;
+  margin-top: 0.7rem;
 }
 
 button {
@@ -67,7 +70,7 @@ button {
   display: inline-block;
   color: #777777;
   cursor: pointer;
-  transition: transform 0.5s ease;
+  transition: transform 0.4s ease;
 }
 
 .plus-icon.active {

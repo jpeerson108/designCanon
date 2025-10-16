@@ -1,12 +1,12 @@
 ---
-import "../../styles/expandCollapse.css";
+import SecondaryLayout from "../../layouts/secondaryLayout.astro";
+import "../../styles/components/expandCollapseAccordion.css";
 ---
-<html lang="en">
-<head>
-  <title>Expand/Collapse</title>
-  <script type="module" src="/scripts/expandCollapse.js"></script>
-</head>
-<body>
+
+<title>Expand/Collapse</title>
+<script type="module" src="/scripts/components/expandCollapseAccordion.js"></script>
+
+<SecondaryLayout>
   <div class="cards-container">
   <div class="card">
       <div class="card-header">
@@ -74,5 +74,4 @@ import "../../styles/expandCollapse.css";
       </div>
     </div>
   </div>
-</body>
-</html>
+</SecondaryLayout>

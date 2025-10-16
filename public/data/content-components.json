@@ -19,7 +19,7 @@
         "title": "Smooth Expand/Collapse Accordion",
         "category": "Structure",
         "image": "/assets/thumbnails/thumbnail-3.png",
-        "href": "#",
+        "href": "/components/expandCollapseAccordion",
         "date": "2025-07-28",
         "tags": ["accordion", "list", "expand", "collapse", "toggle", "reveal", "structure"]
     },
