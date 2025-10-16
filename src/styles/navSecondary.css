@@ -16,11 +16,13 @@ nav {
 .nav-left a,
 .nav-right a {
   display: flex;
+  position: relative;
   gap: 4px;
   align-items: center;
   background-color: rgba(17, 17, 17, 0.8);
   padding: 5px 10px;
   border-radius: var(--rounded-corners-small);
+  isolation: isolate;
 }
 
 .nav-icon {
@@ -31,4 +33,26 @@ nav {
 .nav-icon.github {
   height: 13px;
   width: 100%;
+}
+
+.hover-outline {
+  position: absolute;
+  border: 1px solid rgba(17, 17, 17, 0);
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: -1;
+  transition: all .15s cubic-bezier(.6,0.5,.53,2.5);
+}
+
+.nav-left a:hover .hover-outline,
+.nav-right a:hover .hover-outline {
+  border-color: rgba(17, 17, 17, 0.8);
+  border-radius: 7px;
+  width: 110%;
+  height: 130%;
 }
