@@ -35,7 +35,7 @@
         "title": "Staggered Columns Page Transition",
         "category": "Page Transitions",
         "image": "/assets/thumbnails/thumbnail-5.png",
-        "href": "components/staggeredColumnsPageTransition/home",
+        "href": "/components/staggeredColumnsPageTransition/home",
         "date": "2025-08-28",
         "tags": ["page", "transition", "staggered", "columns", "reveal", "loading", "layout"]
     },
@@ -43,7 +43,7 @@
         "title": "Box Section Transition (Scroll-Based)",
         "category": "Scroll",
         "image": "/assets/thumbnails/thumbnail-6.png",
-        "href": "#",
+        "href": "/components/boxSectionTransition",
         "date": "2025-08-27",
         "tags": ["scroll", "section", "transition", "boxes", "reveal", "scroll-based"]
     }

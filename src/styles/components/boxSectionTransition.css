@@ -18,29 +18,20 @@ section {
   min-height: 100vh;
 }
 
-section.hero-img,
-section.about-img {
-  height: 200vh;
+.hero1,
+.hero3,
+.hero5 {
+  background: var(--color-black-1);
 }
 
-.hero {
-  background: #222;
-}
-
-.about {
-  background: #555;
-}
-
-.footer {
-  background: #888;
-}
-
-img {
-  position: absolute;
+.hero2,
+.hero4 {
+  background: var(--color-black-3);
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: -1;
+  background-image: url("/public/assets/textures/ChatGPT\ Image\ Sep\ 20\,\ 2025\,\ 05_05_21\ PM.png");
+  background-size: cover;
+  background-position: center;
 }
 
 h1 {
@@ -49,10 +40,21 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Inter";
-  font-size: 10vw;
+  font-size: 5vw;
   font-weight: 500;
   letter-spacing: -0.025em;
-  color: #000;
+  pointer-events: none;
+}
+
+.hero1 h1,
+.hero3 h1,
+.hero5 h1 {
+  color: var(--color-black-5);
+}
+
+.hero2 h1,
+.hero4 h1 {
+  color: white;
   opacity: 0.5;
 }
 
@@ -91,18 +93,18 @@ h1 {
   opacity: 0;
 }
 
-.hero-img .blocks-container.top .blocks-row .block {
-  background: #222;
+.hero2 .blocks-container.top .blocks-row .block {
+  background: var(--color-black-1);
 }
 
-.hero-img .blocks-container.bottom .blocks-row .block {
-  background: #555;
+.hero2 .blocks-container.bottom .blocks-row .block {
+  background: var(--color-black-1);
 }
 
-.about-img .blocks-container.top .blocks-row .block {
-  background: #555;
+.hero4 .blocks-container.top .blocks-row .block {
+  background: var(--color-black-1);
 }
 
-.about-img .blocks-container.bottom .blocks-row .block {
-  background: #888;
+.hero4 .blocks-container.bottom .blocks-row .block {
+  background: var(--color-black-1);
 }
