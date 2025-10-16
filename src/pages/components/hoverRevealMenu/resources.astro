@@ -1,0 +1,34 @@
+---
+import SecondaryLayout from "../../../layouts/secondaryLayout.astro";
+import "../../../styles/components/hoverRevealMenu.css";
+---
+    <script type="module" src="/scripts/components/hoverRevealMenu.js"></script>
+<SecondaryLayout title="Reveal Menu Items on Hover">
+    <div class="background"></div>
+    <div class="btn-container">
+        <div class="btn">
+            <ul class="btn-list">
+                <a href="/components/hoverRevealMenu/home" class="btn-wrapper">
+                    <div class="btn-icon"></div>
+                    <div class="btn-text">Home</div>
+                </a>
+                <a href="/components/hoverRevealMenu/about" class="btn-wrapper">
+                    <div class="btn-icon"></div>
+                    <div class="btn-text">About</div>
+                </a>
+                <a href="/components/hoverRevealMenu/resources" class="btn-wrapper">
+                    <div class="btn-icon"></div>
+                    <div class="btn-text">Resources</div>
+                </a>
+                <a href="/components/hoverRevealMenu/tutorials" class="btn-wrapper">
+                    <div class="btn-icon"></div>
+                    <div class="btn-text">Tutorials</div>
+                </a>
+                <a href="/components/hoverRevealMenu/contact" class="btn-wrapper">
+                    <div class="btn-icon"></div>
+                    <div class="btn-text">Contact</div>
+                </a>
+            </ul>
+        </div>
+    </div>
+</SecondaryLayout>
