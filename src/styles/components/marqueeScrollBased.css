@@ -10,6 +10,10 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.marquee-container {
+  position: relative;
+}
+
 .background {
   position: fixed;
   top: 0;
@@ -72,4 +76,36 @@ body {
   transform: rotateX(180deg);
   transform-origin: 50% 50%;
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.scroll-down {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  display: flex;
+  gap: 4px;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  align-items: center;
+}
+
+.scroll-down svg {
+  transform: rotate(90deg);
+  height: 16px;
+}
+
+.scroll-up {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  display: flex;
+  gap: 4px;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  align-items: center;
+}
+
+.scroll-up svg {
+  transform: rotate(-90deg);
+  height: 16px;
 }
