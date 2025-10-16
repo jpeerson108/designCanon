@@ -1,16 +1,13 @@
 ---
-import "../../../styles/pageTransitionVertBoxes.css";
+import SecondaryLayout from "../../../layouts/secondaryLayout.astro";
+import "@/styles/components/staggeredColumnsPageTransition.css";
 ---
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <script defer src="../../../scripts/pageTransitionVertBoxes.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-</head>
-<body>
-        <div class="transition">
+
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script defer src="../../../scripts/components/staggeredColumnsPageTransition.js"></script>
+
+<SecondaryLayout title="About">
+    <div class="transition">
         <div class="transition-row row-1">
             <div class="block"></div>
             <div class="block"></div>
@@ -27,20 +24,16 @@ import "../../../styles/pageTransitionVertBoxes.css";
         </div>
     </div>
     <div class="app">
-        <nav>
-            <div class="logo">
-                <a href="./index.html">Jaret Peerson</a>
-            </div>
+        <div class="staggered-columns-nav">
             <div class="nav-items">
-                <a href="./index.html">Home</a>
-                <a href="./about.html">About</a>
-                <a href="./contact.html">Contact</a>
+                <a href="/components/staggeredColumnsPageTransition/home">Home</a>
+                <a href="/components/staggeredColumnsPageTransition/about">About</a>
+                <a href="/components/staggeredColumnsPageTransition/contact">Contact</a>
             </div>
-        </nav>
+        </div>
 
         <div class="hero">
             <h1>About</h1>
         </div>
     </div>
-</body>
-</html>
+</SecondaryLayout>
