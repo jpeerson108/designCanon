@@ -10,13 +10,25 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/public/assets/textures/ChatGPT\ Image\ Sep\ 19\,\ 2025\,\ 06_58_51\ PM.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
 .marquee-spacer {
   height: 70vh;
 }
 
 .marquee {
   position: relative;
-  background: #1c1c1c;
+  background: #161616;
   color: #ebebeb;
   padding: 15px 0;
   font-weight: 300;

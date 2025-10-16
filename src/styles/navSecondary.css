@@ -8,32 +8,26 @@ nav {
   font-family: "JetBrains Mono", monospace;
   text-transform: uppercase;
   letter-spacing: -0.5px;
-  color: #555;
+  font-size: 0.9rem;
+  color: #fff;
 }
 
 .nav-left a,
 .nav-right a {
   display: flex;
-  gap: 7px;
+  gap: 4px;
   align-items: center;
-  transition: color 0.3s ease;
-}
-
-.nav-left a:hover,
-.nav-right a:hover {
-  color: #aaa;
-}
-
-.nav-right a {
-  gap: 6px;
+  background-color: rgba(17, 17, 17, 0.8);
+  padding: 5px 10px;
+  border-radius: var(--rounded-corners-small);
 }
 
 .nav-icon {
-  height: 16px;
+  height: 14px;
   width: 100%;
 }
 
 .nav-icon.github {
-  height: 15px;
+  height: 13px;
   width: 100%;
 }
