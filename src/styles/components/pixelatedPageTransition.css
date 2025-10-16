@@ -17,7 +17,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff;
   z-index: -2;
   pointer-events: none;
 }
@@ -50,30 +49,6 @@ h1 {
   box-shadow: 0 0 50px -10px #3333338a;
   cursor: pointer;
   z-index: 10000;
-}
-
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  font-family: "Inter", sans-serif;
-  color: #fff;
-  mix-blend-mode: difference;
-  z-index: 1000;
-}
-
-nav div {
-  display: flex;
-  margin: 0 4em;
-}
-
-nav div p {
-  font-weight: 400;
-  text-transform: uppercase;
-  font-size: 0.8em;
-  padding: 0.8em 1.6em;
 }
 
 #square-container {

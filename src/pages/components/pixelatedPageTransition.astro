@@ -1,0 +1,73 @@
+---
+import SecondaryLayout from "../../layouts/secondaryLayout.astro";
+import "../../styles/components/pixelatedPageTransition.css";
+---
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script defer nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script type="module" src="/scripts/components/pixelatedPageTransition.js"></script>
+
+<body>
+    <SecondaryLayout title="Pixelated Page Transition">
+    <div id="toggle">
+        <ion-icon name="menu-sharp"></ion-icon>
+    </div>
+    <div class="hero">
+        <div class="header">
+            <h1>Bridging purpose, aesthetic, and function</h1>
+        </div>
+    </div>
+    <div id="square-container"></div>
+    <div class="content-overlay">
+        <div class="nav-header">
+            <h1>work with us</h1>
+        </div>
+        <div class="nav-links">
+            <span>(01)</span>
+            <a href="#">home</a>
+        </div>
+        <div class="nav-links">
+            <span>(02)</span>
+            <a href="#">about</a>
+        </div>
+        <div class="nav-links">
+            <span>(03)</span>
+            <a href="#">work</a>
+        </div>
+        <div class="nav-links">
+            <span>(04)</span>
+            <a href="#">social</a>
+        </div>
+    </div>
+</SecondaryLayout>
+
+
+
+<SecondaryLayout>
+    <div class="btn-container">
+        <div class="btn">
+            <ul class="btn-list">
+                <a href="/components/hoverRevealMenu" class="btn-wrapper">
+                    <div class="btn-icon"></div>
+                    <div class="btn-text">Home</div>
+                </a>
+                <a href="#" class="btn-wrapper">
+                    <div class="btn-icon"></div>
+                    <div class="btn-text">About</div>
+                </a>
+                <a href="#" class="btn-wrapper">
+                    <div class="btn-icon"></div>
+                    <div class="btn-text">Resources</div>
+                </a>
+                <a href="#" class="btn-wrapper">
+                    <div class="btn-icon"></div>
+                    <div class="btn-text">Tutorials</div>
+                </a>
+                <a href="#" class="btn-wrapper">
+                    <div class="btn-icon"></div>
+                    <div class="btn-text">Contact</div>
+                </a>
+            </ul>
+        </div>
+    </div>
+</SecondaryLayout>

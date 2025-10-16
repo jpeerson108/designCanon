@@ -7,11 +7,10 @@
 }
 
 body {
-  background: #151515;
   font-family: "Inter", sans-serif;
 }
 
-.spacer {
+.marquee-spacer {
   height: 70vh;
 }
 

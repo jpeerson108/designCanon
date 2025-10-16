@@ -16,7 +16,7 @@
         "tags": ["marquee", "scroll", "infinite", "loop", "horizontal", "text", "scrolling", "motion", "continuous"]
     },
     {
-        "title": "Silky-Smooth Accordion List",
+        "title": "Smooth Expand/Collapse Accordion",
         "category": "Structure",
         "image": "/assets/thumbnails/thumbnail-3.png",
         "href": "#",
@@ -27,7 +27,7 @@
         "title": "Pixelated Page Transition",
         "category": "Page Transitions",
         "image": "/assets/thumbnails/thumbnail-4.png",
-        "href": "#",
+        "href": "/components/pixelatedPageTransition",
         "date": "2025-09-12",
         "tags": ["page", "transition", "pixelated", "box", "reveal", "screen"]
     },

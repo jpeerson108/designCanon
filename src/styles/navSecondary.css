@@ -8,7 +8,7 @@ nav {
   font-family: "JetBrains Mono", monospace;
   text-transform: uppercase;
   letter-spacing: -0.5px;
-  color: #fff;
+  color: #555;
 }
 
 .nav-left a,
@@ -16,6 +16,12 @@ nav {
   display: flex;
   gap: 7px;
   align-items: center;
+  transition: color 0.3s ease;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+  color: #aaa;
 }
 
 .nav-right a {
