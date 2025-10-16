@@ -54,7 +54,7 @@ h1 {
 .blocks-container {
   position: absolute;
   width: 100%;
-  height: 100px;
+  height: 160px;
 }
 
 .blocks-container.top {
@@ -67,7 +67,7 @@ h1 {
 
 .blocks-row {
   width: 100%;
-  height: 25px;
+  height: 40px;
   overflow: hidden;
   display: flex;
 }

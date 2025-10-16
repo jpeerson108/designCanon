@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Dynamically create 16 block elements per row
   const blocksRows = document.querySelectorAll(".blocks-row")
   blocksRows.forEach((row) => {
-    for (let i = 0; i < 60; i++) {
+    for (let i = 0; i < 33; i++) {
       const block = document.createElement("div")
       block.className = "block"
       row.appendChild(block)
