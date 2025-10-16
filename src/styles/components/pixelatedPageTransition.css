@@ -1,57 +1,50 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
 html,
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
   overflow: hidden;
 }
 
-.hero {
+.background {
   position: fixed;
   top: 0;
-  width: 100vw;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/public/assets/textures/ChatGPT\ Image\ Sep\ 19\,\ 2025\,\ 07_24_00\ PM.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.toggle-container {
+  width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: -2;
-  pointer-events: none;
+  justify-content: center;
 }
 
-h1 {
-  font-family: "Inter", sans-serif;
-  font-size: 6vw;
-  text-transform: uppercase;
-  font-weight: 400;
-  text-align: center;
-  letter-spacing: -0.025em;
-  line-height: 1;
-  pointer-events: none;
-}
-
-#toggle {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
+.toggle {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1em 0;
-  padding: 0.8em 0.8em;
-  background: rgba(255, 255, 255, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 100px;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 0 50px -10px #3333338a;
+  padding: 0.8em 1.2em;
+  background: var(--color-black-2);
+  border-radius: var(--rounded-corners-med);
   cursor: pointer;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: white;
   z-index: 10000;
 }
 
 #square-container {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -67,7 +60,7 @@ h1 {
 .square {
   width: 100px;
   height: 100px;
-  background: #ec6533;
+  background: var(--color-black-2);
   box-sizing: border-box;
   pointer-events: none;
 }
@@ -80,32 +73,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5em;
-  background: #333;
+  background: #111;
   color: #fff;
   z-index: -1;
-}
-
-.content-overlay h1 {
-  color: #ec6533;
-  font-size: 2vw;
-}
-
-.content-overlay .nav-links {
-  display: flex;
-  font-family: "Inter", sans-serif;
-}
-
-.content-overlay .nav-links span {
-  position: relative;
-  top: 0.3em;
-}
-
-.content-overlay .nav-links a {
-  padding: 0 1em;
-  font-size: 1.5em;
-  font-weight: 300;
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
 }

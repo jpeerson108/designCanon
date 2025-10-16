@@ -17,6 +17,16 @@ window.addEventListener("DOMContentLoaded", () => {
 
   let squares = []
 
+  // Set initial text content
+  const inactiveToggle = document.querySelector(".toggle.inactive")
+  const activeToggle = document.querySelector(".toggle.active")
+  
+  inactiveToggle.textContent = "Click This Thing"
+  activeToggle.textContent = "Do It Again!"
+  
+  // Hide active toggle by default
+  gsap.set(activeToggle, { opacity: 0, visibility: "hidden" })
+
   function createSquares() {
     for (let i = 0; i < numSquares; i++) {
       const square = document.createElement("div")
@@ -26,7 +36,12 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function animateSquares() {
+  function animateSquares(callback) {
+    // Calculate total animation time
+    const staggerTime = 0.003
+    const totalFillTime = squares.length * staggerTime
+    const coverTime = 0.1 + totalFillTime  // When screen is fully covered
+    
     gsap.fromTo(
       squares,
       {
@@ -34,45 +49,72 @@ window.addEventListener("DOMContentLoaded", () => {
       },
       {
         opacity: 1,
-        delay: 0.3,
+        delay: 0.1,
         duration: 0.001,
         stagger: {
-          each: 0.008,
+          each: staggerTime,
           from: "random",
         },
+        onComplete: () => {
+          // Execute callback when screen is fully covered
+          if (callback) callback()
+        }
       }
     )
 
     gsap.to(squares, {
       opacity: 0,
-      delay: 1,
+      delay: coverTime + 0.2,  // Wait for all squares to appear + a brief pause
       duration: 0.001,
       stagger: {
-        each: 0.008,
+        each: staggerTime,
         from: "random",
       },
+      onComplete: () => {
+        // Clear all squares after animation completes
+        squareContainer.innerHTML = ""
+        squares = []
+      }
     })
   }
 
-  let overlayVisibile = false
+  let overlayVisible = false
 
-  document.getElementById("toggle").addEventListener("click", () => {
-    squareContainer.innerHTML = ""
-    squares = []
+  // Inactive toggle click handler
+  inactiveToggle.addEventListener("click", () => {
     createSquares()
-    animateSquares()
-
-    gsap.to(menu, 0.025, {
-      opacity: overlayVisibile ? 0 : 1,
-      visibility: overlayVisibile ? "hidden" : "visible",
-      delay: 1,
+    animateSquares(() => {
+      // This runs when screen is fully covered - switch visibility
+      inactiveToggle.style.opacity = 0
+      inactiveToggle.style.visibility = "hidden"
+      
+      menu.style.opacity = 1
+      menu.style.visibility = "visible"
+      menu.style.zIndex = 0
+      
+      activeToggle.style.opacity = 1
+      activeToggle.style.visibility = "visible"
     })
 
-    gsap.to(menu, {
-      zIndex: overlayVisibile ? -1 : 0,
-      delay: overlayVisibile ? 0 : 2,
+    overlayVisible = true
+  })
+
+  // Active toggle click handler
+  activeToggle.addEventListener("click", () => {
+    createSquares()
+    animateSquares(() => {
+      // This runs when screen is fully covered - switch visibility
+      menu.style.opacity = 0
+      menu.style.visibility = "hidden"
+      menu.style.zIndex = -1
+      
+      activeToggle.style.opacity = 0
+      activeToggle.style.visibility = "hidden"
+      
+      inactiveToggle.style.opacity = 1
+      inactiveToggle.style.visibility = "visible"
     })
 
-    overlayVisibile = !overlayVisibile
+    overlayVisible = false
   })
 })
