@@ -51,7 +51,7 @@
 }
 
 .filter-track.active {
-  width: 100vw;
+  width: calc(100% + (2 * var(--horizontal-page-padding)));
   padding: 5px 5px;
   margin-left: calc(-1 * var(--horizontal-page-padding));
   margin-right: calc(-1 * var(--horizontal-page-padding));
