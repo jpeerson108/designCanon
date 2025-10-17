@@ -21,7 +21,7 @@ section {
   background: var(--color-black-3);
   width: 100%;
   height: 100%;
-  background-image: url("/public/assets/textures/ChatGPT\ Image\ Sep\ 20\,\ 2025\,\ 05_05_21\ PM.png");
+  background-image: url("/public/assets/textures/ChatGPT\ Image\ Sep\ 19\,\ 2025\,\ 07_24_00\ PM.png");
   background-size: cover;
   background-position: center;
 }
@@ -32,7 +32,7 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "JetBrains Mono", monospace;
-  font-size: 2vw;
+  font-size: 2rem;
   font-weight: 300;
   letter-spacing: -5%;
   text-transform: uppercase;
@@ -54,7 +54,9 @@ h1 {
 .blocks-container {
   position: absolute;
   width: 100%;
-  height: 160px;
+  height: 12vw;
+  min-height: 80px;
+  max-height: 160px;
 }
 
 .blocks-container.top {
@@ -67,7 +69,9 @@ h1 {
 
 .blocks-row {
   width: 100%;
-  height: 40px;
+  height: 3vw;
+  min-height: 20px;
+  max-height: 40px;
   overflow: hidden;
   display: flex;
 }
