@@ -6,13 +6,25 @@ body {
   overflow: hidden;
 }
 
-.background {
+.background-1 {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/public/assets/textures/ChatGPT\ Image\ Sep\ 19\,\ 2025\,\ 07_24_00\ PM.png");
+  background-image: url("/public/assets/textures/OpenAI\ Playground\ 2025-10-16\ at\ 19.59.24\ \(1\).png");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.background-2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/public/assets/textures/OpenAI\ Playground\ 2025-10-16\ at\ 19.59.24\ \(2\).png");
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -31,7 +43,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0.8em 1.2em;
-  background: var(--color-black-2);
+  background: var(--color-black-1);
   border-radius: var(--rounded-corners-med);
   cursor: pointer;
   font-family: "JetBrains Mono", monospace;
