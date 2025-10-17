@@ -17,14 +17,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
   let squares = []
 
-  // Set initial text content
   const inactiveToggle = document.querySelector(".toggle.inactive")
   const activeToggle = document.querySelector(".toggle.active")
-  
+
+  // Set button text content here
   inactiveToggle.textContent = "Click This Thing"
   activeToggle.textContent = "Do It Again!"
-  
-  // Hide active toggle by default
+
   gsap.set(activeToggle, { opacity: 0, visibility: "hidden" })
 
   function createSquares() {
@@ -37,11 +36,11 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   function animateSquares(callback) {
-    // Calculate total animation time
+    // Total animation time
     const staggerTime = 0.003
     const totalFillTime = squares.length * staggerTime
-    const coverTime = 0.1 + totalFillTime  // When screen is fully covered
-    
+    const coverTime = 0.1 + totalFillTime
+
     gsap.fromTo(
       squares,
       {
@@ -56,25 +55,24 @@ window.addEventListener("DOMContentLoaded", () => {
           from: "random",
         },
         onComplete: () => {
-          // Execute callback when screen is fully covered
           if (callback) callback()
-        }
+        },
       }
     )
 
     gsap.to(squares, {
       opacity: 0,
-      delay: coverTime + 0.2,  // Wait for all squares to appear + a brief pause
+      delay: coverTime + 0.2,
       duration: 0.001,
       stagger: {
         each: staggerTime,
         from: "random",
       },
       onComplete: () => {
-        // Clear all squares after animation completes
+        // Clear all squares when animation completes
         squareContainer.innerHTML = ""
         squares = []
-      }
+      },
     })
   }
 
@@ -84,14 +82,13 @@ window.addEventListener("DOMContentLoaded", () => {
   inactiveToggle.addEventListener("click", () => {
     createSquares()
     animateSquares(() => {
-      // This runs when screen is fully covered - switch visibility
       inactiveToggle.style.opacity = 0
       inactiveToggle.style.visibility = "hidden"
-      
+
       menu.style.opacity = 1
       menu.style.visibility = "visible"
       menu.style.zIndex = 0
-      
+
       activeToggle.style.opacity = 1
       activeToggle.style.visibility = "visible"
     })
@@ -103,14 +100,13 @@ window.addEventListener("DOMContentLoaded", () => {
   activeToggle.addEventListener("click", () => {
     createSquares()
     animateSquares(() => {
-      // This runs when screen is fully covered - switch visibility
       menu.style.opacity = 0
       menu.style.visibility = "hidden"
       menu.style.zIndex = -1
-      
+
       activeToggle.style.opacity = 0
       activeToggle.style.visibility = "hidden"
-      
+
       inactiveToggle.style.opacity = 1
       inactiveToggle.style.visibility = "visible"
     })
