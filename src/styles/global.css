@@ -14,6 +14,7 @@
   --rounded-corners-large: 15px;
 
   /* Main Colors */
+  --color-background: #0b0b0b;
   --color-accent: #ec6533;
   --color-black-1: #111;
   --color-black-2: #222;
@@ -61,7 +62,7 @@ h4 {
 }
 
 body {
-  background: #111;
+  background: var(--color-background);
   color: #fff;
   -webkit-font-smoothing: antialiased;
   font-family: "Inter", sans-serif;

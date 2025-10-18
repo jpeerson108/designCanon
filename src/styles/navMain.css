@@ -21,7 +21,7 @@ nav {
   font-family: "JetBrains Mono", monospace;
   text-transform: uppercase;
   letter-spacing: -0.5px;
-  background-color: var(--color-black-1);
+  background-color: var(--color-background);
   z-index: 1000;
   transition: height 1s ease;
 }
@@ -154,7 +154,7 @@ li.menu-box {
   transition-duration: 0.3s, 0.3s;
   transition-timing-function: ease, ease;
   transition-delay: 0s, 0s;
-  background-color: var(--color-black-1);
+  background-color: var(--color-background);
 }
 
 .nav-dropdown li a {
