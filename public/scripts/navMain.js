@@ -35,16 +35,3 @@ menuBox.forEach((box) => {
     }
   }
 })
-
-// Make logo smaller on scroll-down
-let lastScrollY = window.scrollY
-const navLogo = document.querySelector(".nav-logo")
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > lastScrollY) {
-    navLogo.classList.add("small")
-  } else {
-    navLogo.classList.remove("small")
-  }
-  lastScrollY = window.scrollY
-})

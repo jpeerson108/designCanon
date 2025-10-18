@@ -231,10 +231,6 @@ li.social-box:hover {
   object-fit: contain;
 }
 
-.nav-logo.small {
-  height: 50%;
-}
-
 /* Tablet */
 @media screen and (max-width: 1200px) {
 }
