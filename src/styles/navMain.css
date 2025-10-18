@@ -2,7 +2,7 @@
   --navMain-heightDesktop: 60px;
   --navMain-heightSmaller: 50px;
   --navMain-heightMobile: 45px;
-  --navMain-border: solid 1px #222;
+  --navMain-border: solid 1px var(--color-main-border);
 }
 
 body {

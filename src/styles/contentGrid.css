@@ -1,6 +1,6 @@
 :root {
   /* Borders & Corners */
-  --filter-border: 1px solid #222;
+  --filter-border: 1px solid var(--color-main-border);
   --filter-border-radius: 4px;
   --contentImg-border-radius: 10px;
 
