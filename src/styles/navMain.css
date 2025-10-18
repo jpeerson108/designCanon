@@ -87,11 +87,11 @@ li.menu-box {
 
 /* Menu Items - Interactivity */
 .menu-box.active {
-  background: #222;
+  background: var(--color-black-1c);
 }
 
 .menu-box.hovering {
-  background: #222;
+  background: var(--color-black-1c);
   transition: background 0.3s ease;
 }
 
@@ -112,7 +112,7 @@ li.menu-box {
 }
 
 .nav-menu-text.show .menu-box {
-  background: #222;
+  background: var(--color-black-1c);
 }
 
 /* Dim !menu-box(s) */
@@ -188,7 +188,7 @@ li.menu-box {
 }
 
 .nav-dropdown li:hover {
-  background-color: #222;
+  background-color: var(--color-black-1c);
 }
 
 /* Socials Menu */
@@ -205,7 +205,7 @@ li.social-box {
 }
 
 li.social-box:hover {
-  background: #222;
+  background: var(--color-black-1c);
 }
 
 /* Center Logo */
