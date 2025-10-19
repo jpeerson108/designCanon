@@ -1,235 +1,67 @@
-/*
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-body {
-    font-family: "Inter", sans-serif;
-    margin: 2rem;
-}
-
-header h1 {
-    text-align: center;
-    margin: 60px auto;
-    font: 4rem;
-    font-weight: 600;
-}
-
-p {
-    text-align: center;
-    font-weight: 300;
-    margin-top: 10px;
-}
-
-.wall-item {
-    display: block;
-    margin: 0 0 24px 0;
-    padding: 12px;
-    background: #f5f5f5;
-    border-radius: 10px;
-    transition: all 200ms;
-}
-
-.wall-item:hover {
-    background: #e1e1e1;
-    transition: all 200ms ease;
-    cursor: pointer;
-}
-
-.wall-item > img {
-    display: block;
-    width: 100%;
-    margin: 0 0 30px 0;
-    border-radius: 6px;
-}
-
-.wall-item h2 {
-    text-align: center;
-    font-size: 1rem;
-    text-transform: uppercase;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.wall-column {
-    display: block;
-    position: relative;
-    width: 33.3333%;
-    float: left;
-    padding: 0 12px;
-    box-sizing: border-box;
-    transition: width 0.4s ease, padding 0.4s ease;
-}
-
-@media (max-width: 800px) {
-    .wall-column {
-        width: 50%;
-    }
-}
-
-@media (max-width: 500px) {
-    .wall-column {
-        width: 100%;
-    }
-}
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-body {
-  font-family: "Inter", sans-serif;
-  margin: 2rem;
-}
-
 header h1 {
   text-align: center;
-  margin: 60px auto;
-  font: 4rem;
+  margin: 120px auto;
+  font-size: 4rem;
   font-weight: 600;
 }
 
 p {
-  text-align: center;
   font-weight: 300;
-  margin-top: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
-/* Wall container as flexbox */
 .wall {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -12px;
-  margin-right: -12px;
+  column-count: 3;
+  column-gap: 20px;
+}
+
+.h2,
+p {
+  max-width: 90%;
 }
 
 .wall-item {
-  display: block;
+  display: inline-block;
+  width: 100%;
   margin: 0 0 24px 0;
   padding: 12px;
-  background: #f5f5f5;
+  background: var(--color-black-1);
   border-radius: 10px;
-  transition: all 200ms;
+  border: 1px solid transparent;
+  transition: border 0.3s ease;
+  break-inside: avoid;
 }
 
 .wall-item:hover {
-  background: #e1e1e1;
-  transition: all 200ms ease;
+  border: 1px solid var(--color-black-2);
   cursor: pointer;
 }
 
 .wall-item > img {
   display: block;
   width: 100%;
-  margin: 0 0 30px 0;
+  margin: 0 0 20px 0;
   border-radius: 6px;
 }
 
 .wall-item h2 {
-  text-align: center;
   font-size: 1rem;
   text-transform: uppercase;
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
-/* Wall columns as flex children */
-.wall-column {
-  flex: 1 1 33.3333%;
-  padding: 0 12px;
-  box-sizing: border-box;
-  transition: flex-basis 0.4s ease, max-width 0.4s ease;
-}
-
 /* Tablet: 2 columns */
-@media (max-width: 640px) {
-  .wall-column {
-    flex-basis: 50%;
-    max-width: 50%;
+@media (max-width: 1000px) {
+  .wall {
+    column-count: 2;
   }
 }
 
 /* Mobile: 1 column */
-@media (max-width: 480px) {
-  .wall-column {
-    flex-basis: 100%;
-    max-width: 100%;
+@media (max-width: 650px) {
+  .wall {
+    column-count: 1;
   }
 }
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-body {
-  font-family: "Inter", sans-serif;
-  margin: 2rem;
-}
-
-header h1 {
-  text-align: center;
-  margin: 60px auto;
-  font: 4rem;
-  font-weight: 600;
-}
-
-p {
-  text-align: center;
-  font-weight: 300;
-  margin-top: 10px;
-}
-
-/* Wall container as flexbox */
-.wall {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -12px;
-  margin-right: -12px;
-}
-
-.wall-item {
-  display: block;
-  margin: 0 0 24px 0;
-  padding: 12px;
-  background: #f5f5f5;
-  border-radius: 10px;
-  transition: all 200ms;
-}
-
-.wall-item:hover {
-  background: #e1e1e1;
-  transition: all 200ms ease;
-  cursor: pointer;
-}
-
-.wall-item > img {
-  display: block;
-  width: 100%;
-  margin: 0 0 30px 0;
-  border-radius: 6px;
-}
-
-.wall-item h2 {
-  text-align: center;
-  font-size: 1rem;
-  text-transform: uppercase;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.wall-column {
-  flex: 0 0 33.3333%;
-  max-width: 33.3333%;
-  padding: 0 12px;
-  box-sizing: border-box;
-  transition: flex-basis 0.4s ease, max-width 0.4s ease;
-}
-
-@media (max-width: 770px) {
-  .wall-column {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
-@media (max-width: 500px) {
-  .wall-column {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-

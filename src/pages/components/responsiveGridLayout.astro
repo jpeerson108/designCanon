@@ -1,88 +1,73 @@
 ---
-import "../../styles/responsiveGridLayout.css";
+import SecondaryLayout from "../../layouts/secondaryLayout.astro";
+import "../../styles/components/responsiveGridLayout.css";
 ---
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design Canon | Responsive Grid</title>
-    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script defer src="/scripts/jaliswall.js"></script>
-</head>
-<body>
-    <header>
-        <h1>Responsive Grid Layout</h1>
-    </header>
+
+<SecondaryLayout title="Responsive Grid Layout" rightLinkHref="https://github.com/jpeerson108/designCanon/blob/main/scripts/components/boxSectionTransition.js">
+    <div class="container">
+        <header>
+            <h1>Responsive Grid Layout</h1>
+        </header>
     <div class="wall">
         <div class="wall-item">
-            <img src="./assets/image 20.jpg" alt="">
+            <img src="/assets/textures/texture-1.png" alt="">
             <h2>Title Goes Here</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam odit, doloremque laborum cum, ducimus inventore non perspiciatis rem ipsum magni pariatur. Molestias sint possimus repellat saepe reiciendis laudantium quia?</p>
         </div>
 
         <div class="wall-item">
-            <img src="./assets/image 21.jpg" alt="">
+            <img src="/assets/textures/texture-2.png" alt="">
             <h2>Title Goes Here</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam odit, doloremque laborum cum, ducimus inventore non perspiciatis rem ipsum magni pariatur. Molestias sint possimus repellat saepe reiciendis laudantium quia?</p>
         </div>
 
         <div class="wall-item">
-            <img src="./assets/image 22.jpg" alt="">
+            <img src="/assets/textures/texture-3.png" alt="">
             <h2>Title Goes Here</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam odit, doloremque laborum cum, ducimus inventore non perspiciatis rem ipsum magni pariatur. Molestias sint possimus repellat saepe reiciendis laudantium quia?</p>
         </div>
 
         <div class="wall-item">
-            <img src="./assets/image 23.jpg" alt="">
+            <img src="/assets/textures/texture-5.png" alt="">
             <h2>Title Goes Here</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam odit, doloremque laborum cum, ducimus inventore non perspiciatis rem ipsum magni pariatur. Molestias sint possimus repellat saepe reiciendis laudantium quia?</p>
         </div>
 
         <div class="wall-item">
-            <img src="./assets/image 30.jpg" alt="">
-            <h2>Title Goes Here</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam odit, doloremque laborum cum, ducimus inventore non perspiciatis rem ipsum magni pariatur. Molestias sint possimus repellat saepe reiciendis laudantium quia?</p>
-        </div>
-
-        <!-- Repeat Items -->
-
-        <div class="wall-item">
-            <img src="./assets/image 20.jpg" alt="">
+            <img src="/assets/textures/texture-6.png" alt="">
             <h2>Title Goes Here</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam odit, doloremque laborum cum, ducimus inventore non perspiciatis rem ipsum magni pariatur. Molestias sint possimus repellat saepe reiciendis laudantium quia?</p>
         </div>
 
         <div class="wall-item">
-            <img src="./assets/image 21.jpg" alt="">
+            <img src="/assets/textures/texture-7.png" alt="">
             <h2>Title Goes Here</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam odit, doloremque laborum cum, ducimus inventore non perspiciatis rem ipsum magni pariatur. Molestias sint possimus repellat saepe reiciendis laudantium quia?</p>
         </div>
 
         <div class="wall-item">
-            <img src="./assets/image 22.jpg" alt="">
+            <img src="/assets/textures/texture-8.png" alt="">
             <h2>Title Goes Here</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam odit, doloremque laborum cum, ducimus inventore non perspiciatis rem ipsum magni pariatur. Molestias sint possimus repellat saepe reiciendis laudantium quia?</p>
         </div>
 
         <div class="wall-item">
-            <img src="./assets/image 23.jpg" alt="">
+            <img src="/assets/textures/texture-9.png" alt="">
             <h2>Title Goes Here</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam odit, doloremque laborum cum, ducimus inventore non perspiciatis rem ipsum magni pariatur. Molestias sint possimus repellat saepe reiciendis laudantium quia?</p>
         </div>
 
         <div class="wall-item">
-            <img src="./assets/image 30.jpg" alt="">
+            <img src="/assets/textures/texture-10.png" alt="">
+            <h2>Title Goes Here</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam odit, doloremque laborum cum, ducimus inventore non perspiciatis rem ipsum magni pariatur. Molestias sint possimus repellat saepe reiciendis laudantium quia?</p>
+        </div>
+
+        <div class="wall-item">
+            <img src="/assets/textures/texture-11.png" alt="">
             <h2>Title Goes Here</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nam odit, doloremque laborum cum, ducimus inventore non perspiciatis rem ipsum magni pariatur. Molestias sint possimus repellat saepe reiciendis laudantium quia?</p>
         </div>
     </div>
-    <script is:inline>
-        document.addEventListener("DOMContentLoaded", () => {
-            $(".wall").jaliswall({
-          item : ".wall-item",
-          columnClass : ".wall-column",
-         })
-        })
-    </script>
-</body>
-</html>
+    </div>
+</SecondaryLayout>
