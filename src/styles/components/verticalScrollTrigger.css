@@ -86,4 +86,5 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   z-index: 100;
+  pointer-events: none;
 }
