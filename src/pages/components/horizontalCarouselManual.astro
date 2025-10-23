@@ -1,0 +1,17 @@
+---
+import SecondaryLayout from "../../layouts/secondaryLayout.astro";
+import "../../styles/components/horizontalCarouselManual.css";
+---
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script type="module" src="/scripts/components/marqueeScrollBased.js"></script>
+
+<SecondaryLayout title="Simple Carousel" rightLinkHref="">
+    <div class="carousel-wrapper">
+        <div class="carousel-track">
+            <div class="carousel-slide">
+                <div class="slide-image slide-1"></div>
+                <div class="slide-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut modi corrupti ducimus, sapiente cum minus totam voluptatibus, voluptates enim consequatur soluta pariatur sint a temporibus illo labore dolores suscipit nemo.</div>
+            </div>
+        </div>
+    </div>
+</SecondaryLayout>
