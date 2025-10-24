@@ -3,49 +3,67 @@ import SecondaryLayout from "../../layouts/secondaryLayout.astro";
 import "../../styles/components/horizontalCarouselManual.css";
 ---
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-<script type="module" src="/scripts/components/marqueeScrollBased.js"></script>
+<script type="module" src="/scripts/components/horizontalCarouselManual.js"></script>
 
 <SecondaryLayout title="Simple Carousel" rightLinkHref="">
     <div class="carousel-container">
         <div class="carousel-wrapper">
             <div class="carousel-track">
                 <div class="carousel-slide">
-                    <div class="slide-image slide-1"></div>
+                    <div class="slide-image">
+                        <img src="/assets/images/image-19.png" alt="">
+                    </div>
                     <div class="slide-description"><span>Lorem ipsum, dolor sit amet consectetur.</span> Aut modi corrupti ducimus, sapiente cum minus totam voluptatibus, voluptates enim consequatur soluta.</div>
                 </div>
                 <div class="carousel-slide">
-                    <div class="slide-image slide-2"></div>
+                    <div class="slide-image">
+                        <img src="/assets/images/image-6.png" alt="">
+                    </div>
                     <div class="slide-description"><span>Lorem ipsum, dolor sit amet consectetur.</span> Aut modi corrupti ducimus, sapiente cum minus totam voluptatibus, voluptates enim consequatur soluta.</div>
                 </div>
                 <div class="carousel-slide">
-                    <div class="slide-image slide-3"></div>
+                    <div class="slide-image">
+                        <img src="/assets/images/image-20.png" alt="">
+                    </div>
                     <div class="slide-description"><span>Lorem ipsum, dolor sit amet consectetur.</span> Aut modi corrupti ducimus, sapiente cum minus totam voluptatibus, voluptates enim consequatur soluta.</div>
                 </div>
                 <div class="carousel-slide">
-                    <div class="slide-image slide-4"></div>
+                    <div class="slide-image">
+                        <img src="/assets/images/image-33.png" alt="">
+                    </div>
                     <div class="slide-description"><span>Lorem ipsum, dolor sit amet consectetur.</span> Aut modi corrupti ducimus, sapiente cum minus totam voluptatibus, voluptates enim consequatur soluta.</div>
                 </div>
                 <div class="carousel-slide">
-                    <div class="slide-image slide-5"></div>
+                    <div class="slide-image">
+                        <img src="/assets/images/image-40.png" alt="">
+                    </div>
                     <div class="slide-description"><span>Lorem ipsum, dolor sit amet consectetur.</span> Aut modi corrupti ducimus, sapiente cum minus totam voluptatibus, voluptates enim consequatur soluta.</div>
                 </div>
                 <div class="carousel-slide">
-                    <div class="slide-image slide-6"></div>
+                    <div class="slide-image">
+                        <img src="/assets/images/image-13.png" alt="">
+                    </div>
                     <div class="slide-description"><span>Lorem ipsum, dolor sit amet consectetur.</span> Aut modi corrupti ducimus, sapiente cum minus totam voluptatibus, voluptates enim consequatur soluta.</div>
                 </div>
                 <div class="carousel-slide">
-                    <div class="slide-image slide-7"></div>
-                    <div class="slide-description"><span>Lorem ipsum, dolor sit amet consectetur.</span> Aut modi corrupti ducimus, sapiente cum minus totam voluptatibus, voluptates enim consequatur soluta.</div>
-                </div>
-                <div class="carousel-slide">
-                    <div class="slide-image slide-8"></div>
+                    <div class="slide-image">
+                        <img src="/assets/images/image-15.png" alt="">
+                    </div>
                     <div class="slide-description"><span>Lorem ipsum, dolor sit amet consectetur.</span> Aut modi corrupti ducimus, sapiente cum minus totam voluptatibus, voluptates enim consequatur soluta.</div>
                 </div>
             </div>
 
             <div class="carousel-controls">
-                <button class="carousel-button" id="previous" disabled></button>
-                <button class="carousel-button" id="next" disabled></button>
+                <button class="carousel-button" id="previous" disabled>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 20" fill="none">
+                    <path d="M11.454 8.81639C12.055 9.55284 12.0127 10.6396 11.3261 11.3262L3.82611 18.8262C3.09388 19.5584 1.906 19.5584 1.17377 18.8262C0.441536 18.0939 0.441536 16.906 1.17377 16.1738L7.3476 9.99998L1.17377 3.82615C0.441537 3.09392 0.441537 1.90604 1.17377 1.17381C1.906 0.441575 3.09388 0.441575 3.82611 1.17381L11.3261 8.67381L11.454 8.81639Z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="carousel-button active" id="next">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 20" fill="none">
+                    <path d="M11.454 8.81639C12.055 9.55284 12.0127 10.6396 11.3261 11.3262L3.82611 18.8262C3.09388 19.5584 1.906 19.5584 1.17377 18.8262C0.441536 18.0939 0.441536 16.906 1.17377 16.1738L7.3476 9.99998L1.17377 3.82615C0.441537 3.09392 0.441537 1.90604 1.17377 1.17381C1.906 0.441575 3.09388 0.441575 3.82611 1.17381L11.3261 8.67381L11.454 8.81639Z" fill="currentColor"/>
+                    </svg>
+                </button>
             </div>
         </div>
     </div>

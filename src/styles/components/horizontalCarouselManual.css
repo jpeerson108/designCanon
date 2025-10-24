@@ -30,9 +30,17 @@
 .slide-image {
   width: 100%;
   height: 400px;
-  object-fit: cover;
   border-radius: 20px;
   background: var(--color-black-1c);
+  overflow: hidden;
+}
+
+.slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .slide-description {
@@ -48,35 +56,36 @@
   color: white;
 }
 
-.slide-image.slide-1 {
-  background-image: url(/assets/textures/texture-2.png);
-  background-position: center center;
+.carousel-controls {
+  display: flex;
+  position: absolute;
+  bottom: 100px;
+  right: 195px;
+  gap: 15px;
 }
-.slide-image.slide-2 {
-  background-image: url(/assets/textures/texture-4.jpeg);
-  background-position: center center;
+
+.carousel-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: var(--color-black-1c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-black-3);
 }
-.slide-image.slide-3 {
-  background-image: url(/assets/textures/texture-20.png);
-  background-position: center center;
+
+.carousel-button.active {
+  background-color: var(--color-black-4);
+  color: white;
 }
-.slide-image.slide-4 {
-  background-image: url(/assets/textures/texture-16.png);
-  background-position: center center;
+
+#previous svg,
+#next svg {
+  height: 14px;
 }
-.slide-image.slide-5 {
-  background-image: url(/assets/textures/texture-12.png);
-  background-position: center center;
-}
-.slide-image.slide-6 {
-  background-image: url(/assets/textures/texture-15.png);
-  background-position: center center;
-}
-.slide-image.slide-7 {
-  background-image: url(/assets/textures/texture-19.png);
-  background-position: center center;
-}
-.slide-image.slide-8 {
-  background-image: url(/assets/textures/texture-17.png);
-  background-position: center center;
+
+#previous svg {
+  rotate: 180deg;
 }
