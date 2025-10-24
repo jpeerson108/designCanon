@@ -1,0 +1,82 @@
+.carousel-container {
+  min-height: 100vh;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-wrapper {
+  width: 100vw;
+  overflow: hidden;
+  padding-left: 12vw;
+  padding-right: calc(-1 * var(--horizontal-page-padding));
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.carousel-slide {
+  width: 375px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.slide-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+  background: var(--color-black-1c);
+}
+
+.slide-description {
+  font-size: 1.1rem;
+  color: var(--color-black-7);
+  padding: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-top: 5px;
+}
+
+.slide-description span {
+  color: white;
+}
+
+.slide-image.slide-1 {
+  background-image: url(/assets/textures/texture-2.png);
+  background-position: center center;
+}
+.slide-image.slide-2 {
+  background-image: url(/assets/textures/texture-4.jpeg);
+  background-position: center center;
+}
+.slide-image.slide-3 {
+  background-image: url(/assets/textures/texture-20.png);
+  background-position: center center;
+}
+.slide-image.slide-4 {
+  background-image: url(/assets/textures/texture-16.png);
+  background-position: center center;
+}
+.slide-image.slide-5 {
+  background-image: url(/assets/textures/texture-12.png);
+  background-position: center center;
+}
+.slide-image.slide-6 {
+  background-image: url(/assets/textures/texture-15.png);
+  background-position: center center;
+}
+.slide-image.slide-7 {
+  background-image: url(/assets/textures/texture-19.png);
+  background-position: center center;
+}
+.slide-image.slide-8 {
+  background-image: url(/assets/textures/texture-17.png);
+  background-position: center center;
+}
