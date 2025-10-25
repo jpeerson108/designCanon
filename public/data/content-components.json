@@ -46,5 +46,13 @@
         "href": "/components/boxSectionTransition",
         "date": "2025-08-27",
         "tags": ["scroll", "section", "transition", "boxes", "reveal", "scroll-based"]
+    },
+    {
+        "title": "Simple Horizontal Carousel",
+        "category": "Carousel",
+        "image": "/assets/thumbnails/thumbnail-8.png",
+        "href": "/components/horizontalCarouselManual",
+        "date": "2025-10-25",
+        "tags": ["carousel", "image", "images", "horizontal", "slideshow", "gallery", "apple", "manual", "click"]
     }
 ]

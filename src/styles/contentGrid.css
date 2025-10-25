@@ -431,6 +431,7 @@ body.dragging-global * {
   margin-bottom: 15px;
   overflow: hidden;
   border-radius: var(--contentImg-border-radius);
+  border: 1px solid var(--color-black-2);
 }
 
 .content-card > a img {
