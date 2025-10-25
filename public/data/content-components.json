@@ -2,7 +2,7 @@
     {
         "title": "Reveal Menu Items on Hover",
         "category": "Navigation",
-        "image": "/assets/thumbnails/thumbnail-2.png",
+        "image": "/assets/thumbnails/thumbnail-2.webp",
         "href": "/components/hoverRevealMenu/home",
         "date": "2025-09-19",
         "tags": ["hover", "expand", "menu", "navigation", "reveal"]
@@ -10,7 +10,7 @@
     {
         "title": "Infinite Marquee (Scroll-Based)",
         "category": "Marquees",
-        "image": "/assets/thumbnails/thumbnail-1.png",
+        "image": "/assets/thumbnails/thumbnail-1.webp",
         "href": "/components/marqueeScrollBased",
         "date": "2025-09-14",
         "tags": ["marquee", "scroll", "infinite", "loop", "horizontal", "text", "scrolling", "motion", "continuous"]
@@ -18,7 +18,7 @@
     {
         "title": "Smooth Expand/Collapse Accordion",
         "category": "Structure",
-        "image": "/assets/thumbnails/thumbnail-3.png",
+        "image": "/assets/thumbnails/thumbnail-3.webp",
         "href": "/components/expandCollapseAccordion",
         "date": "2025-07-28",
         "tags": ["accordion", "list", "expand", "collapse", "toggle", "reveal", "structure"]
@@ -26,7 +26,7 @@
     {
         "title": "Pixelated Page Transition",
         "category": "Page Transitions",
-        "image": "/assets/thumbnails/thumbnail-4.png",
+        "image": "/assets/thumbnails/thumbnail-4.webp",
         "href": "/components/pixelatedPageTransition",
         "date": "2025-09-12",
         "tags": ["page", "transition", "pixelated", "box", "reveal", "screen"]
@@ -34,7 +34,7 @@
     {
         "title": "Staggered Columns Page Transition",
         "category": "Page Transitions",
-        "image": "/assets/thumbnails/thumbnail-5.png",
+        "image": "/assets/thumbnails/thumbnail-5.webp",
         "href": "/components/staggeredColumnsPageTransition/home",
         "date": "2025-08-28",
         "tags": ["page", "transition", "staggered", "columns", "reveal", "loading", "layout"]
@@ -42,7 +42,7 @@
     {
         "title": "Box Section Transition (Scroll-Based)",
         "category": "Scroll",
-        "image": "/assets/thumbnails/thumbnail-6.png",
+        "image": "/assets/thumbnails/thumbnail-6.webp",
         "href": "/components/boxSectionTransition",
         "date": "2025-08-27",
         "tags": ["scroll", "section", "transition", "boxes", "reveal", "scroll-based"]
@@ -50,9 +50,17 @@
     {
         "title": "Simple Horizontal Carousel",
         "category": "Carousel",
-        "image": "/assets/thumbnails/thumbnail-8.png",
+        "image": "/assets/thumbnails/thumbnail-8.webp",
         "href": "/components/horizontalCarouselManual",
         "date": "2025-10-25",
         "tags": ["carousel", "image", "images", "horizontal", "slideshow", "gallery", "apple", "manual", "click"]
+    },
+    {
+        "title": "Staggered Grid with Image Clip Path",
+        "category": "Gallery",
+        "image": "/assets/thumbnails/thumbnail-9.webp",
+        "href": "/components/staggeredGridClipMask",
+        "date": "2025-10-25",
+        "tags": ["gallery", "image", "images", "grid", "masonry", "gallery", "clip", "path", "mask"]
     }
 ]
