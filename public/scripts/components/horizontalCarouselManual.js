@@ -1,5 +1,3 @@
-// horizontalCarouselManual.js
-
 const track = document.querySelector(".carousel-track")
 const slides = document.querySelectorAll(".carousel-slide")
 const previousButton = document.getElementById("previous")
