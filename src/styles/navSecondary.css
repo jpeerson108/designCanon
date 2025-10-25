@@ -13,6 +13,10 @@ nav {
   z-index: 1000;
 }
 
+.nav-right {
+  display: flex;
+}
+
 .nav-left a,
 .nav-right a {
   display: flex;
@@ -23,6 +27,12 @@ nav {
   padding: 5px 10px;
   border-radius: var(--rounded-corners-small);
   isolation: isolate;
+}
+
+.nav-right a:nth-child(1),
+.nav-right a:nth-child(2),
+.nav-right a:nth-child(3) {
+  margin-right: -8px;
 }
 
 .nav-icon {
