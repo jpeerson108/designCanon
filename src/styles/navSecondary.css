@@ -19,7 +19,7 @@ nav {
   position: relative;
   gap: 4px;
   align-items: center;
-  background-color: rgba(17, 17, 17, 0.8);
+  background-color: var(--color-background);
   padding: 5px 10px;
   border-radius: var(--rounded-corners-small);
   isolation: isolate;
