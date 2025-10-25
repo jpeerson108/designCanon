@@ -1,0 +1,103 @@
+---
+import SecondaryLayout from "../../layouts/secondaryLayout.astro";
+import "../../styles/components/staggeredGridClipMask.css";
+---
+<script type="module" src="/scripts/components/staggeredGridClipMask.js"></script>
+
+<SecondaryLayout title="Staggered Grid" rightLinkHref="">
+<div class="grid-container">
+  <svg width="0" height="0" style="position: absolute;">
+    <defs>
+      <clipPath id="image-clip-path" clipPathUnits="objectBoundingBox">
+        <path d="M0.0033,0.9717 L0.0033,0.0304 C0.0033,0.0160 0.0151,0.0043 0.0296,0.0043 L0.9704,0.0043 C0.9849,0.0043 0.9967,0.0160 0.9967,0.0304 L0.9967,0.8826 C0.9967,0.8970 0.9849,0.9087 0.9704,0.9087 L0.6486,0.9087 C0.6311,0.9087 0.6142,0.9154 0.6037,0.9280 L0.5664,0.9772 C0.5559,0.9898 0.5390,0.9965 0.5215,0.9965 L0.0296,0.9965 C0.0151,0.9965 0.0033,0.9848 0.0033,0.9717 Z"/>
+      </clipPath>
+    </defs>
+  </svg>
+
+  <div class="grid">
+    <div class="grid-column">
+      <div class="grid-item">
+        <div class="grid-item-image">
+          <img src="/public/assets/images/image-5.png" alt="Image 1" />
+        </div>
+        <div class="grid-item-title">Flux<span>2025</span></div>
+      </div>
+      <div class="grid-item">
+        <div class="grid-item-image">
+          <img src="/public/assets/images/image-49.png" alt="Image 1" />
+        </div>
+        <div class="grid-item-title">Drift<span>2024</span></div>
+      </div>
+      <div class="grid-item">
+        <div class="grid-item-image">
+          <img src="/public/assets/images/image-15.png" alt="Image 1" />
+        </div>
+        <div class="grid-item-title">Pulse<span>2023</span></div>
+      </div>
+    </div>
+
+    <div class="grid-column grid-column-offset">
+      <div class="grid-item">
+        <div class="grid-item-image">
+          <img src="/public/assets/images/image-13.png" alt="Image 2" />
+        </div>
+        <div class="grid-item-title">Friction<span>2025</span></div>
+      </div>
+      <div class="grid-item">
+        <div class="grid-item-image">
+          <img src="/public/assets/images/image-52.png" alt="Image 2" />
+        </div>
+        <div class="grid-item-title">Haze<span>2024</span></div>
+      </div>
+      <div class="grid-item">
+        <div class="grid-item-image">
+          <img src="/public/assets/images/image-11.png" alt="Image 2" />
+        </div>
+        <div class="grid-item-title">Form<span>2022</span></div>
+      </div>
+    </div>
+
+    <div class="grid-column">
+      <div class="grid-item">
+        <div class="grid-item-image">
+          <img src="/public/assets/images/image-20.png" alt="Image 3" />
+        </div>
+        <div class="grid-item-title">Motion<span>2025</span></div>
+      </div>
+      <div class="grid-item">
+        <div class="grid-item-image">
+          <img src="/public/assets/images/image-26.png" alt="Image 3" />
+        </div>
+        <div class="grid-item-title">Phase<span>2024</span></div>
+      </div>
+      <div class="grid-item">
+        <div class="grid-item-image">
+          <img src="/public/assets/images/image-54.png" alt="Image 3" />
+        </div>
+        <div class="grid-item-title">Blur<span>2022</span></div>
+      </div>
+    </div>
+
+    <div class="grid-column grid-column-offset">
+      <div class="grid-item">
+        <div class="grid-item-image">
+          <img src="/public/assets/images/image-33.png" alt="Image 4" />
+        </div>
+        <div class="grid-item-title">Shift<span>2025</span></div>
+      </div>
+      <div class="grid-item">
+        <div class="grid-item-image">
+          <img src="/public/assets/images/image-17.png" alt="Image 4" />
+        </div>
+        <div class="grid-item-title">Frame<span>2024</span></div>
+      </div>
+      <div class="grid-item">
+        <div class="grid-item-image">
+          <img src="/public/assets/images/image-40.png" alt="Image 4" />
+        </div>
+        <div class="grid-item-title">Glow<span>2022</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</SecondaryLayout>
