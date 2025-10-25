@@ -6,13 +6,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .carousel-wrapper {
-  width: 100vw;
-  overflow: hidden;
-  padding-left: 12vw;
-  padding-right: calc(-1 * var(--horizontal-page-padding));
+  width: 80vw;
+  overflow: visible;
 }
 
 .carousel-track {
@@ -33,6 +32,7 @@
   border-radius: 20px;
   background: var(--color-black-1c);
   overflow: hidden;
+  position: relative;
 }
 
 .slide-image img {
@@ -46,7 +46,7 @@
 .slide-description {
   font-size: 1.1rem;
   color: var(--color-black-7);
-  padding: 15px;
+  padding: 15px 15px 0 15px;
   font-weight: 500;
   line-height: 1.5;
   margin-top: 5px;
@@ -60,7 +60,7 @@
   display: flex;
   position: absolute;
   bottom: 100px;
-  right: 195px;
+  right: 10vw;
   gap: 15px;
 }
 
@@ -88,4 +88,19 @@
 
 #previous svg {
   rotate: 180deg;
+}
+
+.blur-container {
+  width: 100%;
+  height: 150px;
+  background-color: aquamarine;
+  position: absolute;
+  bottom: 0;
+  backdrop-filter: blur(16px);
+  mask-image: linear-gradient(to top, rgb(255, 255, 255) 0%, transparent 100%);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.carousel-wrapper {
+  --right-end-distance: 120px;
 }
