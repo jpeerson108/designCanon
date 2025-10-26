@@ -29,7 +29,18 @@ menuBox.forEach((box) => {
     const navURL = new URL(navLink, window.location.href)
     const navPathEnding = navURL.pathname.split("/").pop()
 
-    if (window.location.pathname.endsWith(navPathEnding)) {
+    // Handle homepage separately
+    if (navURL.pathname === "/" && window.location.pathname === "/") {
+      box.classList.add("active")
+      menuText.classList.add("show")
+      return
+    }
+    if (navURL.pathname === "/") {
+      return
+    }
+
+    // Match subpages by their ending
+    if (navPathEnding && window.location.pathname.endsWith(navPathEnding)) {
       box.classList.add("active")
       menuText.classList.add("show")
     }

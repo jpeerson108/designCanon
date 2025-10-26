@@ -59,6 +59,10 @@ nav li {
   transition: all 0.3s ease;
 }
 
+.nav-icon.inspiration {
+  scale: 1.25;
+}
+
 .nav-icon svg {
   width: 100%;
   height: 100%;
