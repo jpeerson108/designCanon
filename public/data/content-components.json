@@ -8,7 +8,7 @@
         "tags": ["hover", "expand", "menu", "navigation", "reveal"]
     },
     {
-        "title": "Infinite Marquee (Scroll-Based)",
+        "title": "Infinite Marquee (Scroll-Driven)",
         "category": "Marquees",
         "image": "/assets/thumbnails/thumbnail-1.webp",
         "href": "/components/marqueeScrollBased",
@@ -40,7 +40,7 @@
         "tags": ["page", "transition", "staggered", "columns", "reveal", "loading", "layout"]
     },
     {
-        "title": "Box Section Transition (Scroll-Based)",
+        "title": "Pixelated Section Transition (Scroll-Driven)",
         "category": "Scroll",
         "image": "/assets/thumbnails/thumbnail-6.webp",
         "href": "/components/boxSectionTransition",

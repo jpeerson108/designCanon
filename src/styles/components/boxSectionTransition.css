@@ -13,7 +13,7 @@ section {
 .hero1,
 .hero3,
 .hero5 {
-  background: var(--color-black-1);
+  background: var(--color-background);
 }
 
 .hero2,
@@ -91,17 +91,17 @@ h1 {
 }
 
 .hero2 .blocks-container.top .blocks-row .block {
-  background: var(--color-black-1);
+  background: var(--color-background);
 }
 
 .hero2 .blocks-container.bottom .blocks-row .block {
-  background: var(--color-black-1);
+  background: var(--color-background);
 }
 
 .hero4 .blocks-container.top .blocks-row .block {
-  background: var(--color-black-1);
+  background: var(--color-background);
 }
 
 .hero4 .blocks-container.bottom .blocks-row .block {
-  background: var(--color-black-1);
+  background: var(--color-background);
 }
