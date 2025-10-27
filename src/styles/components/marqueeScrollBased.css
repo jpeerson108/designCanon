@@ -1,11 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Inter", sans-serif;
 }
@@ -20,7 +12,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/public/assets/textures/ChatGPT\ Image\ Sep\ 19\,\ 2025\,\ 06_58_51\ PM.png");
+  background-image: url("/assets/textures/texture-10.webp");
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -32,13 +24,12 @@ body {
 
 .marquee {
   position: relative;
-  background: #161616;
+  background: var(--color-black-1);
   color: #ebebeb;
   padding: 15px 0;
   font-weight: 300;
   font-size: 2.2rem;
   letter-spacing: -5%;
-  /* text-transform: uppercase; */
   overflow: hidden;
 }
 
@@ -60,7 +51,7 @@ body {
 .arrow {
   width: 80px;
   height: 80px;
-  color: #ec6533;
+  color: var(--color-accent);
   margin: 0 0.5em;
   transform: rotate(180deg);
   transform-origin: 50% 50%;
