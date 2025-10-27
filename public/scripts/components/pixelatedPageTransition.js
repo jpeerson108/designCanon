@@ -21,8 +21,8 @@ window.addEventListener("DOMContentLoaded", () => {
   const activeToggle = document.querySelector(".toggle.active")
 
   // Set button text content here
-  inactiveToggle.textContent = "Click This Thing"
-  activeToggle.textContent = "Do It Again!"
+  inactiveToggle.textContent = "Initiate"
+  activeToggle.textContent = "Go Back"
 
   gsap.set(activeToggle, { opacity: 0, visibility: "hidden" })
 
