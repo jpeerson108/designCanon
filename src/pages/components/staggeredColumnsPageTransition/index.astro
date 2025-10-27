@@ -1,0 +1,104 @@
+---
+import SecondaryLayout from "../../../layouts/secondaryLayout.astro";
+import "@/styles/components/staggeredColumnsPageTransitioncopy.css";
+---
+
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script defer src="../../../scripts/components/staggeredColumnsPageTransition.js"></script>
+
+<SecondaryLayout 
+    title="Staggered Column Page Transition"
+    htmlLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/pages/components/staggeredColumnsPageTransition/home.astro"
+    cssLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/styles/components/staggeredColumnsPageTransition.css"
+    javascriptLinkHref="https://github.com/jpeerson108/designCanon/blob/main/public/scripts/components/staggeredColumnsPageTransition.js"
+>
+    <div class="transition">
+        <div class="transition-row row-1">
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+        </div>
+        <div class="transition-row row-2">
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid">
+        <div class="grid-item">
+            <div class="grid-item-content">
+                <div class="grid-header">Throw your hands in the air.</div>
+                <div class="grid-info">
+                    <div class="grid-info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" fill="none">
+                            <path d="M6.35695 7.26149C5.80866 6.64914 5.01203 6.26379 4.12539 6.26379C3.23875 6.26379 2.44205 6.64914 1.89376 7.26149M4.12539 7.9749C1.99909 7.9749 0.275391 6.2512 0.275391 4.1249C0.275391 1.99861 1.99909 0.274902 4.12539 0.274902C6.25169 0.274902 7.97539 1.99861 7.97539 4.1249C7.97539 6.2512 6.25169 7.9749 4.12539 7.9749ZM4.12539 4.98046C3.41663 4.98046 2.84206 4.40589 2.84206 3.69712C2.84206 2.98836 3.41663 2.41379 4.12539 2.41379C4.83416 2.41379 5.40872 2.98836 5.40872 3.69712C5.40872 4.40589 4.83416 4.98046 4.12539 4.98046Z" stroke="white" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p>IronFunk</p>
+                    </div>
+                    <div class="grid-info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" fill="none">
+                            <path d="M4.12539 3.69712V5.83601M4.12539 7.9749C1.99909 7.9749 0.275391 6.2512 0.275391 4.1249C0.275391 1.99861 1.99909 0.274902 4.12539 0.274902C6.25169 0.274902 7.97539 1.99861 7.97539 4.1249C7.97539 6.2512 6.25169 7.9749 4.12539 7.9749ZM4.1467 2.41379V2.45657L4.10409 2.45665V2.41379H4.1467Z" stroke="white" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p>01</p>
+                    </div>
+                    <button>Trigger 1</button>
+                </div>
+            </div>
+            <div class="blur-container"></div>
+            <img src="/public/assets/images/image-39.webp" alt="">
+        </div>
+
+        <div class="grid-item">
+            <div class="grid-item-content">
+                <div class="grid-header">Wave em like you just don't care.</div>
+                <div class="grid-info">
+                    <div class="grid-info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" fill="none">
+                            <path d="M6.35695 7.26149C5.80866 6.64914 5.01203 6.26379 4.12539 6.26379C3.23875 6.26379 2.44205 6.64914 1.89376 7.26149M4.12539 7.9749C1.99909 7.9749 0.275391 6.2512 0.275391 4.1249C0.275391 1.99861 1.99909 0.274902 4.12539 0.274902C6.25169 0.274902 7.97539 1.99861 7.97539 4.1249C7.97539 6.2512 6.25169 7.9749 4.12539 7.9749ZM4.12539 4.98046C3.41663 4.98046 2.84206 4.40589 2.84206 3.69712C2.84206 2.98836 3.41663 2.41379 4.12539 2.41379C4.83416 2.41379 5.40872 2.98836 5.40872 3.69712C5.40872 4.40589 4.83416 4.98046 4.12539 4.98046Z" stroke="white" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p>IronFunk</p>
+                    </div>
+                    <div class="grid-info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" fill="none">
+                            <path d="M4.12539 3.69712V5.83601M4.12539 7.9749C1.99909 7.9749 0.275391 6.2512 0.275391 4.1249C0.275391 1.99861 1.99909 0.274902 4.12539 0.274902C6.25169 0.274902 7.97539 1.99861 7.97539 4.1249C7.97539 6.2512 6.25169 7.9749 4.12539 7.9749ZM4.1467 2.41379V2.45657L4.10409 2.45665V2.41379H4.1467Z" stroke="white" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p>02</p>
+                    </div>
+                    <button>Trigger 2</button>
+                </div>
+            </div>
+            <div class="blur-container"></div>
+            <img src="/public/assets/images/image-11.webp" alt="">
+        </div>
+
+        <div class="grid-item">
+            <div class="grid-item-content">
+                <div class="grid-header">Let me hear you say oh-yeaher.</div>
+                <div class="grid-info">
+                    <div class="grid-info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" fill="none">
+                            <path d="M6.35695 7.26149C5.80866 6.64914 5.01203 6.26379 4.12539 6.26379C3.23875 6.26379 2.44205 6.64914 1.89376 7.26149M4.12539 7.9749C1.99909 7.9749 0.275391 6.2512 0.275391 4.1249C0.275391 1.99861 1.99909 0.274902 4.12539 0.274902C6.25169 0.274902 7.97539 1.99861 7.97539 4.1249C7.97539 6.2512 6.25169 7.9749 4.12539 7.9749ZM4.12539 4.98046C3.41663 4.98046 2.84206 4.40589 2.84206 3.69712C2.84206 2.98836 3.41663 2.41379 4.12539 2.41379C4.83416 2.41379 5.40872 2.98836 5.40872 3.69712C5.40872 4.40589 4.83416 4.98046 4.12539 4.98046Z" stroke="white" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p>IronFunk</p>
+                    </div>
+                    <div class="grid-info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" fill="none">
+                            <path d="M4.12539 3.69712V5.83601M4.12539 7.9749C1.99909 7.9749 0.275391 6.2512 0.275391 4.1249C0.275391 1.99861 1.99909 0.274902 4.12539 0.274902C6.25169 0.274902 7.97539 1.99861 7.97539 4.1249C7.97539 6.2512 6.25169 7.9749 4.12539 7.9749ZM4.1467 2.41379V2.45657L4.10409 2.45665V2.41379H4.1467Z" stroke="white" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p>03</p>
+                    </div>
+                    <button>Trigger 3</button>
+                </div>
+            </div>
+            <div class="blur-container"></div>
+            <img src="/public/assets/images/image-56.webp" alt="">
+        </div>
+    </div>
+    </div>
+</SecondaryLayout>
