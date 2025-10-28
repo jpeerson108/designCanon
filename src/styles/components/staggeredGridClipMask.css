@@ -26,14 +26,19 @@
   aspect-ratio: 455 / 460;
   overflow: hidden;
   display: block;
+  clip-path: url(#image-clip-path);
 }
 
 .grid-item-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  clip-path: url(#image-clip-path);
   display: block;
+  transition: scale .5s ease;
+}
+
+.grid-item-image img:hover {
+  scale: 1.1;
 }
 
 .grid-item-title {
