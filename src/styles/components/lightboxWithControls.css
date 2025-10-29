@@ -1,0 +1,109 @@
+body {
+  overflow: hidden;
+}
+
+.grid-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 80vw;
+  max-height: 80vh;
+  gap: 20px;
+}
+
+.grid-item {
+  width: 100%;
+  height: 300px;
+  cursor: pointer;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.controls {
+  display: none;
+  z-index: 10001;
+}
+
+.controls.active {
+  display: block;
+}
+
+.exit-button,
+.next-button,
+.prev-button {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  background: var(--color-black-1c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.next-button {
+  position: absolute;
+  right: 20px;
+}
+
+.prev-button {
+  rotate: 180deg;
+  position: absolute;
+  left: 20px;
+}
+
+.exit-button {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.next-button svg,
+.prev-button svg {
+  height: 14px;
+}
+
+.exit-button svg {
+  height: 11px;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1001;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-image {
+  max-width: 70vw;
+  max-height: 80vh;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.lightbox-image.fade-in {
+  opacity: 1;
+}

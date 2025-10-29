@@ -61,6 +61,14 @@
         "image": "/assets/thumbnails/thumbnail-9.webp",
         "href": "/components/staggeredGridClipMask",
         "date": "2025-10-25",
-        "tags": ["gallery", "image", "images", "grid", "masonry", "gallery", "clip", "path", "mask"]
+        "tags": ["gallery", "image", "images", "grid", "masonry", "clip", "path", "mask"]
+    },
+    {
+        "title": "Lightbox with Controls",
+        "category": "Gallery",
+        "image": "/assets/thumbnails/thumbnail-10.webp",
+        "href": "/components/lightboxWithControls",
+        "date": "2025-10-29",
+        "tags": ["gallery", "image", "images", "grid", "lightbox", "slideshow", "next", "previous"]
     }
 ]
