@@ -61,6 +61,12 @@ body {
   background: var(--color-black-1c);
 }
 
+.exit-button:hover svg,
+.next-button:hover svg,
+.prev-button:hover svg {
+  color: white;
+}
+
 .next-button {
   position: absolute;
   right: 20px;
@@ -82,10 +88,14 @@ body {
 .next-button svg,
 .prev-button svg {
   height: 14px;
+  color: var(--color-black-7);
+  transition: color 0.3s ease;
 }
 
 .exit-button svg {
   height: 11px;
+  color: var(--color-black-7);
+  transition: color 0.3s ease;
 }
 
 .lightbox {
