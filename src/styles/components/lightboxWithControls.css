@@ -30,9 +30,6 @@
 
 .controls {
   display: none;
-  position: fixed;
-  width: 100vw;
-  min-height: 100vh;
   z-index: 10001;
 }
 
@@ -67,14 +64,14 @@
 }
 
 .next-button {
-  position: absolute;
+  position: fixed;
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .prev-button {
-  position: absolute;
+  position: fixed;
   left: 20px;
   top: 50%;
   transform: translateY(-50%) rotate(180deg);
@@ -82,7 +79,7 @@
 }
 
 .exit-button {
-  position: absolute;
+  position: fixed;
   top: 22px;
   left: 50%;
   transform: translateX(-50%);
@@ -143,7 +140,8 @@
     margin: 5rem 1.8rem;
   }
   .grid-item {
-  height: 400px;
+    height: 400px;
+  }
 }
 
 @media screen and (max-width: 650px) {
