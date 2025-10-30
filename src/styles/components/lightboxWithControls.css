@@ -1,13 +1,10 @@
-body {
-  overflow: hidden;
-}
-
 .grid-container {
   width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .grid {
@@ -15,7 +12,6 @@ body {
   grid-template-columns: repeat(3, 1fr);
   width: 80vw;
   max-width: 1200px;
-  max-height: 80vh;
   gap: 20px;
 }
 
@@ -34,6 +30,9 @@ body {
 
 .controls {
   display: none;
+  position: fixed;
+  width: 100vw;
+  min-height: 100vh;
   z-index: 10001;
 }
 
@@ -70,12 +69,16 @@ body {
 .next-button {
   position: absolute;
   right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .prev-button {
-  rotate: 180deg;
   position: absolute;
   left: 20px;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  transform-origin: center;
 }
 
 .exit-button {
@@ -136,7 +139,11 @@ body {
 @media screen and (max-width: 1000px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin: 5rem 1.8rem;
   }
+  .grid-item {
+  height: 400px;
 }
 
 @media screen and (max-width: 650px) {
