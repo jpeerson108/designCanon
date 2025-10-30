@@ -6,18 +6,6 @@ body {
   position: relative;
 }
 
-.background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("/assets/textures/texture-10.webp");
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
-}
-
 .marquee-spacer {
   height: 70vh;
 }
