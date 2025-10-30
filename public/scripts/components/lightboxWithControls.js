@@ -24,14 +24,12 @@ function closeLightbox() {
 
 function showNextImage() {
   currentIndex = (currentIndex + 1) % totalImages
-  const imageSrc = gridItems[currentIndex].querySelector("img").src
-  lightboxImage.src = imageSrc
+  lightboxImage.src = gridItems[currentIndex].querySelector("img").src
 }
 
 function showPreviousImage() {
   currentIndex = (currentIndex - 1 + totalImages) % totalImages
-  const imageSrc = gridItems[currentIndex].querySelector("img").src
-  lightboxImage.src = imageSrc
+  lightboxImage.src = gridItems[currentIndex].querySelector("img").src
 }
 
 gridItems.forEach((item, index) => {

@@ -32,14 +32,6 @@
         "tags": ["page", "transition", "pixelated", "box", "reveal", "screen"]
     },
     {
-        "title": "Staggered Columns Page Transition",
-        "category": "Page Transitions",
-        "image": "/assets/thumbnails/thumbnail-5.webp",
-        "href": "/components/staggeredColumnsPageTransition/home",
-        "date": "2025-08-28",
-        "tags": ["page", "transition", "staggered", "columns", "reveal", "loading", "layout"]
-    },
-    {
         "title": "Pixelated Section Transition (Scroll-Driven)",
         "category": "Scroll",
         "image": "/assets/thumbnails/thumbnail-6.webp",
