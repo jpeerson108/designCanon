@@ -1,35 +1,52 @@
 const gridItems = document.querySelectorAll(".grid-item")
 const lightbox = document.querySelector(".lightbox")
-const lightboxImage = document.querySelector(".lightbox-image")
+const lightboxImages = document.querySelectorAll(".lightbox-image")
 const controls = document.querySelector(".controls")
 const exitButton = document.querySelector(".exit-button")
 const nextButton = document.querySelector(".next-button")
 const prevButton = document.querySelector(".prev-button")
 
 let currentIndex = 0
+let activeImageIndex = 0
 const totalImages = gridItems.length
 
 function openLightbox(index) {
   currentIndex = index
   const imageSrc = gridItems[index].querySelector("img").src
-  lightboxImage.src = imageSrc
+  lightboxImages[0].src = imageSrc
   lightbox.classList.add("active")
   controls.classList.add("active")
+  lightboxImages[0].classList.add("active")
 }
 
 function closeLightbox() {
   lightbox.classList.remove("active")
   controls.classList.remove("active")
+  lightboxImages[activeImageIndex].classList.remove("active")
 }
 
 function showNextImage() {
   currentIndex = (currentIndex + 1) % totalImages
-  lightboxImage.src = gridItems[currentIndex].querySelector("img").src
+  const nextImageIndex = activeImageIndex === 0 ? 1 : 0
+
+  lightboxImages[nextImageIndex].src =
+    gridItems[currentIndex].querySelector("img").src
+  lightboxImages[activeImageIndex].classList.remove("active")
+  lightboxImages[nextImageIndex].classList.add("active")
+
+  activeImageIndex = nextImageIndex
 }
 
 function showPreviousImage() {
   currentIndex = (currentIndex - 1 + totalImages) % totalImages
-  lightboxImage.src = gridItems[currentIndex].querySelector("img").src
+  const nextImageIndex = activeImageIndex === 0 ? 1 : 0
+
+  lightboxImages[nextImageIndex].src =
+    gridItems[currentIndex].querySelector("img").src
+  lightboxImages[activeImageIndex].classList.remove("active")
+  lightboxImages[nextImageIndex].classList.add("active")
+
+  activeImageIndex = nextImageIndex
 }
 
 gridItems.forEach((item, index) => {

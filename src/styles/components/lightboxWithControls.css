@@ -47,11 +47,18 @@ body {
   width: 35px;
   height: 35px;
   border-radius: 100%;
-  background: var(--color-black-1c);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.exit-button:hover,
+.next-button:hover,
+.prev-button:hover {
+  background: var(--color-black-1c);
 }
 
 .next-button {
@@ -103,15 +110,16 @@ body {
 }
 
 .lightbox-image {
+  position: absolute;
   max-width: 70vw;
   max-height: 80vh;
   object-fit: contain;
   border-radius: var(--rounded-corners-med);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.6s ease;
 }
 
-.lightbox.active .lightbox-image {
+.lightbox-image.active {
   opacity: 1;
 }
 
