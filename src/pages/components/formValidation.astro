@@ -10,21 +10,21 @@ import "../../styles/components/formValidation.css";
     cssLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/styles/components/formValidation.css"
     javascriptLinkHref="https://github.com/jpeerson108/designCanon/blob/main/public/scripts/components/formValidation.js"
 >
-<div class="form-container">
+<div id="form-container">
     <div class="form-header">Contact Us</div>
-    <form class="form" action="">
+    <form class="form" id="form" action="">
         <div class="form-names-container">
-            <div class="form-field">
+            <div class="form-field" id="firstNameField">
                 <input type="text" id="firstName" name="firstName" placeholder="First Name">
             </div>
-            <div class="form-field">
+            <div class="form-field" id="lastNameField">
                 <input type="text" id="lastName" name="lastName" placeholder="Last Name">
             </div>
         </div>
-        <div class="form-field">
+        <div class="form-field" id="emailField">
             <input type="email" id="email" name="email" placeholder="Email">
         </div>
-        <div class="form-field">
+        <div class="form-field" id="messageField">
             <textarea id="message" name="message" placeholder="Message"></textarea>
         </div>
         <button class="form-button-submit" type="submit">
@@ -34,5 +34,8 @@ import "../../styles/components/formValidation.css";
             <span>Submit</span>
         </button>
     </form>
+</div>
+<div class="submission-message hidden">
+    <p>Boom! Your message has been launched into the digital void.</p>
 </div>
 </SecondaryLayout>

@@ -1,10 +1,14 @@
-.form-container {
+#form-container {
   width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+#form-container.hidden {
+  display: none;
 }
 
 .form {
@@ -31,6 +35,10 @@
 
 .form-field {
   background: var(--color-black-14);
+}
+
+.form-field.error {
+  border: 1px solid var(--color-accent);
 }
 
 .form-field,
@@ -76,6 +84,29 @@
 
 .form-button-submit {
   cursor: pointer;
+}
+
+.submission-message {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.submission-message p {
+  width: 500px;
+  margin: 0 2rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: "JetBrains Mono", monospace;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.submission-message.hidden {
+  display: none;
 }
 
 @media screen and (max-width: 800px) {
