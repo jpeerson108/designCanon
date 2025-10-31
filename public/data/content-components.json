@@ -67,7 +67,7 @@
         "title": "Form Validation",
         "category": "Forms",
         "image": "/assets/thumbnails/thumbnail-11.webp",
-        "href": "/components/lightboxWithControls",
+        "href": "/components/formValidation",
         "date": "2025-07-29",
         "tags": ["gallery", "image", "images", "grid", "lightbox", "slideshow", "next", "previous"]
     }

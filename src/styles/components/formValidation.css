@@ -1,0 +1,85 @@
+.form-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 80vw;
+  margin: 0 50px;
+  max-width: 700px;
+}
+
+.form-header {
+  font-family: "Inter", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  pointer-events: none;
+}
+
+.form-names-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.form-field {
+  background: var(--color-black-14);
+}
+
+.form-field,
+.form-button-submit {
+  border-radius: var(--rounded-corners-small);
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 14px 18px;
+  width: 100%;
+}
+
+.form-field input {
+  background: none;
+  width: 100%;
+}
+
+.form-button-submit {
+  position: relative;
+  background: var(--color-black-2);
+}
+
+.form-button-submit svg {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 21px;
+}
+
+#message {
+  height: 220px;
+  width: 100%;
+  background: none;
+  resize: none;
+  font-family: inherit;
+  color: inherit;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--color-black-7);
+}
+
+.form-button-submit {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .form-names-container {
+    flex-direction: column;
+  }
+}

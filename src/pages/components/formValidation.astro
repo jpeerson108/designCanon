@@ -10,5 +10,29 @@ import "../../styles/components/formValidation.css";
     cssLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/styles/components/formValidation.css"
     javascriptLinkHref="https://github.com/jpeerson108/designCanon/blob/main/public/scripts/components/formValidation.js"
 >
-
+<div class="form-container">
+    <div class="form-header">Contact Us</div>
+    <form class="form" action="">
+        <div class="form-names-container">
+            <div class="form-field">
+                <input type="text" id="firstName" name="firstName" placeholder="First Name">
+            </div>
+            <div class="form-field">
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+            </div>
+        </div>
+        <div class="form-field">
+            <input type="email" id="email" name="email" placeholder="Email">
+        </div>
+        <div class="form-field">
+            <textarea id="message" name="message" placeholder="Message"></textarea>
+        </div>
+        <button class="form-button-submit" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46" fill="none">
+            <path d="M45.333 22.666C45.333 35.1842 35.1851 45.3328 22.667 45.333C10.1486 45.333 -1.53796e-06 35.1844 -9.90763e-07 22.666C0.000247477 10.1479 10.1488 -1.53795e-06 22.667 -9.90763e-07C35.185 0.000247474 45.3328 10.148 45.333 22.666ZM42.333 22.666C42.3328 11.8049 33.5281 3.00025 22.667 3C11.8057 3 3.00025 11.8047 3 22.666C3 33.5275 11.8055 42.333 22.667 42.333C33.5283 42.3328 42.333 33.5274 42.333 22.666ZM30.8857 21.7197C31.3661 22.3089 31.3313 23.1784 30.7822 23.7275L23.7266 30.7832C23.1408 31.3686 22.1912 31.3686 21.6055 30.7832C21.0198 30.1975 21.0199 29.2479 21.6055 28.6621L26.1006 24.167L15.6104 24.167C14.7822 24.1668 14.1105 23.4952 14.1104 22.667C14.1104 21.8387 14.7821 21.1672 15.6104 21.167L26.1006 21.167L21.6055 16.6719C21.0198 16.0861 21.0198 15.1365 21.6055 14.5508C22.1912 13.965 23.1408 13.9651 23.7266 14.5508L30.7822 21.6064L30.8857 21.7197Z" fill="currentColor"/>
+            </svg>
+            <span>Submit</span>
+        </button>
+    </form>
+</div>
 </SecondaryLayout>
