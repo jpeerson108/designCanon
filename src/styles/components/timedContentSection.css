@@ -29,6 +29,7 @@
   gap: 1rem;
   margin-bottom: 1rem;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .content-section-item p {
@@ -48,6 +49,11 @@
   width: 5px;
   background: var(--color-black-2);
   border-radius: 5px;
+  transition: background 0.7s ease;
+}
+
+.custom-bullet.active {
+  background: var(--color-accent);
 }
 
 .custom-bullet-filler {
@@ -62,7 +68,7 @@
 
 .content-section-item.active .custom-bullet-filler {
   display: block;
-  height: 30%;
+  height: 0;
 }
 
 .content-section-item.active p {
@@ -75,9 +81,12 @@
   max-width: 700px;
   height: auto;
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .content-section-media-wrapper.active {
+  opacity: 1;
   display: block;
 }
 
@@ -169,6 +178,15 @@
     rgba(11, 11, 11, 0),
     rgba(11, 11, 11, 1)
   );
+}
+
+@keyframes fillBullet {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
 }
 
 @media screen and (max-width: 800px) {
