@@ -70,5 +70,13 @@
         "href": "/components/formValidation",
         "date": "2025-07-29",
         "tags": ["gallery", "image", "images", "grid", "lightbox", "slideshow", "next", "previous"]
+    },
+    {
+        "title": "Timed Content Section",
+        "category": "Gallery",
+        "image": "/assets/thumbnails/thumbnail-12.webp",
+        "href": "/components/timedContentSection",
+        "date": "2025-10-31",
+        "tags": ["timed", "looping", "content", "image", "text", "auto", "cycle", "rotation", "sequential", "slideshow", "highlight", "interval", "transition", "switch", "animated"]
     }
 ]
