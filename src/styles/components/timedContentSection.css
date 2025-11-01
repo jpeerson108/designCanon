@@ -29,14 +29,17 @@
   gap: 1rem;
   margin-bottom: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+}
+
+.content-section-item.active {
+  opacity: 1;
 }
 
 .content-section-item p {
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--color-black-5);
-  transition: color 0.3s ease;
+  transition: color 0.6s ease;
 }
 
 .content-section-item p:hover {
@@ -49,7 +52,7 @@
   width: 5px;
   background: var(--color-black-2);
   border-radius: 5px;
-  transition: background 0.7s ease;
+  transition: background 0.6s ease;
 }
 
 .custom-bullet.active {
@@ -75,19 +78,40 @@
   color: white;
 }
 
+.content-section-media-stack {
+  position: relative;
+  max-width: 700px;
+  flex: 1 1 700px;
+}
+
+.content-section-media-stack > .content-section-media-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 1s ease,
+    visibility 1s ease;
+}
+
+.content-section-media-stack > .content-section-media-wrapper.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 .content-section-media-wrapper {
-  display: none;
   position: relative;
   max-width: 700px;
   height: auto;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
 .content-section-media-wrapper.active {
   opacity: 1;
-  display: block;
 }
 
 .media-wrapper-outline {
