@@ -12,7 +12,11 @@ import NavMain from "@/components/navMain.astro";
     <title>{title ? `${title} | Design Canon` : "Design Canon"}</title>
   </head>
   <body>
-    <NavMain />
+    <NavMain 
+    githubLinkHref="https://www.linkedin.com/company/design-canon"
+    linkedinLinkHref="https://www.linkedin.com/company/design-canon"
+    instagramLinkHref="https://www.instagram.com/designcanon/"
+    emailLinkHref="mailto:contact@designcanon.com?subject=Inquiry%20from%20Design%20Canon%20Website"  />
     <div class="container">
         <slot />
     </div>
