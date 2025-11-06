@@ -282,6 +282,11 @@ body.dragging-global * {
 }
 
 .sort-expanded-menu li {
+  display: flex;
+  align-items: center;
+}
+
+.sort-expanded-menu li {
   --i: 0;
 }
 .sort-expanded-menu li:nth-child(1) {
