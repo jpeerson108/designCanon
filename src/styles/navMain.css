@@ -259,16 +259,27 @@ li.social-box:hover {
 @media screen and (max-width: 1200px) {
 }
 
-/* Logo Breakpoint */
+/* Logo Breakpoint 
 @media screen and (max-width: 1000px) {
   .nav-logo {
     opacity: 0;
     visibility: hidden;
   }
 }
+  */
 
 /* Mobile */
 @media screen and (max-width: 650px) {
+  .nav-logo {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .nav-logo-text.active {
+    opacity: 0;
+    display: none;
+  }
+
   .socials-container {
     opacity: 0;
     display: none;
