@@ -511,6 +511,20 @@ article .new-label {
   }
 
   .content-data {
-    margin-left: 20px;
+    margin-left: 35px;
+  }
+
+  .filter-track {
+    /* Positioning */
+    top: 45px;
+    padding: 0 8px;
+  }
+
+  .filter-track.active {
+    padding: 0 var(--horizontal-page-padding);
+  }
+
+  .content-grid {
+    margin-top: 0.2rem;
   }
 }
