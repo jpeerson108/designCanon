@@ -251,6 +251,13 @@ fadeRight.style.transition = "none"
 window.addEventListener("load", showHideArrows)
 categoriesTrack.addEventListener("scroll", showHideArrows)
 window.addEventListener("resize", showHideArrows)
+
+// Watch for when the categoriesTrack actually gets its size
+const resizeObserver = new ResizeObserver(() => {
+  showHideArrows()
+})
+resizeObserver.observe(categoriesTrack)
+
 showHideArrows()
 
 // Small fix so right arrow doesn't ease in on page load
