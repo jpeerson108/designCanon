@@ -494,8 +494,14 @@ article .new-label {
 }
 
 @media (max-width: 650px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .content-grid {
     grid-template-columns: 1fr;
+    margin-top: 0.2rem;
+    gap: 1.2rem 0;
   }
 
   .container .content-grid {
@@ -517,6 +523,7 @@ article .new-label {
 
   .content-data {
     margin-left: 35px;
+    overflow: hidden;
   }
 
   .filter-track {
@@ -527,9 +534,5 @@ article .new-label {
 
   .filter-track.active {
     padding: 0 var(--horizontal-page-padding);
-  }
-
-  .content-grid {
-    margin-top: 0.2rem;
   }
 }
