@@ -183,9 +183,9 @@ body.dragging-global * {
   right: 0;
   background-image: linear-gradient(
     to right,
-    rgba(17, 17, 17, 0) 0%,
-    rgba(17, 17, 17, 0.9) 70%,
-    rgba(17, 17, 17, 1) 100%
+    rgba(11, 11, 11, 0) 0%,
+    rgba(11, 11, 11, 0.9) 70%,
+    rgba(11, 11, 11, 1) 100%
   );
 }
 
@@ -193,9 +193,9 @@ body.dragging-global * {
   left: 0;
   background-image: linear-gradient(
     to left,
-    rgba(17, 17, 17, 0) 0%,
-    rgba(17, 17, 17, 0.9) 70%,
-    rgba(17, 17, 17, 1) 100%
+    rgba(11, 11, 11, 0) 0%,
+    rgba(11, 11, 11, 0.9) 70%,
+    rgba(11, 11, 11, 1) 100%
   );
 }
 
@@ -517,7 +517,7 @@ article .new-label {
   .filter-track {
     /* Positioning */
     top: 45px;
-    padding: 0 8px;
+    padding: 0;
   }
 
   .filter-track.active {
