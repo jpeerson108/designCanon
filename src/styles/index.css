@@ -21,4 +21,10 @@
   .intro-text {
     height: 230px;
   }
+
+  .intro-text p {
+    line-height: 1.3;
+    font-size: clamp(1.62rem, 1.4837rem + 0.6057vw, 1.9531rem);
+    max-width: 25ch;
+  }
 }
