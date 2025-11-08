@@ -118,10 +118,6 @@ body.dragging-global * {
   transition: background 0.3s ease;
 }
 
-.categories-btn:hover {
-  background: #222;
-}
-
 .categories-btn.active {
   background: #222;
 }
@@ -249,10 +245,6 @@ body.dragging-global * {
   display: block;
 }
 
-.sort-button:hover {
-  background: #222;
-}
-
 .sort-button.active {
   background: #222;
 }
@@ -330,10 +322,6 @@ body.dragging-global * {
   transition-delay: calc((5 - var(--i)) * 0.1s);
 }
 
-.sort-expanded-menu li button:hover {
-  background-color: var(--color-black-3);
-}
-
 /* Search Field */
 .filter-track-search {
   all: unset;
@@ -345,10 +333,6 @@ body.dragging-global * {
   align-items: center;
   caret-color: var(--color-white-c);
   transition: border 0.3s ease;
-}
-
-.filter-track-search:hover {
-  border: 1px solid #333;
 }
 
 .filter-track-search:focus-within {
@@ -447,12 +431,6 @@ body.dragging-global * {
   transition: transform 0.3s ease;
 }
 
-/* Zoom content grid image on hover
-.content-card > a img:hover {
-  transform: scale(1.03);
-}
-*/
-
 .content-data {
   margin-left: 2px;
 }
@@ -481,6 +459,24 @@ article .new-label {
   z-index: 2;
   cursor: pointer;
   user-select: none;
+}
+
+@media (hover: hover) {
+  .categories-btn:hover {
+    background: #222;
+  }
+
+  .sort-button:hover {
+    background: #222;
+  }
+
+  .sort-expanded-menu li button:hover {
+    background-color: var(--color-black-3);
+  }
+
+  .filter-track-search:hover {
+    border: 1px solid #333;
+  }
 }
 
 @media (max-width: 1200px) {
