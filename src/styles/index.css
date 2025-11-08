@@ -19,8 +19,7 @@
 
 @media (max-width: 650px) {
   .intro-text {
-    margin-top: 30px;
-    height: 160px;
+    height: 240px;
   }
 
   .intro-text p {

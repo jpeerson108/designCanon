@@ -74,8 +74,10 @@ body {
 
 .container {
   max-width: 2500px;
+  /*
   padding-left: var(--horizontal-page-padding);
   padding-right: var(--horizontal-page-padding);
+  */
 }
 
 .spacer-tiny {
@@ -140,11 +142,4 @@ textarea {
 
 ::-webkit-scrollbar-thumb {
   background: #222;
-}
-
-@media screen and (max-width: 650px) {
-  .container {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
 }
