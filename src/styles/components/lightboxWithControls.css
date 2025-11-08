@@ -51,18 +51,6 @@
   transition: background 0.3s ease;
 }
 
-.exit-button:hover,
-.next-button:hover,
-.prev-button:hover {
-  background: var(--color-black-1c);
-}
-
-.exit-button:hover svg,
-.next-button:hover svg,
-.prev-button:hover svg {
-  color: white;
-}
-
 .next-button {
   position: fixed;
   right: 20px;
@@ -131,6 +119,20 @@
 
 .lightbox-image.active {
   opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+  .exit-button:hover,
+  .next-button:hover,
+  .prev-button:hover {
+    background: var(--color-black-1c);
+  }
+
+  .exit-button:hover svg,
+  .next-button:hover svg,
+  .prev-button:hover svg {
+    color: white;
+  }
 }
 
 @media screen and (max-width: 1000px) {

@@ -57,10 +57,12 @@ nav {
   transition: all 0.15s cubic-bezier(0.6, 0.5, 0.53, 2.5);
 }
 
-.nav-left a:hover .hover-outline,
-.nav-right a:hover .hover-outline {
-  border-color: rgba(17, 17, 17, 0.8);
-  border-radius: 7px;
-  width: 110%;
-  height: 130%;
+@media (hover: hover) {
+  .nav-left a:hover .hover-outline,
+  .nav-right a:hover .hover-outline {
+    border-color: rgba(17, 17, 17, 0.8);
+    border-radius: 7px;
+    width: 110%;
+    height: 130%;
+  }
 }
