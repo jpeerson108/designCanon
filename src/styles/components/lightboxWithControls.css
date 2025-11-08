@@ -158,4 +158,8 @@
   .grid-item {
     height: 250px;
   }
+
+  .lightbox {
+    height: 100dvh;
+  }
 }
