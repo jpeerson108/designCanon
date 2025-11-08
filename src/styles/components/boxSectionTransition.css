@@ -108,3 +108,13 @@ section {
 .hero4 .blocks-container.bottom .blocks-row .block {
   background: var(--color-background);
 }
+
+@media screen and (max-width: 650px) {
+  .hero1 p,
+  .hero3 p,
+  .hero5 p {
+    line-height: 2;
+    font-size: 1rem;
+    padding: 0 40px;
+  }
+}
