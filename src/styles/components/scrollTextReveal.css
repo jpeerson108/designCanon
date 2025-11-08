@@ -1,149 +1,144 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-*, *::before, *::after { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-
 body {
-    font-family: "Inter", sans-serif;
-    background-color: #151515;
+  font-family: "Inter", sans-serif;
+  background-color: #151515;
 }
 
 section {
-    position: relative;
-    width: 100%;
-    height: 100svh;
-    padding: 2em;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  padding: 2em;
+  overflow: hidden;
 }
 
 .copy-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 2rem;
 }
 
 .copy-container h1 {
-    width: 70%;
-    color:#fff;
-    font-size: 5rem;
-    font-weight: 500;
-    line-height: 1;
+  width: 70%;
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 1;
 }
 
 .hero .copy-container {
-    background: #111;
+  background: #111;
 }
 
 .cta .copy-container {
-    background: #333;
+  background: #333;
 }
 
 .outro .copy-container {
-    background: #111;
+  background: #111;
 }
 
-.about .copy-container, 
+.about .copy-container,
 .features .copy-container {
-    border: 0.15rem dashed rgb(60, 60, 60);
+  border: 0.15rem dashed rgb(60, 60, 60);
 }
 
 .anime-text {
-    width: 60%;
+  width: 60%;
 }
 
 .anime-text p {
-    color: #fff;
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 1;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
 }
 
 .anime-text .word {
-    display: inline-block;
-    position: relative;
-    margin-right: 0.2rem;
-    margin-bottom: 0.2rem;
-    padding: 0.1rem 0.2rem;
-    border-radius: 2rem;
-    will-change: background-color, opacity;
+  display: inline-block;
+  position: relative;
+  margin-right: 0.2rem;
+  margin-bottom: 0.2rem;
+  padding: 0.1rem 0.2rem;
+  border-radius: 2rem;
+  will-change: background-color, opacity;
 }
 
 .anime-text .word.keyword-wrapper {
-    margin: 0 0.4rem 0.2rem 0.2rem;
+  margin: 0 0.4rem 0.2rem 0.2rem;
 }
 
 .anime-text .word span {
-    position: relative;
+  position: relative;
 }
 
 .anime-text .word span.keyword {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    border-radius: 2rem;
-    padding: 0.1rem 0;
-    color: #222;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  padding: 0.1rem 0;
+  color: #222;
 }
 
 .anime-text .word span.keyword::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(100% + 1rem);
-    height: calc(100% + 0.4rem);
-    background-color: #fff;
-    border-radius: 2rem;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 1rem);
+  height: calc(100% + 0.4rem);
+  background-color: #fff;
+  border-radius: 2rem;
+  z-index: -1;
 }
 
 .anime-text .word span.keyword.enlightenment::before,
 .anime-text .word span.keyword.seldom::before {
-    background-color: #7a78ff;
+  background-color: #7a78ff;
 }
 
 .anime-text .word span.keyword.wisdom::before,
 .anime-text .word span.keyword.facing::before {
-    background-color: #fe6d38;
+  background-color: #fe6d38;
 }
 
 .anime-text .word span.keyword.face::before {
-    background-color: #c6fe69;
+  background-color: #c6fe69;
 }
 
 .anime-text .word,
 .anime-text .word span {
-    opacity: 0;
+  opacity: 0;
 }
 
 @media (max-width: 1000px) {
-    .copy-container h1 {
-        width: 90%;
-        font-size: 2rem;
-    }
+  .copy-container h1 {
+    width: 90%;
+    font-size: 2rem;
+  }
 
-    .anime-text {
-        width: 90%;
-    }
+  .anime-text {
+    width: 90%;
+  }
 
-    .anime-text p {
-        font-size: 1.25rem;
-    }
+  .anime-text p {
+    font-size: 1.25rem;
+  }
 
-    .anime-text .word {
-        margin-right: 0.1rem;
-        margin-bottom: 0.15rem;
-        padding: 0.1rem 0.2rem;
-    }
+  .anime-text .word {
+    margin-right: 0.1rem;
+    margin-bottom: 0.15rem;
+    padding: 0.1rem 0.2rem;
+  }
 
-    .anime-text .word.keyword-wrapper {
-        margin: 0 0.2rem 0.1rem 0.1rem;
-    }
+  .anime-text .word.keyword-wrapper {
+    margin: 0 0.2rem 0.1rem 0.1rem;
+  }
 }

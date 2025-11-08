@@ -43,10 +43,6 @@
   transition: color 0.6s ease;
 }
 
-.content-section-item p:hover {
-  color: var(--color-black-7);
-}
-
 .custom-bullet {
   position: relative;
   height: 1.7rem;
@@ -204,6 +200,12 @@
     rgba(11, 11, 11, 0),
     rgba(11, 11, 11, 1)
   );
+}
+
+@media screen and (max-width: 800px) {
+  .content-section-item p:hover {
+    color: var(--color-black-7);
+  }
 }
 
 @keyframes fillBullet {
