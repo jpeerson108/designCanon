@@ -109,6 +109,9 @@
 
 .lightbox-image {
   position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
   max-width: 70vw;
   max-height: 80vh;
   object-fit: contain;
