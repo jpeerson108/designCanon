@@ -27,7 +27,8 @@ section {
   font-size: 2rem;
   text-align: center;
   padding: 0 40px;
-  color: var(--color-black-7);
+  color: white;
+  font-weight: 500;
 }
 
 .hero1 p span,
@@ -116,5 +117,9 @@ section {
     line-height: 2;
     font-size: 1rem;
     padding: 0 40px;
+  }
+
+  section {
+    min-height: 70vh;
   }
 }
