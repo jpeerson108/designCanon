@@ -139,15 +139,19 @@
   .grid {
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
-    margin: 5rem 1.8rem;
-    gap: 10px;
+    padding: 5rem 1.8rem;
   }
+
   .grid-item {
     height: 400px;
   }
 }
 
 @media screen and (max-width: 650px) {
+  .grid {
+    gap: 10px;
+  }
+
   .grid-item {
     height: 250px;
   }
