@@ -490,8 +490,7 @@ article .new-label {
 }
 
 @media (max-width: 650px) {
-  html,
-  body {
+  .content-grid-container {
     overflow-x: hidden;
     max-width: 100vw;
   }
