@@ -20,14 +20,13 @@ window.addEventListener("DOMContentLoaded", () => {
   const inactiveToggle = document.querySelector(".toggle.inactive")
   const activeToggle = document.querySelector(".toggle.active")
 
-  // Set button text content here
   inactiveToggle.textContent = "Initiate"
   activeToggle.textContent = "Go Back"
 
   gsap.set(activeToggle, { opacity: 0, visibility: "hidden" })
 
   function createSquares() {
-    for (let i = 0; i < numSquares; i++) {
+    for (let index = 0; index < numSquares; index++) {
       const square = document.createElement("div")
       square.classList.add("square")
       squareContainer.appendChild(square)
@@ -36,9 +35,10 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   function animateSquares(callback) {
-    // Total animation time
-    const staggerTime = 0.003
-    const totalFillTime = squares.length * staggerTime
+    // Fixed duration regardless of screen size
+    const targetDuration = 0.5
+    const staggerTime = targetDuration / squares.length
+    const totalFillTime = targetDuration
     const coverTime = 0.1 + totalFillTime
 
     gsap.fromTo(
@@ -69,7 +69,6 @@ window.addEventListener("DOMContentLoaded", () => {
         from: "random",
       },
       onComplete: () => {
-        // Clear all squares when animation completes
         squareContainer.innerHTML = ""
         squares = []
       },
@@ -78,7 +77,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
   let overlayVisible = false
 
-  // Inactive toggle click handler
   inactiveToggle.addEventListener("click", () => {
     createSquares()
     animateSquares(() => {
@@ -96,7 +94,6 @@ window.addEventListener("DOMContentLoaded", () => {
     overlayVisible = true
   })
 
-  // Active toggle click handler
   activeToggle.addEventListener("click", () => {
     createSquares()
     animateSquares(() => {
