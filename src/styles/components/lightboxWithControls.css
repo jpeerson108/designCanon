@@ -147,7 +147,7 @@
 }
 
 @media screen and (max-width: 650px) {
-  .grid {
-    grid-template-columns: repeat(1, 1fr);
+  .grid-item {
+    height: 250px;
   }
 }
