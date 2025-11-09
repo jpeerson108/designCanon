@@ -452,7 +452,7 @@ h3 {
 
 article .new-label {
   position: absolute;
-  top: 10px;
+  top: 12px;
   left: 10px;
   background: rgba(17, 17, 17, 0.9);
   font-size: 0.7rem;
@@ -516,7 +516,6 @@ article .new-label {
   article .new-label {
     position: absolute;
     top: 10px;
-    margin-left: 10px;
     padding: 3px 7px 3px 8px;
     border-radius: var(--filter-border-radius);
   }
