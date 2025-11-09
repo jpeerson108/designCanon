@@ -3,6 +3,7 @@ const { title } = Astro.props;
 import "../styles/global.css";
 import "../styles/globalPageTransition.css";
 import NavMain from "@/components/navMain.astro";
+import FooterMain from "@/components/FooterMain.astro";
 ---
 <html lang="en">
   <head>
@@ -16,7 +17,7 @@ import NavMain from "@/components/navMain.astro";
     inspirationLinkHref="/resources/inspiration"
     infoLinkHref=""
     tutorialsLinkHref=""
-    githubLinkHref="https://www.linkedin.com/company/design-canon"
+    githubLinkHref="https://github.com/jpeerson108"
     twitterLinkHref=""
     linkedinLinkHref="https://www.linkedin.com/company/design-canon"
     instagramLinkHref=""
@@ -25,5 +26,6 @@ import NavMain from "@/components/navMain.astro";
     <div class="container">
         <slot />
     </div>
+    <!-- <FooterMain></FooterMain> -->
   </body>
 </html>
