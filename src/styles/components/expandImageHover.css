@@ -19,9 +19,10 @@
   height: 100%;
   flex: 1;
   transition: flex 0.3s ease;
+  transform-origin: center center;
 }
 
-.image-container:hover {
+.image-container.active {
   flex: 3;
 }
 
