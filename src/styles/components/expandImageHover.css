@@ -1,0 +1,33 @@
+.gallery-container {
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery {
+  width: 80vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.image-container {
+  height: 100%;
+  flex: 1;
+  transition: flex 0.3s ease;
+}
+
+.image-container:hover {
+  flex: 3;
+}
+
+.image-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--rounded-corners-med);
+}

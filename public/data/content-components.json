@@ -78,5 +78,13 @@
         "href": "/components/timedContentSection",
         "date": "2025-10-31",
         "tags": ["timed", "looping", "content", "image", "text", "auto", "cycle", "rotation", "sequential", "slideshow", "highlight", "interval", "transition", "switch", "animated"]
+    },
+    {
+        "title": "Expand Image on Hover",
+        "category": "Gallery",
+        "image": "/assets/thumbnails/thumbnail-13.webp",
+        "href": "/components/expandImageHover",
+        "date": "2025-11-9",
+        "tags": ["gallery", "hover", "image", "expand", "flexbox", "interactive", "vertical", "transition", "animation", "responsive", "reveal", "stretch"]
     }
 ]
