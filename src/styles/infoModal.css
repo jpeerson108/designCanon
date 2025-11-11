@@ -172,6 +172,10 @@ dialog {
 }
 
 @media screen and (max-width: 650px) {
+  .dialog-container {
+    height: 100dvh;
+  }
+
   .dialog-header {
     font-size: 1.3rem;
     font-weight: 700;
@@ -179,8 +183,8 @@ dialog {
 
   .dialog-box {
     width: 100%;
-    height: 60vh;
-    height: 60dvh;
+    height: 65vh;
+    height: 65dvh;
     padding: 24px;
     margin: 28px;
     padding-bottom: 30px;
