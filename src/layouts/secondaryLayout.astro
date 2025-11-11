@@ -6,9 +6,8 @@ import InfoModal from "@/components/infoModal.astro";
 const { 
     htmlLinkHref,
     cssLinkHref,
-    javascriptLinkHref,
-    infoModalContent
-} = Astro.props;
+    javascriptLinkHref
+    } = Astro.props;
 ---
 
 <html lang="en">
@@ -24,9 +23,9 @@ const {
         cssLinkHref={cssLinkHref}
         javascriptLinkHref={javascriptLinkHref}
     />
-    <InfoModal
-        infoModalContent={infoModalContent}
-    />
+    <InfoModal>
+      <slot name="infoModal" />
+    </InfoModal>
     <slot />
   </body>
 </html>
