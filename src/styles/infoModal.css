@@ -54,10 +54,12 @@ dialog {
   width: 500px;
   height: 60vh;
   max-height: 600px;
+  min-height: 300px;
   background: var(--color-black-1c);
   border: 1px solid var(--color-black-3);
   border-radius: var(--rounded-corners-med);
   padding: 2.2rem;
+  margin: 28px;
 }
 
 .dialog-content-container {
@@ -92,6 +94,10 @@ dialog {
 .dialog-body p {
   margin-bottom: 1.1rem;
   pointer-events: none;
+}
+
+.dialog-body p:last-child {
+  margin-bottom: .5rem;
 }
 
 .dialog-body-gradient {
@@ -134,4 +140,22 @@ dialog {
   #info-button:hover {
     color: white;
   }
+}
+
+@media screen and (max-width: 650px) {
+  .dialog-box {
+    width: 100%;
+    height: 70vh;
+    padding: 32px 28px;
+    margin: 28px;
+  }
+
+  .dialog-body {
+    padding-bottom: 0;
+  }
+
+  .dialog-header-container {
+  margin-bottom: 1.1rem;
+  margin-top: 0;
+}
 }
