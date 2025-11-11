@@ -26,8 +26,8 @@ import "../../styles/components/expandImageHover.css";
     </div>
 </div>
 <Fragment slot="infoModal">
-    <p>Test</p>
-    <p>Test2</p>
-    <p>Your modal content here</p>
+    <p>The HTML sets up a simple, flexible gallery made of multiple .image-container elements inside a .gallery wrapper. Each container holds an image, and one starts as active so it appears larger when the page loads. This structure provides the foundation for the interactive effect, allowing the CSS and JavaScript to control how each image expands or contracts when hovered.</p>
+    <p>The CSS defines how the gallery looks and responds to user interaction. Each image container shares space evenly with flex: 1, but when active, it expands smoothly to flex: 3 (or flex: 4 on smaller screens). Transitions make the expansion fluid, and media queries hide some images on smaller devices to keep the layout clean and balanced. Rounded corners and object-fit styling ensure the images look polished and consistent.</p>
+    <p>The JavaScript adds interactivity by listening for hover events. When a user hovers over a container, it removes the active class from all others and applies it to the hovered one. It also detects where the mouse enters—left or right—and adjusts the transform-origin so the expansion feels directional and natural. This creates a more dynamic, responsive hover effect that enhances the visual flow of the gallery.</p>
 </Fragment>
 </SecondaryLayout>
