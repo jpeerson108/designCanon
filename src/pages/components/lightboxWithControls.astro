@@ -53,4 +53,9 @@ import "../../styles/components/lightboxWithControls.css";
         <img class="lightbox-image" src="" alt="">
         <img class="lightbox-image" src="" alt="">
     </div>
+<Fragment slot="infoModal">
+<p>The layout is built around a simple grid that turns interactive once clicked. Each image acts as a trigger, opening a fullscreen lightbox that takes over the viewport. Inside, two image layers alternate visibility to handle transitions cleanly without flicker or re-rendering. The controls sit on top of the interface, positioned for quick navigation and exit, keeping the interaction clear and consistent while everything else fades into the background.</p> 
+<p>The CSS handles the visual flow. The grid layout feels intentional and evenly spaced, scaling fluidly as the viewport changes. When the lightbox activates, the background dims and the selected image takes full focus. Two image layers are stacked using absolute positioning, with opacity transitions doing the heavy lifting to create smooth crossfades. Fixed-position controls are styled to feel integrated rather than intrusive, adding just enough motion to feel responsive without drawing attention away from the content.</p> 
+<p>The JavaScript ties the entire effect together. It listens for clicks on each grid item, key events for navigation, and overlay clicks to exit. Images are swapped by alternating active classes between two preloaded layers, keeping transitions smooth and immediate. Keyboard support for Escape and arrow keys extends the usability, while the code stays lightweight and readable. The result is a controlled, polished experience that feels effortless to use but is built with precision behind the scenes.</p>
+</Fragment>
 </SecondaryLayout>

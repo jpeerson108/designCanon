@@ -120,4 +120,9 @@ import "../../styles/components/timedContentSection.css";
     </aside>
     </div>
 </section>
+<Fragment slot="infoModal">
+    <p>The HTML provides a simple structure that pairs a list of selectable items with corresponding media panels. Each item and panel share the same order, allowing them to be linked through class names and activated together. The initial state sets one item as active so the section begins with visible content. This foundation allows the styling and scripting to create a synchronized, timed transition effect between items.</p> 
+    <p>The CSS manages layout, transitions, and animations. Flexbox arranges the text column and media panels side by side, while opacity and visibility properties control which panel is shown. The keyframes animation gradually fills the bullet next to each item, providing a visual timer for when the next transition will occur. Transitions for color and opacity create smooth crossfades, and responsive rules ensure the effect scales cleanly across screen sizes.</p> 
+    <p>The JavaScript controls the timing and synchronization of the animation. It loops through each item on a set interval, activating one at a time and applying the active class to both the item and its matching media panel. When activated manually by a click, the script pauses the automatic loop, updates the current index, and then resumes after a delay. The bullet fill animation is reset and triggered on each cycle, tying the visual cue directly to the timed content transitions.</p>
+</Fragment>
 </SecondaryLayout>
