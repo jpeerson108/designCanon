@@ -25,8 +25,11 @@ const hasContent = slotContent.trim().length > 0;
                             </svg>
                         </div>
                     </div>
-                    <div class="dialog-body" set:html={slotContent}></div>
-                    <div class="dialog-body-gradient"></div>
+                    <div class="dialog-body-container">
+                        <div class="dialog-body" set:html={slotContent}></div>
+                        <div class="dialog-body-gradient-top"></div>
+                        <div class="dialog-body-gradient-bottom active"></div>
+                    </div>
                 </div>
             </div>
             <div class="dialog-container-backdrop"></div>
