@@ -83,12 +83,13 @@
 
   .grid-item-title {
     font-size: 0.7rem;
-    height: 7.2%;
+    height: 6.9%;
   }
 
   .grid-item-title span {
     font-size: 0.7rem;
     margin-top: 0;
+    margin-left: 0.4rem;
   }
 
   .grid-column-offset:nth-of-type(4) {
