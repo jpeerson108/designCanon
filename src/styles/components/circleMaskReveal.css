@@ -35,6 +35,8 @@
   height: 100%;
   clip-path: ellipse(100% 0% at 50% 0%);
   transition: clip-path 1s cubic-bezier(0.65, 0.05, 0, 1);
+  -webkit-touch-callout: none;
+  user-select: none;
 }
 
 .hover-img img {
@@ -42,11 +44,19 @@
   height: 100%;
   filter: grayscale(100%);
   object-fit: cover;
+  -webkit-touch-callout: none;
+  user-select: none;
+  pointer-events: none;
 }
 
-.base-img:hover .hover-img,
 .base-img.active .hover-img {
   clip-path: ellipse(80% 100% at 50% 50%);
+}
+
+@media (hover: hover) {
+  .base-img:hover .hover-img {
+    clip-path: ellipse(80% 100% at 50% 50%);
+  }
 }
 
 @media screen and (max-width: 1000px) {
