@@ -1,10 +1,22 @@
 ---
 import BaseLayout from "../../layouts/baseLayout.astro";
 import ContentGrid from "@/components/contentGrid.astro";
+import NavMain from "@/components/navMain.astro";
 import "../../styles/index.css";
 ---
 <script type="module" src="/scripts/inspiration.js"></script>
 <BaseLayout title="Inspiration">
+    <NavMain 
+    inspirationLinkHref="/resources/inspiration"
+    infoLinkHref=""
+    tutorialsLinkHref=""
+    githubLinkHref="https://github.com/jpeerson108"
+    twitterLinkHref=""
+    linkedinLinkHref="https://www.linkedin.com/company/design-canon"
+    instagramLinkHref=""
+    youtubeLinkHref=""
+    emailLinkHref="mailto:contact@designcanon.com?subject=Inquiry%20from%20Design%20Canon%20Website"
+    navCenterText="Design Canon"/>
     <section class="intro-text">
         <p>A growing archive of websites that push the boundaries of design and interaction.</p>
         </section>
