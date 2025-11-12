@@ -163,7 +163,7 @@ window.addEventListener("scroll", () => {
   if (!lastCard) return
 
   const rect = lastCard.getBoundingClientRect()
-  const triggerPoint = window.innerHeight * 0.4
+  const triggerPoint = window.innerHeight * 0.5
 
   if (
     rect.top < triggerPoint &&
