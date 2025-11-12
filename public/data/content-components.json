@@ -86,5 +86,13 @@
         "href": "/components/expandImageHover",
         "date": "2025-11-9",
         "tags": ["gallery", "hover", "image", "expand", "flexbox", "interactive", "vertical", "transition", "animation", "responsive", "reveal", "stretch"]
+    },
+    {
+        "title": "Circular Mask Reveal on Hover",
+        "category": "Gallery",
+        "image": "/assets/thumbnails/thumbnail-14.webp",
+        "href": "/components/circleMaskReveal",
+        "date": "2025-11-12",
+        "tags": ["gallery", "hover", "image", "expand", "flexbox", "interactive", "vertical", "transition", "animation", "responsive", "reveal", "circle"]
     }
 ]
