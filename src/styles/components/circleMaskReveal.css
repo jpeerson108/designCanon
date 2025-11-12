@@ -1,6 +1,6 @@
 .main-container {
   width: 100vw;
-  min-height: 100vh;
+  min-height: var(--body-height-nav);
   display: flex;
   align-items: center;
   justify-content: center;
