@@ -81,7 +81,7 @@
     },
     {
         "title": "Expand Image on Hover",
-        "category": "Gallery",
+        "category": "Hover Animation",
         "image": "/assets/thumbnails/thumbnail-13.webp",
         "href": "/components/expandImageHover",
         "date": "2025-11-9",
@@ -89,7 +89,7 @@
     },
     {
         "title": "Circle Mask Reveal on Hover",
-        "category": "Gallery",
+        "category": "Hover Animation",
         "image": "/assets/thumbnails/thumbnail-14.webp",
         "href": "/components/circleMaskReveal",
         "date": "2025-11-12",
