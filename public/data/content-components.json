@@ -88,7 +88,7 @@
         "tags": ["gallery", "hover", "image", "expand", "flexbox", "interactive", "vertical", "transition", "animation", "responsive", "reveal", "stretch"]
     },
     {
-        "title": "Circular Mask Reveal on Hover",
+        "title": "Circle Mask Reveal on Hover",
         "category": "Gallery",
         "image": "/assets/thumbnails/thumbnail-14.webp",
         "href": "/components/circleMaskReveal",
