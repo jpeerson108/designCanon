@@ -9,12 +9,14 @@
 .media-container {
     display: flex;
     gap: 1rem;
+    margin: 0 28px;
 }
 
 .base-img {
     position: relative;
-    width: 400px;
-    height: 500px;
+    flex: 1;
+    max-width: 400px;
+    max-height: 500px;
 }
 
 .base-img img {
@@ -44,4 +46,24 @@
 
 .base-img:hover .hover-img {
     clip-path: ellipse(80% 100% at 50% 50%);
+}
+
+@media screen and (max-width: 1000px) {
+    .main-container {
+    min-height: 100dvh;
+    }
+
+    .base-img:nth-child(3) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .base-img:nth-child(2) {
+        display: none;
+    }
+
+    .base-img {
+    max-width: 600px;
+    }
 }
