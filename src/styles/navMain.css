@@ -145,6 +145,15 @@ li.menu-box {
   margin-top: -1px;
 }
 
+.right-side-container {
+  height: 100%;
+  display: flex;
+}
+
+.source-code-box {
+  border-left: var(--navMain-border);
+}
+
 /* Socials Menu */
 .socials-container {
   height: 100%;
@@ -246,6 +255,10 @@ li.social-box {
   }
 
   li.social-box:hover {
+    background: var(--color-black-1c);
+  }
+
+  .source-code-box:hover {
     background: var(--color-black-1c);
   }
 }

@@ -1,9 +1,21 @@
 ---
 import BaseLayout from "../layouts/baseLayout.astro";
 import ContentGrid from "@/components/contentGrid.astro";
+import NavMain from "@/components/navMain.astro";
 import "../styles/index.css";
 ---
 <BaseLayout title="Home">
+    <NavMain 
+    inspirationLinkHref="/resources/inspiration"
+    infoLinkHref=""
+    tutorialsLinkHref=""
+    githubLinkHref="https://github.com/jpeerson108"
+    twitterLinkHref=""
+    linkedinLinkHref="https://www.linkedin.com/company/design-canon"
+    instagramLinkHref=""
+    youtubeLinkHref=""
+    emailLinkHref="mailto:contact@designcanon.com?subject=Inquiry%20from%20Design%20Canon%20Website"
+    navCenterText="Design Canon"/>
     <section class="intro-text">
         <p>A growing collection of hand-coded components for modern web development.</p>
     </section>

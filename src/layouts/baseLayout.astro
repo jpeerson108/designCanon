@@ -2,7 +2,6 @@
 const { title } = Astro.props;
 import "../styles/global.css";
 import "../styles/globalPageTransition.css";
-import NavMain from "@/components/navMain.astro";
 import FooterMain from "@/components/FooterMain.astro";
 ---
 <html lang="en">
@@ -13,16 +12,6 @@ import FooterMain from "@/components/FooterMain.astro";
     <title>{title ? `${title} | Design Canon` : "Design Canon"}</title>
   </head>
   <body>
-    <NavMain 
-    inspirationLinkHref="/resources/inspiration"
-    infoLinkHref=""
-    tutorialsLinkHref=""
-    githubLinkHref="https://github.com/jpeerson108"
-    twitterLinkHref=""
-    linkedinLinkHref="https://www.linkedin.com/company/design-canon"
-    instagramLinkHref=""
-    youtubeLinkHref=""
-    emailLinkHref="mailto:contact@designcanon.com?subject=Inquiry%20from%20Design%20Canon%20Website"  />
     <div class="container">
         <slot />
     </div>
