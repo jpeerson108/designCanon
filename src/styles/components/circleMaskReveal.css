@@ -57,12 +57,15 @@
 .mobile-message {
   display: none;
   margin-top: 16px;
-  color: var(--color-black-5);
+  color: var(--color-black-9);
   font-family: "JetBrains Mono", monospace;
   text-transform: uppercase;
   font-size: 0.8rem;
   text-align: center;
   letter-spacing: -0.5px;
+  padding: var(--buttonPadding-vertical) var(--buttonPadding-horizontal);
+  border-radius: var(--filter-border-radius);
+  border: var(--filter-border);
 }
 
 @media (hover: hover) {
