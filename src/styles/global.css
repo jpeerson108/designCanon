@@ -35,6 +35,21 @@
   --color-white-d: #ddd;
   --color-white-e: #eee;
 
+  /* Navigation: Main */
+  --navMain-heightDesktop: 60px;
+  --navMain-heightSmaller: 50px;
+  --navMain-heightMobile: 45px;
+  --navMain-border: solid 1px var(--color-main-border);
+
+  /* Content Grid */
+  --filter-border: 1px solid var(--color-main-border);
+  --filter-border-radius: 4px;
+  --filter-fontSize: 0.85rem;
+  --filterFlexGap: 0.4rem;
+  --contentImg-border-radius: 10px;
+  --buttonPadding-vertical: 3.5px;
+  --buttonPadding-horizontal: 9px;
+
   /* Breakpoints */
   --breakpoint-tablet: 1200px;
   --breakpoint-mobile: 650px;
