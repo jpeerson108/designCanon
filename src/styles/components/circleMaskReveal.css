@@ -75,10 +75,6 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .main-container {
-    min-height: 100dvh;
-  }
-
   .base-img:nth-child(3) {
     display: none;
   }
