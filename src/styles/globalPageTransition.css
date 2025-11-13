@@ -3,28 +3,28 @@
 }
 
 ::view-transition-old(root) {
-  animation: slide-out-down 0.3s cubic-bezier(0.4, 0, 1, 1);
+  animation: slide-out-down 0.8s ease;
 }
 
 ::view-transition-new(root) {
-  animation: slide-in-top 0.4s cubic-bezier(0, 0, 0.2, 1);
+  animation: slide-in-top 0.4s ease;
 }
 
 @keyframes slide-out-down {
+  from {
+    opacity: 1;
+  }
   to {
     opacity: 0;
-    transform: translateY(100px);
   }
 }
 
 @keyframes slide-in-top {
   from {
     opacity: 0;
-    transform: translateY(-100px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
