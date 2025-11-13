@@ -512,14 +512,69 @@ const stickyObserver = new IntersectionObserver(
 
 stickyObserver.observe(gridContainer)
 
+// const gridCounterWidgetText = document.querySelector(".grid-items-counter-widget")
+
+// function updateGridCounter() {
+//   const visibleCards = Array.from(grid.querySelectorAll(".content-card")).filter(
+//     (card) => card.style.display !== "none"
+//   )
+//   const visibleCount = visibleCards.length
+//   const totalCount = currentCards.length
+  
+//   gridCounterWidgetText.textContent = `${visibleCount} / ${totalCount} Components`
+// }
+
+let cardsInViewport = new Set()
 const gridCounterWidgetText = document.querySelector(".grid-items-counter-widget")
 
-function updateGridCounter() {
-  const visibleCards = Array.from(grid.querySelectorAll(".content-card")).filter(
-    (card) => card.style.display !== "none"
-  )
-  const visibleCount = visibleCards.length
+// Observer to track cards entering/exiting viewport
+const cardCounterObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const card = entry.target
+      
+      // Check if card is hidden by search
+      if (card.style.display === "none") return
+      
+      const rect = card.getBoundingClientRect()
+      
+      if (entry.isIntersecting) {
+        // Card is entering viewport - add it
+        cardsInViewport.add(card)
+      } else if (rect.top > window.innerHeight) {
+        // Card is below viewport - remove it
+        cardsInViewport.delete(card)
+      }
+      // If rect.top < 0, card is above viewport - keep it counted
+    })
+    
+    updateGridCounterDisplay()
+  },
+  {
+    threshold: 0,
+    rootMargin: "0px 0px 0px 0px"
+  }
+)
+
+function updateGridCounterDisplay() {
+  const visibleInViewportCount = cardsInViewport.size
   const totalCount = currentCards.length
   
-  gridCounterWidgetText.textContent = `${visibleCount} / ${totalCount} Components`
+  if (gridCounterWidgetText) {
+    gridCounterWidgetText.textContent = `${visibleInViewportCount} / ${totalCount} Components`
+  }
+}
+
+function updateGridCounter() {
+  // Re-observe all visible cards
+  const allCards = grid.querySelectorAll(".content-card")
+  
+  allCards.forEach((card) => {
+    cardCounterObserver.unobserve(card)
+    if (card.style.display !== "none") {
+      cardCounterObserver.observe(card)
+    }
+  })
+  
+  updateGridCounterDisplay()
 }
