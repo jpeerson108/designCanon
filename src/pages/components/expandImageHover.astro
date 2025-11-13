@@ -1,36 +1,38 @@
 ---
-import SecondaryLayout from "../../layouts/secondaryLayout.astro";
+import BaseLayout from "../../layouts/baseLayout.astro";
+import NavMain from "@/components/navMain.astro";
 import "../../styles/components/expandImageHover.css";
 ---
 
 <script type="module" src="/scripts/components/expandImageHover.js"></script>
 
-<SecondaryLayout 
+<BaseLayout>
+    <NavMain
     title="Expand Image on Hover"
     htmlLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/pages/components/expandImageHover.astro"
     cssLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/styles/components/expandImageHover.css"
-    javascriptLinkHref="https://github.com/jpeerson108/designCanon/blob/main/public/scripts/components/expandImageHover.js"
->
-<div class="gallery-container">
-    <div class="gallery">
-        <div class="image-container active"><img src="/assets/images/image-18.webp" alt=""></div>
-        <div class="image-container"><img src="/assets/images/image-56.webp" alt=""></div>
-        <div class="image-container"><img src="/assets/images/image-52.webp" alt=""></div>
-        <div class="image-container"><img src="/assets/images/image-2.webp" alt=""></div>
-        <div class="image-container"><img src="/assets/images/image-58.webp" alt=""></div>
-        <div class="image-container"><img src="/assets/images/image-11.webp" alt=""></div>
-        <div class="image-container"><img src="/assets/images/image-20.webp" alt=""></div>
-        <div class="image-container"><img src="/assets/images/image-33.webp" alt=""></div>
-        <div class="image-container"><img src="/assets/images/image-54.webp" alt=""></div>
-        <div class="image-container"><img src="/assets/images/image-24.webp" alt=""></div>
+    javascriptLinkHref="https://github.com/jpeerson108/designCanon/blob/main/public/scripts/components/expandImageHover.js" />
+
+    <div class="gallery-container">
+        <div class="gallery">
+            <div class="image-container active"><img src="/assets/images/image-18.webp" alt=""></div>
+            <div class="image-container"><img src="/assets/images/image-56.webp" alt=""></div>
+            <div class="image-container"><img src="/assets/images/image-52.webp" alt=""></div>
+            <div class="image-container"><img src="/assets/images/image-2.webp" alt=""></div>
+            <div class="image-container"><img src="/assets/images/image-58.webp" alt=""></div>
+            <div class="image-container"><img src="/assets/images/image-11.webp" alt=""></div>
+            <div class="image-container"><img src="/assets/images/image-20.webp" alt=""></div>
+            <div class="image-container"><img src="/assets/images/image-33.webp" alt=""></div>
+            <div class="image-container"><img src="/assets/images/image-54.webp" alt=""></div>
+            <div class="image-container"><img src="/assets/images/image-24.webp" alt=""></div>
+        </div>
     </div>
-</div>
-<Fragment slot="infoModal">
-    <p>A main container holds and positions the images at the center of the page using flexbox align center and justify content center.</p> 
-    <p>An additional flexbox arranges a gallery of images in a row with a small gap between each item.</p> 
-    <p>The expanded image receives an additional "active" class, with the first image having this class hardcoded in the starting HTML. The "active" class is given a property of flex: 3, making the hovered image expand to three times the size of the other flex items. On mobile, a media query increases this value to 4 for a more noticeable effect, as mobile vertical screen widths are much smaller.</p> 
-    <p>JavaScript listens for hover events. As images are hovered, JavaScript loops through and removes the "active" class from all images and applies it back to the image being hovered.</p> 
-    <p>JavaScript also detects the horizontal mouse entry point and sets the transform origin to the side (left or right) where the cursor enters. This makes the animation of cards expanding and collapsing much smoother. If we only used the CSS flex-grow approach on hovered flex items (which is possible), the active image would always expand from the center, resulting in a more jarring hover animation. Additionally, applying an active class to the hovered image allows for one image, whichever is last hovered, to be expanded at all times.</p> 
-    <p>CSS media queries remove images from the DOM on smaller screen sizes using the :nth-child pseudo-class. For example, on tablets, we can remove the last three images using :nth-child(10), :nth-child(9), and :nth-child(8). We continue this technique down to mobile, where only four images are shown. Selecting via :nth-child gives us the flexibility to dynamically adjust content without having to target specific image IDs.</p>
-</Fragment>
-</SecondaryLayout>
+    <Fragment slot="infoModal">
+        <p>A main container holds and positions the images at the center of the page using flexbox align center and justify content center.</p> 
+        <p>An additional flexbox arranges a gallery of images in a row with a small gap between each item.</p> 
+        <p>The expanded image receives an additional "active" class, with the first image having this class hardcoded in the starting HTML. The "active" class is given a property of flex: 3, making the hovered image expand to three times the size of the other flex items. On mobile, a media query increases this value to 4 for a more noticeable effect, as mobile vertical screen widths are much smaller.</p> 
+        <p>JavaScript listens for hover events. As images are hovered, JavaScript loops through and removes the "active" class from all images and applies it back to the image being hovered.</p> 
+        <p>JavaScript also detects the horizontal mouse entry point and sets the transform origin to the side (left or right) where the cursor enters. This makes the animation of cards expanding and collapsing much smoother. If we only used the CSS flex-grow approach on hovered flex items (which is possible), the active image would always expand from the center, resulting in a more jarring hover animation. Additionally, applying an active class to the hovered image allows for one image, whichever is last hovered, to be expanded at all times.</p> 
+        <p>CSS media queries remove images from the DOM on smaller screen sizes using the :nth-child pseudo-class. For example, on tablets, we can remove the last three images using :nth-child(10), :nth-child(9), and :nth-child(8). We continue this technique down to mobile, where only four images are shown. Selecting via :nth-child gives us the flexibility to dynamically adjust content without having to target specific image IDs.</p>
+    </Fragment>
+</BaseLayout>

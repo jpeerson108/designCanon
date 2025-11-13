@@ -44,14 +44,13 @@ dialog {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  height: 100dvh;
   background: rgba(0, 0, 0, 0.85);
   z-index: -1;
 }
 
 .dialog-box {
   position: relative;
-  width: 500px;
+  max-width: 500px;
   height: 60vh;
   max-height: 600px;
   min-height: 300px;
@@ -117,7 +116,7 @@ dialog {
   background-position: bottom;
   z-index: 5;
   opacity: 0;
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .dialog-body-gradient-bottom {
@@ -134,7 +133,7 @@ dialog {
   background-position: bottom;
   z-index: 5;
   opacity: 0;
-  transition: opacity .1s ease;
+  transition: opacity 0.1s ease;
 }
 
 .dialog-body-gradient-top.active {

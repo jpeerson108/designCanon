@@ -1,7 +1,6 @@
 .gallery-container {
   width: 100vw;
-  height: 100vh;
-  height: 100dvh;
+  height: var(--body-height-nav-desktop);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,18 +56,18 @@
 
 @media (max-width: 650px) {
   .gallery-container {
-  height: 100dvh;
+    min-height: var(--body-height-nav-mobile);
   }
 
   .gallery {
-  max-height: 250px;
-  width: 100%;
-  margin: 23px;
+    max-height: 250px;
+    width: 100%;
+    margin: 23px;
   }
 
   .image-container.active {
-  flex: 4;
-}
+    flex: 4;
+  }
 
   .image-container:nth-child(5) {
     display: none;

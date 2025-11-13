@@ -91,10 +91,6 @@ body {
 
 .container {
   max-width: 2500px;
-  /*
-  padding-left: var(--horizontal-page-padding);
-  padding-right: var(--horizontal-page-padding);
-  */
 }
 
 .spacer-tiny {
