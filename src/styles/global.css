@@ -7,7 +7,8 @@
 :root {
   /* L/R Padding */
   --horizontal-page-padding: clamp(10px, 1rem + 1vw, 40px);
-  --body-height-nav: calc(100vh - var(--navMain-heightDesktop));
+  --body-height-nav-desktop: calc(100vh - var(--navMain-heightDesktop));
+  --body-height-nav-mobile: calc(100dvh - var(--navMain-heightMobile));
 
   /* Rounded Corners */
   --rounded-corners-small: 5px;

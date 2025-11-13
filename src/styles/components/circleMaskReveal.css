@@ -1,6 +1,6 @@
 .main-container {
   width: 100vw;
-  min-height: var(--body-height-nav);
+  min-height: var(--body-height-nav-desktop);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,6 +85,10 @@
 }
 
 @media screen and (max-width: 650px) {
+  .main-container {
+    min-height: var(--body-height-nav-mobile);
+  }
+
   .base-img:nth-child(2) {
     display: none;
   }
