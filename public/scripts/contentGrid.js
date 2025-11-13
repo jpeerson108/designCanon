@@ -483,6 +483,7 @@ function hideCard(card) {
 // Purpose: Make the filter track sticky when in the content grid section
 const filterTrack = document.querySelector(".filter-track")
 const gridContainer = document.querySelector(".content-grid-container")
+const gridCounterWidget = document.querySelector(".grid-items-counter-widget-container")
 
 const stickyObserver = new IntersectionObserver(
   ([entry]) => {
@@ -492,8 +493,10 @@ const stickyObserver = new IntersectionObserver(
     // Add active class when filter-track reaches 60px
     if (filterTop <= 60 && entry.isIntersecting) {
       filterTrack.classList.add("active")
+      gridCounterWidget.classList.add("active")
     } else if (containerTop > 60) {
       filterTrack.classList.remove("active")
+      gridCounterWidget.classList.remove("active")
     }
   },
   {
