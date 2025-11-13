@@ -460,7 +460,7 @@ article .new-label {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%) translateY(150%);
-  transition: all .4s cubic-bezier(.68, -0.55, .265, 1.55);
+  transition: all .8s cubic-bezier(.68, -0.55, .265, 1.55);
 }
 
 .grid-items-counter-widget {
@@ -487,7 +487,7 @@ article .new-label {
   opacity: 1;
   pointer-events: auto;
   transform: translateX(-50%) translateY(0);
-  transition: all .4s cubic-bezier(.68, -0.55, .265, 1.55);
+  transition: all .8s cubic-bezier(.68, -0.55, .265, 1.55);
 }
 
 @media (hover: hover) {
