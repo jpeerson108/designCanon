@@ -37,6 +37,7 @@ async function loadContent() {
   })
 
   renderContent(content, grid)
+  updateGridCounter()
 
   // Filter grid cards on category selection
   categoriesTrack.addEventListener("click", (e) => {
@@ -57,6 +58,7 @@ async function loadContent() {
       )
       renderContent(filtered, grid)
     }
+    updateGridCounter()
   })
 }
 
@@ -90,6 +92,7 @@ function renderContent(cards, grid) {
       grid.style.opacity = "1"
       isRendering = false
       currentIndex = firstBatch.length
+      updateGridCounter()
     }, 300)
   } else {
     grid.innerHTML = ""
@@ -100,6 +103,7 @@ function renderContent(cards, grid) {
     isRendering = false
     firstRender = false
     currentIndex = firstBatch.length
+    updateGridCounter()
   }
 }
 
@@ -187,6 +191,7 @@ window.addEventListener("scroll", () => {
 
     setTimeout(() => {
       isRendering = false
+      updateGridCounter()
     }, 300)
   }
 })
@@ -506,3 +511,15 @@ const stickyObserver = new IntersectionObserver(
 )
 
 stickyObserver.observe(gridContainer)
+
+const gridCounterWidgetText = document.querySelector(".grid-items-counter-widget")
+
+function updateGridCounter() {
+  const visibleCards = Array.from(grid.querySelectorAll(".content-card")).filter(
+    (card) => card.style.display !== "none"
+  )
+  const visibleCount = visibleCards.length
+  const totalCount = currentCards.length
+  
+  gridCounterWidgetText.textContent = `${visibleCount} / ${totalCount} Components`
+}
