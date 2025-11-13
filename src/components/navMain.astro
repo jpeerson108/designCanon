@@ -188,8 +188,10 @@ const {
 
     <!-- Center Text -->
     <div class="nav-logo-text active">
-        {navCenterText && (
+        {navCenterText ? (
             <p>{navCenterText}</p>
+        ) : (
+            <p><a href="/">Design Canon</a></p>
         )}
     </div>
 
