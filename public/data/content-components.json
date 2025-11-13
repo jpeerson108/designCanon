@@ -8,7 +8,7 @@
         "tags": ["hover", "expand", "menu", "navigation", "reveal"]
     },
     {
-        "title": "Infinite Marquee (Scroll-Driven)",
+        "title": "Infinite Marquee (Scroll-Direction)",
         "category": "Marquees",
         "image": "/assets/thumbnails/thumbnail-1.webp",
         "href": "/components/marqueeScrollBased",
