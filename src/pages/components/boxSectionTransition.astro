@@ -1,5 +1,6 @@
 ---
-import SecondaryLayout from "../../layouts/secondaryLayout.astro";
+import BaseLayout from "../../layouts/baseLayout.astro";
+import NavMain from "@/components/navMain.astro";
 import "../../styles/components/boxSectionTransition.css";
 ---
 
@@ -7,12 +8,14 @@ import "../../styles/components/boxSectionTransition.css";
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
 
-<SecondaryLayout 
+<BaseLayout>
+<NavMain 
     title="Pixelated Section Transition"
+    navCenterText="Pixelated Section Transition"
     htmlLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/pages/components/boxSectionTransition.astro"
     cssLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/styles/components/boxSectionTransition.css"
-    javascriptLinkHref="https://github.com/jpeerson108/designCanon/blob/main/public/scripts/components/boxSectionTransition.js"
->
+    javascriptLinkHref="https://github.com/jpeerson108/designCanon/blob/main/public/scripts/components/boxSectionTransition.js" />
+
     <div class="box-section-container">
         <section class="hero1">
             <p>Design Canon is the pursuit of harmony within chaos, the act of reaching into the unknown and shaping it into form. It is the quiet discipline of seeing purpose where others see clutter, of finding meaning in&nbsp;motion.</p>
@@ -52,4 +55,5 @@ import "../../styles/components/boxSectionTransition.css";
             <p>Design Canon is a reminder that great websites are not accidents. They are the result of the alignment of grid and gesture, motion and meaning, content and code. It is about building digital environments that breathe, move, and guide without&nbsp;resistance.</p>
         </section>
     </div>
-</SecondaryLayout>
+
+</BaseLayout>

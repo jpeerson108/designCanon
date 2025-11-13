@@ -1,6 +1,6 @@
 .grid-container {
   width: 100%;
-  min-height: 100vh;
+  min-height: var(--body-height-nav-desktop);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,6 +151,10 @@
 }
 
 @media screen and (max-width: 650px) {
+  .grid-container {
+    min-height: var(--body-height-nav-mobile);
+  }
+
   .grid {
     gap: 10px;
   }

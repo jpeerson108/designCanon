@@ -1,40 +1,46 @@
 ---
-import SecondaryLayout from "../../../layouts/secondaryLayout.astro";
+import BaseLayout from "../../../layouts/baseLayout.astro";
+import NavMain from "@/components/navMain.astro";
 import "../../../styles/components/hoverRevealMenu.css";
 ---
 
 <script type="module" src="/scripts/components/hoverRevealMenu.js"></script>
 
-<SecondaryLayout 
-    title="Reveal Menu Items"
+<BaseLayout>
+<NavMain 
+    title="Reveal Menu Items | Home"
+    navCenterText="Reveal Menu Items | Home"
     htmlLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/pages/components/hoverRevealMenu/home.astro"
     cssLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/styles/components/hoverRevealMenu.css"
-    javascriptLinkHref="https://github.com/jpeerson108/designCanon/blob/main/public/scripts/components/hoverRevealMenu.js"
->
-    <div class="btn-container">
-        <div class="btn">
-            <ul class="btn-list">
-                <a href="/components/hoverRevealMenu/home" class="btn-wrapper">
-                    <div class="btn-icon"></div>
-                    <div class="btn-text">Home</div>
-                </a>
-                <a href="/components/hoverRevealMenu/about" class="btn-wrapper">
-                    <div class="btn-icon"></div>
-                    <div class="btn-text">About</div>
-                </a>
-                <a href="/components/hoverRevealMenu/resources" class="btn-wrapper">
-                    <div class="btn-icon"></div>
-                    <div class="btn-text">Resources</div>
-                </a>
-                <a href="/components/hoverRevealMenu/tutorials" class="btn-wrapper">
-                    <div class="btn-icon"></div>
-                    <div class="btn-text">Tutorials</div>
-                </a>
-                <a href="/components/hoverRevealMenu/contact" class="btn-wrapper">
-                    <div class="btn-icon"></div>
-                    <div class="btn-text">Contact</div>
-                </a>
-            </ul>
+    javascriptLinkHref="https://github.com/jpeerson108/designCanon/blob/main/public/scripts/components/hoverRevealMenu.js" />
+
+    <div class="btn-section">
+        <div class="btn-container">
+            <div class="btn">
+                <ul class="btn-list">
+                    <a href="/components/hoverRevealMenu/home" class="btn-wrapper">
+                        <div class="btn-icon"></div>
+                        <div class="btn-text">Home</div>
+                    </a>
+                    <a href="/components/hoverRevealMenu/about" class="btn-wrapper">
+                        <div class="btn-icon"></div>
+                        <div class="btn-text">About</div>
+                    </a>
+                    <a href="/components/hoverRevealMenu/resources" class="btn-wrapper">
+                        <div class="btn-icon"></div>
+                        <div class="btn-text">Resources</div>
+                    </a>
+                    <a href="/components/hoverRevealMenu/tutorials" class="btn-wrapper">
+                        <div class="btn-icon"></div>
+                        <div class="btn-text">Tutorials</div>
+                    </a>
+                    <a href="/components/hoverRevealMenu/contact" class="btn-wrapper">
+                        <div class="btn-icon"></div>
+                        <div class="btn-text">Contact</div>
+                    </a>
+                </ul>
+            </div>
         </div>
     </div>
-</SecondaryLayout>
+
+</BaseLayout>

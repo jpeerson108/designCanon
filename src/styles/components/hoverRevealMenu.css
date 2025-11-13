@@ -1,14 +1,15 @@
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-body {
+.btn-section {
+  width: 100vw;
+  min-height: var(--body-height-nav-desktop);
   display: flex;
   overflow: hidden;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+}
+
+.btn-section a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .btn-container {
@@ -72,4 +73,10 @@ body {
   margin-left: -1px;
   padding-right: 3px;
   overflow: hidden; /* not auto! */
+}
+
+@media screen and (max-width: 650px) {
+  .btn-section {
+    min-height: var(--body-height-nav-mobile);
+  }
 }

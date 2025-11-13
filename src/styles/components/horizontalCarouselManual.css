@@ -1,6 +1,6 @@
 .carousel-container {
-  min-height: 100vh;
   width: 100%;
+  min-height: var(--body-height-nav-desktop);
   margin: auto;
   position: relative;
   display: flex;
@@ -28,7 +28,7 @@
 
 .slide-image {
   width: 100%;
-  height: 400px;
+  height: 375px;
   border-radius: 20px;
   background: var(--color-black-1c);
   overflow: hidden;
@@ -44,7 +44,7 @@
 }
 
 .slide-description {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: var(--color-black-7);
   padding: 15px 15px 0 15px;
   font-weight: 500;
@@ -59,7 +59,7 @@
 .carousel-controls {
   display: flex;
   position: absolute;
-  bottom: 100px;
+  bottom: 80px;
   right: 10vw;
   gap: 15px;
 }
@@ -90,19 +90,32 @@
   rotate: 180deg;
 }
 
-/*
-.blur-container {
-  width: 100%;
-  height: 150px;
-  background-color: aquamarine;
-  position: absolute;
-  bottom: 0;
-  backdrop-filter: blur(16px);
-  mask-image: linear-gradient(to top, rgb(255, 255, 255) 0%, transparent 100%);
-  background-color: rgba(255, 255, 255, 0.1);
-}
-  */
-
 .carousel-wrapper {
   --right-end-distance: 120px;
+}
+
+@media screen and (max-width: 650px) {
+  .carousel-container {
+    min-height: var(--body-height-nav-mobile);
+  }
+
+  .carousel-controls {
+    bottom: 6.5%;
+  }
+
+  .carousel-slide {
+    width: 80vw;
+  }
+
+  .slide-image {
+    width: 100%;
+    height: 80vw;
+  }
+
+  .slide-description {
+    font-size: 0.9rem;
+    padding: 12px 14px 0 14px;
+    line-height: 1.3;
+    margin-top: 5px;
+  }
 }

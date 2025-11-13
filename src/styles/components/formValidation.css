@@ -1,10 +1,11 @@
 #form-container {
-  width: 100%;
-  min-height: 100vh;
+  width: 100vw;
+  min-height: var(--body-height-nav-desktop);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: -20px;
 }
 
 #form-container.hidden {
@@ -110,7 +111,12 @@
   display: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 650px) {
+  #form-container {
+    min-height: var(--body-height-nav-mobile);
+    margin-top: -15px;
+  }
+
   .form-names-container {
     flex-direction: column;
   }

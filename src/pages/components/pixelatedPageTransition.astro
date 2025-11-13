@@ -1,23 +1,31 @@
 ---
-import SecondaryLayout from "../../layouts/secondaryLayout.astro";
+import BaseLayout from "../../layouts/baseLayout.astro";
+import NavMain from "@/components/navMain.astro";
 import "../../styles/components/pixelatedPageTransition.css";
 ---
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 <script type="module" src="/scripts/components/pixelatedPageTransition.js"></script>
 
-<SecondaryLayout 
+<BaseLayout>
+<NavMain 
     title="Pixelated Page Transition"
+    navCenterText="Pixelated Page Transition"
     htmlLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/pages/components/pixelatedPageTransition.astro"
     cssLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/styles/components/pixelatedPageTransition.css"
-    javascriptLinkHref="https://github.com/jpeerson108/designCanon/blob/main/public/scripts/components/pixelatedPageTransition.js"
->
-    <div class="toggle-container">
-        <p>Learn to ignore the noise. Focus on the signal. Your time and attention are limited.</p>
-        <div class="toggle inactive"></div>
+    javascriptLinkHref="https://github.com/jpeerson108/designCanon/blob/main/public/scripts/components/pixelatedPageTransition.js" />
+
+    <div class="content-container">
+        <div class="toggle-container">
+            <p>Learn to ignore the noise. Focus on the signal. Your time and attention are limited.</p>
+            <div class="toggle inactive"></div>
+        </div>
+
+        <div id="square-container"></div>
+
+        <div class="content-overlay">
+            <p>Seems we’ve stepped through through wrong portal...</p>
+            <div class="toggle active"></div>
+        </div>
     </div>
-    <div id="square-container"></div>
-    <div class="content-overlay">
-        <p>Seems we’ve stepped through through wrong portal...</p>
-        <div class="toggle active"></div>
-    </div>
-</SecondaryLayout>
+
+</BaseLayout>

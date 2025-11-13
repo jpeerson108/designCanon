@@ -1,16 +1,20 @@
 ---
-import SecondaryLayout from "../../layouts/secondaryLayout.astro";
+import BaseLayout from "../../layouts/baseLayout.astro";
+import NavMain from "@/components/navMain.astro";
 import "../../styles/components/lightboxWithControls.css";
 ---
 <script type="module" src="/scripts/components/lightboxWithControls.js"></script>
 
-<SecondaryLayout 
+<BaseLayout>
+<NavMain 
     title="Lightbox with Controls"
+    navCenterText="Lightbox with Controls"
     htmlLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/pages/components/lightboxWithControls.astro"
     cssLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/styles/components/lightboxWithControls.css"
-    javascriptLinkHref="https://github.com/jpeerson108/designCanon/blob/main/public/scripts/components/lightboxWithControls.js"
->
+    javascriptLinkHref="https://github.com/jpeerson108/designCanon/blob/main/public/scripts/components/lightboxWithControls.js" />
+
     <section class="grid-container">
+
         <div class="grid">
             <div class="grid-item" data-index="0">
                 <img src="/assets/images/image-58.webp" alt="">
@@ -31,6 +35,7 @@ import "../../styles/components/lightboxWithControls.css";
                 <img src="/assets/images/image-61.webp" alt="">
             </div>
         </div>
+
         <div class="controls">
             <div class="exit-button">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" fill="none">
@@ -48,18 +53,22 @@ import "../../styles/components/lightboxWithControls.css";
                 </svg>
             </div>
         </div>
+
     </section>
+
     <div class="lightbox">
         <img class="lightbox-image" src="" alt="">
         <img class="lightbox-image" src="" alt="">
     </div>
-<Fragment slot="infoModal">
-<p>A simple grid container houses the grid and aligns it center via flexbox. The grid itself holds six images and is set to display:&nbsp;grid.</p> 
-<p>Controls (next, previous, and exit buttons) are fixed-position and initially hidden, along with the lightbox. Each control holds a simple SVG and shows a subtle circular background on&nbsp;hover.</p> 
-<p>The lightbox setup is simple: it holds two images stacked on top of each other. The images are stacked so the script can crossfade between them by toggling opacity during next/previous&nbsp;transitions.</p> 
-<p>An event listener in JavaScript listens for image clicks. When an image is clicked, an “active” class is added to the lightbox, the selected image, and the controls. The active classes make these elements visible through opacity and pointer-events changes (or display toggles, depending on&nbsp;setup).</p> 
-<p>Since we’re using querySelectorAll to select our images, we can loop through them using their index. Each image includes a data-index="0" (and so on) in HTML, giving a reference to which grid item is selected. When clicked, the index value is passed into a function that opens the lightbox and displays the correct&nbsp;image.</p> 
-<p>The next and previous buttons use modular arithmetic to cycle through the images without breaking the sequence. For example, (currentIndex + 1) % totalImages moves forward and loops back to the first image when reaching the end. The same idea applies in reverse for the previous&nbsp;button.</p> 
-<p>During transitions, the inactive lightbox image updates to the next source, then fades in while the other fades out. This double-layer setup prevents flicker and allows for true crossfade. The exit button (or pressing Escape) removes the active classes, closing the lightbox, and hides the&nbsp;controls.</p>
-</Fragment>
-</SecondaryLayout>
+
+    <Fragment slot="infoModal">
+    <p>A simple grid container houses the grid and aligns it center via flexbox. The grid itself holds six images and is set to display:&nbsp;grid.</p> 
+    <p>Controls (next, previous, and exit buttons) are fixed-position and initially hidden, along with the lightbox. Each control holds a simple SVG and shows a subtle circular background on&nbsp;hover.</p> 
+    <p>The lightbox setup is simple: it holds two images stacked on top of each other. The images are stacked so the script can crossfade between them by toggling opacity during next/previous&nbsp;transitions.</p> 
+    <p>An event listener in JavaScript listens for image clicks. When an image is clicked, an “active” class is added to the lightbox, the selected image, and the controls. The active classes make these elements visible through opacity and pointer-events changes (or display toggles, depending on&nbsp;setup).</p> 
+    <p>Since we’re using querySelectorAll to select our images, we can loop through them using their index. Each image includes a data-index="0" (and so on) in HTML, giving a reference to which grid item is selected. When clicked, the index value is passed into a function that opens the lightbox and displays the correct&nbsp;image.</p> 
+    <p>The next and previous buttons use modular arithmetic to cycle through the images without breaking the sequence. For example, (currentIndex + 1) % totalImages moves forward and loops back to the first image when reaching the end. The same idea applies in reverse for the previous&nbsp;button.</p> 
+    <p>During transitions, the inactive lightbox image updates to the next source, then fades in while the other fades out. This double-layer setup prevents flicker and allows for true crossfade. The exit button (or pressing Escape) removes the active classes, closing the lightbox, and hides the&nbsp;controls.</p>
+    </Fragment>
+
+</BaseLayout>

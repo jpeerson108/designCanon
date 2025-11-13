@@ -1,12 +1,13 @@
-html,
-body {
-  min-height: 100vh;
+.content-container {
+  width: 100vw;
+  min-height: var(--body-height-nav-desktop);
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .toggle-container {
-  width: 100%;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,8 +16,8 @@ body {
 
 .toggle-container p,
 .content-overlay p {
-  font-size: 3.5rem;
-  max-width: 800px;
+  font-size: 2.6rem;
+  max-width: 22ch;
   text-align: center;
   margin: 0 40px 30px;
 }
@@ -75,8 +76,13 @@ body {
 }
 
 @media screen and (max-width: 650px) {
+  .content-container {
+    min-height: var(--body-height-nav-mobile);
+  }
+
   .toggle-container p,
   .content-overlay p {
-    font-size: 2.5rem;
+    max-width: 24ch;
+    font-size: 2rem;
   }
 }

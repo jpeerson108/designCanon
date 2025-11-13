@@ -1,8 +1,5 @@
 .grid-container {
-  padding-left: var(--horizontal-page-padding);
-  padding-right: var(--horizontal-page-padding);
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding: 5rem var(--horizontal-page-padding);
 }
 
 .grid {
@@ -63,6 +60,10 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .grid-container {
+    padding: 4rem var(--horizontal-page-padding);
+  }
+
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -77,6 +78,10 @@
 }
 
 @media screen and (max-width: 650px) {
+  .grid-container {
+    padding: 3rem var(--horizontal-page-padding);
+  }
+
   .grid {
     gap: 0.6rem;
   }

@@ -1,57 +1,67 @@
 ---
-import SecondaryLayout from "../../layouts/secondaryLayout.astro";
+import BaseLayout from "../../layouts/baseLayout.astro";
+import NavMain from "@/components/navMain.astro";
 import "../../styles/components/expandCollapseAccordion.css";
 ---
 
 <script type="module" src="/scripts/components/expandCollapseAccordion.js"></script>
 
-<SecondaryLayout 
-    title="Expand/Collapse Accordion"
-    htmlLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/pages/components/expandCollapseAccordion.astro"
-    cssLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/styles/components/expandCollapseAccordion.css"
-    javascriptLinkHref="https://github.com/jpeerson108/designCanon/blob/main/public/scripts/components/expandCollapseAccordion.js"
->
-  <div class="container">
+<BaseLayout>
+<NavMain 
+  title="Expand/Collapse Accordion"
+  navCenterText="Expand/Collapse Accordion"
+  htmlLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/pages/components/expandCollapseAccordion.astro"
+  cssLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/styles/components/expandCollapseAccordion.css"
+  javascriptLinkHref="https://github.com/jpeerson108/designCanon/blob/main/public/scripts/components/expandCollapseAccordion.js" />
+
+  <div class="accordian-container">
+
     <div class="cards-container">
+
       <div class="card">
-          <div class="card-header">
-            <span>Purpose</span>
-            <div class="plus-icon active">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="card-header">
+          <span>Purpose</span>
+          <div class="plus-icon active">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M11 4H13V6V11H20V13H13V18V20H11V18V13H4V11H11V6V4Z" fill="currentColor"/>
-              </svg>
-            </div>
+            </svg>
+          </div>
         </div>
         <div class="card-body show">
           Design begins with a strategic vision. Purpose defines why something exists, shaping the goals, direction, and meaning of the work. It ensures design is intentional, relevant, and enduring, providing the foundation for aesthetic and function to create lasting impact.
-          </div>
         </div>
+      </div>
+
       <div class="card">
-          <div class="card-header">
-            <span>Aesthetic</span>
-            <div class="plus-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="card-header">
+          <span>Aesthetic</span>
+          <div class="plus-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M11 4H13V6V11H20V13H13V18V20H11V18V13H4V11H11V6V4Z" fill="currentColor"/>
-              </svg>
-            </div>
+            </svg>
+          </div>
         </div>
         <div class="card-body">
           With purpose established, design takes form. Aesthetic shapes the visual language, guiding structure, layout, and rhythm that transform ideas into identity. It creates beauty with clarity, consistency, and emotion, giving design its voice and allowing meaning to be felt.
-          </div>
         </div>
+      </div>
+
       <div class="card">
-          <div class="card-header">
-            <span>Function</span>
-            <div class="plus-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="card-header">
+          <span>Function</span>
+          <div class="plus-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M11 4H13V6V11H20V13H13V18V20H11V18V13H4V11H11V6V4Z" fill="currentColor"/>
-              </svg>
-            </div>
+            </svg>
+          </div>
         </div>
         <div class="card-body">
           Design must work as well as it looks. Function defines how something behaves, translating form into experience and purpose into action. It ensures design is intuitive, reliable, and alive in use, finally uniting purpose and aesthetic with true usability.
-          </div>
         </div>
+      </div>
+
     </div>
+
   </div>
-</SecondaryLayout>
+
+</BaseLayout>

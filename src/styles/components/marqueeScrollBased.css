@@ -1,13 +1,13 @@
-body {
-  font-family: "Inter", sans-serif;
-}
-
 .marquee-container {
   position: relative;
 }
 
-.marquee-spacer {
-  height: 70vh;
+.marquee-spacer-top {
+  height: 45vh;
+}
+
+.marquee-spacer-bottom {
+  height: 80vh;
 }
 
 .marquee {
@@ -87,4 +87,22 @@ body {
 .scroll-up svg {
   transform: rotate(-90deg);
   height: 16px;
+}
+
+.scroll-down,
+.scroll-up {
+  color: var(--color-black-7);
+  pointer-events: none;
+}
+
+@media screen and (max-width: 650px) {
+  .marquee {
+    padding: 16px 0;
+    font-size: 1.8rem;
+  }
+
+  .arrow {
+    width: 50px;
+    height: 50px;
+  }
 }
