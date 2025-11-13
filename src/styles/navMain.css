@@ -62,7 +62,6 @@ nav p {
   transition: opacity 0.3s ease;
 }
 
-/* Menu Items - Interactivity */
 .menu-box.active {
   background: var(--color-black-1c);
 }
@@ -92,6 +91,7 @@ nav p {
   background: var(--color-black-1c);
 }
 
+/* Right Side Items */
 .source-code-box {
   height: 100%;
   border-left: var(--navMain-border);
@@ -208,7 +208,7 @@ nav p {
     opacity: 0.15;
   }
 
-  /* Dropdown Staggard Hover Animations */
+  /* Dropdown Menu: Staggard Hover Animations */
   .has-dropdown:hover .nav-dropdown {
     visibility: visible;
     pointer-events: all;
@@ -235,6 +235,15 @@ nav p {
   }
 }
 
+/* Tablet */
+@media screen and (max-width: 1000px) {
+  .nav-logo-text.active,
+  .nav-logo {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
 /* Mobile */
 @media screen and (max-width: 650px) {
   nav {
@@ -249,9 +258,7 @@ nav p {
 
   .social-box,
   .nav-middle-spacer,
-  .nav-icon,
-  .nav-logo-text.active,
-  .nav-logo {
+  .nav-icon {
     display: none;
   }
 
