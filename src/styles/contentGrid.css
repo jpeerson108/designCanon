@@ -460,7 +460,7 @@ article .new-label {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%) translateY(150%);
-  transition: all .8s cubic-bezier(.68, -0.55, .265, 1.55);
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .grid-items-counter-widget {
@@ -481,13 +481,18 @@ article .new-label {
   text-align: center;
   letter-spacing: -0.4px;
   white-space: nowrap;
+  word-spacing: -6px;
+}
+
+.grid-items-counter-widget span {
+  word-spacing: -1px;
 }
 
 .grid-items-counter-widget-container.active {
   opacity: 1;
   pointer-events: auto;
   transform: translateX(-50%) translateY(0);
-  transition: all .8s cubic-bezier(.68, -0.55, .265, 1.55);
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 @media (hover: hover) {
