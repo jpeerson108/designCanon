@@ -539,15 +539,6 @@ function updateGridCounterDisplay() {
   }
 }
 
-// function updateGridCounterDisplay() {
-//   const visibleInViewportCount = cardsInViewport.size
-//   const totalCount = currentCards.length
-
-//   if (gridCounterWidgetText) {
-//     gridCounterWidgetText.textContent = `${visibleInViewportCount} / ${totalCount} Components`
-//   }
-// }
-
 function updateGridCounter() {
   // Re-observe all visible cards
   const allCards = grid.querySelectorAll(".content-card")
