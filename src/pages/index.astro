@@ -5,6 +5,7 @@ import NavMain from "@/components/navMain.astro";
 import "../styles/index.css";
 ---
 <BaseLayout title="Home">
+    
     <NavMain 
     inspirationLinkHref="/resources/inspiration"
     infoLinkHref=""
@@ -15,8 +16,13 @@ import "../styles/index.css";
     instagramLinkHref=""
     youtubeLinkHref=""
     emailLinkHref="mailto:contact@designcanon.com?subject=Inquiry%20from%20Design%20Canon%20Website" />
+
     <section class="intro-text">
         <p>A growing collection of hand-coded components for modern web development.</p>
     </section>
+
     <ContentGrid dataFile="/data/content-components.json" />
+
+    <div class="spacer-med"></div>
+
 </BaseLayout>
