@@ -167,12 +167,11 @@ window.addEventListener("scroll", () => {
   if (!lastCard) return
 
   const rect = lastCard.getBoundingClientRect()
-  const cardHeight = rect.height
-  const cardVisibleAmount = window.innerHeight - rect.top
-  const visibilityPercentage = cardVisibleAmount / cardHeight
-
+  const distanceFromBottom = rect.bottom - window.innerHeight
+  const triggerDistance = -100 // Load new cards when last card is 100px above bottom of viewport
+  
   if (
-    visibilityPercentage >= 1.55 &&
+    distanceFromBottom <= triggerDistance &&
     currentIndex < currentCards.length &&
     !isRendering
   ) {
