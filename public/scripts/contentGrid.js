@@ -483,54 +483,12 @@ function hideCard(card) {
   )
 }
 
-// Sticky Filter Track
-// Purpose: Make the filter track sticky when in the content grid section
-const filterTrack = document.querySelector(".filter-track")
-const gridContainer = document.querySelector(".content-grid-container")
-const gridCounterWidget = document.querySelector(
-  ".grid-items-counter-widget-container"
-)
-
-const stickyObserver = new IntersectionObserver(
-  ([entry]) => {
-    const containerTop = entry.boundingClientRect.top
-    const filterTop = filterTrack.getBoundingClientRect().top
-
-    // Add active class when filter-track reaches 60px
-    if (filterTop <= 60 && entry.isIntersecting) {
-      filterTrack.classList.add("active")
-      gridCounterWidget.classList.add("active")
-    } else if (containerTop > 60) {
-      filterTrack.classList.remove("active")
-      gridCounterWidget.classList.remove("active")
-    }
-  },
-  {
-    threshold: Array.from({ length: 100 }, (_, i) => i / 100),
-    rootMargin: "0px",
-  }
-)
-
-stickyObserver.observe(gridContainer)
-
-// const gridCounterWidgetText = document.querySelector(".grid-items-counter-widget")
-
-// function updateGridCounter() {
-//   const visibleCards = Array.from(grid.querySelectorAll(".content-card")).filter(
-//     (card) => card.style.display !== "none"
-//   )
-//   const visibleCount = visibleCards.length
-//   const totalCount = currentCards.length
-
-//   gridCounterWidgetText.textContent = `${visibleCount} / ${totalCount} Components`
-// }
-
+// Card Counter Widget Observer
 let cardsInViewport = new Set()
 const gridCounterWidgetText = document.querySelector(
   ".grid-items-counter-widget"
 )
 
-// Observer to track cards entering/exiting viewport
 const cardCounterObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -542,13 +500,12 @@ const cardCounterObserver = new IntersectionObserver(
       const rect = card.getBoundingClientRect()
 
       if (entry.isIntersecting) {
-        // Card is entering viewport - add it
+        // If card is entering viewport, add it to count
         cardsInViewport.add(card)
       } else if (rect.top > window.innerHeight) {
-        // Card is below viewport - remove it
+        // If card is below viewport, remove it from count
         cardsInViewport.delete(card)
       }
-      // If rect.top < 0, card is above viewport - keep it counted
     })
 
     updateGridCounterDisplay()
@@ -563,10 +520,33 @@ function updateGridCounterDisplay() {
   const visibleInViewportCount = cardsInViewport.size
   const totalCount = currentCards.length
 
-  if (gridCounterWidgetText) {
-    gridCounterWidgetText.textContent = `${visibleInViewportCount} / ${totalCount} Components`
+  const gridCounterWidget = document.querySelector(".grid-items-counter-widget")
+
+  if (gridCounterWidget) {
+    // Remove existing count paragraph if it exists
+    const existingCount = gridCounterWidget.querySelector(".counter-display")
+    if (existingCount) {
+      existingCount.remove()
+    }
+
+    // Create new paragraph with count
+    const countParagraph = document.createElement("p")
+    countParagraph.className = "counter-display"
+    countParagraph.textContent = `${visibleInViewportCount} / ${totalCount}`
+
+    // Insert at the beginning
+    gridCounterWidget.insertBefore(countParagraph, gridCounterWidget.firstChild)
   }
 }
+
+// function updateGridCounterDisplay() {
+//   const visibleInViewportCount = cardsInViewport.size
+//   const totalCount = currentCards.length
+
+//   if (gridCounterWidgetText) {
+//     gridCounterWidgetText.textContent = `${visibleInViewportCount} / ${totalCount} Components`
+//   }
+// }
 
 function updateGridCounter() {
   // Re-observe all visible cards
@@ -581,3 +561,37 @@ function updateGridCounter() {
 
   updateGridCounterDisplay()
 }
+
+// Observer to add "active" classes to Filter Track and Card Counter Widget
+const filterTrack = document.querySelector(".filter-track")
+const gridContainer = document.querySelector(".content-grid-container")
+const gridCounterWidget = document.querySelector(
+  ".grid-items-counter-widget-container"
+)
+
+const stickyObserver = new IntersectionObserver(
+  ([entry]) => {
+    const containerTop = entry.boundingClientRect.top
+    const filterTop = filterTrack.getBoundingClientRect().top
+
+    // Add active class to filter-track when it reaches 60px from top
+    if (filterTop <= 60 && entry.isIntersecting) {
+      filterTrack.classList.add("active")
+    } else if (containerTop > 60) {
+      filterTrack.classList.remove("active")
+    }
+
+    // Add active class to grid counter widget when filter-track reaches 200px from top
+    if (filterTop <= 200 && entry.isIntersecting) {
+      gridCounterWidget.classList.add("active")
+    } else if (containerTop > 200) {
+      gridCounterWidget.classList.remove("active")
+    }
+  },
+  {
+    threshold: Array.from({ length: 100 }, (_, index) => index / 100),
+    rootMargin: "0px",
+  }
+)
+
+stickyObserver.observe(gridContainer)

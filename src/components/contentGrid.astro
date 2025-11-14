@@ -1,6 +1,10 @@
 ---
 import "@/styles/contentGrid.css";
-const { dataFile } = Astro.props;
+const { 
+    dataFile,
+    counterWidgetText
+
+} = Astro.props;
 ---
 <script type="module" src="/scripts/contentGrid.js"></script>
 <body>
@@ -55,7 +59,9 @@ const { dataFile } = Astro.props;
         </section>
         <section class="content-grid" id="contentGrid" data-file={dataFile}></section>
         <div class="grid-items-counter-widget-container">
-            <div class="grid-items-counter-widget"></div>
+            <div class="grid-items-counter-widget">
+                <p>&nbsp;{counterWidgetText}</p>
+            </div>
         </div>
     </div>
 </body>
