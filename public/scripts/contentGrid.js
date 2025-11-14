@@ -488,7 +488,9 @@ function hideCard(card) {
 // Purpose: Make the filter track sticky when in the content grid section
 const filterTrack = document.querySelector(".filter-track")
 const gridContainer = document.querySelector(".content-grid-container")
-const gridCounterWidget = document.querySelector(".grid-items-counter-widget-container")
+const gridCounterWidget = document.querySelector(
+  ".grid-items-counter-widget-container"
+)
 
 const stickyObserver = new IntersectionObserver(
   ([entry]) => {
@@ -520,46 +522,49 @@ stickyObserver.observe(gridContainer)
 //   )
 //   const visibleCount = visibleCards.length
 //   const totalCount = currentCards.length
-  
+
 //   gridCounterWidgetText.textContent = `${visibleCount} / ${totalCount} Components`
 // }
 
 let cardsInViewport = new Set()
-const gridCounterWidgetText = document.querySelector(".grid-items-counter-widget")
+const gridCounterWidgetText = document.querySelector(
+  ".grid-items-counter-widget"
+)
 
-// Observer to track cards entering/exiting viewport
+// Observer to track cards entering/exiting viewport middle
 const cardCounterObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       const card = entry.target
-      
+
       // Check if card is hidden by search
       if (card.style.display === "none") return
-      
+
       const rect = card.getBoundingClientRect()
-      
-      if (entry.isIntersecting) {
-        // Card is entering viewport - add it
+      const cardTopMiddle = rect.top
+      const screenMiddle = window.innerHeight / 2
+
+      if (cardTopMiddle <= screenMiddle) {
+        // Card's top has passed screen middle - count it
         cardsInViewport.add(card)
-      } else if (rect.top > window.innerHeight) {
-        // Card is below viewport - remove it
+      } else {
+        // Card's top is below screen middle - don't count it
         cardsInViewport.delete(card)
       }
-      // If rect.top < 0, card is above viewport - keep it counted
     })
-    
+
     updateGridCounterDisplay()
   },
   {
     threshold: 0,
-    rootMargin: "0px 0px 0px 0px"
+    rootMargin: "0px 0px 0px 0px",
   }
 )
 
 function updateGridCounterDisplay() {
   const visibleInViewportCount = cardsInViewport.size
   const totalCount = currentCards.length
-  
+
   if (gridCounterWidgetText) {
     gridCounterWidgetText.textContent = `${visibleInViewportCount} / ${totalCount} Components`
   }
@@ -568,13 +573,13 @@ function updateGridCounterDisplay() {
 function updateGridCounter() {
   // Re-observe all visible cards
   const allCards = grid.querySelectorAll(".content-card")
-  
+
   allCards.forEach((card) => {
     cardCounterObserver.unobserve(card)
     if (card.style.display !== "none") {
       cardCounterObserver.observe(card)
     }
   })
-  
+
   updateGridCounterDisplay()
 }
