@@ -167,10 +167,12 @@ window.addEventListener("scroll", () => {
   if (!lastCard) return
 
   const rect = lastCard.getBoundingClientRect()
-  const triggerPoint = window.innerHeight * 0.5
+  const cardHeight = rect.height
+  const cardVisibleAmount = window.innerHeight - rect.top
+  const visibilityPercentage = cardVisibleAmount / cardHeight
 
   if (
-    rect.top < triggerPoint &&
+    visibilityPercentage > 1.55 && // Card must be 155% visible to trigger next load
     currentIndex < currentCards.length &&
     !isRendering
   ) {
@@ -192,7 +194,7 @@ window.addEventListener("scroll", () => {
     setTimeout(() => {
       isRendering = false
       updateGridCounter()
-    }, 300)
+    }, 200)
   }
 })
 
