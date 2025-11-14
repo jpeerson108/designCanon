@@ -172,7 +172,7 @@ window.addEventListener("scroll", () => {
   const visibilityPercentage = cardVisibleAmount / cardHeight
 
   if (
-    visibilityPercentage > 1.55 && // Card must be 155% visible to trigger next load
+    visibilityPercentage >= 1.55 &&
     currentIndex < currentCards.length &&
     !isRendering
   ) {
@@ -187,14 +187,11 @@ window.addEventListener("scroll", () => {
       currentIndex + itemsPerLoad
     )
 
-    // Add small timeout to avoid double-triggering on fast scrolls
     addNewCards(nextBatch, grid, oneMonthAgo)
     currentIndex += nextBatch.length
 
-    setTimeout(() => {
-      isRendering = false
-      updateGridCounter()
-    }, 200)
+    isRendering = false
+    updateGridCounter()
   }
 })
 
