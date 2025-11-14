@@ -531,7 +531,7 @@ const gridCounterWidgetText = document.querySelector(
   ".grid-items-counter-widget"
 )
 
-// Observer to track cards entering/exiting viewport middle
+// Observer to track cards entering/exiting viewport
 const cardCounterObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -541,16 +541,15 @@ const cardCounterObserver = new IntersectionObserver(
       if (card.style.display === "none") return
 
       const rect = card.getBoundingClientRect()
-      const cardTopMiddle = rect.top
-      const screenMiddle = window.innerHeight / 2
 
-      if (cardTopMiddle <= screenMiddle) {
-        // Card's top has passed screen middle - count it
+      if (entry.isIntersecting) {
+        // Card is entering viewport - add it
         cardsInViewport.add(card)
-      } else {
-        // Card's top is below screen middle - don't count it
+      } else if (rect.top > window.innerHeight) {
+        // Card is below viewport - remove it
         cardsInViewport.delete(card)
       }
+      // If rect.top < 0, card is above viewport - keep it counted
     })
 
     updateGridCounterDisplay()
