@@ -1,5 +1,5 @@
 .main-container {
-  width: 100vw;
+  width: 100%;
   min-height: var(--body-height-nav-desktop);
   display: flex;
   align-items: center;

@@ -14,29 +14,32 @@ import "../../styles/components/circleMaskReveal.css";
     cssLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/styles/components/circleMaskReveal.css"
     javascriptLinkHref="https://github.com/jpeerson108/designCanon/blob/main/public/scripts/components/ircleMaskReveal.js" />
 
-    <div class="main-container">
-    <div class="media-container">
-        <div class="base-img">
-            <img src="/assets/images/image-53.webp" alt="">
-            <div class="hover-img">
-                <img src="/assets/images/image-31.webp" alt="">
+    <div class="container">
+        <div class="main-container">
+            <div class="media-container">
+                <div class="base-img">
+                    <img src="/assets/images/image-53.webp" alt="">
+                    <div class="hover-img">
+                        <img src="/assets/images/image-31.webp" alt="">
+                    </div>
+                </div>
+                <div class="base-img">
+                    <img src="/assets/images/image-54.webp" alt="">
+                    <div class="hover-img">
+                        <img src="/assets/images/image-9.webp" alt="">
+                    </div>
+                </div>
+                <div class="base-img">
+                    <img src="/assets/images/image-55.webp" alt="">
+                    <div class="hover-img">
+                        <img src="/assets/images/image-80.webp" alt="">
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="base-img">
-            <img src="/assets/images/image-54.webp" alt="">
-            <div class="hover-img">
-                <img src="/assets/images/image-9.webp" alt="">
-            </div>
-        </div>
-        <div class="base-img">
-            <img src="/assets/images/image-55.webp" alt="">
-            <div class="hover-img">
-                <img src="/assets/images/image-80.webp" alt="">
-            </div>
+            <div class="mobile-message">Hold down on image</div>
         </div>
     </div>
-    <div class="mobile-message">Hold down on image</div>
-</div>
+
 <Fragment slot="infoModal">
 <p>A main container holds and centers the images on the page via flexbox. An additional flexbox houses the images with a small gap between each&nbsp;image.</p> 
 <p>The setup of the mask reveal is relatively simple. A base image acts as the container for the secondary image, which fills the base image absolutely at 100% height. To achieve the masked animation effect, we set an initial clip-path: ellipse(100% 0% at 50% 0%) to the secondary image. This creates a wide elliptical shape for the secondary image to fill, with an x position of 50%, which is the horizontal center of the base&nbsp;image.</p> 
