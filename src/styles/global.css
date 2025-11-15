@@ -91,6 +91,8 @@ body {
 
 .container {
   max-width: 2500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .spacer-tiny {
