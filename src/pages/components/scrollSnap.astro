@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../../layouts/baseLayout.astro";
+import NavMain from "@/components/navMain.astro";
+import "../../styles/components/scrollSnap.css";
+---
+
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script type="module" src="/scripts/components/scrollSnap.js"></script>
+
+<BaseLayout>
+<NavMain 
+    title="Scroll Snap"
+    navCenterText="Scroll Snap"
+    htmlLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/pages/components/circleMaskReveal.astro"
+    cssLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/styles/components/circleMaskReveal.css"
+    javascriptLinkHref="https://github.com/jpeerson108/designCanon/blob/main/public/scripts/components/ircleMaskReveal.js" />
+
+    <section class="image-container">
+        <img src="/assets/images/image-5.webp" alt="">
+    </section>
+    <section class="image-container">
+        <img src="/assets/images/image-6.webp" alt="">
+    </section>
+    <section class="image-container">
+        <img src="/assets/images/image-7.webp" alt="">
+    </section>
+    <section class="image-container">
+        <img src="/assets/images/image-8.webp" alt="">
+    </section>
+    <section class="image-container">
+        <img src="/assets/images/image-9.webp" alt="">
+    </section>
+    <section class="image-container">
+        <img src="/assets/images/image-10.webp" alt="">
+    </section>
+
+</BaseLayout>
