@@ -39,8 +39,7 @@
   width: 30ch;
   text-align: center;
   pointer-events: none;
-  margin: 0 3rem;
-  margin-top: 0.8rem;
+  margin: 0.8rem 3rem 0 3rem;
   line-height: 1.4;
 }
 
@@ -55,6 +54,6 @@
 
   .section-text {
     font-size: 1.7rem;
-    margin: 0 2rem;
+    padding: 0 4rem;
   }
 }
