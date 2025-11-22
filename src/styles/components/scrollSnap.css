@@ -1,9 +1,9 @@
-.image-container {
+.section-container {
   width: 100%;
   height: 100vh;
 }
 
-.image-container img {
+.section-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;

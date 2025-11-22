@@ -1,4 +1,4 @@
-const sections = document.querySelectorAll(".image-container")
+const sections = document.querySelectorAll(".section-container")
 let isScrolling = false
 let currentSection = 0
 let wheelAccumulator = 0
