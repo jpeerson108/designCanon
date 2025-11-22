@@ -16,7 +16,7 @@ function scrollToSection(index) {
       y: sections[index],
       offsetY: 0,
     },
-    ease: "elastic.out(1, 1)",
+    ease: "expo.inOut",
     onComplete: () => {
       setTimeout(() => {
         isScrolling = false
