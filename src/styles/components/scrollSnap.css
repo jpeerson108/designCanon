@@ -26,6 +26,10 @@
 }
 
 @media screen and (max-width: 650px) {
+  .section-container {
+    height: 100dvh;
+  }
+
   .section-container:first-of-type {
     margin-top: var(--navMain-heightMobile);
   }
