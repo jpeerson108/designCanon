@@ -6,6 +6,10 @@
   justify-content: center;
 }
 
+.section-container:first-of-type {
+  margin-top: var(--navMain-heightDesktop);
+}
+
 .section-container img {
   width: 100%;
   height: 100%;
@@ -18,4 +22,16 @@
   width: 30ch;
   text-align: center;
   pointer-events: none;
+  margin: 0 3rem;
+}
+
+@media screen and (max-width: 650px) {
+  .section-container:first-of-type {
+    margin-top: var(--navMain-heightMobile);
+  }
+
+  .section-text {
+    font-size: 1.7rem;
+    margin: 0 2rem;
+  }
 }
