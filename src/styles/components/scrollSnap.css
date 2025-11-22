@@ -2,8 +2,10 @@
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  pointer-events: none;
 }
 
 .section-container:first-of-type {
@@ -17,12 +19,29 @@
   filter: grayscale(100%);
 }
 
+.section-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: -0.4px;
+  color: var(--color-white-c);
+  border: var(--filter-border);
+  padding: var(--buttonPadding-vertical) var(--buttonPadding-horizontal);
+  border-radius: var(--filter-border-radius);
+  pointer-events: none;
+}
+
 .section-text {
   font-size: 2rem;
   width: 30ch;
   text-align: center;
   pointer-events: none;
   margin: 0 3rem;
+  margin-top: 0.8rem;
+  line-height: 1.4;
 }
 
 @media screen and (max-width: 650px) {
