@@ -102,5 +102,13 @@
         "href": "/components/scrollSnap",
         "date": "2025-11-22",
         "tags": ["scroll", "snap", "sections", "navigation", "scroll-behavior", "interaction", "vertical", "smooth", "animation"]
-    }
+    },
+    {
+        "title": "Expandable Directory",
+        "category": "Dropdown",
+        "image": "/assets/thumbnails/thumbnail-16.webp",
+        "href": "/components/expandableDirectory",
+        "date": "2025-12-2",
+        "tags": ["directory", "expand", "team", "avatars", "dropdown", "reveal", "interaction", "ui", "profile"]
+}
 ]
