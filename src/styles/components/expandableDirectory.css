@@ -7,7 +7,7 @@
 }
 
 .dialogue-box-container {
-  border-radius: var(--rounded-corners-large);
+  border-radius: var(--rounded-corners-huge);
   background-color: var(--color-black-1c);
   overflow: hidden;
 }
@@ -57,6 +57,10 @@
   gap: 25px;
 }
 
+.avatars ul li {
+  cursor: pointer;
+}
+
 .avatar-image {
   width: 100px;
   aspect-ratio: 1/1;
@@ -88,4 +92,5 @@
   background: var(--color-black-3);
   color: white;
   border-radius: var(--rounded-corners-med);
+  cursor: pointer;
 }
