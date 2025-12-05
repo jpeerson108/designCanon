@@ -14,20 +14,14 @@
   border-radius: var(--rounded-corners-huge);
   background-color: var(--color-black-1c);
   overflow: hidden;
-}
-
-.dialogue-box-container {
-  transition: all 0.3s ease;
-}
-
-.dialogue-box-container * {
-  transition: all 0.5s ease 1s;
+  transition: border-radius 0.4s ease;
 }
 
 .dialogue-box {
   position: relative;
   padding: var(--dialogue-box-padding);
   display: block;
+  transition: padding 0.4s ease;
 }
 
 .top-bar {
@@ -38,6 +32,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition:
+    height 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .top-bar-title {
@@ -63,10 +60,12 @@
 
 .avatars {
   margin-bottom: var(--dialogue-box-padding);
+  transition: margin-bottom 0.4s ease;
 }
 
 .avatars ul li {
   cursor: pointer;
+  transition: margin-left 0.4s ease;
 }
 
 .avatars-row-1 ul,
@@ -74,10 +73,20 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
+  transition:
+    gap 0.4s ease,
+    margin-bottom 0.4s ease,
+    max-width 0.4s ease;
 }
 
 .avatars-row-1 ul {
   margin-bottom: 20px;
+}
+
+.avatars-row-2 {
+  transition:
+    opacity 0.3s ease,
+    height 0.3s ease;
 }
 
 .avatar-image {
@@ -99,6 +108,10 @@
   color: var(--color-black-7);
   text-align: center;
   margin-top: 10px;
+  transition:
+    opacity 0.3s ease,
+    height 0.3s ease,
+    margin-top 0.3s ease;
 }
 
 .cta {
@@ -112,6 +125,10 @@
   color: white;
   border-radius: var(--rounded-corners-med);
   cursor: pointer;
+  transition:
+    opacity 0.3s ease,
+    height 0.3s ease,
+    max-width 0.3s ease;
 }
 
 .dropdown-selector {
@@ -123,6 +140,10 @@
   gap: 4px;
   margin: 0 10px 0 14px;
   cursor: pointer;
+  transition:
+    opacity 0.3s ease,
+    height 0.3s ease,
+    max-width 0.3s ease;
 }
 
 .dropdown-count {
