@@ -1,3 +1,7 @@
+:root {
+  --dialogue-box-padding: 30px;
+}
+
 .dialogue-box-wrapper {
   width: 100%;
   min-height: var(--body-height-nav-desktop);
@@ -14,7 +18,7 @@
 
 .dialogue-box {
   position: relative;
-  padding: 40px;
+  padding: var(--dialogue-box-padding);
   display: block;
 }
 
@@ -50,7 +54,7 @@
 }
 
 .avatars {
-  margin-bottom: 40px;
+  margin-bottom: var(--dialogue-box-padding);
 }
 
 .avatars ul li {
@@ -103,6 +107,7 @@
 }
 
 .dropdown-selector {
+  height: 4ch;
   color: var(--color-black-7);
   display: flex;
   align-items: center;
@@ -160,6 +165,8 @@
 .dialogue-box-wrapper.inactive .dialogue-box {
   padding: 15px;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dialogue-box-wrapper.inactive .avatars-row-1 ul {
