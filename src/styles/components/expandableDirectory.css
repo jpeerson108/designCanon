@@ -1,5 +1,8 @@
 :root {
   --dialogue-box-padding: 30px;
+  --transition-time-short: 0.2s;
+  --transition-time-med: 0.4s;
+  --transition-time-long: 0.6s;
 }
 
 .dialogue-box-wrapper {
@@ -17,15 +20,15 @@
   display: grid;
   grid-template-rows: 1fr auto;
   transition:
-    border-radius 0.5s ease,
-    grid-template-rows 0.5s ease;
+    border-radius var(--transition-time-long) ease,
+    grid-template-rows var(--transition-time-long) ease;
 }
 
 .dialogue-box {
   position: relative;
   padding: var(--dialogue-box-padding);
   display: block;
-  transition: padding 0.4s ease;
+  transition: padding var(--transition-time-med) ease;
 }
 
 .top-bar {
@@ -38,8 +41,8 @@
   justify-content: center;
   overflow: hidden;
   transition:
-    min-height 0.4s ease,
-    opacity 0.4s ease 0.2s;
+    min-height var(--transition-time-med) ease,
+    opacity var(--transition-time-med) ease var(--transition-time-short);
 }
 
 .top-bar-title {
@@ -65,12 +68,12 @@
 
 .avatars {
   margin-bottom: var(--dialogue-box-padding);
-  transition: margin-bottom 0.4s ease;
+  transition: margin-bottom var(--transition-time-med) ease;
 }
 
 .avatars ul li {
   cursor: pointer;
-  transition: margin-left 0.4s ease;
+  transition: margin-left var(--transition-time-med) ease;
 }
 
 .avatars-row-1 ul,
@@ -79,9 +82,9 @@
   flex-direction: row;
   gap: 20px;
   transition:
-    gap 0.4s ease,
-    margin-bottom 0.4s ease,
-    max-width 0.4s ease;
+    gap var(--transition-time-med) ease,
+    margin-bottom var(--transition-time-med) ease,
+    max-width var(--transition-time-med) ease;
 }
 
 .avatars-row-1 ul {
@@ -90,8 +93,8 @@
 
 .avatars-row-2 {
   transition:
-    opacity 0.4s ease 0.2s,
-    height 0.4s ease;
+    opacity var(--transition-time-med) ease var(--transition-time-short),
+    height var(--transition-time-med) ease;
 }
 
 .avatar-image {
@@ -114,9 +117,9 @@
   text-align: center;
   margin-top: 10px;
   transition:
-    opacity 0.4s ease 0.2s,
-    height 0.4s ease,
-    margin-top 0.4s ease;
+    opacity var(--transition-time-med) ease var(--transition-time-short),
+    height var(--transition-time-med) ease,
+    margin-top var(--transition-time-med) ease;
 }
 
 .cta {
@@ -131,9 +134,9 @@
   border-radius: var(--rounded-corners-med);
   cursor: pointer;
   transition:
-    opacity 0.4s ease 0.2s,
-    height 0.4s ease,
-    max-width 0.4s ease;
+    opacity var(--transition-time-med) ease var(--transition-time-short),
+    height var(--transition-time-med) ease,
+    max-width var(--transition-time-med) ease;
 }
 
 .dropdown-selector {
@@ -169,7 +172,7 @@
   height: 0;
   pointer-events: none;
   max-width: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity var(--transition-time-short) ease;
 }
 
 .dialogue-box-wrapper.inactive .avatar-text {
@@ -177,7 +180,7 @@
   pointer-events: none;
   height: 0;
   margin-top: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity var(--transition-time-short) ease;
 }
 
 .dialogue-box-wrapper.inactive .avatars {
@@ -188,7 +191,7 @@
   opacity: 0;
   pointer-events: none;
   min-height: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity var(--transition-time-short) ease;
 }
 
 .dialogue-box-wrapper.inactive .dialogue-box-container {
@@ -211,7 +214,7 @@
   opacity: 0;
   pointer-events: none;
   height: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity var(--transition-time-short) ease;
 }
 
 .dialogue-box-wrapper.inactive .avatars-row-1 ul {
