@@ -14,14 +14,14 @@
   border-radius: var(--rounded-corners-huge);
   background-color: var(--color-black-1c);
   overflow: hidden;
-  transition: border-radius 0.4s ease;
+  transition: border-radius 0.5s ease;
 }
 
 .dialogue-box {
   position: relative;
   padding: var(--dialogue-box-padding);
   display: block;
-  transition: padding 0.4s ease;
+  transition: padding 0.4s ease 0.4s;
 }
 
 .top-bar {
@@ -33,8 +33,8 @@
   align-items: center;
   justify-content: center;
   transition:
-    height 0.3s ease,
-    opacity 0.3s ease;
+    height 0.4s ease 0.4s,
+    opacity 0.4s ease 0.4s;
 }
 
 .top-bar-title {
@@ -60,12 +60,12 @@
 
 .avatars {
   margin-bottom: var(--dialogue-box-padding);
-  transition: margin-bottom 0.4s ease;
+  transition: margin-bottom 0.4s ease 0.4s;
 }
 
 .avatars ul li {
   cursor: pointer;
-  transition: margin-left 0.4s ease;
+  transition: margin-left 0.4s ease 0.4s;
 }
 
 .avatars-row-1 ul,
@@ -74,9 +74,9 @@
   flex-direction: row;
   gap: 20px;
   transition:
-    gap 0.4s ease,
-    margin-bottom 0.4s ease,
-    max-width 0.4s ease;
+    gap 0.4s ease 0.4s,
+    margin-bottom 0.4s ease 0.4s,
+    max-width 0.4s ease 0.4s;
 }
 
 .avatars-row-1 ul {
@@ -85,8 +85,8 @@
 
 .avatars-row-2 {
   transition:
-    opacity 0.3s ease,
-    height 0.3s ease;
+    opacity 0.4s ease 0.4s,
+    height 0.4s ease 0.4s;
 }
 
 .avatar-image {
@@ -109,9 +109,9 @@
   text-align: center;
   margin-top: 10px;
   transition:
-    opacity 0.3s ease,
-    height 0.3s ease,
-    margin-top 0.3s ease;
+    opacity 0.4s ease 0.4s,
+    height 0.4s ease 0.4s,
+    margin-top 0.4s ease 0.4s;
 }
 
 .cta {
@@ -126,9 +126,9 @@
   border-radius: var(--rounded-corners-med);
   cursor: pointer;
   transition:
-    opacity 0.3s ease,
-    height 0.3s ease,
-    max-width 0.3s ease;
+    opacity 0.4s ease 0.4s,
+    height 0.4s ease 0.4s,
+    max-width 0.4s ease 0.4s;
 }
 
 .dropdown-selector {
@@ -141,9 +141,9 @@
   margin: 0 10px 0 14px;
   cursor: pointer;
   transition:
-    opacity 0.3s ease,
-    height 0.3s ease,
-    max-width 0.3s ease;
+    opacity 0.4s ease 0.4s,
+    height 0.4s ease 0.4s,
+    max-width 0.4s ease 0.4s;
 }
 
 .dropdown-count {
@@ -188,7 +188,7 @@
 }
 
 .dialogue-box-wrapper.inactive .dialogue-box-container {
-  border-radius: 999px;
+  border-radius: 75px;
 }
 
 .dialogue-box-wrapper.inactive .dialogue-box {
