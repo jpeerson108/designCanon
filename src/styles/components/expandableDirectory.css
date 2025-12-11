@@ -1,8 +1,7 @@
 :root {
   --dialogue-box-padding: 30px;
-  --transition-time-short: 0.2s;
-  --transition-time-med: 0.4s;
-  --transition-time-long: 0.6s;
+  --transition-time: 20s;
+  --transition-easing: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .dialogue-box-wrapper {
@@ -20,15 +19,15 @@
   display: grid;
   grid-template-rows: 1fr auto;
   transition:
-    border-radius var(--transition-time-long) ease,
-    grid-template-rows var(--transition-time-long) ease;
+    border-radius var(--transition-time) var(--transition-easing),
+    grid-template-rows var(--transition-time) var(--transition-easing);
 }
 
 .dialogue-box {
   position: relative;
   padding: var(--dialogue-box-padding);
   display: block;
-  transition: padding var(--transition-time-med) ease;
+  transition: padding var(--transition-time) var(--transition-easing);
 }
 
 .top-bar {
@@ -41,8 +40,8 @@
   justify-content: center;
   overflow: hidden;
   transition:
-    min-height var(--transition-time-med) ease,
-    opacity var(--transition-time-med) ease var(--transition-time-short);
+    min-height var(--transition-time) var(--transition-easing),
+    opacity var(--transition-time) var(--transition-easing);
 }
 
 .top-bar-title {
@@ -68,12 +67,12 @@
 
 .avatars {
   margin-bottom: var(--dialogue-box-padding);
-  transition: margin-bottom var(--transition-time-med) ease;
+  transition: margin-bottom var(--transition-time) var(--transition-easing);
 }
 
 .avatars ul li {
   cursor: pointer;
-  transition: margin-left var(--transition-time-med) ease;
+  transition: margin-left var(--transition-time) var(--transition-easing);
 }
 
 .avatars-row-1 ul,
@@ -82,9 +81,9 @@
   flex-direction: row;
   gap: 20px;
   transition:
-    gap var(--transition-time-med) ease,
-    margin-bottom var(--transition-time-med) ease,
-    max-width var(--transition-time-med) ease;
+    gap var(--transition-time) var(--transition-easing),
+    margin-bottom var(--transition-time) var(--transition-easing),
+    max-width var(--transition-time) var(--transition-easing);
 }
 
 .avatars-row-1 ul {
@@ -93,8 +92,8 @@
 
 .avatars-row-2 {
   transition:
-    opacity var(--transition-time-med) ease var(--transition-time-short),
-    height var(--transition-time-med) ease;
+    opacity var(--transition-time) var(--transition-easing),
+    height var(--transition-time) var(--transition-easing);
 }
 
 .avatar-image {
@@ -117,9 +116,9 @@
   text-align: center;
   margin-top: 10px;
   transition:
-    opacity var(--transition-time-med) ease var(--transition-time-short),
-    height var(--transition-time-med) ease,
-    margin-top var(--transition-time-med) ease;
+    opacity var(--transition-time) var(--transition-easing),
+    height var(--transition-time) var(--transition-easing),
+    margin-top var(--transition-time) var(--transition-easing);
 }
 
 .cta {
@@ -134,9 +133,9 @@
   border-radius: var(--rounded-corners-med);
   cursor: pointer;
   transition:
-    opacity var(--transition-time-med) ease var(--transition-time-short),
-    height var(--transition-time-med) ease,
-    max-width var(--transition-time-med) ease;
+    opacity var(--transition-time) var(--transition-easing),
+    height var(--transition-time) var(--transition-easing),
+    max-width var(--transition-time) var(--transition-easing);
 }
 
 .dropdown-selector {
@@ -172,7 +171,7 @@
   height: 0;
   pointer-events: none;
   max-width: 0;
-  transition: opacity var(--transition-time-short) ease;
+  transition: opacity var(--transition-time) var(--transition-easing);
 }
 
 .dialogue-box-wrapper.inactive .avatar-text {
@@ -180,7 +179,7 @@
   pointer-events: none;
   height: 0;
   margin-top: 0;
-  transition: opacity var(--transition-time-short) ease;
+  transition: opacity var(--transition-time) var(--transition-easing);
 }
 
 .dialogue-box-wrapper.inactive .avatars {
@@ -191,7 +190,7 @@
   opacity: 0;
   pointer-events: none;
   min-height: 0;
-  transition: opacity var(--transition-time-short) ease;
+  transition: opacity var(--transition-time) var(--transition-easing);
 }
 
 .dialogue-box-wrapper.inactive .dialogue-box-container {
@@ -214,7 +213,7 @@
   opacity: 0;
   pointer-events: none;
   height: 0;
-  transition: opacity var(--transition-time-short) ease;
+  transition: opacity var(--transition-time) var(--transition-easing);
 }
 
 .dialogue-box-wrapper.inactive .avatars-row-1 ul {
