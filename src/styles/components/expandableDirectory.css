@@ -16,8 +16,6 @@
   border-radius: var(--rounded-corners-huge);
   background-color: var(--color-black-1c);
   overflow: hidden;
-  display: grid;
-  grid-template-rows: 1fr auto;
   transition:
     border-radius var(--transition-time) var(--transition-easing),
     grid-template-rows var(--transition-time) var(--transition-easing);
