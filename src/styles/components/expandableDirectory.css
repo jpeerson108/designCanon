@@ -171,7 +171,6 @@
   height: 0;
   pointer-events: none;
   max-width: 0;
-  transition: opacity var(--transition-time) var(--transition-easing);
 }
 
 .dialogue-box-wrapper.inactive .avatar-text {
@@ -179,7 +178,6 @@
   pointer-events: none;
   height: 0;
   margin-top: 0;
-  transition: opacity var(--transition-time) var(--transition-easing);
 }
 
 .dialogue-box-wrapper.inactive .avatars {
@@ -190,7 +188,6 @@
   opacity: 0;
   pointer-events: none;
   min-height: 0;
-  transition: opacity var(--transition-time) var(--transition-easing);
 }
 
 .dialogue-box-wrapper.inactive .dialogue-box-container {
@@ -213,7 +210,6 @@
   opacity: 0;
   pointer-events: none;
   height: 0;
-  transition: opacity var(--transition-time) var(--transition-easing);
 }
 
 .dialogue-box-wrapper.inactive .avatars-row-1 ul {
