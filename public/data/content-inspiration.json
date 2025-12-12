@@ -390,5 +390,12 @@
         "image": "/assets/inspiration/image 49.webp",
         "href": "https://jitter.video/",
         "date": "2025-08-02"
+    },
+    {
+        "title": "StringTune",
+        "category": "JS Library",
+        "image": "/assets/inspiration/image 2.webp",
+        "href": "https://string-tune.fiddle.digital/",
+        "date": "2025-12-12"
     }
 ]
