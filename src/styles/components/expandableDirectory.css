@@ -251,7 +251,6 @@
   .dialogue-box.inactive .avatars {
     margin-bottom: 0;
     max-height: var(--avatar-image-size);
-    overflow: hidden;
   }
 
   .dialogue-box.inactive .avatar-text,
