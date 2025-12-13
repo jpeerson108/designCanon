@@ -241,7 +241,7 @@
 @media screen and (max-width: 650px) {
   .avatars ul {
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: min-content;
+    align-items: start;
     margin-right: 20px;
   }
 
