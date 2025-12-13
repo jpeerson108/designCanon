@@ -4,7 +4,6 @@
   --dialogue-box-padding: 30px;
   --transition-time: 0.8s;
   --transition-easing: cubic-bezier(0.68, -0.6, 0.32, 1.6);
-  /* cubic-bezier(0.4, 0, 0.2, 1) */
 }
 
 .container.dialogue-box-container {
