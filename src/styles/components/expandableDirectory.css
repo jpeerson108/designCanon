@@ -101,7 +101,7 @@
 
 .avatar-image {
   width: var(--avatar-image-size);
-  aspect-ratio: 1/1;
+  height: var(--avatar-image-size);
   border: 3px solid var(--color-white-c);
   border-radius: 100%;
 }
