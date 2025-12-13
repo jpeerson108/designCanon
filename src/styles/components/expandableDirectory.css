@@ -241,11 +241,8 @@
 @media screen and (max-width: 650px) {
   .avatars ul {
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: min-content;
     margin-right: 20px;
-  }
-
-  .avatars ul li {
-    height: var(--avatar-image-size);
   }
 
   .avatars ul li:nth-child(n + 7) {
