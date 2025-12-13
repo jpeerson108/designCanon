@@ -244,6 +244,10 @@
     margin-right: 20px;
   }
 
+  .avatars ul li {
+    height: var(--avatar-image-size);
+  }
+
   .avatars ul li:nth-child(n + 7) {
     display: none;
   }
