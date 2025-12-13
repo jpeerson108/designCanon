@@ -86,9 +86,11 @@
 .avatars ul li {
   transform: none;
   max-height: 200px;
+  transform: scaleY(1);
   overflow: hidden;
   transition:
     max-height var(--transition-time) var(--transition-easing),
+    transform var(--transition-time) var(--transition-easing),
     opacity var(--transition-time) var(--transition-easing),
     transform var(--transition-time) var(--transition-easing);
 }
@@ -110,11 +112,13 @@
 .avatar-text {
   font-size: 1rem;
   max-height: 30px;
+  transform: scaleY(1);
   color: var(--color-black-7);
   text-align: center;
   margin-top: 10px;
   transition:
     max-height var(--transition-time) var(--transition-easing),
+    transform var(--transition-time) var(--transition-easing),
     margin-top var(--transition-time) var(--transition-easing),
     opacity var(--transition-time) var(--transition-easing);
 }
@@ -187,6 +191,7 @@
 .dialogue-box.inactive .avatar-text,
 .dialogue-box.inactive .avatars ul li:nth-child(n + 5) {
   max-height: 0;
+  transform: scaleY(0);
   opacity: 0;
   pointer-events: none;
   margin-top: 0;
