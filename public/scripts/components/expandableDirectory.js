@@ -10,6 +10,15 @@ dropdownSelector.addEventListener("click", () => {
   dropdownSelector.classList.add("inactive")
 })
 
+avatarListItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    if (dialogueBox.classList.contains("inactive")) {
+      dialogueBox.classList.remove("inactive")
+      dropdownSelector.classList.add("inactive")
+    }
+  })
+})
+
 closeIcon.addEventListener("click", () => {
   dialogueBox.classList.add("inactive")
   dropdownSelector.classList.remove("inactive")

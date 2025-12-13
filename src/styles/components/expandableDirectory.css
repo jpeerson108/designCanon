@@ -88,6 +88,7 @@
   max-height: 200px;
   transform: scaleY(1);
   overflow: hidden;
+  cursor: pointer;
   transition:
     max-height var(--transition-time) var(--transition-easing),
     transform var(--transition-time) var(--transition-easing),
