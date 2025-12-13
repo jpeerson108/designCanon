@@ -48,16 +48,21 @@
   position: absolute;
   right: var(--dialogue-box-padding);
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) translateX(25%);
   color: var(--color-black-7);
-  height: 14px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  transition: color 0.4s ease;
 }
 
 .top-bar-close-icon svg {
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: 14px;
 }
 
 .dialogue-box-content {
@@ -216,6 +221,12 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s var(--transition-easing);
+}
+
+@media (hover: hover) {
+  .top-bar-close-icon:hover {
+    color: var(--color-black-9);
+  }
 }
 
 @media screen and (max-width: 650px) {
