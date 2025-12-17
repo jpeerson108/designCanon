@@ -243,6 +243,10 @@
 }
 
 @media screen and (max-width: 650px) {
+  .container.dialogue-box-container {
+    min-height: var(--body-height-nav-mobile);
+  }
+
   .avatars ul {
     grid-template-columns: repeat(3, 1fr);
     align-items: start;
