@@ -1,3 +1,4 @@
+/*
 @view-transition {
   navigation: auto;
 }
@@ -25,6 +26,52 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
+*/
+
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: exit-page 0.8s ease;
+}
+
+::view-transition-new(root) {
+  animation: enter-page 0.8s ease;
+}
+
+@keyframes exit-page {
+  from {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    filter: blur(20px);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes enter-page {
+  from {
+    opacity: 0;
+    filter: blur(20px);
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1);
   }
 }
 
