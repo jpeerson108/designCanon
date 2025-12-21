@@ -2,9 +2,11 @@
 import BaseLayout from "../../layouts/baseLayout.astro";
 import ContentGrid from "@/components/contentGrid.astro";
 import NavMain from "@/components/navMain.astro";
+import FooterMain from "@/components/footerMain.astro";
 import "../../styles/index.css";
 ---
 <script type="module" src="/scripts/inspiration.js"></script>
+<script type="module" src="/scripts/footerMain.js"></script>
 <BaseLayout title="Inspiration">
 
     <NavMain 
@@ -27,8 +29,8 @@ import "../../styles/index.css";
     <ContentGrid 
         dataFile="/data/content-inspiration.json"
         counterWidgetText="Websites" />
-
-    <div class="spacer-med"></div>
     </div>
+
+    <FooterMain></FooterMain>
 
 </BaseLayout>

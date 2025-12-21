@@ -1,4 +1,10 @@
+// Footer visibility and float state management
 const footer = document.querySelector("footer")
+const footerToTop = document.getElementById("footer-to-top")
+const footerShareProject = document.getElementById("footer-share-project")
+const footerShareProjectText = document.getElementById(
+  "footer-share-project-text"
+)
 const scrollThreshold = 60
 
 function updateFooterState() {
@@ -20,6 +26,34 @@ function updateFooterState() {
   }
 }
 
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  })
+}
+
+function copyPageUrl() {
+  const currentUrl = window.location.href
+  navigator.clipboard.writeText(currentUrl)
+
+  if (footerShareProjectText) {
+    footerShareProjectText.textContent = "Link Copied"
+  }
+}
+
 window.addEventListener("scroll", updateFooterState)
+
+if (footerToTop) {
+  footerToTop.addEventListener("click", scrollToTop)
+}
+
+if (footerShareProject) {
+  footerShareProject.addEventListener("click", copyPageUrl)
+}
+
+if (footerShareProjectText) {
+  footerShareProjectText.textContent = "Share Project"
+}
 
 updateFooterState()
