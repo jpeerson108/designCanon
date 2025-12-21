@@ -3,7 +3,6 @@ const { title } = Astro.props;
 import "../styles/global.css";
 import "../styles/globalPageTransition.css";
 import InfoModal from "@/components/infoModal.astro";
-import FooterMain from "@/components/FooterMain.astro";
 ---
 <html lang="en">
   <head>
@@ -13,10 +12,14 @@ import FooterMain from "@/components/FooterMain.astro";
     <title>{title ? `${title} | Design Canon` : "Design Canon"}</title>
   </head>
   <body>
+
     <InfoModal>
       <slot name="infoModal" />
     </InfoModal>
-    <div class="page-content"><slot /></div>
-    <FooterMain></FooterMain>
+
+    <div class="page-content">
+      <slot />
+    </div>
+
   </body>
 </html>

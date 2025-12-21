@@ -2,8 +2,12 @@
 import BaseLayout from "../layouts/baseLayout.astro";
 import ContentGrid from "@/components/contentGrid.astro";
 import NavMain from "@/components/navMain.astro";
+import FooterMain from "@/components/FooterMain.astro";
 import "../styles/index.css";
 ---
+
+<script type="module" src="/scripts/footerMain.js"></script>
+
 <BaseLayout title="Home">
     
     <NavMain 
@@ -25,8 +29,8 @@ import "../styles/index.css";
     <ContentGrid 
         dataFile="/data/content-components.json"
         counterWidgetText="Components" />
-
-    <div class="spacer-med"></div>
     </div>
+
+    <FooterMain></FooterMain>
 
 </BaseLayout>
