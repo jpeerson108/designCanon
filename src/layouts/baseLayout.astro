@@ -16,7 +16,7 @@ import FooterMain from "@/components/FooterMain.astro";
     <InfoModal>
       <slot name="infoModal" />
     </InfoModal>
-    <slot />
-    <!-- <FooterMain></FooterMain> -->
+    <div class="page-content"><slot /></div>
+    <FooterMain></FooterMain>
   </body>
 </html>
