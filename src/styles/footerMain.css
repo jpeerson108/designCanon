@@ -39,7 +39,7 @@ footer {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: -0.4px;
-  word-spacing: -2px;
+  word-spacing: -3px;
   color: white;
 
   /* Animations */
@@ -108,6 +108,7 @@ footer.float {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: -0.2px;
+  word-spacing: -3px;
   color: white;
 }
 
