@@ -63,6 +63,7 @@ footer {
   gap: 0.4rem;
   white-space: nowrap;
   cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
 .footer-icon {
@@ -114,4 +115,15 @@ footer.float {
 
 footer.invisible {
   transform: translateX(-50%) translateY(200%);
+}
+
+@media (hover: hover) {
+  .footer-item:hover {
+    opacity: 1;
+  }
+
+  .footer-item:has(~ .footer-item:hover),
+  .footer-item:hover ~ .footer-item {
+    opacity: 0.2;
+  }
 }
