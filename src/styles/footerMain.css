@@ -1,6 +1,6 @@
 :root {
-  --footer-height: 15rem;
-  --footer-float-height: 45px;
+  --footer-height: 10rem;
+  --footer-float-height: 43px;
   --footer-border: 1px solid var(--color-main-border);
   --footer-transition-time: 0.5s;
   --footer-transition-ease: cubic-bezier(0.68, -0.6, 0.32, 1.6);
@@ -30,13 +30,13 @@ footer {
   background: var(--color-background);
   border-radius: none;
   border-top: var(--footer-border);
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
 
   /* Font */
   font-family: "JetBrains Mono", monospace;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: -0.4px;
   word-spacing: -3px;
@@ -53,7 +53,8 @@ footer {
     border-bottom var(--footer-transition-time) var(--footer-transition-ease),
     border-left var(--footer-transition-time) var(--footer-transition-ease),
     border-right var(--footer-transition-time) var(--footer-transition-ease),
-    gap var(--footer-transition-time) var(--footer-transition-ease);
+    gap var(--footer-transition-time) var(--footer-transition-ease),
+    font-size var(--footer-transition-time) var(--footer-transition-ease);
 }
 
 .footer-item {
@@ -108,7 +109,7 @@ footer.float {
   font-family: "JetBrains Mono", monospace;
   font-size: 0.9rem;
   text-transform: uppercase;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.4px;
   word-spacing: -3px;
   color: white;
 }

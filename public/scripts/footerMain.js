@@ -19,7 +19,7 @@ function updateFooterState() {
     footer.classList.add("invisible")
   }
 
-  if (distanceFromBottom < 180) {
+  if (distanceFromBottom < 80) {
     footer.classList.remove("float")
   } else {
     footer.classList.add("float")
