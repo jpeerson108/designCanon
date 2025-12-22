@@ -2,8 +2,6 @@
   --footer-height: 10rem;
   --footer-float-height: 43px;
   --footer-border: 1px solid var(--color-main-border);
-  --footer-transition-time: 0.5s;
-  --footer-transition-ease: cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
 .page-content {
@@ -44,17 +42,17 @@ footer {
 
   /* Animations */
   transition:
-    bottom var(--footer-transition-time) var(--footer-transition-ease),
-    transform var(--footer-transition-time) var(--footer-transition-ease),
-    min-width var(--footer-transition-time) var(--footer-transition-ease),
-    height var(--footer-transition-time) var(--footer-transition-ease),
-    padding var(--footer-transition-time) var(--footer-transition-ease),
-    border-radius var(--footer-transition-time) var(--footer-transition-ease),
-    border-bottom var(--footer-transition-time) var(--footer-transition-ease),
-    border-left var(--footer-transition-time) var(--footer-transition-ease),
-    border-right var(--footer-transition-time) var(--footer-transition-ease),
-    gap var(--footer-transition-time) var(--footer-transition-ease),
-    font-size var(--footer-transition-time) var(--footer-transition-ease);
+    bottom var(--transition-time-med) var(--transition-ease-bounce),
+    transform var(--transition-time-med) var(--transition-ease-bounce),
+    min-width var(--transition-time-med) var(--transition-ease-bounce),
+    height var(--transition-time-med) var(--transition-ease-bounce),
+    padding var(--transition-time-med) var(--transition-ease-bounce),
+    border-radius var(--transition-time-med) var(--transition-ease-bounce),
+    border-bottom var(--transition-time-med) var(--transition-ease-bounce),
+    border-left var(--transition-time-med) var(--transition-ease-bounce),
+    border-right var(--transition-time-med) var(--transition-ease-bounce),
+    gap var(--transition-time-med) var(--transition-ease-bounce),
+    font-size var(--transition-time-med) var(--transition-ease-bounce);
 }
 
 .footer-item {

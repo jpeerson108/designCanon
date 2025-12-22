@@ -53,12 +53,15 @@
   --buttonPadding-vertical: 3.5px;
   --buttonPadding-horizontal: 9px;
 
-  /* Animations */
+  /* Animation: Speeds */
   --transition-time-fast: 0.3s;
   --transition-time-med: 0.5s;
   --transition-time-slow: 0.8s;
   --transition-time-turtle: 1.2s;
+
+  /* Animation: Easings */
   --transition-ease-bounce: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  --transition-ease-slow-fast: cubic-bezier(0.65, 0.05, 0, 1);
 
   /* Breakpoints */
   --breakpoint-tablet: 1200px;

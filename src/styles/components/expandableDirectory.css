@@ -4,8 +4,6 @@
   --dialogue-box-padding: 30px;
   --dialogue-box-padding-mobile: 24px;
   --dialogue-box-padding-inactive: 18px;
-  --transition-time: 0.8s;
-  --transition-easing: cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
 .container.dialogue-box-container {
@@ -22,9 +20,9 @@
   background-color: var(--color-black-1c);
   overflow: hidden;
   padding-right: 0px;
-  transition: 
-    border-radius var(--transition-time) var(--transition-easing),
-    padding-right var(--transition-time) var(--transition-easing);
+  transition:
+    border-radius var(--transition-time-slow) var(--transition-ease-bounce),
+    padding-right var(--transition-time-slow) var(--transition-ease-bounce);
 }
 
 .top-bar {
@@ -39,9 +37,9 @@
   align-items: center;
   justify-content: center;
   transition:
-    height var(--transition-time) var(--transition-easing),
-    transform var(--transition-time) var(--transition-easing),
-    opacity var(--transition-time) var(--transition-easing);
+    height var(--transition-time-slow) var(--transition-ease-bounce),
+    transform var(--transition-time-slow) var(--transition-ease-bounce),
+    opacity var(--transition-time-slow) var(--transition-ease-bounce);
 }
 
 .top-bar-title {
@@ -72,22 +70,22 @@
 
 .dialogue-box-content {
   padding: var(--dialogue-box-padding);
-  transition: padding var(--transition-time) var(--transition-easing);
+  transition: padding var(--transition-time-slow) var(--transition-ease-bounce);
 }
 
 .avatars {
   margin-bottom: var(--dialogue-box-padding);
   max-height: 500px;
   transition:
-    margin-bottom var(--transition-time) var(--transition-easing),
-    max-height var(--transition-time) var(--transition-easing);
+    margin-bottom var(--transition-time-slow) var(--transition-ease-bounce),
+    max-height var(--transition-time-slow) var(--transition-ease-bounce);
 }
 
 .avatars ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--grid-gap);
-  transition: gap var(--transition-time) var(--transition-easing);
+  transition: gap var(--transition-time-slow) var(--transition-ease-bounce);
 }
 
 .avatars ul li {
@@ -97,10 +95,10 @@
   overflow: hidden;
   cursor: pointer;
   transition:
-    max-height var(--transition-time) var(--transition-easing),
-    transform var(--transition-time) var(--transition-easing),
-    opacity var(--transition-time) var(--transition-easing),
-    transform var(--transition-time) var(--transition-easing);
+    max-height var(--transition-time-slow) var(--transition-ease-bounce),
+    transform var(--transition-time-slow) var(--transition-ease-bounce),
+    opacity var(--transition-time-slow) var(--transition-ease-bounce),
+    transform var(--transition-time-slow) var(--transition-ease-bounce);
 }
 
 .avatar-image {
@@ -125,10 +123,10 @@
   text-align: center;
   margin-top: 10px;
   transition:
-    max-height var(--transition-time) var(--transition-easing),
-    transform var(--transition-time) var(--transition-easing),
-    margin-top var(--transition-time) var(--transition-easing),
-    opacity var(--transition-time) var(--transition-easing);
+    max-height var(--transition-time-slow) var(--transition-ease-bounce),
+    transform var(--transition-time-slow) var(--transition-ease-bounce),
+    margin-top var(--transition-time-slow) var(--transition-ease-bounce),
+    opacity var(--transition-time-slow) var(--transition-ease-bounce);
 }
 
 .cta {
@@ -145,9 +143,9 @@
   border-radius: var(--rounded-corners-med);
   cursor: pointer;
   transition:
-    height var(--transition-time) var(--transition-easing),
-    transform var(--transition-time) var(--transition-easing),
-    opacity var(--transition-time) var(--transition-easing);
+    height var(--transition-time-slow) var(--transition-ease-bounce),
+    transform var(--transition-time-slow) var(--transition-ease-bounce),
+    opacity var(--transition-time-slow) var(--transition-ease-bounce);
 }
 
 .dropdown-selector {
@@ -163,7 +161,7 @@
   gap: 4px;
   color: var(--color-black-7);
   cursor: pointer;
-  transition: opacity 0.4s var(--transition-easing) 0.3s;
+  transition: opacity 0.4s var(--transition-ease-bounce) 0.3s;
 }
 
 .dropdown-count {
@@ -233,7 +231,7 @@
 .dropdown-selector.inactive {
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.5s var(--transition-easing);
+  transition: opacity 0.5s var(--transition-ease-bounce);
 }
 
 @media (hover: hover) {
@@ -276,14 +274,14 @@
   }
 
   .top-bar-close-icon {
-  right: var(--dialogue-box-padding-mobile);
+    right: var(--dialogue-box-padding-mobile);
   }
 
   .dialogue-box-content {
-  padding: var(--dialogue-box-padding-mobile);
+    padding: var(--dialogue-box-padding-mobile);
   }
 
   .avatars {
-  margin-bottom: var(--dialogue-box-padding-mobile);
+    margin-bottom: var(--dialogue-box-padding-mobile);
   }
 }
