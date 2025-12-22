@@ -34,11 +34,11 @@
 
   /* Animations */
   transition:
-    width 0.3s ease,
-    margin 0.3s ease,
-    border-bottom 0.3s ease,
-    padding 0.3s ease,
-    opacity 0.3s ease;
+    width var(--transition-time-fast) ease,
+    margin var(--transition-time-fast) ease,
+    border-bottom var(--transition-time-fast) ease,
+    padding var(--transition-time-fast) ease,
+    opacity var(--transition-time-fast) ease;
 }
 
 .filter-track.active {
@@ -106,7 +106,7 @@ body.dragging-global * {
   border-radius: var(--filter-border-radius);
   cursor: grab;
   letter-spacing: -0.4px;
-  transition: background 0.3s ease;
+  transition: background var(--transition-time-fast) ease;
 }
 
 .categories-btn.active {
@@ -123,8 +123,8 @@ body.dragging-global * {
   z-index: 2;
   color: #fff;
   transition:
-    color 0.3s ease,
-    opacity 0.3s ease;
+    color var(--transition-time-fast) ease,
+    opacity var(--transition-time-fast) ease;
   opacity: 0;
   pointer-events: none;
 }
@@ -162,7 +162,7 @@ body.dragging-global * {
   width: 100px;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity var(--transition-time-fast) ease;
   z-index: 1;
 }
 
@@ -219,7 +219,7 @@ body.dragging-global * {
   letter-spacing: -0.4px;
   font-weight: 400;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background var(--transition-time-fast) ease;
 }
 
 .sort-button span {
@@ -227,7 +227,7 @@ body.dragging-global * {
   align-items: center;
   color: #777;
   margin-left: 8px;
-  transition: all 0.3s ease;
+  transition: all var(--transition-time-fast) ease;
 }
 
 .sort-button svg {
@@ -251,10 +251,10 @@ body.dragging-global * {
   max-width: 0;
   margin-left: -5px;
   transition:
-    opacity 0.3s ease,
-    margin-left 0.3s ease,
-    max-width 0.3s ease,
-    visibility 0.3s linear;
+    opacity var(--transition-time-fast) ease,
+    margin-left var(--transition-time-fast) ease,
+    max-width var(--transition-time-fast) ease,
+    visibility var(--transition-time-fast) linear;
 }
 
 .sort-expanded-menu.show {
@@ -295,7 +295,7 @@ body.dragging-global * {
   letter-spacing: -0.4px;
   font-weight: 400;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  transition: opacity var(--transition-time-fast) ease;
 }
 
 .sort-expanded-menu li button.active {
@@ -323,7 +323,7 @@ body.dragging-global * {
   justify-content: space-between;
   align-items: center;
   caret-color: var(--color-white-c);
-  transition: border 0.3s ease;
+  transition: border var(--transition-time-fast) ease;
 }
 
 .filter-track-search:focus-within {
@@ -341,7 +341,7 @@ body.dragging-global * {
   opacity: 40%;
   cursor: pointer;
   filter: invert(1);
-  transition: all 0.3s ease;
+  transition: all var(--transition-time-fast) ease;
 }
 
 .filter-track-search button {
@@ -358,7 +358,7 @@ body.dragging-global * {
 
 .search-input::placeholder {
   color: #555;
-  transition: color 0.3s ease;
+  transition: color var(--transition-time-fast) ease;
 }
 
 .search-input:focus::placeholder {
@@ -383,7 +383,7 @@ body.dragging-global * {
   margin-top: 1rem;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.2rem;
-  transition: opacity 0.3s ease;
+  transition: opacity var(--transition-time-fast) ease;
 }
 
 .content-card {
@@ -391,7 +391,7 @@ body.dragging-global * {
   margin-bottom: 13px;
   overflow: hidden;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity var(--transition-time-fast) ease;
 }
 
 .content-card:not(.hidden) {
@@ -419,7 +419,7 @@ body.dragging-global * {
   width: 101%;
   height: 101%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-time-fast) ease;
 }
 
 .content-data {
@@ -459,7 +459,8 @@ article .new-label {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%) translateY(150%);
-  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all var(--transition-time-slow)
+    cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .grid-items-counter-widget {
@@ -491,7 +492,8 @@ article .new-label {
   opacity: 1;
   pointer-events: auto;
   transform: translateX(-50%) translateY(0);
-  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all var(--transition-time-slow)
+    cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 @media (hover: hover) {
