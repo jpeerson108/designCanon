@@ -75,7 +75,7 @@
 .block {
   width: 100%;
   height: 100%;
-  transition: opacity 100ms;
+  transition: opacity 100ms ease;
 }
 
 .blocks-container.top .blocks-row .block {

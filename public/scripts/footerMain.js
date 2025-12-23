@@ -1,5 +1,6 @@
 // Footer visibility and float state management
 const footer = document.querySelector("footer")
+const footerLineCover = document.querySelector(".footer-line-cover")
 const footerToTop = document.getElementById("footer-to-top")
 const footerShareProject = document.getElementById("footer-share-project")
 const footerShareProjectText = document.getElementById(
@@ -21,8 +22,10 @@ function updateFooterState() {
 
   if (distanceFromBottom < 80) {
     footer.classList.remove("float")
+    footerLineCover.classList.remove("invisible")
   } else {
     footer.classList.add("float")
+    footerLineCover.classList.add("invisible")
   }
 }
 

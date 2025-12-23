@@ -56,7 +56,7 @@
   overflow: hidden;
   opacity: 0;
   margin-left: -5px;
-  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all var(--transition-time-fast) cubic-bezier(0.77, 0, 0.175, 1);
   white-space: nowrap;
 }
 

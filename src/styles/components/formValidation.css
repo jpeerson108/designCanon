@@ -94,7 +94,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: all var(--transition-time-fast) ease;
 }
 
 .submission-message p {
