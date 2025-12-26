@@ -9,7 +9,7 @@
 }
 
 .section-container:first-of-type {
-  padding-top: calc(-1 * var(--navMain-heightDesktop));
+  margin-top: calc(-1 * var(--navMain-heightDesktop));
 }
 
 .section-container img {
