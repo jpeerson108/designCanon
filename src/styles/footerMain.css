@@ -79,6 +79,15 @@ footer {
   object-fit: cover;
 }
 
+.footer-text {
+    opacity: 1;
+    max-width: 300px;
+    pointer-events: auto;
+    transition:
+    opacity var(--transition-time-med) var(--transition-ease-bounce),
+    max-width var(--transition-time-med) var(--transition-ease-bounce);
+  }
+
 .footer-logo {
   position: absolute;
   top: 0;
@@ -170,5 +179,13 @@ footer.invisible {
   .footer-item:has(~ .footer-item:hover),
   .footer-item:hover ~ .footer-item {
     opacity: 0.2;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  footer.float .footer-text {
+    opacity: 0;
+    max-width: 0;
+    pointer-events: none;
   }
 }
