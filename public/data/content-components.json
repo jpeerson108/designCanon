@@ -3,7 +3,7 @@
         "title": "Reveal Menu Items on Hover",
         "category": "Navigation",
         "image": "/assets/thumbnails/thumbnail-2.webp",
-        "href": "/components/hoverRevealMenu/home",
+        "href": "/components/hoverRevealMenu",
         "date": "2025-09-19",
         "tags": ["hover", "expand", "menu", "navigation", "reveal"]
     },
