@@ -56,7 +56,7 @@ if (footerShareProject) {
 }
 
 if (footerShareProjectText) {
-  footerShareProjectText.textContent = "Share Site"
+  footerShareProjectText.textContent = "Share Project"
 }
 
 updateFooterState()
