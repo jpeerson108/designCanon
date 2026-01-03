@@ -36,6 +36,7 @@
 
 .btn-icon {
   height: calc(0.85 * var(--font-size));
+  min-width: calc(0.85 * var(--font-size));
 }
 
 .btn-icon svg {
