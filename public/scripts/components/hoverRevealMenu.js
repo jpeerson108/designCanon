@@ -1,28 +1,28 @@
-const btnWrappers = document.querySelectorAll(".btn-wrapper")
+const button = document.querySelectorAll(".btn")
 
-btnWrappers.forEach((wrapper) => {
-  const btnText = wrapper.querySelector(".btn-text")
+button.forEach((btn) => {
+  const btnText = btn.querySelector(".btn-text")
 
-  // Hover events
-  wrapper.addEventListener("mouseenter", () => {
-    btnText.classList.add("btn-text-show")
-    console.log("hi")
-  })
-
-  wrapper.addEventListener("mouseleave", () => {
-    btnText.classList.remove("btn-text-show")
-  })
-
-  // Active page detection
-  const navLink = wrapper.getAttribute("href")
+  const navLink = btn.getAttribute("href")
+  let isCurrentPage = false
 
   if (navLink && navLink !== "#") {
     const navURL = new URL(navLink, window.location.href)
     const navPathEnding = navURL.pathname.split("/").pop()
 
     if (window.location.pathname.endsWith(navPathEnding)) {
-      wrapper.classList.add("active")
-      btnText.classList.add("show")
+      btnText.classList.add("active")
+      isCurrentPage = true
     }
   }
+
+  btn.addEventListener("mouseenter", () => {
+    btnText.classList.add("active")
+  })
+
+  btn.addEventListener("mouseleave", () => {
+    if (!isCurrentPage) {
+      btnText.classList.remove("active")
+    }
+  })
 })
