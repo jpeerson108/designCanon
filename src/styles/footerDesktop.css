@@ -183,9 +183,13 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .footer-desktop.float .footer-desktop-text {
-    opacity: 0;
-    max-width: 0;
+  .footer-desktop {
+    display: none;
+    pointer-events: none;
+  }
+
+  .footer-desktop.float {
+    display: none;
     pointer-events: none;
   }
 }
