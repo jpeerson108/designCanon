@@ -18,23 +18,12 @@ button.forEach((btn) => {
   }
 
   if (isTouchDevice) {
-    btn.addEventListener("click", (event) => {
-      if (isCurrentPage) {
-        event.preventDefault()
-        btnText.classList.toggle("active")
-        return
-      }
+    btn.addEventListener("click", () => {
+      button.forEach((otherBtn) => {
+        otherBtn.querySelector(".btn-text").classList.remove("active")
+      })
 
-      const isActive = btnText.classList.contains("active")
-
-      if (!isActive) {
-        event.preventDefault()
-        btnText.classList.add("active")
-
-        setTimeout(() => {
-          window.location.href = navLink
-        }, 300)
-      }
+      btnText.classList.add("active")
     })
   } else {
     btn.addEventListener("mouseenter", () => {
