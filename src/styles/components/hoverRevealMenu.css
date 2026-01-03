@@ -5,7 +5,6 @@
 }
 
 .btn-section {
-  width: 100%;
   height: var(--body-height-nav-desktop);
   display: flex;
   align-items: center;
@@ -37,7 +36,7 @@
 
 .btn-icon {
   height: calc(0.85 * var(--font-size));
-  min-width: calc(0.85 * var(--font-size));
+  width: calc(0.85 * var(--font-size));
 }
 
 .btn-icon svg {
