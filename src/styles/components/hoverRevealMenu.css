@@ -1,5 +1,6 @@
 :root {
   --btn-size: 50px;
+  --btn-size-mobile: 35px;
   --font-size: 1.5rem;
 }
 
@@ -23,7 +24,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: var(--btn-size);
+  min-height: var(--btn-size);
   min-width: var(--btn-size);
   background: var(--color-black-3);
   padding: 0 calc(0.3 * var(--btn-size));
@@ -66,9 +67,5 @@
 @media screen and (max-width: 650px) {
   .btn-section {
     height: var(--body-height-nav-mobile);
-  }
-
-  .btn-wrapper {
-    transform: scale(0.8);
   }
 }
