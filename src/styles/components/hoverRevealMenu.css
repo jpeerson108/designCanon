@@ -67,4 +67,8 @@
   .btn-section {
     height: var(--body-height-nav-mobile);
   }
+
+  .btn-wrapper {
+    transform: scale(0.8);
+  }
 }
