@@ -94,7 +94,7 @@
   top: var(--footer-fixed-distance);
   left: var(--footer-fixed-distance);
   height: 30px;
-  width: auto;
+  max-width: 36px;
   z-index: 3;
   opacity: 0;
   pointer-events: none;
