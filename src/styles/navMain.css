@@ -11,7 +11,7 @@ nav {
   text-transform: uppercase;
   letter-spacing: -0.5px;
   background-color: var(--color-background);
-  z-index: 1000;
+  z-index: 2;
 }
 
 .nav-spacer {
