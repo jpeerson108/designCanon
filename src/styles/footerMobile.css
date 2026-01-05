@@ -94,12 +94,12 @@
   top: var(--footer-fixed-distance);
   left: var(--footer-fixed-distance);
   height: 30px;
+  width: auto;
   z-index: 3;
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--transition-time-fast)
     var(--transition-ease-slow-fast);
-  background-color: blueviolet;
 }
 
 .footer-mobile-logo svg {
