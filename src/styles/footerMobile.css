@@ -50,6 +50,11 @@
   padding: calc(0.5 * var(--footer-mobile-circle-size));
 }
 
+.footer-mobile-item.pie-menu .footer-mobile-text {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .footer-mobile-icon {
   border-radius: 100%;
   aspect-ratio: 1/1;
@@ -89,9 +94,9 @@
   left: 40px;
   height: 30px;
   z-index: 3;
-  transform: scale(0);
+  opacity: 0;
   pointer-events: none;
-  transition: transform var(--transition-time-fast)
+  transition: opacity var(--transition-time-fast)
     var(--transition-ease-slow-fast);
 }
 
@@ -118,7 +123,8 @@
 
 .footer-mobile-wrapper.active .footer-mobile-logo,
 .footer-mobile-wrapper.active .footer-mobile-item,
-.footer-mobile-wrapper.active .footer-mobile-backdrop {
+.footer-mobile-wrapper.active .footer-mobile-backdrop,
+.footer-mobile-wrapper.active .footer-mobile-item.pie-menu .footer-mobile-text {
   opacity: 1;
   pointer-events: auto;
 }
@@ -135,7 +141,8 @@
   transition-delay: 0.2s;
 }
 
-.footer-mobile-wrapper.active .footer-mobile-item:nth-child(4) {
+.footer-mobile-wrapper.active .footer-mobile-item:nth-child(4),
+.footer-mobile-wrapper.active .footer-mobile-item.pie-menu .footer-mobile-text {
   transition-delay: 0.1s;
 }
 
@@ -145,9 +152,9 @@
 }
 
 .footer-mobile-wrapper.active .footer-mobile-logo {
-  transform: scale(1);
-  transition: transform var(--transition-time-fast)
-    var(--transition-ease-slow-fast) var(--transition-time-fast);
+  opacity: 1;
+  transition: opacity var(--transition-time-slow) ease
+    var(--transition-time-med);
 }
 
 @media (hover: hover) {
