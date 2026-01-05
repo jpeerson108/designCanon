@@ -26,7 +26,8 @@
   z-index: 3;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity var(--transition-time-slow) ease;
+  transition-delay: 0s;
 }
 
 .footer-mobile-item.pie-menu {
@@ -59,6 +60,7 @@
 .footer-mobile-icon {
   border-radius: 100%;
   aspect-ratio: 1/1;
+  overflow: hidden;
 }
 
 .footer-mobile-icon svg {
@@ -67,6 +69,7 @@
   object-fit: cover;
 }
 
+/* Pie Menu */
 #footer-mobile-pie-menu {
   position: relative;
 }
@@ -75,20 +78,23 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scaleX(1);
   width: var(--footer-mobile-icon-size);
   height: 2px;
   background: white;
+  transition: transform var(--transition-time-slow)
+    var(--transition-ease-bounce);
 }
 
 .pie-menu-line:first-child {
-  transform: translateX(-50%) translateY(-6px);
+  transform: translateX(-50%) translateY(-6px) rotate(0);
 }
 
 .pie-menu-line:nth-child(3) {
-  transform: translateX(-50%) translateY(6px);
+  transform: translateX(-50%) translateY(6px) rotate(0);
 }
 
+/* Footer Logo */
 .footer-mobile-logo {
   position: fixed;
   top: var(--footer-fixed-distance);
@@ -96,10 +102,10 @@
   height: 30px;
   max-width: 36px;
   z-index: 3;
-  opacity: 0;
+  transform: scale(0);
   pointer-events: none;
-  transition: opacity var(--transition-time-fast)
-    var(--transition-ease-slow-fast);
+  transition: transform var(--transition-time-fast)
+    var(--transition-ease-bounce);
 }
 
 .footer-mobile-logo svg {
@@ -157,9 +163,23 @@
 }
 
 .footer-mobile-wrapper.active .footer-mobile-logo {
-  opacity: 1;
-  transition: opacity var(--transition-time-slow) ease
-    var(--transition-time-fast);
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform var(--transition-time-fast)
+    cubic-bezier(0.67, 0, 0.6, 2.19) var(--transition-time-med);
+}
+
+/* Pie Menu Animation */
+.footer-mobile-wrapper.active .pie-menu-line {
+  transform: translateX(300%) scaleX(2);
+}
+
+.footer-mobile-wrapper.active .pie-menu-line:first-child {
+  transform: translateX(-50%) translateY(0) rotate(45deg);
+}
+
+.footer-mobile-wrapper.active .pie-menu-line:nth-child(3) {
+  transform: translateX(-50%) translateY(0) rotate(-45deg);
 }
 
 @media (hover: hover) {
