@@ -26,7 +26,7 @@
   z-index: 3;
   opacity: 0;
   pointer-events: none;
-  transition: opacity var(--transition-time-slow) ease;
+  transition: opacity var(--transition-time-med) ease;
   transition-delay: 0s;
 }
 
@@ -105,7 +105,7 @@
   transform: scale(0);
   pointer-events: none;
   transition: transform var(--transition-time-fast)
-    var(--transition-ease-bounce);
+    cubic-bezier(0.4, -1.19, 0.33, 1);
 }
 
 .footer-mobile-logo svg {
@@ -166,7 +166,7 @@
   transform: scale(1);
   transform-origin: center;
   transition: transform var(--transition-time-fast)
-    cubic-bezier(0.67, 0, 0.6, 2.19) var(--transition-time-med);
+    cubic-bezier(0.67, 0, 0.6, 2.19) var(--transition-time-fast);
 }
 
 /* Pie Menu Animation */
