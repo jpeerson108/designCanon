@@ -112,21 +112,24 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(11, 11, 11, 0.95);
+  background-color: var(--color-background);
   z-index: 2;
   opacity: 0;
   pointer-events: none;
-  transition: opacity var(--transition-time-med) ease;
+  transition: opacity var(--transition-time-slow) ease;
 }
 
 /* Active States */
 
-.footer-mobile-wrapper.active .footer-mobile-logo,
 .footer-mobile-wrapper.active .footer-mobile-item,
 .footer-mobile-wrapper.active .footer-mobile-backdrop,
 .footer-mobile-wrapper.active .footer-mobile-item.pie-menu .footer-mobile-text {
   opacity: 1;
   pointer-events: auto;
+}
+
+.footer-mobile-wrapper.active .footer-mobile-logo {
+  opacity: 1;
 }
 
 .footer-mobile-wrapper.active .footer-mobile-item:nth-child(1) {
@@ -154,7 +157,7 @@
 .footer-mobile-wrapper.active .footer-mobile-logo {
   opacity: 1;
   transition: opacity var(--transition-time-slow) ease
-    var(--transition-time-med);
+    var(--transition-time-fast);
 }
 
 @media (hover: hover) {
