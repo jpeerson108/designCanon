@@ -99,6 +99,7 @@
   pointer-events: none;
   transition: opacity var(--transition-time-fast)
     var(--transition-ease-slow-fast);
+  background-color: blueviolet;
 }
 
 .footer-mobile-logo svg {
