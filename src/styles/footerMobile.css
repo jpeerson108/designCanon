@@ -127,6 +127,10 @@
   transition: opacity var(--transition-time-slow) ease;
 }
 
+body:has(.footer-mobile-wrapper.active) {
+  overflow: hidden;
+}
+
 /* Active States */
 
 .footer-mobile-wrapper.active .footer-mobile-item,
