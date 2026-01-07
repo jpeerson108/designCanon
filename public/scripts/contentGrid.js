@@ -143,14 +143,13 @@ function addNewCards(cards, grid, oneMonthAgo, instant = false) {
     }
 
     if (content.kind === "button") {
-      // TODO: Build out button card structure
-      // Properties available: title, category, html, css, js, date, tags
       card.innerHTML = `
-    <div class="button-card-placeholder">
-      <h3>${content.title}</h3>
-      <p>${content.category}</p>
-    </div>
-  `
+        <iframe src="${content.html}" title="${content.title}"></iframe>
+        <div class="content-data">
+          <h3>${content.title}</h3>
+          <p>Category: ${content.category}</p>
+        </div>
+      `
     }
 
     // Add "New!" label if <1Mo Old

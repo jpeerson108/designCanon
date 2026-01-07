@@ -403,7 +403,8 @@ body.dragging-global * {
   pointer-events: none;
 }
 
-.content-card > a {
+.content-card > a,
+.content-card iframe {
   display: flex;
   align-items: center;
   justify-content: center;
