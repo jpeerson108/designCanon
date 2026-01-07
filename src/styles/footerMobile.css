@@ -139,18 +139,36 @@ body:has(.footer-mobile-wrapper.active) {
 }
 
 .footer-mobile-fixed {
-  margin-top: 4rem;
+  margin-top: 3rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.footer-mobile-fixed-item {
+  height: 3.5rem;
   border-top: 1px solid var(--color-main-border);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  gap: 15px;
-  padding: 25px;
-  background-color: blueviolet;
+}
+
+.footer-mobile-fixed-item a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-mobile-fixed-item.logo {
+  height: 5.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.footer-mobile-fixed-item.logo svg {
+  height: 30px;
 }
 
 /* Active States: Expanded Menu */
