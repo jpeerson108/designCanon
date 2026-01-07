@@ -1,17 +1,9 @@
 ---
-import BaseLayout from "../../layouts/baseLayout.astro";
-import NavMain from "@/components/navMain.astro";
-import "../../styles/components/circleMaskReveal.css";
+import "../../styles/buttons/hoverReplace.css";
 ---
 
-<script type="module" src="/scripts/components/circleMaskReveal.js"></script>
+<script type="module" src="/scripts/components/hoverReplace.js"></script>
 
-<BaseLayout>
-<NavMain 
-    title="Expandable Directory"
-    navCenterText="Expandable Directory"
-    htmlLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/pages/components/expandableDirectory.astro"
-    cssLinkHref="https://github.com/jpeerson108/designCanon/blob/main/src/styles/components/expandableDirectory.css"
-    javascriptLinkHref="https://github.com/jpeerson108/designCanon/blob/main/public/scripts/components/expandableDirectory.js" />
-
-</BaseLayout>
+<div class="button-container">
+    <button>Button Test</button>
+</div>
