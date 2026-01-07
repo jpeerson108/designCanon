@@ -1,6 +1,6 @@
 // Footer visibility and float state management
-const footer = document.querySelector("footer")
-const footerLineCover = document.querySelector(".footer-line-cover")
+const footer = document.querySelector(".footer-desktop")
+const footerLineCover = document.querySelector(".footer-desktop-line-cover")
 const footerToTop = document.getElementById("footer-to-top")
 const footerShareProject = document.getElementById("footer-share-project")
 const footerShareProjectText = document.getElementById(
