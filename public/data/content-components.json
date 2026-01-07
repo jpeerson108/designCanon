@@ -1,5 +1,6 @@
 [
     {
+        "kind": "component",
         "title": "Reveal Menu Items on Hover",
         "category": "Navigation",
         "image": "/assets/thumbnails/thumbnail-2.webp",
@@ -8,6 +9,7 @@
         "tags": ["hover", "expand", "menu", "navigation", "reveal"]
     },
     {
+        "kind": "component",
         "title": "Infinite Marquee (Scroll-Direction)",
         "category": "Marquees",
         "image": "/assets/thumbnails/thumbnail-1.webp",
@@ -16,6 +18,7 @@
         "tags": ["marquee", "scroll", "infinite", "loop", "horizontal", "text", "scrolling", "motion", "continuous"]
     },
     {
+        "kind": "component",
         "title": "Smooth Expand/Collapse Accordion",
         "category": "Structure",
         "image": "/assets/thumbnails/thumbnail-3.webp",
@@ -24,6 +27,7 @@
         "tags": ["accordion", "list", "expand", "collapse", "toggle", "reveal", "structure"]
     },
     {
+        "kind": "component",
         "title": "Pixelated Page Transition",
         "category": "Page Transitions",
         "image": "/assets/thumbnails/thumbnail-4.webp",
@@ -32,6 +36,7 @@
         "tags": ["page", "transition", "pixelated", "box", "reveal", "screen"]
     },
     {
+        "kind": "component",
         "title": "Pixelated Section Transition (Scroll-Driven)",
         "category": "Scroll",
         "image": "/assets/thumbnails/thumbnail-6.webp",
@@ -40,6 +45,7 @@
         "tags": ["scroll", "section", "transition", "boxes", "reveal", "scroll-based"]
     },
     {
+        "kind": "component",
         "title": "Simple Horizontal Carousel",
         "category": "Carousel",
         "image": "/assets/thumbnails/thumbnail-8.webp",
@@ -48,6 +54,7 @@
         "tags": ["carousel", "image", "images", "horizontal", "slideshow", "gallery", "apple", "manual", "click"]
     },
     {
+        "kind": "component",
         "title": "Staggered Grid with Image Clip Path",
         "category": "Gallery",
         "image": "/assets/thumbnails/thumbnail-9.webp",
@@ -56,6 +63,7 @@
         "tags": ["gallery", "image", "images", "grid", "masonry", "clip", "path", "mask"]
     },
     {
+        "kind": "component",
         "title": "Lightbox with Controls",
         "category": "Gallery",
         "image": "/assets/thumbnails/thumbnail-10.webp",
@@ -64,6 +72,7 @@
         "tags": ["gallery", "image", "images", "grid", "lightbox", "slideshow", "next", "previous"]
     },
     {
+        "kind": "component",
         "title": "Form Validation",
         "category": "Forms",
         "image": "/assets/thumbnails/thumbnail-11.webp",
@@ -72,6 +81,7 @@
         "tags": ["gallery", "image", "images", "grid", "lightbox", "slideshow", "next", "previous"]
     },
     {
+        "kind": "component",
         "title": "Timed Content Section",
         "category": "Gallery",
         "image": "/assets/thumbnails/thumbnail-12.webp",
@@ -80,6 +90,7 @@
         "tags": ["timed", "looping", "content", "image", "text", "auto", "cycle", "rotation", "sequential", "slideshow", "highlight", "interval", "transition", "switch", "animated"]
     },
     {
+        "kind": "component",
         "title": "Expand Image on Hover",
         "category": "Hover Animation",
         "image": "/assets/thumbnails/thumbnail-13.webp",
@@ -88,6 +99,7 @@
         "tags": ["gallery", "hover", "image", "expand", "flexbox", "interactive", "vertical", "transition", "animation", "responsive", "reveal", "stretch"]
     },
     {
+        "kind": "component",
         "title": "Circle Mask Reveal on Hover",
         "category": "Hover Animation",
         "image": "/assets/thumbnails/thumbnail-14.webp",
@@ -96,6 +108,7 @@
         "tags": ["gallery", "hover", "image", "expand", "flexbox", "interactive", "vertical", "transition", "animation", "responsive", "reveal", "circle"]
     },
     {
+        "kind": "component",
         "title": "Scroll Snap",
         "category": "Scrolling",
         "image": "/assets/thumbnails/thumbnail-15.webp",
@@ -104,6 +117,7 @@
         "tags": ["scroll", "snap", "sections", "navigation", "scroll-behavior", "interaction", "vertical", "smooth", "animation"]
     },
     {
+        "kind": "component",
         "title": "Expandable Directory",
         "category": "Dropdown",
         "image": "/assets/thumbnails/thumbnail-16.webp",

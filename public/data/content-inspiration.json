@@ -1,5 +1,6 @@
 [
     {
+        "kind": "inspiration",
         "title": "Advanced Electric Motors",
         "category": "Industrial",
         "image": "/assets/inspiration/image 25.webp",
@@ -7,6 +8,7 @@
         "date": "2025-10-08"
     },
     {
+        "kind": "inspiration",
         "title": "Sui Overflow 2025",
         "category": "Event",
         "image": "/assets/inspiration/image 7.webp",
@@ -14,6 +16,7 @@
         "date": "2025-10-07"
     },
     {
+        "kind": "inspiration",
         "title": "ChainGPT Labs",
         "category": "AI",
         "image": "/assets/inspiration/image 345.webp",
@@ -21,6 +24,7 @@
         "date": "2025-10-06"
     },
     {
+        "kind": "inspiration",
         "title": "Shield AI",
         "category": "AI",
         "image": "/assets/inspiration/image 235.webp",
@@ -28,6 +32,7 @@
         "date": "2025-10-05"
     },
     {
+        "kind": "inspiration",
         "title": "Ursa Major",
         "category": "Industrial",
         "image": "/assets/inspiration/image 271.webp",
@@ -35,6 +40,7 @@
         "date": "2025-10-04"
     },
     {
+        "kind": "inspiration",
         "title": "MARA",
         "category": "Industrial",
         "image": "/assets/inspiration/image 189.webp",
@@ -42,6 +48,7 @@
         "date": "2025-10-03"
     },
     {
+        "kind": "inspiration",
         "title": "Palantir",
         "category": "Industrial",
         "image": "/assets/inspiration/image 278.webp",
@@ -49,6 +56,7 @@
         "date": "2025-07-05"
     },
     {
+        "kind": "inspiration",
         "title": "Saronic",
         "category": "Industrial",
         "image": "/assets/inspiration/image 210.webp",
@@ -56,6 +64,7 @@
         "date": "2025-07-18"
     },
     {
+        "kind": "inspiration",
         "title": "Intercom Report 2025",
         "category": "Publication",
         "image": "/assets/inspiration/image 314.webp",
@@ -63,6 +72,7 @@
         "date": "2025-07-19"
     },
     {
+        "kind": "inspiration",
         "title": "ChainGPT",
         "category": "AI",
         "image": "/assets/inspiration/image 351.webp",
@@ -70,6 +80,7 @@
         "date": "2025-07-10"
     },
     {
+        "kind": "inspiration",
         "title": "Northwood Space",
         "category": "Industrial",
         "image": "/assets/inspiration/image 302.webp",
@@ -77,6 +88,7 @@
         "date": "2025-08-07"
     },
     {
+        "kind": "inspiration",
         "title": "Slash",
         "category": "Finance",
         "image": "/assets/inspiration/image 156.webp",
@@ -84,6 +96,7 @@
         "date": "2025-06-17"
     },
     {
+        "kind": "inspiration",
         "title": "Eduard Bodak",
         "category": "Portfolio",
         "image": "/assets/inspiration/image 143.webp",
@@ -91,6 +104,7 @@
         "date": "2025-09-05"
     },
     {
+        "kind": "inspiration",
         "title": "Empower Trading",
         "category": "Industrial",
         "image": "/assets/inspiration/image 320.webp",
@@ -98,6 +112,7 @@
         "date": "2025-06-15"
     },
     {
+        "kind": "inspiration",
         "title": "Flowfest",
         "category": "Event",
         "image": "/assets/inspiration/image 176.webp",
@@ -105,6 +120,7 @@
         "date": "2025-09-03"
     },
     {
+        "kind": "inspiration",
         "title": "Jones Bar-B-Q",
         "category": "Food & Beverage",
         "image": "/assets/inspiration/image 116.webp",
@@ -112,6 +128,7 @@
         "date": "2025-05-09"
     },
     {
+        "kind": "inspiration",
         "title": "Terminal",
         "category": "Industrial",
         "image": "/assets/inspiration/image 373.webp",
@@ -119,6 +136,7 @@
         "date": "2025-05-02"
     },
     {
+        "kind": "inspiration",
         "title": "Retool",
         "category": "SaaS",
         "image": "/assets/inspiration/image 204.webp",
@@ -126,6 +144,7 @@
         "date": "2025-05-18"
     },
     {
+        "kind": "inspiration",
         "title": "Letta",
         "category": "AI",
         "image": "/assets/inspiration/image 357.webp",
@@ -133,6 +152,7 @@
         "date": "2025-09-24"
     },
     {
+        "kind": "inspiration",
         "title": "Studio Alphonse",
         "category": "Agency",
         "image": "/assets/inspiration/image 122.webp",
@@ -140,6 +160,7 @@
         "date": "2025-04-22"
     },
     {
+        "kind": "inspiration",
         "title": "Arena AI",
         "category": "AI",
         "image": "/assets/inspiration/image 296.webp",
@@ -147,6 +168,7 @@
         "date": "2025-04-12"
     },
     {
+        "kind": "inspiration",
         "title": "Trona",
         "category": "Food & Beverage",
         "image": "/assets/inspiration/image 222.webp",
@@ -154,6 +176,7 @@
         "date": "2025-04-11"
     },
     {
+        "kind": "inspiration",
         "title": "Payload",
         "category": "Development",
         "image": "/assets/inspiration/image 198.webp",
@@ -161,6 +184,7 @@
         "date": "2025-09-06"
     },
     {
+        "kind": "inspiration",
         "title": "Black Jays",
         "category": "Finance",
         "image": "/assets/inspiration/image 333.webp",
@@ -168,6 +192,7 @@
         "date": "2025-04-02"
     },
     {
+        "kind": "inspiration",
         "title": "Fin AI",
         "category": "AI",
         "image": "/assets/inspiration/image 91.webp",
@@ -175,6 +200,7 @@
         "date": "2025-03-28"
     },
     {
+        "kind": "inspiration",
         "title": "Firestorm",
         "category": "Industrial",
         "image": "/assets/inspiration/image 284.webp",
@@ -182,6 +208,7 @@
         "date": "2025-03-24"
     },
     {
+        "kind": "inspiration",
         "title": "Infinite Capital",
         "category": "Finance",
         "image": "/assets/inspiration/image 31.webp",
@@ -189,6 +216,7 @@
         "date": "2025-03-19"
     },
     {
+        "kind": "inspiration",
         "title": "Dich Fashiun",
         "category": "Fashion",
         "image": "/assets/inspiration/image 138.webp",
@@ -196,6 +224,7 @@
         "date": "2025-03-13"
     },
     {
+        "kind": "inspiration",
         "title": "Webflow Conf 2025",
         "category": "Event",
         "image": "/assets/inspiration/image 1.webp",
@@ -203,6 +232,7 @@
         "date": "2025-03-04"
     },
     {
+        "kind": "inspiration",
         "title": "Wone",
         "category": "SaaS",
         "image": "/assets/inspiration/image 55.webp",
@@ -210,6 +240,7 @@
         "date": "2025-03-02"
     },
     {
+        "kind": "inspiration",
         "title": "Pizarro",
         "category": "Food & Beverage",
         "image": "/assets/inspiration/image 128.webp",
@@ -217,6 +248,7 @@
         "date": "2025-02-18"
     },
     {
+        "kind": "inspiration",
         "title": "Kustomer",
         "category": "SaaS",
         "image": "/assets/inspiration/image 103.webp",
@@ -224,6 +256,7 @@
         "date": "2025-02-12"
     },
     {
+        "kind": "inspiration",
         "title": "Tonemaki",
         "category": "Agency",
         "image": "/assets/inspiration/image 150.webp",
@@ -231,6 +264,7 @@
         "date": "2025-02-10"
     },
     {
+        "kind": "inspiration",
         "title": "Offbrand",
         "category": "Agency",
         "image": "/assets/inspiration/image 169.webp",
@@ -238,6 +272,7 @@
         "date": "2025-02-06"
     },
     {
+        "kind": "inspiration",
         "title": "Husher",
         "category": "Music",
         "image": "/assets/inspiration/image 365.webp",
@@ -245,6 +280,7 @@
         "date": "2025-01-19"
     },
     {
+        "kind": "inspiration",
         "title": "Arago",
         "category": "Hardware",
         "image": "/assets/inspiration/image 67.webp",
@@ -252,6 +288,7 @@
         "date": "2025-01-09"
     },
     {
+        "kind": "inspiration",
         "title": "Dropbox Brand Guidelines",
         "category": "SaaS",
         "image": "/assets/inspiration/image 13.webp",
@@ -259,6 +296,7 @@
         "date": "2025-01-14"
     },
     {
+        "kind": "inspiration",
         "title": "Tripletta",
         "category": "Food & Beverage",
         "image": "/assets/inspiration/image 61.webp",
@@ -266,6 +304,7 @@
         "date": "2025-01-27"
     },
     {
+        "kind": "inspiration",
         "title": "Niki Studio",
         "category": "Portfolio",
         "image": "/assets/inspiration/image 259.webp",
@@ -273,6 +312,7 @@
         "date": "2025-05-14"
     },
     {
+        "kind": "inspiration",
         "title": "Aerodome",
         "category": "Industrial",
         "image": "/assets/inspiration/image 265.webp",
@@ -280,6 +320,7 @@
         "date": "2024-12-21"
     },
     {
+        "kind": "inspiration",
         "title": "Sonar Music",
         "category": "Music",
         "image": "/assets/inspiration/image 19.webp",
@@ -287,6 +328,7 @@
         "date": "2024-12-03"
     },
     {
+        "kind": "inspiration",
         "title": "Koyeb",
         "category": "SaaS",
         "image": "/assets/inspiration/image 326.webp",
@@ -294,6 +336,7 @@
         "date": "2024-12-08"
     },
     {
+        "kind": "inspiration",
         "title": "Vercel",
         "category": "SaaS",
         "image": "/assets/inspiration/image 74.webp",
@@ -301,6 +344,7 @@
         "date": "2024-11-30"
     },
     {
+        "kind": "inspiration",
         "title": "GSAP",
         "category": "Development",
         "image": "/assets/inspiration/image 162.webp",
@@ -308,6 +352,7 @@
         "date": "2024-11-28"
     },
     {
+        "kind": "inspiration",
         "title": "Yellowbird",
         "category": "Food & Beverage",
         "image": "/assets/inspiration/image 190.webp",
@@ -315,6 +360,7 @@
         "date": "2024-11-22"
     },
     {
+        "kind": "inspiration",
         "title": "VAST Space",
         "category": "Industrial",
         "image": "/assets/inspiration/image 290.webp",
@@ -322,6 +368,7 @@
         "date": "2024-10-29"
     },
     {
+        "kind": "inspiration",
         "title": "Brainsave",
         "category": "AI",
         "image": "/assets/inspiration/image 339.webp",
@@ -329,6 +376,7 @@
         "date": "2025-07-08"
     },
     {
+        "kind": "inspiration",
         "title": "Anime.js",
         "category": "Development",
         "image": "/assets/inspiration/image 247.webp",
@@ -336,6 +384,7 @@
         "date": "2025-06-29"
     },
     {
+        "kind": "inspiration",
         "title": "Stripe",
         "category": "Finance",
         "image": "/assets/inspiration/image 97.webp",
@@ -343,6 +392,7 @@
         "date": "2025-08-01"
     },
     {
+        "kind": "inspiration",
         "title": "Figma",
         "category": "SaaS",
         "image": "/assets/inspiration/image 85.webp",
@@ -350,6 +400,7 @@
         "date": "2025-04-17"
     },
     {
+        "kind": "inspiration",
         "title": "Hyperbolic",
         "category": "AI",
         "image": "/assets/inspiration/image 241.webp",
@@ -357,6 +408,7 @@
         "date": "2025-08-10"
     },
     {
+        "kind": "inspiration",
         "title": "Baseten",
         "category": "AI",
         "image": "/assets/inspiration/image 216.webp",
@@ -364,6 +416,7 @@
         "date": "2025-08-15"
     },
     {
+        "kind": "inspiration",
         "title": "Cal.com",
         "category": "SaaS",
         "image": "/assets/inspiration/image 109.webp",
@@ -371,6 +424,7 @@
         "date": "2025-08-30"
     },
     {
+        "kind": "inspiration",
         "title": "Codemetal",
         "category": "AI",
         "image": "/assets/inspiration/image 79.webp",
@@ -378,6 +432,7 @@
         "date": "2025-08-18"
     },
     {
+        "kind": "inspiration",
         "title": "FifthRow",
         "category": "SaaS",
         "image": "/assets/inspiration/image 308.webp",
@@ -385,6 +440,7 @@
         "date": "2025-08-10"
     },
     {
+        "kind": "inspiration",
         "title": "Jitter",
         "category": "SaaS",
         "image": "/assets/inspiration/image 49.webp",
@@ -392,6 +448,7 @@
         "date": "2025-08-02"
     },
     {
+        "kind": "inspiration",
         "title": "StringTune",
         "category": "JS Library",
         "image": "/assets/inspiration/image 2.webp",
