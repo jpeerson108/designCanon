@@ -37,11 +37,11 @@ window.addEventListener("scroll", () => {
     footerMobilePieMenuItem.classList.add("invisible")
   }
 
-  if (distanceFromBottom <= 100) {
+  if (distanceFromBottom <= 300) {
     footerMobileWrapper.classList.add("bottom")
   }
 
-  if (distanceFromBottom > 100) {
+  if (distanceFromBottom > 300) {
     footerMobileWrapper.classList.remove("bottom")
   }
 

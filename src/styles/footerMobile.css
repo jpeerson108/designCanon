@@ -15,6 +15,8 @@
   gap: 10px;
   align-items: flex-end;
   z-index: 2;
+  opacity: 1;
+  transition: opacity var(--transition-time-med) ease;
 }
 
 .footer-mobile-item {
@@ -211,6 +213,11 @@ body:has(.footer-mobile-wrapper.active) {
   transform-origin: center;
   transition: transform var(--transition-time-fast)
     cubic-bezier(0.67, 0, 0.6, 2.19) var(--transition-time-fast);
+}
+
+.footer-mobile-wrapper.bottom {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* Pie Menu Animation */
