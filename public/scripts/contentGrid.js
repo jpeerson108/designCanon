@@ -117,15 +117,41 @@ function addNewCards(cards, grid, oneMonthAgo, instant = false) {
       card.classList.add("hidden")
     }
 
-    card.innerHTML = `
-      <a href="${content.href}">
-        <img src="${content.image}" alt="${content.title}">
-      </a>
-      <div class="content-data">
-        <a href="${content.href}"><h3>${content.title}</h3></a>
-        <p>Category: ${content.category}</p>
-      </div>
-    `
+    // card.innerHTML = `
+    //   <a href="${content.href}">
+    //     <img src="${content.image}" alt="${content.title}">
+    //   </a>
+    //   <div class="content-data">
+    //     <a href="${content.href}"><h3>${content.title}</h3></a>
+    //     <p>Category: ${content.category}</p>
+    //   </div>
+    // `
+
+    const isComponentOrInspiration =
+      content.kind === "component" || content.kind === "inspiration"
+
+    if (isComponentOrInspiration) {
+      card.innerHTML = `
+    <a href="${content.href}">
+      <img src="${content.image}" alt="${content.title}">
+    </a>
+    <div class="content-data">
+      <a href="${content.href}"><h3>${content.title}</h3></a>
+      <p>Category: ${content.category}</p>
+    </div>
+  `
+    }
+
+    if (content.kind === "button") {
+      // TODO: Build out button card structure
+      // Properties available: title, category, html, css, js, date, tags
+      card.innerHTML = `
+    <div class="button-card-placeholder">
+      <h3>${content.title}</h3>
+      <p>${content.category}</p>
+    </div>
+  `
+    }
 
     // Add "New!" label if <1Mo Old
     const contentDate = new Date(content.date)
@@ -169,7 +195,7 @@ window.addEventListener("scroll", () => {
   const rect = lastCard.getBoundingClientRect()
   const distanceFromBottom = rect.bottom - window.innerHeight
   const triggerDistance = -100 // Load new cards when last card is 100px above bottom of viewport
-  
+
   if (
     distanceFromBottom <= triggerDistance &&
     currentIndex < currentCards.length &&

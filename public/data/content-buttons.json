@@ -1,0 +1,12 @@
+[
+    {
+        "kind": "button",
+        "title": "Replace on Hover",
+        "category": "Stagger",
+        "html": "/buttons/hoverReplace",
+        "css": "../styles/hoverReplace.css",
+        "js": "/buttons/hoverReplace.js",
+        "date": "2026-1-7",
+        "tags": ["hover", "stagger", "replace", "vertical", "reveal"]
+    }
+]
