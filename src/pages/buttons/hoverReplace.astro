@@ -1,9 +1,13 @@
 ---
+import BaseLayout from "../../layouts/baseLayout.astro";
 import "../../styles/buttons/hoverReplace.css";
+import "@/styles/global.css";
 ---
 
 <script type="module" src="/scripts/components/hoverReplace.js"></script>
 
-<div class="button-container">
-    <button>Button Test</button>
-</div>
+<BaseLayout>
+    <div class="button-container">
+        <button>Button Test</button>
+    </div>
+</BaseLayout>
