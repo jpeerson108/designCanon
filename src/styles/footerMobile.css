@@ -140,6 +140,7 @@ body:has(.footer-mobile-wrapper.active) {
   overflow: hidden;
 }
 
+/* Fixed Footer */
 .footer-mobile-fixed {
   margin-top: 3rem;
   font-family: "JetBrains Mono", monospace;
@@ -162,6 +163,10 @@ body:has(.footer-mobile-wrapper.active) {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.footer-mobile-fixed-item.share-project {
+  cursor: pointer;
 }
 
 .footer-mobile-fixed-item.logo {

@@ -7,8 +7,14 @@ const footerMobilePieMenuText = document.querySelector(
 const footerMobilePieMenuItem = document.querySelector(
   ".footer-mobile-item.pie-menu"
 )
+const footerMobileShareProject = document.querySelector(
+  ".footer-mobile-fixed-item.share-project"
+)
+const footerMobileShareProjectText =
+  footerMobileShareProject?.querySelector("p")
 
 let lastScrollPosition = 0
+let shareProjectTimeout = null
 
 footerMobilePieMenu.addEventListener("click", () => {
   footerMobileWrapper.classList.toggle("active")
@@ -21,6 +27,25 @@ footerMobileBackdrop.addEventListener("click", () => {
 footerMobilePieMenuText.addEventListener("click", () => {
   footerMobileWrapper.classList.remove("active")
 })
+
+if (footerMobileShareProject) {
+  footerMobileShareProject.addEventListener("click", () => {
+    const currentUrl = window.location.href
+    navigator.clipboard.writeText(currentUrl)
+
+    if (footerMobileShareProjectText) {
+      footerMobileShareProjectText.textContent = "Link Copied"
+
+      if (shareProjectTimeout) {
+        clearTimeout(shareProjectTimeout)
+      }
+
+      shareProjectTimeout = setTimeout(() => {
+        footerMobileShareProjectText.textContent = "Share Project"
+      }, 2200)
+    }
+  })
+}
 
 window.addEventListener("scroll", () => {
   const currentScrollPosition = window.scrollY
