@@ -409,6 +409,7 @@ body.dragging-global * {
   align-items: center;
   justify-content: center;
   aspect-ratio: 16 / 9;
+  width: 100%;
   margin-bottom: 15px;
   overflow: hidden;
   border-radius: var(--contentImg-border-radius);
