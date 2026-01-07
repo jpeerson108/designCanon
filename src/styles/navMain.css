@@ -210,6 +210,9 @@ nav p {
   height: 60%;
   border-radius: 100%;
   background: white;
+  transition:
+    width var(--transition-time-fast) ease,
+    height var(--transition-time-fast) ease;
 }
 
 @media (hover: hover) {
@@ -258,6 +261,11 @@ nav p {
 
   .nav-dropdown li:hover {
     background-color: var(--color-black-1c);
+  }
+
+  .menu-box.buttons:hover .nav-icon-buttons-inner {
+    width: 35%;
+    height: 35%;
   }
 }
 
