@@ -35,6 +35,10 @@
   cursor: pointer;
 }
 
+.footer-mobile-item.share-project {
+  cursor: pointer;
+}
+
 .footer-mobile-text,
 .footer-mobile-icon {
   min-width: var(--footer-mobile-circle-size);
@@ -241,7 +245,7 @@ body:has(.footer-mobile-wrapper.active) {
 
 @media (hover: hover) {
   .footer-mobile-fixed-item:hover {
-    background: var(--color-black-2);
+    background: var(--color-black-1c);
   }
 
   .footer-mobile-fixed-item.logo:hover {

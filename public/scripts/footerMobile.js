@@ -7,12 +7,22 @@ const footerMobilePieMenuText = document.querySelector(
 const footerMobilePieMenuItem = document.querySelector(
   ".footer-mobile-item.pie-menu"
 )
+
+// Float footer
 const footerMobileShareProject = document.querySelector(
-  ".footer-mobile-fixed-item.share-project"
+  ".footer-mobile-item.share-project"
 )
 const footerMobileShareProjectText =
   footerMobileShareProject?.querySelector("p")
 
+// Fixed footer
+const footerMobileFixedShareProject = document.querySelector(
+  ".footer-mobile-fixed-item.share-project"
+)
+const footerMobileFixedShareProjectText =
+  footerMobileFixedShareProject?.querySelector("p")
+
+// Toggle Classes on Scroll
 let lastScrollPosition = 0
 let shareProjectTimeout = null
 
@@ -42,6 +52,25 @@ if (footerMobileShareProject) {
 
       shareProjectTimeout = setTimeout(() => {
         footerMobileShareProjectText.textContent = "Share Project"
+      }, 2200)
+    }
+  })
+}
+
+if (footerMobileFixedShareProject) {
+  footerMobileFixedShareProject.addEventListener("click", () => {
+    const currentUrl = window.location.href
+    navigator.clipboard.writeText(currentUrl)
+
+    if (footerMobileFixedShareProjectText) {
+      footerMobileFixedShareProjectText.textContent = "Link Copied"
+
+      if (shareProjectTimeout) {
+        clearTimeout(shareProjectTimeout)
+      }
+
+      shareProjectTimeout = setTimeout(() => {
+        footerMobileFixedShareProjectText.textContent = "Share Project"
       }, 2200)
     }
   })
