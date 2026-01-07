@@ -144,7 +144,7 @@ function addNewCards(cards, grid, oneMonthAgo, instant = false) {
 
     if (content.kind === "button") {
       card.innerHTML = `
-        <iframe src="${content.html}" title="${content.title}"></iframe>
+        <iframe src="${content.html}" title="${content.title}" scrolling="no"></iframe>
         <div class="content-data">
           <h3>${content.title}</h3>
           <p>Category: ${content.category}</p>
