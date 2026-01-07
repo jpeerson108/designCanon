@@ -1,16 +1,17 @@
 ---
-import BaseLayout from "../../layouts/baseLayout.astro";
+import BaseLayout from "../layouts/baseLayout.astro";
 import ContentGrid from "@/components/contentGrid.astro";
 import NavMain from "@/components/navMain.astro";
 import FooterMain from "@/components/footerMain.astro";
-import "../../styles/index.css";
+import "../styles/index.css";
 ---
 <script type="module" src="/scripts/inspiration.js"></script>
 <script type="module" src="/scripts/footerMain.js"></script>
 <BaseLayout title="Inspiration">
 
     <NavMain 
-    inspirationLinkHref="/resources/inspiration"
+    inspirationLinkHref="/inspiration"
+    buttonsLinkHref="/buttons"
     infoLinkHref=""
     tutorialsLinkHref=""
     githubLinkHref="https://github.com/jpeerson108"

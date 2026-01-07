@@ -3,6 +3,7 @@ import "@/styles/navMain.css";
 const { 
     /* Pages */
     inspirationLinkHref,
+    buttonsLinkHref,
     infoLinkHref,
     tutorialsLinkHref,
     
@@ -51,6 +52,18 @@ const {
                     </svg>
                 </div>
                 <p class="nav-menu-text">Inspiration</p>
+            </a>
+        </div>
+    )}
+    {buttonsLinkHref && (
+        <div class="menu-box">
+            <a href={buttonsLinkHref}>
+                <div class="nav-icon">
+                    <div class="nav-icon-buttons">
+                        <div class="nav-icon-buttons-inner"></div>
+                    </div>
+                </div>
+                <p class="nav-menu-text">Buttons</p>
             </a>
         </div>
     )}
