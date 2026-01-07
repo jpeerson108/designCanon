@@ -4,6 +4,11 @@ const footerMobileBackdrop = document.querySelector(".footer-mobile-backdrop")
 const footerMobilePieMenuText = document.querySelector(
   ".footer-mobile-item.pie-menu .footer-mobile-text"
 )
+const footerMobilePieMenuItem = document.querySelector(
+  ".footer-mobile-item.pie-menu"
+)
+
+let lastScrollPosition = 0
 
 footerMobilePieMenu.addEventListener("click", () => {
   footerMobileWrapper.classList.toggle("active")
@@ -15,4 +20,30 @@ footerMobileBackdrop.addEventListener("click", () => {
 
 footerMobilePieMenuText.addEventListener("click", () => {
   footerMobileWrapper.classList.remove("active")
+})
+
+window.addEventListener("scroll", () => {
+  const currentScrollPosition = window.scrollY
+  const windowHeight = window.innerHeight
+  const documentHeight = document.documentElement.scrollHeight
+  const distanceFromBottom =
+    documentHeight - (currentScrollPosition + windowHeight)
+
+  if (currentScrollPosition > 60) {
+    footerMobilePieMenuItem.classList.remove("invisible")
+  }
+
+  if (currentScrollPosition <= 60) {
+    footerMobilePieMenuItem.classList.add("invisible")
+  }
+
+  if (distanceFromBottom <= 100) {
+    footerMobileWrapper.classList.add("bottom")
+  }
+
+  if (distanceFromBottom > 100) {
+    footerMobileWrapper.classList.remove("bottom")
+  }
+
+  lastScrollPosition = currentScrollPosition
 })

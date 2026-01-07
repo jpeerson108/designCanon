@@ -192,4 +192,8 @@
     display: none;
     pointer-events: none;
   }
+
+  .page-content {
+    margin-bottom: 0;
+  }
 }
