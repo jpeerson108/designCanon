@@ -155,6 +155,7 @@ body:has(.footer-mobile-wrapper.active) {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background var(--transition-time-fast) ease;
 }
 
 .footer-mobile-fixed-item a {
@@ -239,6 +240,13 @@ body:has(.footer-mobile-wrapper.active) {
 }
 
 @media (hover: hover) {
+  .footer-mobile-fixed-item:hover {
+    background: var(--color-black-2);
+  }
+
+  .footer-mobile-fixed-item.logo:hover {
+    background: transparent;
+  }
 }
 
 @media screen and (min-width: 1000px) {
