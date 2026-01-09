@@ -313,6 +313,7 @@ nav p {
 
   .nav-dropdown {
     display: block;
+    display: none;
     position: fixed;
     top: var(--navMain-heightMobile);
     left: 0;
