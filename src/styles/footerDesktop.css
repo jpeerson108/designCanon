@@ -35,8 +35,8 @@
   font-family: "JetBrains Mono", monospace;
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: -0.4px;
-  word-spacing: -3px;
+  letter-spacing: var(--letter-spacing);
+  word-spacing: var(--word-spacing);
   color: white;
 
   /* Animations */
@@ -148,8 +148,8 @@
   font-family: "JetBrains Mono", monospace;
   font-size: 0.9rem;
   text-transform: uppercase;
-  letter-spacing: -0.4px;
-  word-spacing: -3px;
+  letter-spacing: var(--letter-spacing);
+  word-spacing: var(--word-spacing);
   color: white;
 }
 

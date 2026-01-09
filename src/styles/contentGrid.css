@@ -29,7 +29,7 @@
   white-space: nowrap;
   font-size: var(--filter-fontSize);
   font-weight: 400;
-  letter-spacing: -0.4px;
+  letter-spacing: var(--letter-spacing);
   color: #fff;
 
   /* Animations */
@@ -105,7 +105,7 @@ body.dragging-global * {
   padding: var(--buttonPadding-vertical) var(--buttonPadding-horizontal);
   border-radius: var(--filter-border-radius);
   cursor: grab;
-  letter-spacing: -0.4px;
+  letter-spacing: var(--letter-spacing);
   transition: background var(--transition-time-fast) ease;
 }
 
@@ -216,7 +216,7 @@ body.dragging-global * {
   border-radius: var(--filter-border-radius);
   padding: var(--buttonPadding-vertical) var(--buttonPadding-horizontal);
   text-transform: uppercase;
-  letter-spacing: -0.4px;
+  letter-spacing: var(--letter-spacing);
   font-weight: 400;
   cursor: pointer;
   transition: background var(--transition-time-fast) ease;
@@ -292,7 +292,7 @@ body.dragging-global * {
   border-radius: var(--filter-border-radius);
   padding: var(--buttonPadding-vertical) var(--buttonPadding-horizontal);
   text-transform: uppercase;
-  letter-spacing: -0.4px;
+  letter-spacing: var(--letter-spacing);
   font-weight: 400;
   cursor: pointer;
   transition: opacity var(--transition-time-fast) ease;
@@ -481,9 +481,9 @@ article .new-label {
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: -0.4px;
+  letter-spacing: var(--letter-spacing);
   white-space: nowrap;
-  word-spacing: -6px;
+  word-spacing: var(--word-spacing);
 }
 
 .grid-items-counter-widget span {

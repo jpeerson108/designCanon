@@ -16,6 +16,10 @@
   --rounded-corners-large: 15px;
   --rounded-corners-huge: 30px;
 
+  /* Font Stuff */
+  --word-spacing: -.3ch;
+  --letter-spacing: -0.05ch;
+
   /* Main Colors */
   --color-background: #0b0b0b;
   --color-accent: #ec6533;
