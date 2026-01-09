@@ -61,6 +61,34 @@ function setupHoverReplace(button) {
 
     animateLetters(originalLetters, duplicateLetters, "leave")
   })
+
+  // Set up touch animations
+  button.addEventListener("touchstart", (event) => {
+    event.preventDefault() // Prevent mouse events from firing
+
+    const originalLetters = originalContainer.querySelectorAll(".letter")
+    const duplicateLetters = duplicateContainer.querySelectorAll(".letter")
+
+    animateLetters(originalLetters, duplicateLetters, "enter")
+  })
+
+  button.addEventListener("touchend", (event) => {
+    event.preventDefault()
+
+    const originalLetters = originalContainer.querySelectorAll(".letter")
+    const duplicateLetters = duplicateContainer.querySelectorAll(".letter")
+
+    animateLetters(originalLetters, duplicateLetters, "leave")
+  })
+
+  button.addEventListener("touchcancel", (event) => {
+    event.preventDefault()
+
+    const originalLetters = originalContainer.querySelectorAll(".letter")
+    const duplicateLetters = duplicateContainer.querySelectorAll(".letter")
+
+    animateLetters(originalLetters, duplicateLetters, "leave")
+  })
 }
 
 function animateLetters(originalLetters, duplicateLetters, direction) {
