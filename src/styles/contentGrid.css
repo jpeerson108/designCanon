@@ -534,7 +534,8 @@ article .new-label {
 
   .content-grid {
     grid-template-columns: 1fr;
-    margin-top: 0.2rem;
+    /* margin-top: 0.2rem; */
+    margin-top: 1rem;
     gap: 1.2rem 0;
   }
 
