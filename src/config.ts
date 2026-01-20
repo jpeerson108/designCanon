@@ -1,1 +1,1 @@
-export const SITE_NAME = "This is a test";
+export const SITE_NAME = "Shapeshift";
