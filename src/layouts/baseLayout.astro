@@ -1,5 +1,6 @@
 ---
 const { title } = Astro.props;
+import { SITE_NAME } from "@/config";
 import "../styles/global.css";
 import "../styles/globalPageTransition.css";
 import InfoModal from "@/components/infoModal.astro";
@@ -9,7 +10,7 @@ import InfoModal from "@/components/infoModal.astro";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/assets/svg/designcanon-favicon.svg" />
-    <title>{title ? `Transform Origin | ${title}`: "Transform Origin"}</title>
+    <title>{title ? `${SITE_NAME} | ${title}` : SITE_NAME}</title>
   </head>
   <body>
 

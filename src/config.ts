@@ -1,0 +1,1 @@
+export const SITE_NAME = "This is a test";

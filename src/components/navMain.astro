@@ -1,5 +1,6 @@
 ---
 import "@/styles/navMain.css";
+import { SITE_NAME } from "@/config";
 const { 
     /* Pages */
     inspirationLinkHref,
@@ -204,7 +205,7 @@ const {
         {navCenterText ? (
             <p>{navCenterText}</p>
         ) : (
-            <p><a href="/">Transform Origin</a></p>
+            <p><a href="/">{SITE_NAME}</a></p>
         )}
     </div>
 
