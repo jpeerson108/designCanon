@@ -1,5 +1,6 @@
 ---
 import "@/styles/footerDesktop.css";
+import { NAV_LINKS } from "@/config";
 ---
 <footer class="footer-desktop invisible float">
 
@@ -10,7 +11,7 @@ import "@/styles/footerDesktop.css";
             </svg>
         </div>
         <div class="footer-desktop-text">
-            <a href="https://www.linkedin.com/in/jaret-peerson/" target="_blank" rel="noopener noreferrer">View Creator</a>
+            <a href={NAV_LINKS.linkedin} target="_blank" rel="noopener noreferrer">Meet Creator</a>
         </div>
     </div>
 
@@ -21,10 +22,11 @@ import "@/styles/footerDesktop.css";
             </svg>
         </div>
         <div class="footer-desktop-text">
-            <a href="https://github.com/jpeerson108/designCanon" target="_blank" rel="noopener noreferrer">Clone Repo</a>
+            <a href={NAV_LINKS.github} target="_blank" rel="noopener noreferrer">Clone Repo</a>
         </div>
     </div>
 
+    <!--
     <div class="footer-desktop-item">
         <div class="footer-desktop-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 12" fill="none">
@@ -35,6 +37,7 @@ import "@/styles/footerDesktop.css";
             <a href="https://www.linkedin.com/company/design-canon" target="_blank" rel="noopener noreferrer">Follow Along</a>
         </div>
     </div>
+    -->
 
     <div class="footer-desktop-item" id="footer-share-project">
         <div class="footer-desktop-icon">
