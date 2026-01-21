@@ -1,4 +1,5 @@
 ---
+import { NAV_LINKS } from "@/config";
 import BaseLayout from "../layouts/baseLayout.astro";
 import ContentGrid from "@/components/contentGrid.astro";
 import NavMain from "@/components/navMain.astro";
@@ -11,17 +12,12 @@ import "../styles/index.css";
 <BaseLayout title="Inspiration">
 
     <NavMain 
-    inspirationLinkHref="/inspiration"
-    buttonsLinkHref="/buttons"
-    infoLinkHref=""
-    tutorialsLinkHref=""
-    githubLinkHref="https://github.com/jpeerson108"
-    twitterLinkHref=""
-    linkedinLinkHref="https://www.linkedin.com/company/design-canon"
-    instagramLinkHref=""
-    youtubeLinkHref=""
-    emailLinkHref="mailto:contact@designcanon.com?subject=Inquiry%20from%20Design%20Canon%20Website"
-    navCenterText=""/>
+    inspirationLinkHref={NAV_LINKS.inspiration}
+    buttonsLinkHref={NAV_LINKS.buttons}
+    githubLinkHref={NAV_LINKS.github}
+    linkedinLinkHref={NAV_LINKS.linkedin}
+    emailLinkHref={NAV_LINKS.email}
+    navCenterText="" />
 
     <div class="container">
         <section class="intro-text">
