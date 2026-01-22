@@ -1,4 +1,4 @@
-export const SITE_NAME = "Shapeshift";
+export const SITE_NAME = "Toggle Triggers";
 
 // Navigation Links
 export const NAV_LINKS = {
