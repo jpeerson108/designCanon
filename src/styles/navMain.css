@@ -181,6 +181,18 @@ nav p {
     opacity 0.3s ease;
 }
 
+.nav-logo-text a {
+  letter-spacing: -0.3em;
+}
+
+.nav-logo-text a span:nth-child(4) {
+  transform: scaleX(-1);
+  display: inline-block;
+  transform-origin: center center;
+  letter-spacing: 0;
+  margin-right: -0.35em;
+}
+
 .nav-logo-text:has(a) {
   cursor: pointer;
 }

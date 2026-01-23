@@ -200,12 +200,27 @@ const {
         </div>
     )}
 
-    <!-- Center Text -->
+    <!-- Center Text 
     <div class="nav-logo-text active">
         {navCenterText ? (
             <p>{navCenterText}</p>
         ) : (
-            <p><a href="/">{SITE_NAME.siteNameFull}</a></p>
+            <p><a href="/">{SITE_NAME.siteNameFullSplit}</a></p>
+        )}
+    </div>
+    -->
+
+    <div class="nav-logo-text active">
+        {navCenterText ? (
+            <p>{navCenterText}</p>
+        ) : (
+            <p>
+                <a href="/">
+                    {SITE_NAME.siteNameFullLetters.map((letter) => (
+                        <span>{letter}</span>
+                    ))}
+                </a>
+            </p>
         )}
     </div>
 
