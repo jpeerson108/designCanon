@@ -1,4 +1,4 @@
-export const SITE_NAME = "Toggle Triggers";
+export const SITE_NAME = "Toggle Supply";
 
 // Navigation Links
 export const NAV_LINKS = {
