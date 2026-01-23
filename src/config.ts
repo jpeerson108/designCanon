@@ -1,4 +1,7 @@
-export const SITE_NAME = "Toggle Supply";
+export const SITE_NAME = {
+  siteName: "Toggle",
+  siteNameFull: "Toggle Supply"
+} as const;
 
 // Navigation Links
 export const NAV_LINKS = {
