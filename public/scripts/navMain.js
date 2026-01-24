@@ -47,9 +47,8 @@ menuBox.forEach((box) => {
   }
 })
 
-// Switch text with logo when user is 100px from top of screen
-const navLogoText = document.querySelector(".nav-logo-text")
-const navLogo = document.querySelector(".nav-logo")
+// Toggle logo text visibility on scroll
+const navLogoTextSection = document.querySelector(".nav-logo-text-section")
 const scrollThreshold = 100
 
 window.addEventListener("scroll", function () {
@@ -57,11 +56,9 @@ window.addEventListener("scroll", function () {
     window.pageYOffset || document.documentElement.scrollTop
 
   if (currentScrollPosition <= scrollThreshold) {
-    navLogoText.classList.add("active")
-    navLogo.classList.remove("active")
+    navLogoTextSection.classList.remove("active")
     return
   }
 
-  navLogoText.classList.remove("active")
-  navLogo.classList.add("active")
+  navLogoTextSection.classList.add("active")
 })

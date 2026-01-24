@@ -1,3 +1,8 @@
+:root {
+  --toggle-switch-size: 0.9rem;
+  --toggle-switch-border-weight: 1.65px;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -150,9 +155,6 @@ nav p {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  border: 1px solid var(--color-black-3);
-  border-radius: var(--rounded-corners-small);
-  padding: 2px 7px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,26 +163,58 @@ nav p {
 
 .nav-logo-text {
   word-spacing: var(--word-spacing);
-  transition: transform 0.4s cubic-bezier(0.5, -0.35, 0.71, 1);
 }
 
-.nav-logo-switch {
-  width: 3ch;
-  height: 1.4ch;
-  border: 1px solid var(--color-accent);
-  border-radius: var(--rounded-corners-xsmall);
+.nav-logo-text:first-child {
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--transition-time-med) ease;
+}
+
+.nav-logo-text:last-child {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-time-med) ease;
+}
+
+.nav-logo-toggle-wrapper {
+  border: var(--toggle-switch-border-weight) solid var(--color-main-border);
+  border-radius: var(--rounded-corners-small);
   margin-top: 1px;
+  padding: 5px;
 }
 
-.nav-logo {
-  position: absolute;
-  height: 55%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-150%);
+.nav-logo-toggle-container {
+  width: calc(4 * var(--toggle-switch-size));
+}
+
+.nav-logo-toggle-switch {
+  width: calc(2 * var(--toggle-switch-size));
+  height: var(--toggle-switch-size);
+  border-radius: var(--rounded-corners-xxsmall);
+  border: var(--toggle-switch-border-weight) solid var(--color-white-c);
+  transform: translateX(0);
+  transition:
+    border var(--transition-time-med) ease,
+    transform var(--transition-time-med) ease;
+}
+
+/* Nav Logo - Active States */
+.nav-logo-text-section.active .nav-logo-text {
   opacity: 1;
-  visibility: visible;
-  opacity: 0;
-  transition: all 0.4s cubic-bezier(0.5, -0.35, 0.71, 1);
+}
+
+.nav-logo-text-section.active .nav-logo-toggle-switch {
+  border: var(--toggle-switch-border-weight) solid var(--color-accent);
+  transform: translateX(100%);
+}
+
+.nav-logo-text-section.active .nav-logo-text:first-child {
+  transform: scaleX(1);
+}
+
+.nav-logo-text-section.active .nav-logo-text:last-child {
+  transform: scaleX(1);
 }
 
 /* Buttons Icon */
