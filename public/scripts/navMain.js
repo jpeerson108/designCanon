@@ -62,3 +62,13 @@ window.addEventListener("scroll", function () {
 
   navLogoTextSection.classList.add("active")
 })
+
+// Smooth scroll to top on logo click
+navLogoTextSection.addEventListener("click", function (event) {
+  event.preventDefault()
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  })
+  navLogoTextSection.classList.remove("active")
+})

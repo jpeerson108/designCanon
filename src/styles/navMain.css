@@ -150,6 +150,10 @@ nav p {
 .nav-logo-text-section {
   position: absolute;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .nav-logo-text-wrapper {
