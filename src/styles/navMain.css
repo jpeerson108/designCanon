@@ -149,6 +149,7 @@ nav p {
 /* Center Logo */
 .nav-logo-text-section {
   position: absolute;
+  width: 100%;
 }
 
 .nav-logo-text-wrapper {
@@ -163,18 +164,6 @@ nav p {
 
 .nav-logo-text {
   word-spacing: var(--word-spacing);
-}
-
-.nav-logo-text:first-child {
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform var(--transition-time-med) ease;
-}
-
-.nav-logo-text:last-child {
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--transition-time-med) ease;
 }
 
 .nav-logo-toggle-wrapper {
@@ -192,29 +181,20 @@ nav p {
   width: calc(2 * var(--toggle-switch-size));
   height: var(--toggle-switch-size);
   border-radius: var(--rounded-corners-xxsmall);
-  border: var(--toggle-switch-border-weight) solid var(--color-white-c);
+  border: var(--toggle-switch-border-weight) solid var(--color-black-3);
+  background: transparent;
   transform: translateX(0);
   transition:
     border var(--transition-time-med) ease,
+    background var(--transition-time-med) ease,
     transform var(--transition-time-med) ease;
 }
 
 /* Nav Logo - Active States */
-.nav-logo-text-section.active .nav-logo-text {
-  opacity: 1;
-}
-
 .nav-logo-text-section.active .nav-logo-toggle-switch {
   border: var(--toggle-switch-border-weight) solid var(--color-accent);
+  background: rgba(236, 101, 51, 0.6);
   transform: translateX(100%);
-}
-
-.nav-logo-text-section.active .nav-logo-text:first-child {
-  transform: scaleX(1);
-}
-
-.nav-logo-text-section.active .nav-logo-text:last-child {
-  transform: scaleX(1);
 }
 
 /* Buttons Icon */
