@@ -1,8 +1,7 @@
 export const SITE_NAME = {
-  siteName: "Toggle",
+  siteNameFirst: "Toggle",
+  siteNameLast: "Supply",
   siteNameFull: "Toggle Supply",
-  siteNameLetters: ["T", "o", "g", "g", "l", "e"],
-  siteNameFullLetters: ["T", "o", "g", "g", "l", "e", " ", "S", "u", "p", "p", "l", "y"]
 } as const;
 
 // Navigation Links
