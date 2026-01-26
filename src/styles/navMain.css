@@ -185,7 +185,7 @@ nav p {
   width: calc(2 * var(--toggle-switch-size));
   height: var(--toggle-switch-size);
   border-radius: var(--rounded-corners-xxsmall);
-  border: var(--toggle-switch-border-weight) solid var(--color-black-3);
+  border: var(--toggle-switch-border-weight) solid var(--color-black-5);
   background: transparent;
   transform: translateX(0);
   transition:

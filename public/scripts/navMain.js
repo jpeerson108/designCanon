@@ -49,7 +49,7 @@ menuBox.forEach((box) => {
 
 // Toggle logo text visibility on scroll
 const navLogoTextSection = document.querySelector(".nav-logo-text-section")
-const scrollThreshold = 100
+const scrollThreshold = 10
 
 window.addEventListener("scroll", function () {
   const currentScrollPosition =
